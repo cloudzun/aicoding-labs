@@ -65,7 +65,12 @@ if (Test-Path $metaPath) {
     else { Fail ("索引异常：{0} chunk / {1} 维（期望 315 / 2560）" -f $m.chunk_count, $m.embed_dim) }
     $docs = @(Get-ChildItem 'cases\01-rag-qa\data\corpus\synthetic' -Filter *.md -ErrorAction SilentlyContinue).Count
     if ($docs -eq 13) { Pass "语料 13 个文件（12 篇制度 + 埋点登记）" } else { Fail ("语料文件数 {0}（期望 13）" -f $docs) }
-} else { Fail "案例一索引缺失（先 python -m src.ingest）" }
+} else {
+    # 索引依赖嵌入服务、需要 key，因此不随仓库分发；缺失只提醒，不算失败
+    Write-Host "  [WARN] 索引尚未生成（需要 key）：cd cases\01-rag-qa; python -m src.ingest" -ForegroundColor Yellow
+    $docs = @(Get-ChildItem 'cases\01-rag-qa\data\corpus\synthetic' -Filter *.md -ErrorAction SilentlyContinue).Count
+    if ($docs -eq 13) { Pass "语料 13 个文件（12 篇制度 + 埋点登记）" } else { Fail ("语料文件数 {0}（期望 13）" -f $docs) }
+}
 
 Step "5/5 密钥扫描"
 & (Join-Path $PSScriptRoot 'check-secrets.ps1') | Out-Host
