@@ -7,6 +7,7 @@
 ### Changed
 
 - 虚构主体改名：`浙东省通信服务有限公司` → **`明州数智服务有限公司`**（12 篇制度语料与元数据同步；`EMBEDDED_CASES.md` 一并更新）。
+- 界面合规横幅同步改名（`web/index.html` 原先仍显示旧名，2026-10-21 17:20 修正）。
 - 重建索引：`python -m src.ingest` → 315 chunk / 2560 维；`corpus_sha256` 由 `78fedbd8…` 变为 **`1f0487bc…`**。
 - 重新冻结：`evidence/frozen-manifest-rag-meta.json` 与 `frozen-manifest-rag-corpus.json` 更新；旧快照保留为 `*.pre-rename.bak.json`。
 - 金标准答案文本（`golden_set*.jsonl`、`subset_judged.jsonl`）同步替换公司名。
