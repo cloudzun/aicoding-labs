@@ -1,8 +1,8 @@
-# 实验手册总览（`project/labs/`）
+# 实验手册总览（`labs/`）
 
 > **定位：** 学生向的**可复现操作手册**。三本手册与教材第五章配套：手册回答"怎么敲"，教材回答"为什么"。
-> **上位依据：** `project/HANDOFF-三案例教学化.md`（§2.5 环境、§4.1 端点与 smoke 脚本、§5 手册体例）。
-> **状态：** 体例已定稿（`00-手册编写体例.md`）；三本手册待写。
+> **上位依据：** 内部文档 `HANDOFF-三案例教学化.md`（未随仓库分发；§2.5 环境、§4.1 端点与 smoke 脚本、§5 手册体例）。
+> **状态：** 体例已定稿（`00-手册编写体例.md`）；**三本手册待写**（本目录暂无 `L1/L2/L3` 手册文件，当前先按 `assets/` 体验步骤跑）。
 
 ---
 
@@ -35,7 +35,7 @@
 | L2 | `POST /api/ask` | `{"question":"...","clarify":true}` | `sql`、`columns`、`rows`、`row_count`、`chart`、`clarification`、`rejected` |
 | L2 | `GET /api/health` | — | `tables`（6 张） |
 | L3 | `POST /api/review` | `{"contract_id":"CT001","with_semantic":true}` | `summary`、`findings`、`coverage`、`review_id` |
-| L3 | `GET /api/contracts`、`GET /api/rules`、`POST /api/upload` | — | 30 份合同 / 27 条规则（含 `stance`） |
+| L3 | `GET /api/contracts`、`GET /api/rules`、`POST /api/upload` | — | 30 份合同 / 27 条规则（`stance` 仅在 `rules.yaml`，接口不返回） |
 
 > 中文请求体的 PowerShell 坑：JSON 存 UTF-8 无 BOM 文件，用 `--data-binary "@q1.json"`，勿直接 `-d` 拼中文。
 
@@ -44,15 +44,22 @@
 ## 四、目录约定
 
 ```
-project/labs/
+labs/
 ├── README.md                 # 本文件
 ├── 00-手册编写体例.md         # 8 段体例 + 模板 + 正反例 + 自检清单
-├── L1-RAG问答实验手册.md
-├── L2-NL2SQL实验手册.md
-├── L3-合同审查实验手册.md
-├── scripts/                  # 三个 5 分钟 smoke 脚本（smoke-rag.ps1 等）
-└── assets/                   # 截图与录屏（首页、关键结果、失败示范）
+├── scripts/                  # 三个 5 分钟 smoke 验收脚本（见下）
+└── assets/                   # 体验步骤、审计记录、截图与录屏
 ```
+
+### 现成可用的 smoke 验收脚本
+
+三本手册写完之前，这三份脚本就是**现成的验收脚本**：只读接口 + 逐条断言，每份约 5 分钟，全部 PASS 才算该案例环境就绪。脚本为 UTF-8 with BOM，Windows PowerShell 5.1+ 可直接运行；先按对应案例启动服务。
+
+| 脚本 | 验收对象 | 断言（全过 exit 0） | 前置 |
+|---|---|---|---|
+| `scripts/smoke-rag.ps1` | 案例一 RAG 问答（4180） | 7 条：`chunk_count=315` / `embed_dim=2560`；主问题含"500"与"废止"；拒答题 `done.refused=true` 且 `elapsed_ms<2000` | `cd cases\01-rag-qa; python -m src.server` |
+| `scripts/smoke-nl2sql.ps1` | 案例二 NL2SQL（4181） | 10 条：`gen_db`+`verify_db` 11 行 PASS；6 张表；`541252.34 / 57 / 35`；写操作 `rejected.gate=write_intent` | `cd cases\02-nl2sql; python -m src.server` |
+| `scripts/smoke-contract.ps1` | 案例三 合同审查（4182） | 13 条：`gen_contracts`+`verify_data` 10 行 PASS；CT001 全 0；CT003 含 R02（中）/R19（高）；关语义 `not_detected` 含 R20–R25 | `cd cases\03-contract-review; python -m src.server` |
 
 ---
 

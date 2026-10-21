@@ -1,7 +1,7 @@
 # QUICKSTART：15 分钟跑起来
 
-> 前置：**Python 3.12** + 一个 [硅基流动](https://siliconflow.cn) API key（同一个 key 覆盖对话、嵌入、重排）。
-> 全部命令在仓库根目录的 PowerShell 中执行。
+> 前置：**Python 3.12**（实测 3.12.10；**3.11+** 理论可用，`numpy==2.4.2` 等依赖要求 3.11+）+ 一个 [硅基流动](https://siliconflow.cn) API key（同一个 key 覆盖对话、嵌入、重排）。
+> 全部命令在仓库根目录的 PowerShell 中执行。Windows PowerShell 5.1 **不支持 `&&`**，下面每条命令单行执行。
 
 ## 第 1 步：安装（约 3 分钟）
 
@@ -9,7 +9,7 @@
 .\scripts\setup.ps1
 ```
 
-它会：建 `.venv` → 安装三个案例的依赖 → 为每个案例生成一份 `.env`（从根目录 `.env.example` 复制）。
+它会：建 `.venv` → 安装三个案例的依赖 → 为每个案例生成一份 `.env`（优先用该案例自带的 `cases\<案例>\.env.example`，没有才回退根模板）。生成的 `.env` 里已含该案例**未注释的 `PORT`**（4180 / 4181 / 4182），要换端口直接改这一行。
 
 ## 第 2 步：填 key（1 分钟）
 
@@ -29,7 +29,7 @@ cases\03-contract-review\.env
 .\scripts\doctor.ps1
 ```
 
-逐项输出 `[OK]` / `[WARN]` / `[FAIL]`：Python、`.env`、key、模型可用性、端口占用、索引与数据。
+逐项输出 `[OK]` / `[WARN]` / `[FAIL]`：Python、`.env`、key、模型名是否在 `/models` 列表、端口占用、索引与数据。
 **有 `[FAIL]` 就按提示修**，全部通过再往下走。
 
 ## 第 4 步：启动
@@ -47,9 +47,19 @@ cases\03-contract-review\.env
 ## 第 5 步：验收（可选）
 
 ```powershell
-.\scripts\verify.ps1              # 离线断言：语法、两案例数据断言、索引、密钥扫描
+.\scripts\verify.ps1              # 离线断言：语法、两案例数据断言、索引（存在则校验）、密钥扫描
 .\scripts\verify.ps1 -WithNetwork # 额外做三案例各一次真实模型调用
 ```
+
+服务启动后（第 4 步的窗口保持运行），还可以跑 `labs\scripts\` 里三个现成的 5 分钟验收脚本——它们直接打 HTTP 接口，逐步打印 `[PASS]` / `[FAIL]`：
+
+```powershell
+.\labs\scripts\smoke-rag.ps1        # 案例一 4180：健康 / 检索命中 / 拒答
+.\labs\scripts\smoke-nl2sql.ps1     # 案例二 4181：歧义反问 / 只读闸 / 期望值
+.\labs\scripts\smoke-contract.ps1   # 案例三 4182：CT001 零风险 / CT003 命中 / 覆盖度
+```
+
+端口不是默认值时加 `-Port`，例如 `.\labs\scripts\smoke-rag.ps1 -Port 5180`。脚本只读、不写业务数据；全过退出码 0，末尾打印 `RESULT`。
 
 ## 手动方式（不用脚本）
 
@@ -57,7 +67,7 @@ cases\03-contract-review\.env
 python -m venv .venv; .\.venv\Scripts\Activate.ps1
 cd cases\01-rag-qa
 pip install -r requirements.txt
-copy ..\..\.env.example .env     # 填 key
+copy .env.example .env           # 用案例自带模板（键名与 PORT 都对得上），再填 key
 python -m src.ingest
 python -m src.server
 ```

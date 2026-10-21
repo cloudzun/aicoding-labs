@@ -34,6 +34,7 @@ if (Test-Path $vpy) {
 Write-Host "== 2. 读取各案例 .env ==" -ForegroundColor Cyan
 $cases = @{ '1' = '01-rag-qa'; '2' = '02-nl2sql'; '3' = '03-contract-review' }
 $selected = if ($Case -eq 'all') { @('1', '2', '3') } else { @($Case) }
+$caseModels = @{}
 
 function Read-EnvFile([string]$path) {
     $h = @{}
@@ -62,6 +63,20 @@ foreach ($k in $selected) {
     }
     if (-not $key -or $key -match '^<') { Bad "案例$k：未填 API key（当前仍为占位符）"; continue }
     Ok ("案例{0}：供应商 {1}，key 已填（{2} 字符）" -f $k, $provider, $key.Length)
+    # 记下该案例代码真正会读的模型键，第 3 步对照 /models 列表（写错键名不会报错，只会静默用默认值）
+    $readKeys = switch ($k) {
+        '1' { @('MODEL_MAIN', 'MODEL_REASONER', 'EMBED_MODEL', 'RERANK_MODEL') }
+        '2' { @('MODEL_MAIN') }
+        '3' { @('MODEL_MAIN', 'MODEL_SEMANTIC') }
+    }
+    $caseModels[$k] = @($readKeys | ForEach-Object { if ($e[$_]) { $e[$_] } })
+    # 旧根模板把判官键写成 MODEL_JUDGE（代码读 MODEL_REASONER / MODEL_SEMANTIC），改了会静默无效
+    if ($k -eq '1' -and -not $e['MODEL_REASONER'] -and $e['MODEL_JUDGE']) {
+        Warn "案例1：.env 只有废弃键 MODEL_JUDGE，代码读的是 MODEL_REASONER；请改键名（或补一行 MODEL_REASONER）"
+    }
+    if ($k -eq '3' -and -not $e['MODEL_SEMANTIC'] -and $e['MODEL_JUDGE']) {
+        Warn "案例3：.env 只有废弃键 MODEL_JUDGE，代码读的是 MODEL_SEMANTIC；请改键名（或补一行 MODEL_SEMANTIC）"
+    }
     $global:LastBase = $base
     $global:LastKey = $key
     $global:LastProvider = $provider
@@ -77,10 +92,13 @@ if ($global:LastKey) {
             $models = Invoke-RestMethod -Uri "$base/models" -Headers $hdr -TimeoutSec 20
             Ok ("/models 可达，共 {0} 个模型" -f @($models.data).Count)
             $ids = @($models.data | ForEach-Object { $_.id })
-            $need = @()
-            if ($selected -contains '1') { $need += @('Qwen/Qwen3-Embedding-4B', 'Qwen/Qwen3-Reranker-4B') }
-            foreach ($m in $need) {
-                if ($ids -contains $m) { Ok "模型存在：$m" } else { Warn "默认模型缺失：$m（模型可能已下架，改 .env 换同名替代）" }
+            # 逐个案例核对 .env 里会被代码读取的模型名：写错或下架都只会在调用时变成 404
+            foreach ($k in $selected) {
+                foreach ($m in @($caseModels[$k])) {
+                    if (-not $m) { continue }
+                    if ($ids -contains $m) { Ok ("案例{0} 模型存在：{1}" -f $k, $m) }
+                    else { Warn ("案例{0} 默认模型缺失：{1}（不在 /models 列表，可能已下架；按 FAQ §1 换同名替代）" -f $k, $m) }
+                }
             }
         } catch {
             Bad "连不上模型服务：$($_.Exception.Message)"

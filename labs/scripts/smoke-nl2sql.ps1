@@ -2,7 +2,7 @@
 .SYNOPSIS
   案例二 NL2SQL 问数 · 5 分钟自检脚本（HANDOFF §4.1 逐字实现）
 .DESCRIPTION
-  前置：cd project\02-nl2sql; python -m src.server（监听 4181）
+  前置：cd cases\02-nl2sql; python -m src.server（监听 4181）
   四步断言：
     S1  python -m scripts.gen_db; python -m scripts.verify_db
         -> 11 行 [PASS]，输出含 "合计 8584"
@@ -16,9 +16,13 @@
 param(
     [int]$Port = 4181,
     [int]$TimeoutSec = 300,
-    [string]$ProjectDir = (Resolve-Path (Join-Path $PSScriptRoot '..\..\02-nl2sql')).Path
+    [string]$ProjectDir = ''
 )
 
+# PS 5.1 下 $PSScriptRoot 在 param 默认值求值时为空，故在 param 之后解析项目目录
+if (-not $ProjectDir) {
+    $ProjectDir = (Resolve-Path (Join-Path $PSScriptRoot '..\..\cases\02-nl2sql')).Path
+}
 $ErrorActionPreference = 'Stop'
 # PS 5.1 默认不加载 System.Net.Http（PS 7 免加载）
 try { Add-Type -AssemblyName System.Net.Http -ErrorAction Stop } catch { }
@@ -77,7 +81,7 @@ try {
     $health = Invoke-Json '/api/health' $null 15
 } catch {
     Write-Host "[FAIL] S0 服务不可达：$base/api/health -> $($_.Exception.Message)"
-    Write-Host "RESULT: FAIL (0/0) — 先启动服务：cd project\02-nl2sql; python -m src.server"
+    Write-Host "RESULT: FAIL (0/0) — 先启动服务：cd cases\02-nl2sql; python -m src.server"
     exit 1
 }
 

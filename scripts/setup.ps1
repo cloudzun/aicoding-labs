@@ -64,7 +64,7 @@ if (-not $interp) {
     }
 }
 if (-not $interp) {
-    Write-Host "[失败] 找不到可用的 Python（需 3.10+，建议 3.12）。" -ForegroundColor Red
+    Write-Host "[失败] 找不到可用的 Python（需 3.11+；实测 3.12，建议 3.12）。" -ForegroundColor Red
     Write-Host "  安装后若仍报 No module named 'encodings'，说明 PATH 里是 shim：" -ForegroundColor Yellow
     Write-Host "  改用完整路径调用，例如 C:\Python312\python.exe -m venv .venv" -ForegroundColor Yellow
     exit 1
@@ -89,18 +89,31 @@ foreach ($c in $cases) {
 }
 
 Write-Host "== 4/4 准备 .env ==" -ForegroundColor Cyan
+$ports = @{ '01-rag-qa' = 4180; '02-nl2sql' = 4181; '03-contract-review' = 4182 }
 foreach ($c in $cases) {
     $envPath = Join-Path $root "cases\$c\.env"
     if ((Test-Path $envPath) -and (-not $Force)) {
         Write-Host ("  {0}: 已存在，跳过" -f $c)
         continue
     }
-    Copy-Item (Join-Path $root '.env.example') $envPath -Force
-    Write-Host ("  {0}: 已生成 cases\{0}\.env  ← 请填入 SILICONFLOW_KEY" -f $c)
+    # 优先用案例自带模板：键名（MODEL_REASONER / MODEL_SEMANTIC 等）与端口都与该案例对得上；
+    # 只有案例目录没有 .env.example 时才回退根模板。
+    $tpl = Join-Path $root "cases\$c\.env.example"
+    $fromCase = Test-Path $tpl
+    if (-not $fromCase) { $tpl = Join-Path $root '.env.example' }
+    Copy-Item $tpl $envPath -Force
+    # 兜底：确保 .env 里有未注释的 PORT（FAQ 与 doctor.ps1 都让学员改这一行）
+    $lines = @(Get-Content $envPath -Encoding UTF8)
+    if (-not ($lines | Where-Object { $_ -match '^\s*PORT\s*=' })) {
+        Add-Content $envPath '' -Encoding UTF8
+        Add-Content $envPath ("PORT={0}" -f $ports[$c]) -Encoding UTF8
+    }
+    $src = if ($fromCase) { "cases\$c\.env.example" } else { '.env.example（回退）' }
+    Write-Host ("  {0}: 已生成 cases\{0}\.env（模板 {1}）← 请填入 SILICONFLOW_KEY" -f $c, $src)
 }
 
 Write-Host ""
 Write-Host "完成。下一步：" -ForegroundColor Green
-Write-Host "  1) 编辑 cases\*\..env，把 <YOUR_SILICONFLOW_KEY> 换成你的 key"
+Write-Host "  1) 编辑 cases\<案例目录>\.env（如 cases\01-rag-qa\.env，三个案例各一份），把 <YOUR_SILICONFLOW_KEY> 换成你的 key"
 Write-Host "  2) 运行 .\scripts\doctor.ps1 体检"
 Write-Host "  3) 运行 .\scripts\run.ps1 -Case 1"

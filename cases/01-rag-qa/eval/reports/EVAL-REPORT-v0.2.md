@@ -1,7 +1,7 @@
 # 评测报告 v0.2（facts 口径）
 
 > 生成时间：2026-10-21T14:20:52+08:00　模型：`opencode-go/gpt-6-luna`　judge：`opencode-go/deepseek-v4.1-flash`
-> **本报告与 v1 报告不可跨口径比较。** 口径定义见 [docs/07-SPEC-v0.2增量.md](../docs/07-SPEC-v0.2增量.md)。
+> **本报告与 v1 报告不可跨口径比较。** 口径定义见 [docs/07-SPEC-v0.2增量.md](../../docs/07-SPEC-v0.2增量.md)。
 
 ## 一、门禁结论
 

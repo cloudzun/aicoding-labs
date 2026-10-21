@@ -10,7 +10,7 @@
 
 ### Fixed
 
-- `scripts/gen_contracts.py:209`：`NameError: name 'D06' is not defined`（把字符串写成裸变量）→ 重建 30 份 docx 必崩，`smoke-contract` S1 永久 FAIL。改为 `(("D06","R11"),("D07","R05"),("D08","R12"))`；修复后 `gen_contracts` exit=0、`verify_data` 10/10、重建保真度见 `project/labs/assets/postfix-audit-20261021-110031.txt`。
+- `scripts/gen_contracts.py:209`：`NameError: name 'D06' is not defined`（把字符串写成裸变量）→ 重建 30 份 docx 必崩，`smoke-contract` S1 永久 FAIL。改为 `(("D06","R11"),("D07","R05"),("D08","R12"))`；修复后 `gen_contracts` exit=0、`verify_data` 10/10、重建保真度见 `labs/assets/postfix-audit-20261021-110031.txt`（未随仓库分发）。
 - `web/index.html`：`$` 选择器不兼容裸 id（`querySelector('sumCard')` 返回 `null`）→ 点「开始审查」抛 `TypeError`、`busy` 永久为 true、`POST /api/review` 发不出。改为 `$` 自动补 `#`。
 
 ### Added

@@ -2,6 +2,8 @@
 
 > 多份制度文档的问答：**答得出、指得准、答不了敢拒**。三个教学案例的第一棒。
 
+> **证据说明：** `evidence/` 原始记录未随仓库分发（体积大且含内部路径）；本目录 `qa-report.md` 是结论性摘要，逐条数字以它为准。
+
 ## 现在能做什么
 
 | 能力 | 说明 |
@@ -25,18 +27,21 @@
 | claim 支撑率 | **73.31%**（10-20 基线 78.06%；3-gram 下限指标） |
 | judge 失败率 | **3.85%**（10-20 基线 2.53%；超 2% 门禁 → 结论 **INCOMPLETE**） |
 | Recall@5 | 100%（**题料同源，不可当能力**）；异源冒烟 91.67% |
-| TTFT p95 | **3195ms**（10-20 基线 4041ms；阈值 1000ms，**环境依赖缺口**） |
+| TTFT p95 | **3194.8ms（facts 子集 80 题）/ 3334ms（全量 208 题）**；10-20 基线 4041ms；阈值 1000ms，**环境依赖缺口** |
 | 功能 QA | **10/10** |
 
 ## 快速开始
 
 ```powershell
-cd project\01-rag-qa
+cd cases\01-rag-qa
+python -m src.ingest            # 建索引（需 key，约 315 chunk）
 python -m src.server            # → http://127.0.0.1:4180
 python scripts/qa_checks.py     # 需先启服务，10 项检查
 python -m eval.run_eval --dataset eval/golden_set.jsonl --no-judge
 python -m eval.run_eval_v2 --dataset eval/golden_set_v2.jsonl --human-verdicts eval/human_verdicts.jsonl
 ```
+
+> **索引必须先生成**：`data/index/` 被 `.gitignore` 排除，不随仓库分发；新克隆直接起服务只会得到"检索不到内容、全部拒答"。建索引需要 key（要调嵌入模型），重复建库走缓存不重复计费；从仓库根用 `scripts\run.ps1 -Case 1` 启动时会自动补建索引。
 
 详见 [docs/11-操作手册.md](docs/11-操作手册.md)、[BUILD.md](BUILD.md)。
 
@@ -51,12 +56,12 @@ python -m eval.run_eval_v2 --dataset eval/golden_set_v2.jsonl --human-verdicts e
 ├── scripts/                      # probe_models / qa_checks / make_gold_* / bench_*
 ├── docs/                         # 00 口径 / 01 需求 / 03 会审 / 05 处置 / 06 演示
 │                                 # 07 SPEC v0.2 / 08 会审 v0.2 / 09 三阶段 / 10 八环 / 11 手册
-└── evidence/                     # 42 份证据（评测、探测、评审原文、界面截图）
+└── evidence/                     # 证据目录（评测、探测、评审原文、界面截图；未随仓库分发，故克隆后为空）
 ```
 
 ## 诚实边界
 
-- ❌ 数据不出域（嵌入/生成仍经本地网关，上游为云端模型）
+- ❌ 数据不出域（嵌入/重排/生成默认走硅基流动公网 API，可选内网 magpie 网关；上游模型仍在云端）
 - ❌ 深度验收（正确率 **68.00%**，judge 失败率 **3.85%** 超门禁 → INCOMPLETE）
 - ❌ TTFT ≤1s（差约 4 倍，需专用推理端点）
 - ⚠️ Recall 100% 是题料同源产物；F05 引用语义校验、F14 生成总 deadline 未修
@@ -70,13 +75,13 @@ python -m eval.run_eval_v2 --dataset eval/golden_set_v2.jsonl --human-verdicts e
 | [docs/03-会审记录.md](docs/03-会审记录.md) / [docs/08-会审-v0.2.md](docs/08-会审-v0.2.md) | 两轮会审 |
 | [docs/05-评审处置.md](docs/05-评审处置.md) | codex 26 条逐条处置 |
 | [docs/09-三阶段结果.md](docs/09-三阶段结果.md) | A/B/C 攻坚与双口径 |
-| [docs/10-八环讲解记录.md](docs/10-八环讲解记录.md) | 课堂讲解（326 行） |
+| [docs/10-八环讲解记录.md](docs/10-八环讲解记录.md) | 课堂讲解（466 行） |
 | [docs/11-操作手册.md](docs/11-操作手册.md) | 功能验证手册 |
-| [review.md](review.md) | codex 独立评审原文（26 条） |
+| review.md（内部评审记录，未随仓库分发） | codex 独立评审原文（26 条） |
 | [qa-report.md](qa-report.md) | 三轮评测对照 + 失败归因 |
-| [retro.md](retro.md) | 复盘 |
+| retro.md（内部评审记录，未随仓库分发） | 复盘 |
 | [DECISIONS.md](DECISIONS.md) | 22 条决策（D-01～D-22） |
 
-> 已补 `evidence/README.md`（含补丁脚本 ↔ 评审发现对照表）。
+> `evidence/README.md`（证据索引，含补丁脚本 ↔ 评审发现对照表）为本地证据索引，**未随仓库分发**。
 >
 > **编号说明：** `docs/` 无 02 与 04——02 的内容并入 `00-数据与口径`，04 未产出（SPEC 直接在根目录）。属历史编号，不是丢文件。

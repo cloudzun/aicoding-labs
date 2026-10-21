@@ -3,7 +3,7 @@
 > 时间：2026-10-21 11:22–11:27
 > 修复：`02-nl2sql/web/index.html`、`03-contract-review/web/index.html` 各 1 行
 > 验证方式：Chrome DevTools 真实页面操作（非接口直调）
-> 关联：`project/labs/assets/ui-bug-案例二三-20261021.md`（缺陷记录）
+> 关联：`labs/assets/ui-bug-案例二三-20261021.md`（缺陷记录）
 
 ## 一、修复内容
 

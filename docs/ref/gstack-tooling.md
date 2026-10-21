@@ -8,9 +8,9 @@
 
 | 宿主 | 安装根 | VERSION | 技能命名 | 说明 |
 |---|---|---|---|---|
-| Claude Code | `C:\Users\cheng\.claude\skills\` | **1.58.3.0** | 扁平：`spec/`、`review/`、`qa/`… | 另有完整仓库副本 `C:\Users\cheng\.claude\skills\gstack\`（含 `bin/`、`test/`、`docs/`、`sections/`），版本同为 1.58.3.0 |
-| opencode | `C:\Users\cheng\.config\opencode\skills\` | **1.87.3.0** | 前缀：`gstack-spec/`、`gstack-review/`… | 主包 `gstack/` 是完整仓库，带 `bin/gstack-skill-start` |
-| Codex CLI | `C:\Users\cheng\.codex\skills\` | **1.91.121.0** | 前缀：`gstack-spec/`… | 主包 `gstack/` 是完整仓库，`bin/` 最全（157 个脚本 vs Claude 版 74、opencode 版 92） |
+| Claude Code | `<用户目录>\.claude\skills\` | **1.58.3.0** | 扁平：`spec/`、`review/`、`qa/`… | 另有完整仓库副本 `<用户目录>\.claude\skills\gstack\`（含 `bin/`、`test/`、`docs/`、`sections/`），版本同为 1.58.3.0 |
+| opencode | `<用户目录>\.config\opencode\skills\` | **1.87.3.0** | 前缀：`gstack-spec/`、`gstack-review/`… | 主包 `gstack/` 是完整仓库，带 `bin/gstack-skill-start` |
+| Codex CLI | `<用户目录>\.codex\skills\` | **1.91.121.0** | 前缀：`gstack-spec/`… | 主包 `gstack/` 是完整仓库，`bin/` 最全（157 个脚本 vs Claude 版 74、opencode 版 92） |
 
 版本证据：三处 `VERSION` 文件；git head `a861c00 2026-06-18`（Claude 版）、`85b8c03 2026-09-15`（opencode 版）。三版之间相差 33 个 minor，**门禁实现已经改过**（见 §6.2、§6.3）。
 
@@ -18,14 +18,14 @@
 
 | 记号 | 实际路径 |
 |---|---|
-| `[CC]` | `C:\Users\cheng\.claude\skills\` |
-| `[REPO]` | `C:\Users\cheng\.claude\skills\gstack\` |
-| `[OC]` | `C:\Users\cheng\.config\opencode\skills\` |
-| `[CX]` | `C:\Users\cheng\.codex\skills\` |
-| `[R1]` | `D:\vibecoding\easyvibe\r1-fruitlab\`（R1 真实产物） |
-| `[R2G]` | `D:\vibecoding\easyvibe\r2-fruitlab\.gstack\`（R1/R2 真实调用脚本与日志） |
-| `[AUDIT]` | `D:\vibecoding\easyvibe\archive\gstack_skill_audit.md` |
-| `[FLOW]` | `D:\vibecoding\easyvibe\gstack标准开发流程.md` |
+| `[CC]` | `<用户目录>\.claude\skills\` |
+| `[REPO]` | `<用户目录>\.claude\skills\gstack\` |
+| `[OC]` | `<用户目录>\.config\opencode\skills\` |
+| `[CX]` | `<用户目录>\.codex\skills\` |
+| `[R1]` | `<工作区根>\r1-fruitlab\`（R1 真实产物） |
+| `[R2G]` | `<工作区根>\r2-fruitlab\.gstack\`（R1/R2 真实调用脚本与日志） |
+| `[AUDIT]` | `<工作区根>\archive\gstack_skill_audit.md` |
+| `[FLOW]` | `<工作区根>\gstack标准开发流程.md` |
 
 ---
 
@@ -45,8 +45,8 @@
 |---|---|---|
 | **官方 7 段** | Think → Plan → Build → Review → Test → Ship → Reflect | `[REPO]README.md:171-175` |
 | **课程 8 环**（本文主用） | office-hours → spec → autoplan → build（施工）→ review → qa → ship → retro | `[FLOW]:13-15`（"上一环的产出是下一环的输入，没有环节可以被跳过"）；`[R1]R1-八环讲解记录.md:28-62` |
-| **课程 7 环**（去掉 retro） | office-hours → spec → autoplan → 施工 → review → qa → ship | `D:\vibecoding\easyvibe\基础课程大纲.md:130`；`D:\vibecoding\easyvibe\HANDOFF.md:68` |
-| **课程 5 环**（第 4 章后端阶段） | spec → autoplan → review → qa → ship | `D:\vibecoding\easyvibe\课程总纲.md:309` |
+| **课程 7 环**（去掉 retro） | office-hours → spec → autoplan → 施工 → review → qa → ship | `<工作区根>\基础课程大纲.md:130`；`<工作区根>\HANDOFF.md:68` |
+| **课程 5 环**（第 4 章后端阶段） | spec → autoplan → review → qa → ship | `<工作区根>\课程总纲.md:309` |
 
 官方各技能的从属关系（Plan 家族）：`[REPO]AGENTS.md:14-24` 把 `office-hours / plan-ceo-review / plan-eng-review / plan-design-review / plan-devex-review / plan-tune / autoplan / design-consultation / spec` 归为"Plan-mode reviews"。
 
@@ -228,8 +228,8 @@ opencode run "加载 gstack-spec 技能，只执行 spec 这一环，产出 SPEC
 #!/usr/bin/env bash
 set -u
 export PATH="$HOME/.bun/bin:$PATH"
-CODEX="/c/Users/cheng/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe"   # 哈希目录会随升级变
-SANDBOX="/d/vibecoding/easyvibe/r1-fruitlab"
+CODEX="<用户目录>/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe"   # 哈希目录会随升级变
+SANDBOX="<工作区根>/r1-fruitlab"
 OUT="$SANDBOX/.gstack/ring1e-output.txt"
 PROMPT_FILE="$SANDBOX/.gstack/ring1e-prompt.txt"
 PROMPT="$(cat "$PROMPT_FILE")"
@@ -256,12 +256,12 @@ echo "OUTPUT_LINES=$(wc -l < "$OUT")"
 在 codex 里**没有技能加载器**，所以每个 prompt 都得写清两件事（`[R2G]codex-review-prompt.txt` 是范本）：
 1. 先跑 preamble：
    ```bash
-   export PATH=/c/Users/cheng/.bun/bin:$PATH
-   /c/Users/cheng/.codex/skills/gstack/bin/gstack-skill-start --skill review --model gpt-6-astra
+   export PATH="<用户目录>/.bun/bin:$PATH"
+   "<用户目录>/.codex/skills/gstack/bin/gstack-skill-start" --skill review --model gpt-6-astra
    ```
 2. 再读技能全文：
    ```
-   读取 C:\Users\cheng\.codex\skills\gstack-review\SKILL.md，按技能要求执行
+   读取 <用户目录>\.codex\skills\gstack-review\SKILL.md，按技能要求执行
    ```
 
 ### 4.5 三宿主的"双智能体复核"接法
@@ -284,8 +284,8 @@ echo "OUTPUT_LINES=$(wc -l < "$OUT")"
 当前 codex 二进制自带 `exec review`（2026-10-20 实测 `codex exec review --help`）：
 
 ```bash
-CODEX="/c/Users/cheng/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe"
-REPO="/d/vibecoding/easyvibe/r2-fruitlab"
+CODEX="<用户目录>/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe"
+REPO="<工作区根>/r2-fruitlab"
 
 # 审"相对某基线的改动"（第二智能体复核最常用）
 "$CODEX" exec review --base main -c model="opencode-go/deepseek-v4.1-flash" -s danger-full-access -C "$REPO"

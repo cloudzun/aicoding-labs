@@ -9,19 +9,19 @@
 
 | 项 | 值 | 说明 |
 |---|---|---|
-| Python | 3.12.10（3.12.x 均可） | 纯 Python，无容器、无 GPU |
+| Python | 3.12 实测；3.11+ 理论可用 | 纯 Python，无容器、无 GPU |
 | 依赖清单 | `requirements.txt`（本目录） | 按实际 import 冻结：`fastapi` `uvicorn` `httpx` `pydantic`；数据库用 stdlib `sqlite3` |
 | 安装 | `pip install -r requirements.txt` | 版本为 2026-10-21 本机现网，非全量 `pip freeze` |
-| 模型网关 | magpie `http://127.0.0.1:3425`，`Authorization: Bearer <MAGPIE_KEY>` | 生成与嵌入都走它；**网关不可用时无法生成 SQL** |
-| 配置 | `.env`（本地，不提交）；模板 `.env.example` | 模板中密钥已占位为 `<MAGPIE_KEY>` |
+| 模型网关 | 默认公网硅基流动 `https://api.siliconflow.cn/v1`，`Authorization: Bearer <SILICONFLOW_KEY>`；内网 magpie 为**可选档 B** | 生成走它；**网关不可用时无法生成 SQL** |
+| 配置 | `.env`（本地，不提交）；模板 `.env.example` | 模板中密钥已占位为 `<YOUR_SILICONFLOW_KEY>` |
 | 端口 | `4181` | `PORT=4181` |
-| 模型名 | 生成 `opencode-go/gpt-6-luna`；推理 `opencode-go/deepseek-v4.1-flash` | 见 `.env` |
+| 模型名 | 生成 `Qwen/Qwen2.5-72B-Instruct`（档 B 为 `opencode-go/gpt-6-luna`） | 见 `.env`；`MODEL_REASONER` 模板保留，当前代码未读取 |
 
 ## 1. 能力矩阵
 
 | 能力 | 来源 | 状态 | 说明 |
 |---|---|---|---|
-| 生成（SQL） | magpie `/v1/chat/completions` | ✅ | 实测 p50 1.5–4.6s（含检索/排队波动），选 luna 最快 |
+| 生成（SQL） | OpenAI 兼容 `/v1/chat/completions`（默认硅基流动，可选 magpie） | ✅ | 实测 p50 1.5–4.6s（含检索/排队波动），选 luna 最快 |
 | 结构化输出 | magpie | ⚠️ | `/v1/systemone` 需 Jev provider，本机不可用；改用"提示词约束 + 正则提取 + 校验" |
 | 嵌入 | magpie Qwen3-Embedding-4B | ✅ 可用但**本 demo 未使用** | 6 张表全量 schema 约 1.5k token，直接进 prompt 更可靠 |
 | 数据库 | 本地 SQLite 文件 | ✅ | `data/aicoding.db`，8,584 行，sha256 `d1f5872e…`（2026-10-21 客户名改造后重冻结） |
@@ -57,7 +57,7 @@
 ## 5. 复现
 
 ```powershell
-cd project\02-nl2sql
+cd cases\02-nl2sql
 python -m scripts.gen_db        # 生成库（约 3 秒）
 python -m scripts.verify_db     # 11 项完整性断言
 python -m src.server            # → http://127.0.0.1:4181

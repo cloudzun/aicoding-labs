@@ -4,14 +4,14 @@
 
 ## 1. 环境
 
-- Python 3.12（`python --version`）
+- Python **3.12 实测；3.11+ 理论可用**（`python --version`）
 - 依赖：`fastapi uvicorn httpx pydantic`（已在本机环境）
-- 模型网关：magpie `http://127.0.0.1:3425`（`.env` 可改）
+- 模型网关：**默认公网硅基流动 `https://api.siliconflow.cn/v1`**（一个 key 覆盖全部调用）；内网 magpie `http://127.0.0.1:3425` 为**可选档 B**，见 `.env.example` 注释块，没有它也能跑通
 
 ## 2. 四步启动
 
 ```powershell
-cd project\02-nl2sql
+cd cases\02-nl2sql
 
 # ① 生成库（确定性，约 3 秒）
 python -m scripts.gen_db
@@ -49,8 +49,8 @@ python -m scripts.test_safety        # 12 条对抗用例，必须全 PASS
 | `库不存在` / health 显示 db_exists=false | 没跑 ① | `python -m scripts.gen_db` |
 | `verify_db` 有 FAIL | 库被改过 | 删 `data/aicoding.db` 重跑 ①（seed 固定，结果一致） |
 | 全部问题都被拒 | authorizer 白名单与表名不一致 | 检查 `src/db.py: ALLOWED_TABLES` |
-| 所有查询超时 | 网关慢 + 首次加载 | 重试；或把 `.env` 的 `QUERY_TIMEOUT_S` 调大 |
-| `生成失败：LLMError` | magpie 不可达或模型名错 | 先 `curl http://127.0.0.1:3425/v1/models` |
+| 所有查询超时 | 网关慢 + 首次加载 | 重试；超时值当前是 `src/safety.py: TIMEOUT_S_DEFAULT`（10s）的常量，`.env` 的 `QUERY_TIMEOUT_S` 尚未接入（改 `.env` 是空操作） |
+| `生成失败：LLMError` | 网关不可达或模型名错 | 先 `curl https://api.siliconflow.cn/v1/models -H "Authorization: Bearer $env:SILICONFLOW_KEY"`（内网档 B 则为 `curl http://127.0.0.1:3425/v1/models`） |
 | 问题被判"歧义"不回答 | 阻塞式歧义（营收/近三月） | 在问题里写清口径，如"应收（含调整）" |
 
 ## 6. 降级边界（如实说明）

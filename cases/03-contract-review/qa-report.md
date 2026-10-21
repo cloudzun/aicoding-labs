@@ -4,6 +4,8 @@
 > 方式：`scripts/qa_checks.py` + `eval/run_eval.py`（810 判定单元自动比对）
 > **结论：14 条 AC 全 PASS（v1.2 起语义精确率 100% 且已入门禁）；功能自检 `qa_checks` 10/10。**
 
+> **证据说明：** `evidence/` 原始记录未随仓库分发（体积大且含内部路径）；本目录 `qa-report.md` 是结论性摘要。
+
 ## 一、门禁（含语义全量 27 条）
 
 | 指标 | 门槛 | 实测 | 判定 |
@@ -36,7 +38,9 @@
 | 语义型 R | SKIP（未执行，coverage 显式列出） | **90.32%** |
 | 定位准确率 | 100%（n=30） | 100%（n=30） |
 | 缺失项位置覆盖率 | 100%（n=63） | 100%（n=63） |
-| 总体 P/R/F1 | **100 / 100 / 100** | 81.88 / 98.39 / 89.38 |
+| 总体 P/R/F1 | **100 / 100 / 100** | **100 / 97.58 / 98.78**（TP 121 / FP 0 / FN 3） |
+
+> 注：含语义列的总体指标以 v1.2 为准（P 100% / R 97.58% / F1 98.78%）；**`81.88 / 98.39 / 89.38` 是 v1.1 旧值**（语义守卫与立场提示落地前），仅作历史对照，不得与本节混用。
 
 ## 三、口径变更（诊断驱动，必须双报）
 
@@ -74,7 +78,7 @@
 python -m scripts.gen_contracts; python -m scripts.verify_data   # 10/10
 python -m scripts.qa_checks                                      # 10/10
 python -m eval.run_eval                                          # 确定性（PASS）
-python -m eval.run_eval --semantic                               # 含语义（PASS，FP 27）
+python -m eval.run_eval --semantic                               # 含语义（PASS，FP 0）
 python -m eval.run_eval --anchors                                # 100%
 python -m scripts.diag_metrics --semantic 6                      # 诊断（只读）
 ```

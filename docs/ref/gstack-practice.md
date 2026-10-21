@@ -50,18 +50,18 @@
 | 〔SCAFFOLD-PLAN〕 | `reference-app/SCAFFOLD-PLAN.md` | 4+1 表 schema、刻意留白、13 条验收判据 |
 | 〔阶段记录〕 | `reference-app/reports/阶段记录-GStack八环跑通与教材修订.md` | 78→70→8→实际修改的收敛过程 |
 | 〔已有教材评估〕 | `reference-app/reports/已有教材借鉴价值评估报告.md` | 教材资产盘点、真跑记录体裁 |
-| 〔迭代方法论〕 | `D:\vibecoding\easyvibe\course-labs\gstack迭代开发方法论.md` | 何时走全流程 / 何时轻量、迭代七步 |
-| 〔教材 ch04〕 | `D:\vibecoding\easyvibe\textbook\ch04_上工程纪律.md` | 流程适用边界、代价评估 |
-| 〔教材 ch07〕 | `D:\vibecoding\easyvibe\textbook\ch07_上下文工程与Skill.md` | AGENTS.md、懒加载、人工撰写优于 AI 生成 |
-| 〔教材 ch09〕 | `D:\vibecoding\easyvibe\textbook\ch09_多Agent与LoopEngineering.md` | 多 Agent 三问、maker-checker、Token 成本量化 |
-| 〔教材 ch10〕 | `D:\vibecoding\easyvibe\textbook\ch10_质量保障体系.md` | 质量门禁串线与执行顺序 |
-| 〔教材 ch11〕 | `D:\vibecoding\easyvibe\textbook\ch11_团队落地.md` | 团队落地与成本量级 |
+| 〔迭代方法论〕 | `<工作区根>\course-labs\gstack迭代开发方法论.md` | 何时走全流程 / 何时轻量、迭代七步 |
+| 〔教材 ch04〕 | `<工作区根>\textbook\ch04_上工程纪律.md` | 流程适用边界、代价评估 |
+| 〔教材 ch07〕 | `<工作区根>\textbook\ch07_上下文工程与Skill.md` | AGENTS.md、懒加载、人工撰写优于 AI 生成 |
+| 〔教材 ch09〕 | `<工作区根>\textbook\ch09_多Agent与LoopEngineering.md` | 多 Agent 三问、maker-checker、Token 成本量化 |
+| 〔教材 ch10〕 | `<工作区根>\textbook\ch10_质量保障体系.md` | 质量门禁串线与执行顺序 |
+| 〔教材 ch11〕 | `<工作区根>\textbook\ch11_团队落地.md` | 团队落地与成本量级 |
 
 ### 0.2 两套「八环」不要混为一谈
 
 | 轮次 | 仓库 | 性质 | 规模 |
 |---|---|---|---|
-| 沙盒验证跑 | `D:\vibecoding\easyvibe\gstack-fruitlab` | 第一次把八环跑通、专门用来验门禁 | 14 提交、26 测试、`Test Ratio 0.937`〔八环经验报告〕 |
+| 沙盒验证跑 | `<工作区根>\gstack-fruitlab` | 第一次把八环跑通、专门用来验门禁 | 14 提交、26 测试、`Test Ratio 0.937`〔八环经验报告〕 |
 | **R1** | `r1-fruitlab` | 正式第一轮（课堂展品） | 62 测试（61 过/1 跳过）、38 义务〔R1-八环讲解记录〕〔R1-义务覆盖率核查〕 |
 | **R2** | `r2-fruitlab` | 七环升级（PRD 替代 office-hours） | 96 测试、42 义务、`2.0.0.0`〔R2-八环讲解记录〕 |
 | **R3** | `r3-fruitlab` | 七环升级（Postgres + 分层 + 容器） | 138 测试、42 义务、`3.0.0.0`〔R3-八环讲解记录〕 |

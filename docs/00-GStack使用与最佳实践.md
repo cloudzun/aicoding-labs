@@ -36,7 +36,7 @@ GStack 不是"提示词合集"，也不是"聊天模板"。它是一套**带门�
 
 | 口径 | 内容 | 出处 |
 |---|---|---|
-| **官方叙事：7 段** | Think → Plan → Build → Review → Test → Ship → Reflect | `C:\Users\cheng\gstack\README.md:171-175` |
+| **官方叙事：7 段** | Think → Plan → Build → Review → Test → Ship → Reflect | `<用户目录>\gstack\README.md:171-175` |
 | **课程口径：八环**（本文默认） | office-hours → spec → autoplan → 受控施工 → review+cso → qa → ship → retro+learn | 课程 README、R1–R3 讲解记录 |
 | **七环** | 八环去掉 retro（迭代轮次从 spec 起算） | 迭代方法论 |
 | **五环** | spec → autoplan → review → qa → ship（轻量交付） | R3.5 轻量实践 |
@@ -45,7 +45,7 @@ GStack 不是"提示词合集"，也不是"聊天模板"。它是一套**带门�
 
 补一条容易被漏掉的机制事实：**第 4 环"施工"在 GStack 里没有对应技能**（技能表与安装目录都没有 build 类条目）。施工是"提示词驱动 + autoplan 产出的 tasks/test-plan + ship 的 plan-completion 校验"三者拼起来的，这解释了为什么施工期最容易失控——**它是全流程里唯一没有技能内建门禁的一环**。
 
-### 1.2 四条构建者信条（源码 `C:\Users\cheng\gstack\ETHOS.md`）
+### 1.2 四条构建者信条（源码 `<用户目录>\gstack\ETHOS.md`）
 
 | 信条 | 原文要义 | 对使用者的实际含义 |
 |---|---|---|
@@ -89,9 +89,9 @@ GStack 不是"提示词合集"，也不是"聊天模板"。它是一套**带门�
 
 | 位置 | 版本 | 来源 | 谁会用到 |
 |---|---|---|---|
-| `C:\Users\cheng\.codex\skills\gstack` | **1.91.121.0** | 源码仓库 `C:\Users\cheng\gstack` | `codex exec` 非交互调用（本项目 R1–R3.5 实际用的就是这条路径） |
-| `C:\Users\cheng\.config\opencode\skills\gstack` | **1.87.3** | npm 包 | opencode 宿主 |
-| `C:\Users\cheng\.claude\skills\gstack` | **1.58.3.0** | npm 包 | Claude Code 宿主 |
+| `<用户目录>\.codex\skills\gstack` | **1.91.121.0** | 源码仓库 `<用户目录>\gstack` | `codex exec` 非交互调用（本项目 R1–R3.5 实际用的就是这条路径） |
+| `<用户目录>\.config\opencode\skills\gstack` | **1.87.3** | npm 包 | opencode 宿主 |
+| `<用户目录>\.claude\skills\gstack` | **1.58.3.0** | npm 包 | Claude Code 宿主 |
 
 证据：`~/.gstack/installs.tsv` 记录 `codex / global / .../gstack 1.91.121.0 committed 2026-10-17T08:03:33Z`；`~/.gstack/.last-setup-version` = `1.91.121.0`；三处各自的 `VERSION`／`package.json` 如上表。
 
@@ -554,10 +554,10 @@ codex exec -c model="<模型>" -c model_reasoning_effort="medium" \
 
 | 层级 | 文件 |
 |---|---|
-| 原始技能定义 | `C:\Users\cheng\.codex\skills\gstack\`（1.91.121.0）、`C:\Users\cheng\gstack\ETHOS.md`、`C:\Users\cheng\gstack\README.md` |
+| 原始技能定义 | `<用户目录>\.codex\skills\gstack\`（1.91.121.0）、`<用户目录>\gstack\ETHOS.md`、`<用户目录>\gstack\README.md` |
 | 分册（带行号来源） | [gstack-tooling.md](ref/gstack-tooling.md)、[gstack-practice.md](ref/gstack-practice.md) |
 | 实跑记录 | `reference-app/reports/`（八环经验报告、R1/R2/R3 讲解记录、操作经验教训、ring2–ring8 分环记录） |
-| 课程资产 | `通用AI_Coding课程与教材/`（11 单元）、`D:\vibecoding\easyvibe\course-labs\gstack迭代开发方法论.md` |
+| 课程资产 | `通用AI_Coding课程与教材/`（11 单元）、`<工作区根>\course-labs\gstack迭代开发方法论.md` |
 | 证据规程 | `reference-app/CHECKPOINT-PROTOCOL.md`、`ENVIRONMENT.md`、`SCAFFOLD-PLAN.md` |
 
 ### 12.2 三档置信度

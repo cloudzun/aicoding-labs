@@ -1,6 +1,6 @@
 # ENVIRONMENT · 环境基线（合同审查）
 
-> 锁定：Python 3.12.10｜python-docx｜PyYAML 6.0.3｜FastAPI｜端口 **4182**｜模型 `opencode-go/gpt-6-luna`（确定性规则不需要模型）
+> 锁定：Python 3.12.10｜python-docx｜PyYAML 6.0.3｜FastAPI｜端口 **4182**｜语义模型 `deepseek-ai/DeepSeek-V3`（默认硅基流动公网；确定性规则不需要模型）
 
 ## 1. 能力矩阵
 
@@ -9,7 +9,7 @@
 | docx 解析 | python-docx | ✅ | 段落 + 段内偏移；页号为估算（每 40 段 ≈ 1 页） |
 | PDF 解析 | — | ❌ **不支持** | v1 明确排除，避免解析质量污染指标 |
 | 确定性规则 | 本地正则/标题匹配 | ✅ | 21 条，单份 ~1–3ms |
-| 语义规则 | magpie `deepseek-v4.1-flash` | ✅ | 6 条，单份 5–15s |
+| 语义规则 | LLM `deepseek-ai/DeepSeek-V3`（默认硅基流动；内网档 B 为 `opencode-go/deepseek-v4.1-flash`） | ✅ | 6 条，单份 5–15s |
 | 数据库 | 无 | — | 纯文件处理，无状态 |
 | GPU/容器 | — | ❌ | 不需要 |
 
@@ -46,7 +46,7 @@
 ## 5. 复现
 
 ```powershell
-cd project\03-contract-review
+cd cases\03-contract-review
 python -m scripts.gen_contracts     # 30 份 docx + 810 单元（约 2 秒）
 python -m scripts.verify_data       # 10 项断言
 python -m src.server                # → http://127.0.0.1:4182

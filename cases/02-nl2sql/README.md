@@ -3,6 +3,8 @@
 > 运营商政企业务的"中文问数"演示：问一句中文，自动出受约束的 SQL、结果表、图表建议，并把口径讲清楚。
 > **属于三个教学案例中的第 ② 个**，用于演示"从工具到方法"：证据边界（①）→ **确定性安全边界 + 可自动验收**（②）→ 分级与追溯（③）。
 
+> **证据说明：** `evidence/` 原始记录未随仓库分发（体积大且含内部路径）；本目录 `qa-report.md` 是结论性摘要。
+
 ## 一句话定位
 
 **一个能问出数字、看得到 SQL、说得清口径、且物理上写不坏数据的问数助手。**
@@ -46,15 +48,19 @@
 ├── scripts/                   # gen_db / verify_db / build_gold / gen_questions / test_safety / qa_checks
 ├── docs/                      # 00 口径 / 01 需求 / 02 八环讲解记录
 ├── SPEC.md  DECISIONS.md  BUILD.md  ENVIRONMENT.md
-└── evidence/                  # 带时间戳的实测证据
+└── evidence/                  # 带时间戳的实测证据（未随仓库分发）
 ```
 
 ## 快速开始
 
 ```powershell
-python -m scripts.gen_db && python -m scripts.verify_db && python -m src.server
-# → http://127.0.0.1:4181
+cd cases\02-nl2sql
+python -m scripts.gen_db          # 生成库（约 3 秒）
+python -m scripts.verify_db       # 11 项完整性断言
+python -m src.server              # → http://127.0.0.1:4181
 ```
+
+> PowerShell 5.1 **不支持** `&&` 串联，请逐行执行（或用 `;`）。
 
 详见 [BUILD.md](BUILD.md)。
 
@@ -75,8 +81,8 @@ python -m scripts.gen_db && python -m scripts.verify_db && python -m src.server
 | [DECISIONS.md](DECISIONS.md) | 18 条决策（含 Rejected、未修项与口径澄清） |
 | [docs/10-八环讲解记录.md](docs/10-八环讲解记录.md) | 课堂讲解用（与 ① 同体例：每环 输入/分析/决策依据/门禁产出/要点） |
 | [docs/11-操作手册.md](docs/11-操作手册.md) | **功能验证手册**：8 步验证 + 期望值 + 故障表 + 验收清单 |
-| [review.md](review.md) | 第一轮评审（glm-5.3）16 条发现与处置 |
-| [review-codex.md](review-codex.md) | **第二轮评审（codex）19 条发现与处置** |
+| review.md（内部评审记录，未随仓库分发） | 第一轮评审（glm-5.3）16 条发现与处置 |
+| review-codex.md（内部评审记录，未随仓库分发） | **第二轮评审（codex）19 条发现与处置** |
 | [qa-report.md](qa-report.md) | QA 10/10 + EX 分桶与失败归因 |
-| [retro.md](retro.md) | 复盘：四个教训、11 条债务、与 ① 的方法对照 |
+| retro.md（内部评审记录，未随仓库分发） | 复盘：四个教训、11 条债务、与 ① 的方法对照 |
 | [ENVIRONMENT.md](ENVIRONMENT.md) | 能力矩阵与安全闸设计 |

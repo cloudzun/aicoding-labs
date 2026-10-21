@@ -2,7 +2,7 @@
 .SYNOPSIS
   案例一 政企 RAG 问答 · 5 分钟自检脚本（HANDOFF §4.1 逐字实现）
 .DESCRIPTION
-  前置：cd project\01-rag-qa; python -m src.server（监听 4180）
+  前置：cd cases\01-rag-qa; python -m src.server（监听 4180）
   三步断言：
     S1  GET /api/health        -> index.chunk_count = 315，index.embed_dim = 2560
     S2  "单笔采购金额500万元以上的采购项目，需要提交什么会议审议？"
@@ -71,7 +71,7 @@ try {
     $health = Invoke-RestMethod -Uri "$base/api/health" -TimeoutSec 15
 } catch {
     Write-Host "[FAIL] S0 服务不可达：$base/api/health -> $($_.Exception.Message)"
-    Write-Host "RESULT: FAIL (0/0) — 先启动服务：cd project\01-rag-qa; python -m src.server"
+    Write-Host "RESULT: FAIL (0/0) — 先启动服务：cd cases\01-rag-qa; python -m src.server"
     exit 1
 }
 

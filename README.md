@@ -12,25 +12,24 @@
 
 ## 目录
 
-```
-cases/01-rag-qa/         RAG：语料、索引、评测、Web UI
-cases/02-nl2sql/         NL2SQL：数据生成、语义层、评测、Web UI
-cases/03-contract-review/合同审查：30 份 docx、27 条规则、评测
-labs/                    实验手册、体验步骤、评审记录
-docs/                    方法层文档（八环、性能分析、复盘等）
-```
+| 路径 | 内容 |
+|---|---|
+| [`cases/01-rag-qa/`](cases/01-rag-qa) · [`cases/02-nl2sql/`](cases/02-nl2sql) · [`cases/03-contract-review/`](cases/03-contract-review) | 三个可运行案例：语料/数据生成、评测、Web UI；各有 `README.md` 与 `qa-report.md` |
+| [`labs/`](labs/README.md) | 手册体例与待写计划、体验步骤、评审记录（三本实验手册**待写**）；`labs/scripts/smoke-*.ps1` 是三个现成的验收脚本 |
+| [`docs/`](docs/README.md) | 方法层文档（八环、性能分析、复盘等），入口见 [`docs/README.md`](docs/README.md) |
+| `scripts/` | 一键脚本：`setup` / `doctor` / `run` / `verify` / `check-secrets` |
 
 ## 环境要求
 
-- **Python 3.12**（3.10+ 大概率可用，未逐一验证）
+- **Python 3.12**（实测 3.12.10）；**3.11+** 理论可用（`numpy==2.4.2` 等依赖要求 3.11+），3.10 会在装依赖时失败
 - 一个模型服务 key：默认示例用 [硅基流动 SiliconFlow](https://siliconflow.cn)（同一个 key 覆盖对话、嵌入、重排）
-- Windows PowerShell 5.1+ / macOS / Linux 均可（脚本以 PowerShell 为主，Linux 可直接用 python 命令）
+- Windows PowerShell 5.1+ / macOS / Linux 均可（脚本以 PowerShell 为主，Linux 可直接用 python 命令；注意 5.1 **不支持 `&&`**）
 
 ## 快速开始（15 分钟）
 
 ```powershell
 .\scripts\setup.ps1        # 建 .venv、装依赖、生成 .env
-# 编辑 cases\*\..env 填入 SILICONFLOW_KEY
+# 编辑 cases\01-rag-qa\.env（三个案例各一份）填入 SILICONFLOW_KEY
 .\scripts\doctor.ps1       # 体检（红/绿清单）
 .\scripts\run.ps1 -Case 1  # 打开 http://127.0.0.1:4180
 ```
@@ -41,15 +40,22 @@ docs/                    方法层文档（八环、性能分析、复盘等）
 
 | 脚本 | 作用 |
 |---|---|
-| `scripts/setup.ps1` | 建 `.venv`、装三个案例依赖、生成 `.env`（幂等，`-Force` 覆盖） |
-| `scripts/doctor.ps1` | 体检：Python、key、模型可用性、端口、索引/数据；给中文修复建议 |
+| `scripts/setup.ps1` | 建 `.venv`、装三个案例依赖、生成 `.env`（优先用各案例自带模板；幂等，`-Force` 覆盖） |
+| `scripts/doctor.ps1` | 体检：Python、key、模型名是否在 `/models` 列表、端口、索引/数据；给中文修复建议 |
 | `scripts/run.ps1 -Case 1/2/3` | 启动对应案例；缺数据时自动生成（`-Port` 可换端口） |
-| `scripts/verify.ps1` | 离线断言（语法/数据/索引/密钥）；`-WithNetwork` 加三案例真实模型调用 |
+| `scripts/verify.ps1` | 离线断言（语法/两案例数据断言/索引存在则校验/密钥扫描）；`-WithNetwork` 加三案例真实模型调用 |
 | `scripts/check-secrets.ps1` | 提交前扫描真实密钥（CI 同款） |
+| `labs/scripts/smoke-*.ps1` | 服务启动后的 5 分钟验收（HTTP 断言），用法见 [QUICKSTART](QUICKSTART.md) 第 5 步 |
 
 ## 配置（双轨）
 
-每个案例目录一份 `.env`（从根 `.env.example` 复制）：
+每个案例目录一份 `.env`，**从该案例自带的模板复制**（`cases\<案例>\.env.example` 键名与端口都对得上；根 `.env.example` 只是兜底，`setup.ps1` 优先用案例模板）：
+
+| 案例 | 代码真正读取的模型键 |
+|---|---|
+| 01 RAG | `MODEL_MAIN` / `MODEL_REASONER`（判官）/ `EMBED_MODEL` / `RERANK_MODEL` |
+| 02 NL2SQL | `MODEL_MAIN` |
+| 03 合同审查 | `MODEL_MAIN` / `MODEL_SEMANTIC`（语义引擎） |
 
 - **档 A（默认）硅基流动**：一个 key 覆盖 chat / embedding / rerank；
 - **档 B magpie 内网**：把 `LLM_PROVIDER=magpie` 与 `MAGPIE_BASE/KEY` 打开即可（不对外分发）。
@@ -67,6 +73,8 @@ docs/                    方法层文档（八环、性能分析、复盘等）
 | 案例三合同 | `cd cases\03-contract-review; python -m scripts.gen_contracts` |
 
 `scripts/run.ps1` 会自动补；`scripts/verify.ps1` 会重新生成并断言（案例二 11 项、案例三 10 项）。
+
+`evidence/`（原始评测 JSON、评审记录、截图）**未随仓库分发**：体积大且含内部路径。结论性摘要见各案例 `qa-report.md` 与 `eval/reports/`；文档里出现的 `evidence/...` 引用属于作者环境，克隆后不存在是正常的。
 
 ## 数字口径（重要）
 
@@ -90,3 +98,5 @@ docs/                    方法层文档（八环、性能分析、复盘等）
 - 案例三仅支持 docx；PDF/扫描件未支持；语义规则有波动，确定性规则稳定。
 - 案例二 JOIN 类问题是已知短板（JOIN 桶 68%），不是环境问题。
 - 案例一门禁结论为 INCOMPLETE（judge 失败率超 2%），刻意保留。
+- `evidence/`、案例一索引、案例二数据库、案例三合同都不随仓库分发；缺文件按上文命令生成，不是克隆坏了。
+- 三份 `BUILD.md` / `ENVIRONMENT.md` 仍保留作者环境的 magpie 内网口径，默认路径以根 `README.md` + `QUICKSTART.md` 为准。

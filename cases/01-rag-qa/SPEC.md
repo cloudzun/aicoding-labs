@@ -1,7 +1,7 @@
 # SPEC · 政企 RAG 问答 demo（v1）
 
 > **环次：** 第 2 环 `/spec`
-> **上游：** [环 0 数据与口径](00-数据与口径.md)（已关闭）、[环 1 需求](01-需求.md)（已批准）
+> **上游：** [环 0 数据与口径](docs/00-数据与口径.md)（已关闭）、[环 1 需求](docs/01-需求.md)（已批准）
 > **本 SPEC 的门禁：** 每条验收标准都必须能映射到一个可执行的测量方式；无法自动判定的显式标注"人工判定 + 判定人"。
 
 ---
@@ -53,7 +53,8 @@
 01-rag-qa/
 ├── .env / .env.example         # 配置（.env 不入库）
 ├── ENVIRONMENT.md              # 环境基线与实测证据（已完成）
-├── SPEC.md  DECISIONS.md  BUILD.md  review.md  qa-report.md  CHANGELOG.md  VERSION  retro.md
+├── SPEC.md  DECISIONS.md  BUILD.md  qa-report.md  CHANGELOG.md  VERSION
+│                              # review.md / retro.md 为内部评审记录，未随仓库分发
 ├── docs/                       # 00-数据与口径 / 01-需求
 ├── data/
 │   ├── corpus/synthetic/       # 12 份虚构制度 + manifest.json + EMBEDDED_CASES.md
@@ -170,7 +171,7 @@ event: done      data: {"answer":"完整答案","elapsed_ms":2143,"refused":fals
 
 ## 8. 风险与对策
 
-见 [01-需求 §8](01-需求.md) 与 [ENVIRONMENT §4](ENVIRONMENT.md)。SPEC 新增两条：
+见 [01-需求 §8](docs/01-需求.md) 与 [ENVIRONMENT §4](ENVIRONMENT.md)。SPEC 新增两条：
 
 | 风险 | 对策 |
 |---|---|

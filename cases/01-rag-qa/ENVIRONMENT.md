@@ -4,9 +4,10 @@
 > **锁定项（GStack 版本冻结纪律）：**
 > - GStack：`1.91.121.0`（`~/.codex/skills/gstack`，全项目统一，勿混用 1.58.3.0 / 1.87.3.0）
 > - Python：3.12.10 ｜ Node：v22.20.0 ｜ OS：Windows（本机直跑，无容器）
-> - 生成模型：`opencode-go/gpt-6-luna`（`reasoning_effort=none`）
-> - 嵌入：`BAAI/bge-m3`（1024 维，硅基流动）
-> - 重排：`BAAI/bge-reranker-v2-m3`（硅基流动）
+> - 生成模型：`opencode-go/gpt-6-luna`（`reasoning_effort=none`；0.2 轮实测环境为内网 magpie，默认档 A 为 `Qwen/Qwen2.5-72B-Instruct`）
+> - 嵌入：`Qwen/Qwen3-Embedding-4B`（2560 维，硅基流动）
+> - 重排：`Qwen/Qwen3-Reranker-4B`（硅基流动）
+> - 历史环境：0.1 轮曾用 `BAAI/bge-m3`（1024 维）/ `bge-reranker-v2-m3`，见 §7 变更表
 
 ## 1. 能力来源与实测结论
 
@@ -15,7 +16,7 @@
 | 生成（LLM） | magpie（本地网关） | `http://127.0.0.1:3425/v1/chat/completions` | ✅ 可用 | 见下表 |
 | 模型清单 | magpie | `/v1/models` | ✅ 15 个模型 | 5 个支持 `reasoning_effort=none` |
 | 结构化输出 | magpie | `/v1/systemone` | ❌ **不可用** | `magpie has no Jev provider`（需 Jev provider，本机未配置） |
-| 嵌入 | 硅基流动（公网） | `/v1/embeddings` | ✅ 可用 | 10 chunk 0.236s，dim=1024 |
+| 嵌入 | 硅基流动（公网） | `/v1/embeddings` | ✅ 可用 | 10 chunk 0.236s，dim=1024（0.1 轮 bge-m3 实测；0.2 轮起为 Qwen3-Embedding-4B / 2560 维，见 §7） |
 | 重排 | 硅基流动（公网） | `/v1/rerank` | ✅ 可用 | 10 doc 0.148s，top1 分数 0.950 |
 | magpie 自带嵌入 | magpie | `/v1/embeddings` | ❌ **无模型** | 报错 `knows no model`，仅列聊天模型 |
 | 本地大模型（Ollama） | 本机 | `:11434` | ❌ 未安装/未运行 | — |
@@ -48,7 +49,7 @@
 | 生成（真实 RAG） | 2–4s（估） | 约 5 chunk × 400 token 上下文、200–400 字答案，**待实测** |
 | **端到端** | **~2.0–4.5s（估）** | 结论：**"单轮 ≤3s" 只在短答案 + 小上下文下成立**；必须改成 TTFT + 流式口径 |
 
-> 这个预算正好验证了 [轴二文档](../docs/01-FDE场景与三项目业界借鉴.md) 第 0 节的判断：3 秒不是不可能，但**不能承诺"完整政策解读 3 秒返回"**。
+> 这个预算正好验证了 [轴二文档](../../docs/01-FDE场景与三项目业界借鉴.md) 第 0 节的判断：3 秒不是不可能，但**不能承诺"完整政策解读 3 秒返回"**。
 
 ## 4. 已知风险与降级方案
 
@@ -63,7 +64,7 @@
 ## 5. 复现方式
 
 ```powershell
-cd project\01-rag-qa
+cd cases\01-rag-qa
 copy .env.example .env      # 填入 SILICONFLOW_KEY
 python scripts\probe_models.py
 # 产出 evidence\probe-<UTC 时间戳>.json，并在控制台打印 p50/max/成功率和答案样例
@@ -104,5 +105,5 @@ python scripts\probe_models.py
 
 - 语料主体 `浙东省通信服务有限公司` → **`明州数智服务有限公司`**（12 篇制度 + `EMBEDDED_CASES.md`）。
 - 索引重建：`python -m src.ingest` → 315 chunk / 2560 维；`corpus_sha256` `78fedbd8…` → **`1f0487bc…`**。
-- 评测重跑（2026-10-21）：facts 口径正确率 **68.00%**（10-20 基线 50.65%）、claim **73.31%**、judge 失败 **3.85%**、TTFT p50/p95 **2091/3195ms**（基线 4041ms）。差异归因见 `qa-report.md` §七（模型/判官漂移，非改名功效）。
+- 评测重跑（2026-10-21）：facts 口径正确率 **68.00%**（10-20 基线 50.65%）、claim **73.31%**、judge 失败 **3.85%**、TTFT p50/p95 **2091 / 3194.8ms**（facts 子集 80 题口径；全量 208 题口径为 2006.0 / 3334.0ms；基线 4041ms）。差异归因见 `qa-report.md` §七（模型/判官漂移，非改名功效）。
 - 冻结快照已更新；旧快照保留为 `evidence/frozen-manifest-rag-*.pre-rename.bak.json`。

@@ -3,6 +3,8 @@
 > 上传/选择一份合同，按 **27 条规则**逐条检查，输出「哪有风险、第几段、原文是什么、怎么改」，按 高/中/低 排序。
 > **三个教学案例的第三棒**：① 考"能不能承认不知道" → ② 考"能不能守住边界" → ③ 考**"能不能分级与追溯"**。
 
+> **证据说明：** `evidence/` 原始记录未随仓库分发（体积大且含内部路径）；本目录 `qa-report.md` 是结论性摘要。
+
 ## 现在能做什么
 
 | 能力 | 说明 |
@@ -45,17 +47,21 @@
 ├── eval/                      # run_eval（规则命中/报告质量/锚点）+ anchors.jsonl
 ├── scripts/                   # gen_contracts / verify_data / qa_checks / smoke
 ├── docs/                      # 00 口径 / 01 需求 / 10 八环记录 / 11 操作手册
-└── evidence/                  # 数据断言、QA、评测、评审原文
+└── evidence/                  # 数据断言、QA、评测、评审原文（未随仓库分发）
 ```
 
 ## 快速开始
 
 ```powershell
-python -m scripts.gen_contracts && python -m scripts.verify_data
-python -m src.server            # → http://127.0.0.1:4182
-python -m eval.run_eval         # 确定性 21 条（5 秒）
+cd cases\03-contract-review
+python -m scripts.gen_contracts   # 30 份 docx + 810 单元（约 2 秒）
+python -m scripts.verify_data     # 10 项断言
+python -m src.server              # → http://127.0.0.1:4182
+python -m eval.run_eval           # 确定性 21 条（5 秒）
 python -m eval.run_eval --semantic
 ```
+
+> PowerShell 5.1 **不支持** `&&` 串联，请逐行执行（或用 `;`）。
 
 ## 诚实边界
 
@@ -77,7 +83,7 @@ python -m eval.run_eval --semantic
 | [docs/10-八环讲解记录.md](docs/10-八环讲解记录.md) | 课堂讲解（与 ①② 同体例） |
 | [docs/09-诊断与修复记录.md](docs/09-诊断与修复记录.md) | **v1.0→v1.1 闭环**：诊断→一处修复→全绿，含三条教学要点 |
 | [docs/11-操作手册.md](docs/11-操作手册.md) | 功能验证手册 |
-| [review-codex.md](review-codex.md) | codex 独立评审与处置 |
+| review-codex.md（内部评审记录，未随仓库分发） | codex 独立评审与处置 |
 | [qa-report.md](qa-report.md) | 评估结果与失败归因 |
-| [retro.md](retro.md) | 复盘（含诊断轮补记与债务） |
-| [evidence/README.md](evidence/README.md) | **证据索引**：每个数字的出处 + 口径纪律 |
+| retro.md（内部评审记录，未随仓库分发） | 复盘（含诊断轮补记与债务） |
+| `evidence/README.md`（证据索引，未随仓库分发） | 每个数字的出处 + 口径纪律 |

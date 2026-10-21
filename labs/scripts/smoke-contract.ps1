@@ -2,7 +2,7 @@
 .SYNOPSIS
   案例三 合同审查 · 5 分钟自检脚本（HANDOFF §4.1 逐字实现）
 .DESCRIPTION
-  前置：cd project\03-contract-review; python -m src.server（监听 4182）
+  前置：cd cases\03-contract-review; python -m src.server（监听 4182）
   四步断言：
     S1  python -m scripts.gen_contracts; python -m scripts.verify_data
         -> 10 行 [PASS]，共 810 单元
@@ -16,9 +16,13 @@
 param(
     [int]$Port = 4182,
     [int]$TimeoutSec = 600,
-    [string]$ProjectDir = (Resolve-Path (Join-Path $PSScriptRoot '..\..\03-contract-review')).Path
+    [string]$ProjectDir = ''
 )
 
+# PS 5.1 下 $PSScriptRoot 在 param 默认值求值时为空，故在 param 之后解析项目目录
+if (-not $ProjectDir) {
+    $ProjectDir = (Resolve-Path (Join-Path $PSScriptRoot '..\..\cases\03-contract-review')).Path
+}
 $ErrorActionPreference = 'Stop'
 # PS 5.1 默认不加载 System.Net.Http（PS 7 免加载）
 try { Add-Type -AssemblyName System.Net.Http -ErrorAction Stop } catch { }
@@ -70,7 +74,7 @@ try {
     $health = Invoke-Json '/api/health' $null 15
 } catch {
     Write-Host "[FAIL] S0 服务不可达：$base/api/health -> $($_.Exception.Message)"
-    Write-Host "RESULT: FAIL (0/0) — 先启动服务：cd project\03-contract-review; python -m src.server"
+    Write-Host "RESULT: FAIL (0/0) — 先启动服务：cd cases\03-contract-review; python -m src.server"
     exit 1
 }
 

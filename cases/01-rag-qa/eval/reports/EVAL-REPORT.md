@@ -1,7 +1,7 @@
 # 评测报告（EVAL-REPORT）
 
 > 生成时间：2026-10-21T14:08:22+08:00　模型：`opencode-go/gpt-6-luna`　judge：`opencode-go/deepseek-v4.1-flash`
-> 口径见 [docs/00-数据与口径.md](docs/00-数据与口径.md)；本报告由 `python -m eval.run_eval` 生成，不手工编辑。
+> 口径见 [docs/00-数据与口径.md](../../docs/00-数据与口径.md)；本报告由 `python -m eval.run_eval` 生成，不手工编辑。
 
 ## 一、门禁结论
 
