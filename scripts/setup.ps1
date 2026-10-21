@@ -11,23 +11,68 @@
 param([switch]$Force)
 
 $ErrorActionPreference = 'Stop'
+$env:PYTHONUTF8 = '1'
 $root = Split-Path -Parent $PSScriptRoot
 Set-Location $root
 
 $cases = @('01-rag-qa', '02-nl2sql', '03-contract-review')
 
 Write-Host "== 1/4 检查 Python ==" -ForegroundColor Cyan
-$pyCmd = Get-Command python -ErrorAction SilentlyContinue
-if (-not $pyCmd) {
-    Write-Host "[失败] 找不到 python。请安装 Python 3.12 并勾选 Add to PATH。" -ForegroundColor Red
+# 注意：某些安装方式（如 Chocolatey/Windows 应用别名）会在 PATH 里放一个 shim，
+# 直接调用时 Python 可能把"当前目录"误当成安装前缀（报 No module named 'encodings'）。
+# 因此逐个候选解释器做一次真实导入测试，选第一个能正常启动的。
+$candidates = @()
+if (Get-Command py -ErrorAction SilentlyContinue) {
+    $candidates += @{ exe = 'py'; args = @('-3.12') }
+    $candidates += @{ exe = 'py'; args = @('-3') }
+}
+$candidates += @{ exe = 'python'; args = @() }
+$candidates += @{ exe = 'python3'; args = @() }
+
+$interp = $null
+foreach ($cand in $candidates) {
+    if (-not (Get-Command $cand.exe -ErrorAction SilentlyContinue)) { continue }
+    try {
+        $probeArgs = @($cand.args) + @('-c', 'import sys,encodings;print(sys.version_info[0], sys.version_info[1])')
+        $out = & $cand.exe @probeArgs 2>$null
+        if ($LASTEXITCODE -eq 0 -and $out) {
+            $interp = $cand
+            Write-Host ("  python {0}（{1}）" -f (($out | Select-Object -First 1) -replace ' ', '.'), $cand.exe)
+            break
+        }
+    } catch { }
+}
+if (-not $interp) {
+    # 兜底：直接尝试常见安装目录（绕过 PATH 里的 shim）
+    $common = @(
+        'C:\Python312\python.exe',
+        (Join-Path $env:ProgramFiles 'Python312\python.exe'),
+        (Join-Path $env:LOCALAPPDATA 'Programs\Python\Python312\python.exe'),
+        'C:\Python311\python.exe',
+        (Join-Path $env:ProgramFiles 'Python311\python.exe')
+    )
+    foreach ($exe in $common) {
+        if (-not (Test-Path $exe)) { continue }
+        try {
+            $out = & $exe -c 'import sys,encodings;print(sys.version_info[0], sys.version_info[1])' 2>$null
+            if ($LASTEXITCODE -eq 0 -and $out) {
+                $interp = @{ exe = $exe; args = @() }
+                Write-Host ("  python {0}（{1}）" -f (($out | Select-Object -First 1) -replace ' ', '.'), $exe)
+                break
+            }
+        } catch { }
+    }
+}
+if (-not $interp) {
+    Write-Host "[失败] 找不到可用的 Python（需 3.10+，建议 3.12）。" -ForegroundColor Red
+    Write-Host "  安装后若仍报 No module named 'encodings'，说明 PATH 里是 shim：" -ForegroundColor Yellow
+    Write-Host "  改用完整路径调用，例如 C:\Python312\python.exe -m venv .venv" -ForegroundColor Yellow
     exit 1
 }
-$ver = & python -c "import sys;print('.'.join(map(str,sys.version_info[:2])))"
-Write-Host ("  python {0}（建议 3.12）" -f $ver)
 
 Write-Host "== 2/4 创建虚拟环境 .venv ==" -ForegroundColor Cyan
 if (-not (Test-Path (Join-Path $root '.venv'))) {
-    & python -m venv .venv
+    & $interp.exe @(@($interp.args) + @('-m', 'venv', '.venv'))
 } else {
     Write-Host "  .venv 已存在，复用"
 }

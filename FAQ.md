@@ -59,3 +59,16 @@
 | 系统 | Windows PowerShell 5.1+；macOS/Linux 可手动执行同样的 python 命令 |
 | 网络 | 需要访问模型服务（默认 `api.siliconflow.cn`）；`*.ps1` 不联网 |
 | 磁盘 | 约 100 MB（含 .venv 与生成数据） |
+
+## 6. 干净机 / 服务器环境（Azure VM 实测）
+
+以下问题在全新 Windows Server 2022（无 git、英文代码页 cp437）上真实出现过，已修复或已在脚本中处理：
+
+| 现象 | 原因 | 处理 |
+|---|---|---|
+| `No module named 'encodings'` / `Could not find platform independent libraries` | PATH 里的 `python` 是 shim，或 Python 安装残缺（`Lib` 为空） | 用完整路径（如 `C:\Python312\python.exe`）或重装；`setup.ps1` 会自动探测可用解释器并给出提示 |
+| 打印中文报 `UnicodeEncodeError: 'charmap' codec` | 系统默认代码页不是 UTF-8 | 脚本已设 `PYTHONUTF8=1`；手动运行前先 `$env:PYTHONUTF8='1'` |
+| `check-secrets.ps1` 报 `git 不是内部或外部命令` | 机器没装 git（直接下载 zip 的情况） | 脚本已支持无 git：退化为扫描工作区并跳过 `.env` |
+| `setup.ps1` 报 `.venv 创建失败` | 解释器不可用（同上第一条） | 按提示改用完整路径重跑 |
+
+> 验证记录：2026-10-21，Azure `Standard_B2s` / Windows Server 2022，无 git、cp437、NuGet 版 Python 3.12.10，`setup.ps1` 与 `verify.ps1` 均通过。

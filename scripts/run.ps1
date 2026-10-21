@@ -11,6 +11,7 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+$env:PYTHONUTF8 = '1'
 $root = Split-Path -Parent $PSScriptRoot
 Set-Location $root
 

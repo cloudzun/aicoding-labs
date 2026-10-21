@@ -15,11 +15,15 @@
 param([switch]$WithNetwork)
 
 $ErrorActionPreference = 'Continue'
+$env:PYTHONUTF8 = '1'
 $root = Split-Path -Parent $PSScriptRoot
 Set-Location $root
 
 $vpy = Join-Path $root '.venv\Scripts\python.exe'
-if (-not (Test-Path $vpy)) { $vpy = 'python' }
+if (-not (Test-Path $vpy)) {
+    Write-Host "[失败] 缺少 .venv，请先运行 .\scripts\setup.ps1" -ForegroundColor Red
+    exit 1
+}
 
 $fail = 0
 function Step($name) { Write-Host ""; Write-Host "== $name ==" -ForegroundColor Cyan }

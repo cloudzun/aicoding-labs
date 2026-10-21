@@ -10,6 +10,11 @@
 """
 
 from __future__ import annotations
+import sys as _sys
+
+# 干净 Windows 的默认代码页可能不是 UTF-8；中文 print 会抛 UnicodeEncodeError。
+if hasattr(_sys.stdout, "reconfigure"):
+    _sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 import hashlib
 import json

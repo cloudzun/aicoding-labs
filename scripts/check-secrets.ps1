@@ -11,12 +11,21 @@ $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
 Set-Location $root
 
-$files = git -c core.quotepath=false ls-files | ForEach-Object { $_.Trim('"') }
-if (-not $files) { Write-Host "[失败] 当前目录不是 git 仓库" -ForegroundColor Red; exit 1 }
+$hasGit = [bool](Get-Command git -ErrorAction SilentlyContinue)
+if ($hasGit) {
+    $files = git -c core.quotepath=false ls-files | ForEach-Object { $_.Trim('"') }
+    if (-not $files) { Write-Host "[失败] 当前目录不是 git 仓库" -ForegroundColor Red; exit 1 }
+} else {
+    # 没有 git（例如直接下载 zip）：退化为扫描工作区，跳过 .env 与虚拟环境
+    Write-Host "[提示] 未找到 git，改为扫描工作区文件（跳过 .env / .venv）" -ForegroundColor Yellow
+    $files = Get-ChildItem $root -Recurse -File -Force |
+        Where-Object { $_.FullName -notmatch '\\\.git\\|\\\.venv\\' -and $_.Name -ne '.env' } |
+        ForEach-Object { $_.FullName.Substring($root.Length + 1) }
+}
 
 $bad = @()
 foreach ($f in $files) {
-    if ($f -match '(^|/)\.env$') { $bad += "$f  ← .env 被纳入版本控制"; continue }
+    if ($hasGit -and $f -match '(^|/)\.env$') { $bad += "$f  ← .env 被纳入版本控制"; continue }
     if (-not (Test-Path $f)) { continue }
     $item = Get-Item $f
     if ($item.Length -gt 2MB) { continue }
