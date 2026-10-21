@@ -1,89 +1,75 @@
-# QUICKSTART：三个案例的完整启动步骤
+# QUICKSTART：15 分钟跑起来
 
-> 全程 PowerShell 示例（macOS/Linux 把 `copy` 换成 `cp`、`.\\.venv\\Scripts\\Activate.ps1` 换成 `source .venv/bin/activate`）。
-> **前置：** Python 3.12；一个硅基流动（SiliconFlow）key。
+> 前置：**Python 3.12** + 一个 [硅基流动](https://siliconflow.cn) API key（同一个 key 覆盖对话、嵌入、重排）。
+> 全部命令在仓库根目录的 PowerShell 中执行。
 
-## 0. 公共准备（每个案例各做一次）
+## 第 1 步：安装（约 3 分钟）
 
 ```powershell
-cd <repo>
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
+.\scripts\setup.ps1
 ```
 
-每个案例目录都有一份 `requirements.txt` 与 `.env.example`：
+它会：建 `.venv` → 安装三个案例的依赖 → 为每个案例生成一份 `.env`（从根目录 `.env.example` 复制）。
+
+## 第 2 步：填 key（1 分钟）
+
+打开三个文件，把 `<YOUR_SILICONFLOW_KEY>` 换成你的 key：
+
+```
+cases\01-rag-qa\.env
+cases\02-nl2sql\.env
+cases\03-contract-review\.env
+```
+
+> `.env` 已在 `.gitignore` 中，不会被提交。
+
+## 第 3 步：体检（30 秒）
 
 ```powershell
+.\scripts\doctor.ps1
+```
+
+逐项输出 `[OK]` / `[WARN]` / `[FAIL]`：Python、`.env`、key、模型可用性、端口占用、索引与数据。
+**有 `[FAIL]` 就按提示修**，全部通过再往下走。
+
+## 第 4 步：启动
+
+```powershell
+.\scripts\run.ps1 -Case 1     # RAG 制度问答  → http://127.0.0.1:4180
+.\scripts\run.ps1 -Case 2     # NL2SQL 问数   → http://127.0.0.1:4181
+.\scripts\run.ps1 -Case 3     # 合同审查      → http://127.0.0.1:4182
+```
+
+第一次运行 `-Case 1` 会自动建索引（315 chunk，需要 key，约 1 分钟）；`-Case 2/3` 会自动生成数据库与合同（不需要 key）。
+
+端口被占用时：`.\scripts\run.ps1 -Case 1 -Port 5180`。
+
+## 第 5 步：验收（可选）
+
+```powershell
+.\scripts\verify.ps1              # 离线断言：语法、两案例数据断言、索引、密钥扫描
+.\scripts\verify.ps1 -WithNetwork # 额外做三案例各一次真实模型调用
+```
+
+## 手动方式（不用脚本）
+
+```powershell
+python -m venv .venv; .\.venv\Scripts\Activate.ps1
 cd cases\01-rag-qa
 pip install -r requirements.txt
-copy ..\..\.env.example .env
-notepad .env      # 把 SILICONFLOW_KEY 换成你自己的
+copy ..\..\.env.example .env     # 填 key
+python -m src.ingest
+python -m src.server
 ```
 
-## 1. 案例一：RAG 制度问答（4180）
+## 三个案例各看什么
 
-```powershell
-cd cases\01-rag-qa
-python -m src.ingest        # 重建索引（315 chunk / 2560 维；需 key）
-python -m src.server        # 打开 http://127.0.0.1:4180
-```
+| 案例 | 演示要点 | 预期 |
+|---|---|---|
+| 01 RAG | 引用与拒答边界 | 问"500 万以上采购"给引用并指出旧条款废止；问"员工婚假"应**拒答** |
+| 02 NL2SQL | 歧义反问与只读闸 | 问"营收"先反问口径；问"删除所有订单"被**拒绝** |
+| 03 合同审查 | 双引擎 + 定位到原文 | CT001 零风险；CT003 命中 R19/R02（开语义加 R20/R25）；点行左栏高亮原句 |
 
-自检（可选）：
+## 遇到问题
 
-```powershell
-python scripts\qa_checks.py     # 10 项实机检查
-python -m eval.run_eval         # 全量 208 条（无 judge，约 15 分钟）
-python -m eval.run_eval_v2      # 分层子集 80 条（judge，约 12 分钟）
-```
-
-**预期：** 健康徽标 `315 chunk / 12 文档 / 2560 维`；问"员工的婚假有多少天？"应**拒答**；问"500 万以上采购项目"应给引用并指出旧条款已废止。
-
-## 2. 案例二：NL2SQL 政企问数（4181）
-
-```powershell
-cd cases\02-nl2sql
-python -m scripts.gen_db        # 生成 db（8,584 行）
-python -m scripts.verify_db     # 11 项断言
-python -m src.server            # 打开 http://127.0.0.1:4181
-```
-
-自检（可选）：
-
-```powershell
-python -m scripts.test_safety   # 12 条安全闸
-python -m eval.run_eval         # 150 题主集（约 20 分钟）
-```
-
-**预期：** 问"今年的营收是多少"应先**反问口径**；问"删除所有订单"应被**拒绝**。
-
-## 3. 案例三：合同审查（4182）
-
-```powershell
-cd cases\03-contract-review
-python -m scripts.gen_contracts   # 30 份 docx（约 3 秒）
-python -m scripts.verify_data     # 10 项断言
-python -m src.server              # 打开 http://127.0.0.1:4182
-```
-
-自检（可选）：
-
-```powershell
-python -m scripts.qa_checks
-python -m eval.run_eval           # 指标评测
-```
-
-**预期：** CT001 零风险；CT003 命中 `R19/高`、`R02/中`（开语义再加 `R20/R25`）；点任一发现项，左侧原文面板跳到对应段落。
-
-## 常见问题
-
-| 现象 | 处理 |
-|---|---|
-| 嵌入维度不是 2560 | 你换过 `EMBED_MODEL`；必须 `python -m src.ingest` 重建索引，否则 `Index.load` 拒绝启动 |
-| 案例一答非所问 / 检索为空 | 索引没建或 key 无效；先跑 `src.ingest` 看是否报 `EmbeddingError` |
-| 端口被占用 | 设置 `PORT=4181` 等环境变量，或改 `.env` |
-| 中文乱码（PowerShell） | 文件均 UTF-8；`chcp 65001` 后重试 |
-| 案例三语义规则时有时无 | 语义判定依赖模型，**允许波动**；确定性 21 条稳定 |
-
-## 指标说明
-
-各案例 `qa-report.md` 里的数字是作者环境的一次性读数：**换模型/换网络后不可复现**。仓库只保证"流程与断言可复现"，不保证"数字相同"。
+见 **[FAQ.md](FAQ.md)**。本项目为静态教学标本，不接收 PR。

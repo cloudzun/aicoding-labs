@@ -1,0 +1,38 @@
+name: verify
+
+# 静态标本的"保险丝"：每次 push 只跑不需要 key 的离线断言。
+# 不跑联网评测（无 key、无成本），也不接收 PR。
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  offline:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 安装依赖与 .venv
+        shell: pwsh
+        run: ./scripts/setup.ps1
+
+      - name: 离线验收（语法 / 两案例数据断言 / 索引 / 密钥）
+        shell: pwsh
+        run: ./scripts/verify.ps1
+
+      - name: 仓库守卫（无 .env、体积 <10MB）
+        shell: pwsh
+        run: |
+          $envs = @(git ls-files | Where-Object { $_ -match '(^|/)\.env$' })
+          if ($envs.Count -gt 0) { throw ".env 被纳入版本控制：$($envs -join ', ')" }
+          $size = (Get-ChildItem . -Recurse -File -Force |
+                   Where-Object { $_.FullName -notmatch '\\\.git\\|\\.venv\\' } |
+                   Measure-Object Length -Sum).Sum
+          Write-Host ("仓库体积 {0:N2} MB" -f ($size / 1MB))
+          if ($size -gt 10MB) { throw "仓库超过 10MB 上限" }
