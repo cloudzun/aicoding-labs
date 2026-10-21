@@ -19,7 +19,21 @@ sys.path.insert(0, str(ROOT))
 from src import engine, pipeline  # noqa: E402
 from src.parse import parse_docx  # noqa: E402
 
-PORT = int(__import__("os").environ.get("PORT", "4182"))
+def _port() -> int:
+    """端口优先级：环境变量 PORT > .env 的 PORT > 4182。"""
+    import os
+    if "PORT" in os.environ:
+        return int(os.environ["PORT"])
+    env_file = ROOT / ".env"
+    if env_file.exists():
+        for line in env_file.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if line.startswith("PORT="):
+                return int(line.split("=", 1)[1].strip())
+    return 4182
+
+
+PORT = _port()
 WEB = ROOT / "web"
 UPLOADS = ROOT / "data" / "uploads"
 TRACES = ROOT / "data" / "traces"

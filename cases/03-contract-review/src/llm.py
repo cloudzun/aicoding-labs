@@ -24,10 +24,26 @@ def _env() -> dict[str, str]:
 
 
 CFG = {**_env(), **os.environ}
-BASE = CFG.get("MAGPIE_BASE", "http://127.0.0.1:3425").rstrip("/")
-KEY = CFG.get("MAGPIE_KEY", "magpie")
-MODEL_MAIN = CFG.get("MODEL_MAIN", "opencode-go/gpt-6-luna")
-MODEL_SEMANTIC = CFG.get("MODEL_SEMANTIC", "opencode-go/deepseek-v4.1-flash")
+# ---- 供应商：siliconflow（公网，默认）| magpie（内网可选）----
+PROVIDER = str(CFG.get("LLM_PROVIDER", "siliconflow")).strip().lower()
+_SF_BASE = str(CFG.get("SILICONFLOW_BASE", "https://api.siliconflow.cn/v1")).rstrip("/")
+_SF_KEY = str(CFG.get("SILICONFLOW_KEY", ""))
+_MAGPIE_BASE = str(CFG.get("MAGPIE_BASE", "http://127.0.0.1:3425")).rstrip("/")
+_MAGPIE_KEY = str(CFG.get("MAGPIE_KEY", "magpie"))
+_BASE = str(CFG.get("LLM_BASE", _MAGPIE_BASE if PROVIDER == "magpie" else _SF_BASE)).rstrip("/")
+BASE = _BASE if _BASE.endswith("/v1") else _BASE + "/v1"
+KEY = str(CFG.get("LLM_KEY", _MAGPIE_KEY if PROVIDER == "magpie" else _SF_KEY))
+MODEL_MAIN = str(
+    CFG.get("MODEL_MAIN", "opencode-go/gpt-6-luna" if PROVIDER == "magpie" else "Qwen/Qwen2.5-72B-Instruct")
+)
+MODEL_SEMANTIC = str(
+    CFG.get("MODEL_SEMANTIC", "opencode-go/deepseek-v4.1-flash" if PROVIDER == "magpie" else "deepseek-ai/DeepSeek-V3")
+)
+
+
+def chat_extra(effort: str = "none") -> dict:
+    """magpie 专有的 reasoning_effort 只在 magpie 档发送；公网 API 可能拒绝未知字段。"""
+    return {"reasoning_effort": effort} if PROVIDER == "magpie" else {}
 
 
 class LLMError(RuntimeError):
@@ -37,9 +53,9 @@ class LLMError(RuntimeError):
 def chat(messages: list[dict], model: str | None = None, effort: str = "none",
          max_tokens: int = 1500, timeout_s: float = 60) -> dict:
     payload = {"model": model or MODEL_MAIN, "messages": messages,
-               "max_tokens": max_tokens, "reasoning_effort": effort, "stream": False}
+               "max_tokens": max_tokens, **chat_extra(effort), "stream": False}
     try:
-        r = httpx.post(f"{BASE}/v1/chat/completions", json=payload,
+        r = httpx.post(f"{BASE}/chat/completions", json=payload,
                        headers={"Authorization": f"Bearer {KEY}"}, timeout=timeout_s)
         r.raise_for_status()
         try:

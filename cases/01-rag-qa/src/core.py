@@ -42,31 +42,72 @@ def cfg(key: str, default: str = "") -> str:
     return CFG.get(key, default)
 
 
+# ---- 供应商：siliconflow（公网，默认）| magpie（内网可选）----
+PROVIDER = cfg("LLM_PROVIDER", "siliconflow").strip().lower()
 MAGPIE_BASE = cfg("MAGPIE_BASE", "http://127.0.0.1:3425").rstrip("/")
 MAGPIE_KEY = cfg("MAGPIE_KEY", "magpie")
 SF_BASE = cfg("SILICONFLOW_BASE", "https://api.siliconflow.cn/v1").rstrip("/")
 SF_KEY = cfg("SILICONFLOW_KEY", "")
-MODEL_MAIN = cfg("MODEL_MAIN", "opencode-go/gpt-6-luna")
-MODEL_JUDGE = cfg("MODEL_REASONER", "opencode-go/deepseek-v4.1-flash")
-EMBED_MODEL = cfg("EMBED_MODEL", "BAAI/bge-m3")
-RERANK_MODEL = cfg("RERANK_MODEL", "BAAI/bge-reranker-v2-m3")
+CHAT_BASE = cfg("LLM_BASE", MAGPIE_BASE if PROVIDER == "magpie" else SF_BASE).rstrip("/")
+CHAT_KEY = cfg("LLM_KEY", MAGPIE_KEY if PROVIDER == "magpie" else SF_KEY)
+
+
+def _with_v1(base: str) -> str:
+    """统一把 base 规范成 .../v1（chat / embeddings / rerank 都在其下）。"""
+    base = (base or "").rstrip("/")
+    return base if base.endswith("/v1") else base + "/v1"
+
+
+CHAT_BASE = _with_v1(CHAT_BASE)
+
+# 各供应商的默认模型：只切供应商、不改 .env 时，至少落到该供应商真实存在的模型上。
+_DEFAULT_MODELS = {
+    "siliconflow": {
+        "main": "Qwen/Qwen2.5-72B-Instruct",
+        "judge": "deepseek-ai/DeepSeek-V3",
+        "embed": "Qwen/Qwen3-Embedding-4B",
+        "rerank": "Qwen/Qwen3-Reranker-4B",
+    },
+    "magpie": {
+        "main": "opencode-go/gpt-6-luna",
+        "judge": "opencode-go/deepseek-v4.1-flash",
+        "embed": "siliconflow/Qwen/Qwen3-Embedding-4B",
+        "rerank": "siliconflow/Qwen/Qwen3-Reranker-4B",
+    },
+}
+_D = _DEFAULT_MODELS.get(PROVIDER, _DEFAULT_MODELS["siliconflow"])
+MODEL_MAIN = cfg("MODEL_MAIN", _D["main"])
+MODEL_JUDGE = cfg("MODEL_REASONER", _D["judge"])
+EMBED_MODEL = cfg("EMBED_MODEL", _D["embed"])
+RERANK_MODEL = cfg("RERANK_MODEL", _D["rerank"])
 TOP_K = int(cfg("TOP_K", "5"))
 
-# 嵌入/重排端点可独立配置：默认沿用硅基流动直连；
-# 若模型改为 magpie 上的 siliconflow/*，把 EMBED_BASE/RERANK_BASE 指向 magpie 即可统一入口。
-EMBED_BASE = cfg("EMBED_BASE", SF_BASE).rstrip("/")
-EMBED_KEY = cfg("EMBED_KEY", SF_KEY)
-RERANK_BASE = cfg("RERANK_BASE", SF_BASE).rstrip("/")
-RERANK_KEY = cfg("RERANK_KEY", SF_KEY)
+# 嵌入/重排端点可独立配置：默认沿用所选供应商；
+# magpie 档下统一指向网关 /v1（模型名带 siliconflow/ 前缀）。
+_EMBED_DEFAULT = MAGPIE_BASE if PROVIDER == "magpie" else SF_BASE
+_EMBED_KEY_DEFAULT = MAGPIE_KEY if PROVIDER == "magpie" else SF_KEY
+EMBED_BASE = _with_v1(cfg("EMBED_BASE", _EMBED_DEFAULT))
+EMBED_KEY = cfg("EMBED_KEY", _EMBED_KEY_DEFAULT)
+RERANK_BASE = _with_v1(cfg("RERANK_BASE", _EMBED_DEFAULT))
+RERANK_KEY = cfg("RERANK_KEY", _EMBED_KEY_DEFAULT)
 
 DENSE_TOP_N = 30
 SPARSE_TOP_N = 30
 RERANK_TOP_N = 20
 RRF_K = 60
-MIN_RERANK_SCORE = 0.30
+# 重排分数阈值：换重排模型/供应商后分布会变，用 .env 覆盖并重新校准（见 docs/11-操作手册.md）。
+MIN_RERANK_SCORE = float(cfg("MIN_RERANK_SCORE", "0.30"))
 GEN_TIMEOUT_S = 15.0
 CHUNKER_VERSION = "1.0"
 PORT = int(cfg("PORT", "4180"))
+
+
+def chat_extra(effort: str = "none") -> dict:
+    """magpie 专有的 reasoning_effort 只在 magpie 档发送。
+
+    公网 OpenAI 兼容 API 对未知字段可能直接 400，因此非 magpie 档不发送该参数。
+    """
+    return {"reasoning_effort": effort} if PROVIDER == "magpie" else {}
 
 
 def ensure_dirs() -> None:

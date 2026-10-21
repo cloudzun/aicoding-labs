@@ -15,16 +15,17 @@ from collections.abc import Iterator
 import httpx
 
 from .core import (
+    CHAT_BASE,
+    CHAT_KEY,
     GEN_TIMEOUT_S,
-    MAGPIE_BASE,
-    MAGPIE_KEY,
     MODEL_JUDGE,
     MODEL_MAIN,
+    chat_extra,
 )
 
 
 def _headers() -> dict[str, str]:
-    return {"Authorization": f"Bearer {MAGPIE_KEY}", "Content-Type": "application/json"}
+    return {"Authorization": f"Bearer {CHAT_KEY}", "Content-Type": "application/json"}
 
 
 def stream_chat(
@@ -39,7 +40,7 @@ def stream_chat(
         "model": model,
         "messages": messages,
         "max_tokens": max_tokens,
-        "reasoning_effort": effort,
+        **chat_extra(effort),
         "stream": True,
     }
     t0 = time.perf_counter()
@@ -50,7 +51,7 @@ def stream_chat(
     try:
         with httpx.stream(
             "POST",
-            f"{MAGPIE_BASE}/v1/chat/completions",
+            f"{CHAT_BASE}/chat/completions",
             json=payload,
             headers=_headers(),
             timeout=timeout_s,
@@ -107,12 +108,12 @@ def chat(
         "model": model,
         "messages": messages,
         "max_tokens": max_tokens,
-        "reasoning_effort": effort,
+        **chat_extra(effort),
         "stream": False,
     }
     t0 = time.perf_counter()
     r = httpx.post(
-        f"{MAGPIE_BASE}/v1/chat/completions", json=payload, headers=_headers(), timeout=timeout_s
+        f"{CHAT_BASE}/chat/completions", json=payload, headers=_headers(), timeout=timeout_s
     )
     dt = time.perf_counter() - t0
     r.raise_for_status()
