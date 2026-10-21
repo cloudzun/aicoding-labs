@@ -28,7 +28,7 @@
 
 | 现象 | 处理 |
 |---|---|
-| `[Errno 10048] address already in use` | `.\scripts\doctor.ps1` 会列出占用端口；在对应 `.env` 改 `PORT`，或 `.\scripts\run.ps1 -Case 1 -Port 5180` |
+| 端口被占用（`[Errno 10048]`）/ 想一次停掉所有服务 | `.\scripts\demo-control.ps1 status` 看端口与 PID，`stop` 一键停（只杀本项目服务）；在对应 `.env` 改 `PORT`，或 `.\scripts\run.ps1 -Case 1 -Port 5180` |
 | 打开页面但接口全报错 | 服务窗口是否还在？`/api/health` 是否正常？ |
 | `ModuleNotFoundError: src` | 要在**案例目录内**运行 `python -m src.server`，或用 `run.ps1` |
 | `标记"&&"不是此版本中的有效语句分隔符` | Windows PowerShell 5.1 不支持 `&&`（PS 7+ 才有）。逐行执行，或用 `;` 分隔，或装 PowerShell 7 |

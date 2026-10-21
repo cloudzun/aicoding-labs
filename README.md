@@ -17,7 +17,7 @@
 | [`cases/01-rag-qa/`](cases/01-rag-qa) · [`cases/02-nl2sql/`](cases/02-nl2sql) · [`cases/03-contract-review/`](cases/03-contract-review) | 三个可运行案例：语料/数据生成、评测、Web UI；各有 `README.md` 与 `qa-report.md` |
 | [`labs/`](labs/README.md) | 手册体例与待写计划、体验步骤、评审记录（三本实验手册**待写**）；`labs/scripts/smoke-*.ps1` 是三个现成的验收脚本 |
 | [`docs/`](docs/README.md) | 方法层文档（八环、性能分析、复盘等），入口见 [`docs/README.md`](docs/README.md) |
-| `scripts/` | 一键脚本：`setup` / `doctor` / `run` / `verify` / `check-secrets` |
+| `scripts/` | 一键脚本：`setup` / `doctor` / `run` / `verify` / `check-secrets` / `demo-control` |
 
 ## 环境要求
 
@@ -45,6 +45,7 @@
 | `scripts/run.ps1 -Case 1/2/3` | 启动对应案例；缺数据时自动生成（`-Port` 可换端口） |
 | `scripts/verify.ps1` | 离线断言（语法/两案例数据断言/索引存在则校验/密钥扫描）；`-WithNetwork` 加三案例真实模型调用 |
 | `scripts/check-secrets.ps1` | 提交前扫描真实密钥（CI 同款） |
+| `scripts/demo-control.ps1` | 一键启停/状态：`status` / `start` / `stop` / `restart`（后台运行，`-Case 1` 只操作单个；`stop` 只杀本项目服务） |
 | `labs/scripts/smoke-*.ps1` | 服务启动后的 5 分钟验收（HTTP 断言），用法见 [QUICKSTART](QUICKSTART.md) 第 5 步 |
 
 ## 配置（双轨）

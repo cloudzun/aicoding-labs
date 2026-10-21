@@ -61,6 +61,20 @@ cases\03-contract-review\.env
 
 端口不是默认值时加 `-Port`，例如 `.\labs\scripts\smoke-rag.ps1 -Port 5180`。脚本只做断言；但案例二/三的 smoke 会确定性重建 `data/aicoding.db` 与 30 份合同，跑完 `git status` 可能出现生成物改动，属正常（生成物已在 `.gitignore`）。全过退出码 0，末尾打印 `RESULT`。
 
+## 停止与重启（后台运行）
+
+`run.ps1` 是前台进程（Ctrl+C 停止）。如果想**后台跑、随时看状态、一键全停**：
+
+```powershell
+.\scripts\demo-control.ps1 status      # 端口 / PID / 内存 / 健康 / 运行时长
+.\scripts\demo-control.ps1 start       # 后台启动三个案例（缺数据会先生成）
+.\scripts\demo-control.ps1 stop        # 只停本项目服务，不会误杀其他 python
+.\scripts\demo-control.ps1 restart     # 演示前推荐：干净重启
+.\scripts\demo-control.ps1 restart -Case 1
+```
+
+实测：本机三个服务合计占内存约 0.14–0.38 GB，空闲 CPU 接近 0；停掉不影响数据（索引、数据库、合同都在磁盘上，下次 `start` 直接可用）。日志在各案例 `evidence/server-out.txt`（不随仓库分发）。
+
 ## 手动方式（不用脚本）
 
 ```powershell
