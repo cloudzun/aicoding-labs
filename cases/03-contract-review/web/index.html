@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>合同审查 · demo</title>
+<style>
+  :root{--bg:#f7f8fa;--panel:#fff;--line:#e3e6ea;--text:#1f2329;--muted:#6b7280;--brand:#1a5fb4;--warn:#fff7e6;--warnline:#f0c36d;--ok:#e8f5e9;--bad:#fdecec}
+  *{box-sizing:border-box}
+  body{margin:0;font:15px/1.6 "Segoe UI","Microsoft YaHei",system-ui,sans-serif;background:var(--bg);color:var(--text)}
+  header{padding:14px 22px;background:var(--panel);border-bottom:1px solid var(--line);display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  header h1{font-size:16px;margin:0}
+  .badge{font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 10px}
+  #banner{background:var(--warn);border-bottom:1px solid var(--warnline);padding:8px 22px;font-size:12.5px;color:#7a5b18}
+  main{max-width:1440px;margin:0 auto;padding:18px 22px 40px}
+  .layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:16px;align-items:start}
+  @media(max-width:1000px){.layout{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;margin-bottom:14px;overflow:hidden}
+  .card h2{font-size:13px;margin:0;padding:10px 14px;border-bottom:1px solid var(--line);color:var(--muted);font-weight:600;letter-spacing:.03em}
+  .card .body{padding:12px 14px}
+  textarea{width:100%;height:64px;padding:12px;border:1px solid var(--line);border-radius:8px;font:inherit;resize:vertical;outline:none}
+  .row{display:flex;gap:10px;margin-top:10px;align-items:center;flex-wrap:wrap}
+  button{padding:8px 18px;border:0;border-radius:8px;background:var(--brand);color:#fff;font:inherit;cursor:pointer}
+  button:disabled{background:#9db4d4;cursor:default}
+  pre{margin:0;padding:10px 12px;background:#0f172a;color:#e2e8f0;border-radius:8px;overflow:auto;font:12.5px/1.55 Consolas,monospace}
+  table{border-collapse:collapse;width:100%;font-size:13px}
+  th,td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+  th{background:#f4f7fb;color:#374151;font-weight:600}
+  .kv{display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
+  .chip{display:inline-block;font-size:12px;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 4px 2px 0;background:#f9fafb}
+  .clar{background:#eef4ff;border:1px solid #b9d2f5;border-radius:8px;padding:10px 12px}
+  .rej{background:var(--bad);border:1px solid #f3b6b6;border-radius:8px;padding:10px 12px;color:#8a1f1f}
+  .lv{border-radius:6px;padding:1px 7px;font-size:12px;display:inline-block;margin-right:2px}
+  .lv-高{background:#fdecec;color:#8a1f1f}
+  .lv-中{background:#fff7e6;color:#8a5a00}
+  .lv-低{background:#eef4ff;color:#12447f}
+  .nd{color:#8a1f1f;font-size:11.5px;margin-top:2px}
+  .q{border-left:3px solid #b9d2f5;padding-left:8px;color:#374151}
+  /* 原文面板 */
+  #docCard{position:sticky;top:12px}
+  #doc{max-height:70vh;overflow:auto;font-size:13px;line-height:1.8}
+  #doc .p{margin:0 0 6px;padding:3px 6px;border-radius:5px}
+  #doc .p .no{color:#9aa3af;font-size:11px;margin-right:6px;user-select:none}
+  #doc .p.active{background:#eaf2ff;box-shadow:inset 2px 0 0 var(--brand)}
+  #doc .p.hit{background:#fff7e0}
+  #doc mark{background:#ffe58a;padding:0 1px;border-radius:2px}
+  #docNote{border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+  tr.f-row{cursor:pointer}
+  tr.f-row:hover td{background:#f7fafd}
+  tr.f-row.sel td{background:#eaf2ff}
+</style>
+</head>
+<body>
+<header>
+  <h1>合同审查</h1>
+  <span class="badge" id="health">连接中…</span>
+  <span class="badge">双引擎：确定性 21 条 + 语义 6 条</span>
+  <span class="badge">报告含定位与原文引用</span>
+</header>
+<div id="banner">
+  <b>合规声明：</b>全部合同为<b>程序生成的虚构文本</b>，不含任何真实企业与个人信息；语义判定经本地网关 magpie（上游云端模型）。本工具只做<b>清单式检查与提示</b>，不构成法律意见。
+</div>
+
+<main>
+  <div class="layout">
+    <section class="card" id="docCard">
+      <h2>合同原文 <span id="docMeta" class="kv" style="display:inline"></span></h2>
+      <div class="body" id="doc">
+        <span style="color:var(--muted);font-size:13px">选择合同后自动加载…</span>
+      </div>
+      <div class="body" id="docNote">页号按每页约 40 段估算，非真实排版分页</div>
+    </section>
+
+    <div class="col">
+      <section class="card">
+        <h2>选择合同</h2>
+        <div class="body">
+          <div class="row">
+            <select id="cid"></select>
+            <button id="go">开始审查</button>
+            <label class="kv"><input type="checkbox" id="sem" checked /> 启用语义规则（LLM）</label>
+            <span class="kv" id="status"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="sumCard" style="display:none">
+        <h2>摘要</h2>
+        <div class="body"><div class="row" id="sum"></div></div>
+      </section>
+
+      <section class="card" id="findCard" style="display:none">
+        <h2>发现的问题 <span class="kv" style="display:inline">点击任意一行可定位到左侧原文</span></h2>
+        <div class="body" style="overflow:auto"><table id="tbl"></table></div>
+      </section>
+
+      <section class="card" id="metaCard" style="display:none">
+        <h2>覆盖率与运行信息</h2>
+        <div class="body"><div id="cov"></div><div class="kv" id="meta" style="margin-top:8px"></div></div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<script>
+// 兼容两种写法：'#id' 与裸 'id'（show() 传的是裸 id）
+const $ = s => document.querySelector(s.startsWith('#') ? s : '#' + s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let busy = false;
+let docParas = [];
+let lastFindings = [];
+
+/* ---------- 合同原文面板（2026-10-21 新增） ---------- */
+async function loadDoc(cid){
+  const box = $('#doc'), meta = $('#docMeta'), note = $('#docNote');
+  if(!cid){ return; }
+  box.innerHTML = '<span style="color:var(--muted);font-size:13px">加载原文…</span>';
+  try{
+    const r = await fetch('/api/contract/' + encodeURIComponent(cid) + '/text');
+    if(!r.ok){
+      docParas = [];
+      box.innerHTML = '<span style="color:#8a1f1f;font-size:13px">未找到该合同原文（仅 CT001–CT030 支持预览）</span>';
+      meta.textContent = ''; note.textContent = '';
+      return;
+    }
+    const d = await r.json();
+    docParas = d.paras || [];
+    meta.textContent = `${d.contract_id} · ${d.n_paras} 段 · 约 ${d.pages_estimated} 页`;
+    note.textContent = (d.pages_note || '') + ' · 点击右侧「发现的问题」可定位到对应段落';
+    box.innerHTML = docParas.map(p =>
+      `<p class="p" data-idx="${p.idx}" title="第 ${p.page} 页（估算）"><span class="no">§${p.idx}</span><span class="tx">${esc(p.text)}</span></p>`
+    ).join('');
+  } catch(e){
+    box.innerHTML = '<span style="color:#8a1f1f;font-size:13px">原文加载失败：' + esc(String(e)) + '</span>';
+  }
+}
+
+function resetDocMarks(){
+  document.querySelectorAll('#doc .p').forEach(p => {
+    p.classList.remove('active','hit');
+    const hit = docParas.find(x => String(x.idx) === p.dataset.idx);
+    const tx = p.querySelector('.tx');
+    if(hit && tx){ tx.innerHTML = esc(hit.text); }
+  });
+}
+
+/* 定位：优先用 evidence 精确匹配；否则用 char_offset + 句末截断；推断位置只标注不高亮 */
+function locateFinding(f){
+  resetDocMarks();
+  const loc = f.locator || {};
+  const note = $('#docNote');
+  if(loc.para == null){
+    note.textContent = '该发现项没有可定位的段落（条款整体缺失或无法定位）';
+    $('#doc').scrollTop = 0;
+    return;
+  }
+  const paraEl = document.querySelector(`#doc .p[data-idx="${loc.para}"]`);
+  if(!paraEl){
+    note.textContent = '定位段落不在当前原文中（可能是上传件或索引不一致）';
+    return;
+  }
+  paraEl.classList.add('active');
+  const tx = paraEl.querySelector('.tx');
+  const raw = tx ? tx.textContent : '';
+
+  let start = -1, len = 0;
+  // 语义规则的 evidence 是命中句 → 精确高亮；
+  // 确定性规则的 evidence 常等于整段 → 覆盖大半段落时不整段高亮，改用 char_offset 取到句末。
+  if(f.evidence){
+    const ev = String(f.evidence);
+    const i = raw.indexOf(ev.slice(0, 30));
+    const coversMost = ev.length > Math.max(60, raw.length * 0.6);
+    if(i >= 0 && !coversMost){ start = i; len = ev.length; }
+  }
+  if(start < 0 && typeof loc.char_offset === 'number' && loc.char_offset >= 0){
+    start = loc.char_offset;
+    const rest = raw.slice(start);
+    const m = rest.match(/^[^。；;\n]{1,60}/);
+    len = m ? m[0].length : Math.min(60, rest.length);
+  }
+
+  if(loc.inferred){
+    paraEl.classList.add('hit');
+    note.textContent = '推断位置：该条款在原文中未找到，这里是缺失处附近（非原文命中）';
+  } else if(tx && start >= 0 && len > 0){
+    tx.innerHTML = esc(raw.slice(0, start)) + '<mark>' + esc(raw.slice(start, start + len)) + '</mark>' + esc(raw.slice(start + len));
+    paraEl.classList.add('hit');
+    note.textContent = `已定位：第 ${loc.page ?? 1} 页（估算）/ 段 ${loc.para} / 偏移 ${loc.char_offset ?? 0}`;
+  } else {
+    paraEl.classList.add('hit');
+    note.textContent = '已定位到段落；原文中未能精确匹配到片段';
+  }
+  paraEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+/* ---------- 列表与审查 ---------- */
+async function loadList(){
+  const list = await (await fetch('/api/contracts')).json();
+  $('#cid').innerHTML = list.map(c => `<option value="${esc(c.contract_id)}">${esc(c.contract_id)}（${esc(c.file)}）</option>`).join('');
+  if(list.length){ await loadDoc(list[0].contract_id); }
+}
+
+async function review(){
+  if(busy) return; busy = true; $('#go').disabled = true;
+  $('#status').textContent = '审查中…（语义规则需调用模型，约 5–15 秒）';
+  ['sumCard','findCard','metaCard'].forEach(s => $(s).style.display='none');
+  resetDocMarks();
+  try{
+    const r = await fetch('/api/review', {method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({contract_id: $('#cid').value, with_semantic: $('#sem').checked})});
+    if(!r.ok){ alert('审查失败：' + await r.text()); return; }
+    const d = await r.json();
+    lastFindings = d.findings || [];
+    const s = d.summary;
+    $('#sum').innerHTML = ['高','中','低'].map(k => `<span class="lv lv-${k}">${k} ${s[k]}</span>`).join(' ') +
+      ` <span class="badge">必查缺失 ${s['必查缺失']}</span><span class="badge">${d.pages_estimated} 页（估算）</span>`;
+    $('#sumCard').style.display='block';
+
+    $('#tbl').innerHTML = '<thead><tr><th>等级</th><th>规则</th><th>类别</th><th>位置</th><th>原文引用 / 判定依据</th><th>建议</th></tr></thead><tbody>' +
+      lastFindings.map((f, i) => `<tr class="f-row" data-fidx="${i}">
+        <td><span class="lv lv-${esc(f.level)}">${esc(f.level)}</span></td>
+        <td><b>${esc(f.rule_id)}</b> ${esc(f.title)}${f.detected ? '' : '<div class="nd">未取得判定依据（≠合规）</div>'}</td>
+        <td>${esc(f.category)}<div class="kv">${esc(f.detector)}</div></td>
+        <td>${f.locator ? `第 ${esc(f.locator.page)} 页 / 段 ${esc(f.locator.para)} / 偏移 ${esc(f.locator.char_offset)}${f.locator.inferred ? '<div class="kv">（推断位置）</div>' : ''}` : '—'}</td>
+        <td>${f.evidence ? `<div class="q">${esc(f.evidence)}</div>` : ''}<div class="kv">${esc(f.reason)}</div></td>
+        <td>${esc(f.remediation)}</td></tr>`).join('') + '</tbody>';
+    $('#findCard').style.display='block';
+    document.querySelectorAll('#tbl tbody tr.f-row').forEach(tr => {
+      tr.addEventListener('click', () => {
+        document.querySelectorAll('#tbl tbody tr.f-row').forEach(x => x.classList.remove('sel'));
+        tr.classList.add('sel');
+        locateFinding(lastFindings[Number(tr.dataset.fidx)]);
+      });
+    });
+
+    const c = d.coverage;
+    $('#cov').innerHTML = `<div class="kv">规则总数 <b>${c.rules_total}</b> · 已取得依据 <b>${c.rules_checked}</b> · 未取得依据 <b>${c.not_detected.length}</b> ${c.not_detected.length? '('+c.not_detected.join(', ')+')':''}</div>
+      <div class="kv" style="margin-top:6px">${esc(c.note)}</div>`;
+    const t = d.meta.timings_ms || {};
+    $('#meta').innerHTML = `规则版本 ${esc(d.meta.rule_version)} · 解析 ${t.parse}ms · 确定性 ${t.deterministic}ms · 语义 ${t.semantic}ms · 总计 ${d.meta.elapsed_ms}ms · review_id ${esc(d.review_id)}`;
+    $('#metaCard').style.display='block';
+  } catch(e){ alert('网络错误：'+e); }
+  finally { busy = false; $('#go').disabled = false; $('#status').textContent=''; }
+}
+
+$('#go').onclick = review;
+$('#cid').addEventListener('change', () => loadDoc($('#cid').value));
+loadList().catch(()=>{});
+fetch('/api/health').then(r=>r.json()).then(h=>{
+  $('#health').textContent = `规则 v${h.rule_version} · ${h.rules} 条 · ${h.contracts} 份合同`;
+}).catch(()=>{ $('#health').textContent='健康检查失败'; });
+</script>
+</body>
+</html>

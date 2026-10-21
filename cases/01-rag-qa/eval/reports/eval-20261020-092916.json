@@ -1,0 +1,679 @@
+{
+  "generated_at": "2026-10-20T09:29:16+08:00",
+  "mode": {
+    "judge": false,
+    "refusal_mode": false,
+    "model": "opencode-go/gpt-6-luna",
+    "judge_model": "opencode-go/deepseek-v4.1-flash"
+  },
+  "n_total": 24,
+  "n_answerable": 24,
+  "n_unanswerable": 0,
+  "recall_at_5": 0.9167,
+  "recall_at_5_all_gold": 0.875,
+  "accuracy_correct": null,
+  "accuracy_partial": null,
+  "faithfulness": null,
+  "hallucination_rate": null,
+  "refusal_rate": null,
+  "misrefusal_rate": 0.0,
+  "citation_ok_rate": 1.0,
+  "ttft_p50_ms": 1501.5,
+  "ttft_p95_ms": 2640.4,
+  "elapsed_p50_ms": 3039.0,
+  "elapsed_p95_ms": 4540.2,
+  "n_latency_samples": 24,
+  "by_split": {
+    "conflict_or_stale": {
+      "n": 8,
+      "recall_hit": 1.0,
+      "refused": 0.0,
+      "correct": null
+    },
+    "single_hop": {
+      "n": 16,
+      "recall_hit": 0.875,
+      "refused": 0.0,
+      "correct": null
+    }
+  },
+  "errors": [],
+  "invalid_citation_examples": [],
+  "results": [
+    {
+      "qid": "h-01",
+      "split": "conflict_or_stale",
+      "answerable": true,
+      "question": "单笔采购金额500万元以上的采购项目，需要提交什么会议审议？",
+      "gold_chunk_ids": [
+        "zdcg-2025-004#c011",
+        "zdcg-2025-004#c026",
+        "zdcg-2023-001#c013"
+      ],
+      "retrieved": [
+        "zdcg-2025-004#c011",
+        "zdcg-2025-004#c008",
+        "zdcg-2025-004#c014",
+        "zdcg-2023-001#c013",
+        "zdcg-2025-004#c017"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": false,
+      "answer": "结论：单笔采购金额在500万元以上的采购项目，其采购方式、采购文件和采购结果应提交总经理办公会审议。[c01]\n\n现行《采购审批权限实施细则》自2025年3月1日起施行；《采购管理办法》第十二条关于采购审批权限的规定已同时废止。[c08]",
+      "refused": false,
+      "ttft_ms": 1597,
+      "elapsed_ms": 2660,
+      "invalid_citations": [],
+      "timed_out": false
+    },
+    {
+      "qid": "h-02",
+      "split": "conflict_or_stale",
+      "answerable": true,
+      "question": "中标供应商应在多少天内与公司签订书面合同？",
+      "gold_chunk_ids": [
+        "zdcg-2023-001#c019",
+        "zdcg-2024-003#c010"
+      ],
+      "retrieved": [
+        "zdcg-2023-001#c019",
+        "zdcg-2024-003#c010",
+        "zdcg-2024-003#c011",
+        "zdcg-2024-003#c005",
+        "zdcg-2023-001#c014"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "结论：材料中存在期限冲突，无法确定唯一的签约期限，需向采购与供应链部确认。\n\n《采购管理办法》规定，中标通知书发出之日起30日内签订书面合同；逾期视为放弃中标资格。[c01]《采购合同管理细则》规定，中标通知书发出之日起15个工作日内签订；因不可抗力或双方书面协商一致，可延长不超过10个工作日。[c02] 两项材料未提供可判断哪项规定优先或更新的生效信息，因此不能直接择一作为现行期限。",
+      "refused": false,
+      "ttft_ms": 1318,
+      "elapsed_ms": 3652,
+      "invalid_citations": [],
+      "timed_out": false
+    },
+    {
+      "qid": "h-03",
+      "split": "conflict_or_stale",
+      "answerable": true,
+      "question": "单笔资金支付达到多少金额需要报总经理审批？",
+      "gold_chunk_ids": [
+        "zdcw-2023-005#c009",
+        "zdcw-2023-005#c020"
+      ],
+      "retrieved": [
+        "zdcw-2023-005#c009",
+        "zdcw-2023-005#c020",
+        "zdcg-2025-004#c014",
+        "zdcw-2024-006#c016",
+        "zdcg-2023-001#c007"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "**按资金支付金额口径，单笔支付达到200万元以上（含200万元）的，须经总会计师审核后报总经理审批。**[c01]\n\n另有“大额支付”规定：单笔金额在300万元以上的，须经总会计师审核后报总经理审批，并在支付完成后5个工作日内报总经理办公会备案。[c02] **两条规定的门槛不同，存在口径差异；请向财务部门确认具体适用口径。**",
+      "refused": false,
+      "ttft_ms": 1405,
+      "elapsed_ms": 3236,
+      "invalid_citations": [],
+      "timed_out": false
+    },
+    {
+      "qid": "h-04",
+      "split": "conflict_or_stale",
+      "answerable": true,
+      "question": "发生重大通信故障后，应在多长时间内上报省公司网络运行维护中心？",
+      "gold_chunk_ids": [
+        "zdww-2023-010#c015",
+        "zdww-2023-010#c027"
+      ],
+      "retrieved": [
+        "zdww-2023-010#c027",
+        "zdww-2023-010#c015",
+        "zdww-2024-011#c021",
+        "zdww-2023-010#c030",
+        "zdww-2023-010#c020"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "重大故障信息应自故障确认之日起30分钟内报送省公司网络运行维护中心。[c01]",
+      "refused": false,
+      "ttft_ms": 1533,
+      "elapsed_ms": 2350,
+      "invalid_citations": [],
+      "timed_out": false
+    },
+    {
+      "qid": "h-05",
+      "split": "conflict_or_stale",
+      "answerable": true,
+      "question": "履约保证金什么时候提交，什么时候退还？",
+      "gold_chunk_ids": [
+        "zdcg-2023-001#c020"
+      ],
+      "retrieved": [
+        "zdcg-2023-001#c020",
+        "zdcg-2023-002#c014",
+        "zdcg-2024-003#c021",
+        "zdcg-2024-003#c013",
+        "zdcg-2024-003#c012"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "结论：中标供应商应提交合同金额5%的履约保证金；履约期满且无违约情形的，由采购与供应链部办理退还手续。材料未说明具体应在何时提交，资料不足，建议咨询采购与供应链部确认提交时间。[c01]",
+      "refused": false,
+      "ttft_ms": 1420,
+      "elapsed_ms": 2656,
+      "invalid_citations": [],
+      "timed_out": false
+    },
+    {
+      "qid": "h-06",
+      "split": "conflict_or_stale",
+      "answerable": true,
+      "question": "员工对申诉处理结论不服，应向哪个部门申请复核？",
+      "gold_chunk_ids": [
+        "zdrl-2025-009#c015"
+      ],
+      "retrieved": [
+        "zdrl-2025-009#c015",
+        "zdrl-2025-009#c005",
+        "zdrl-2025-009#c016",
+        "zdcg-2023-002#c018",
+        "zdrl-2025-009#c008"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "员工可以向公司有关部门提出复核申请；材料未具体指定复核部门，需咨询公司相关部门确认。[c01]",
+      "refused": false,
+      "ttft_ms": 1407,
+      "elapsed_ms": 2653,
+      "invalid_citations": [],
+      "timed_out": false
+    },
+    {
+      "qid": "h-07",
+      "split": "conflict_or_stale",
+      "answerable": true,
+      "question": "供应商管理实施细则现在还有效吗？",
+      "gold_chunk_ids": [
+        "zdcg-2023-002#c027"
+      ],
+      "retrieved": [
+        "zdcg-2023-002#c001",
+        "zdcg-2023-002#c027",
+        "zdcg-2023-002#c003",
+        "zdcg-2025-004#c026",
+        "zdcg-2024-003#c024"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "**资料不足，无法确认该细则现在是否仍有效。**\n\n该细则自2024年1月1日起施行，试行期两年，试行期满后由采购与供应链部组织评估并根据评估结果修订。[c01][c02] 材料未说明试行期满后的评估结果、是否修订或是否继续施行，因此无法判定其当前效力；建议咨询采购与供应链部确认。",
+      "refused": false,
+      "ttft_ms": 1586,
+      "elapsed_ms": 3296,
+      "invalid_citations": [],
+      "timed_out": false
+    },
+    {
+      "qid": "h-08",
+      "split": "conflict_or_stale",
+      "answerable": true,
+      "question": "数字化服务成本科目的立项由谁审批？",
+      "gold_chunk_ids": [
+        "zdcw-2024-006#c025",
+        "zdcw-2024-006#c016"
+      ],
+      "retrieved": [
+        "zdcw-2024-006#c025",
+        "zdcg-2025-004#c006",
+        "zdcw-2023-005#c009",
+        "zdcw-2024-006#c016",
+        "zdcg-2025-004#c003"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "数字化服务成本科目的立项由归口部门负责人签批后即可执行。[c01] 但这是2024年度预算执行的过渡期安排，自《全面预算管理办法》发布之日起6个月后失效；该简化审批规定现是否仍适用，资料不足，建议咨询归口部门确认。[c01]",
+      "refused": false,
+      "ttft_ms": 1472,
+      "elapsed_ms": 2914,
+      "invalid_citations": [],
+      "timed_out": false
+    },
+    {
+      "qid": "a-001",
+      "split": "single_hop",
+      "answerable": true,
+      "question": "公司为什么要制定员工岗位竞聘管理办法？",
+      "gold_chunk_ids": [
+        "zdrl-2024-008#c002"
+      ],
+      "retrieved": [
+        "zdrl-2024-008#c002",
+        "zdrl-2024-008#c003",
+        "zdrl-2024-008#c004",
+        "zdrl-2024-008#c027",
+        "zdrl-2024-008#c008"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "公司制定员工岗位竞聘管理办法，是为了拓宽选人用人渠道，建立公开、平等、竞争、择优的岗位配置机制，激发员工队伍活力。[c01]",
+      "refused": false,
+      "ttft_ms": 1512,
+      "elapsed_ms": 2504,
+      "invalid_citations": [],
+      "timed_out": false
+    },
+    {
+      "qid": "a-002",
+      "split": "single_hop",
+      "answerable": true,
+      "question": "没批就做割接、超时施工或者临时改方案，会受到什么处理？",
+      "gold_chunk_ids": [
+        "zdww-2024-011#c025"
+      ],
+      "retrieved": [
+        "zdww-2024-011#c025",
+        "zdww-2024-011#c004",
+        "zdww-2024-011#c018",
+        "zdcg-2025-004#c020",
+        "zdcg-2025-004#c022"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "未审批就实施割接或超窗口施工的，责任人会被通报批评；如果造成业务中断，还将按公司员工违规行为处理规定处理。[c01] 未经审批的割接本身也不得实施。[c02]\n\n临时变更方案的，应先取得方案审核人同意，并记录变更内容；擅自变更方案的，责任人会被通报批评；如果造成业务中断，还将按公司员工违规行为处理规定处理。[c03][c01]",
+      "refused": false,
+      "ttft_ms": 1479,
+      "elapsed_ms": 3099,
+      "invalid_citations": [],
+      "timed_out": false
+    },
+    {
+      "qid": "a-003",
+      "split": "single_hop",
+      "answerable": true,
+      "question": "我有一笔180万元的付款，需要谁来审批？",
+      "gold_chunk_ids": [
+        "zdcw-2023-005#c009"
+      ],
+      "retrieved": [
+        "zdcw-2023-005#c009",
+        "zdcw-2023-005#c020",
+        "zdcg-2025-004#c006",
+        "zdcw-2024-006#c016",
+        "zdcw-2025-007#c016"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "结论：若这是一般资金支付，180万元属于“200万元以下”，由财务部负责人审批。[c01]\n\n但材料中没有说明这笔款项是否属于预算外支出、采购立项或报销；这些事项适用不同审批规定，不能仅凭金额确定审批人。若属于预算外支出，180万元须报总经理审批；如达到200万元以上，还须报总经理办公会审议。[c04] 若是采购立项，180万元由需求部门分管副总经理审批。[c03] 若是费用报销，180万元由总会计师审批。[c05]\n\n请确认款项性质；如仍不确定，建议咨询财务部。",
+      "refused": false,
+      "ttft_ms": 1658,
+      "elapsed_ms": 3986,
+      "invalid_citations": [],
+      "timed_out": false
+    },
+    {
+      "qid": "a-004",
+      "split": "single_hop",
+      "answerable": true,
+      "question": "采购金额不同的话，审批权限是怎么划分的？",
+      "gold_chunk_ids": [
+        "zdcg-2025-004#c001"
+      ],
+      "retrieved": [
+        "zdcg-2025-004#c006",
+        "zdcg-2025-004#c016",
+        "zdcg-2025-004#c012",
+        "zdcg-2025-004#c007",
+        "zdcg-2025-004#c011"
+      ],
+      "recall_hit": false,
+      "recall_all_hit": false,
+      "answer": "结论：采购金额不同，审批权限应区分**采购立项审批**与**采购方式、文件和结果审批**两类；以下按2025年3月1日起施行的细则说明。[c01][c05][c06]\n\n- **采购立项审批**：单笔预算金额50万元以下，由需求部门负责人审批；50万元以上至200万元，由需求部门分管副总经理审批；200万元以上，由总经理审批。[c01]\n- **采购方式、采购文件和采购结果审批**：50万元以下，由需求部门负责人审批；50万元以上至200万元，由采购与供应链部负责人审批；200万元以上至500万元，由分管副总经理审批；500万元以上，提交总经理办公会审议。[c05]\n\n另，采购方式本身还有对应审批要求：公开招标由采购与供应链部负责人审批；邀请招标、竞争性谈判、询价由分管采购的副总经理审批；单一来源一律报总经理审批。[c04]\n\n注意：同一项目在12个月内分次实施的，应按累计金额确定审批层级；故意拆分规避审批的，将追究经办人和审批人责任。[c03] 细则自2025年3月1日起施行；《采购管理办法》（浙东通信采〔2023〕7号）第十二条关于采购审批权限的规定同时废止，其他条款继续有效。[c06]",
+      "refused": false,
+      "ttft_ms": 1514,
+      "elapsed_ms": 4611,
+      "invalid_citations": [],
+      "timed_out": false
+    },
+    {
+      "qid": "a-005",
+      "split": "single_hop",
+      "answerable": true,
+      "question": "岗位竞聘面试的考官至少要有几人？有亲属关系需要回避吗？",
+      "gold_chunk_ids": [
+        "zdrl-2024-008#c015"
+      ],
+      "retrieved": [
+        "zdrl-2024-008#c015",
+        "zdrl-2024-008#c024",
+        "zdrl-2024-008#c013",
+        "zdrl-2024-008#c004",
+        "zdrl-2024-008#c005"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "结论：岗位竞聘面试考官不少于5人；考官与报名人员存在规定的亲属关系时，应当回避。[c01]\n\n规定的关系包括夫妻关系、直系血亲关系、三代以内旁系血亲关系或者近姻亲关系。[c01]",
+      "refused": false,
+      "ttft_ms": 1625,
+      "elapsed_ms": 2911,
+      "invalid_citations": [],
+      "timed_out": false
+    },
+    {
+      "qid": "a-006",
+      "split": "single_hop",
+      "answerable": true,
+      "question": "供应商交付不合格、擅自改合同或无故延期超过15天，公司能扣履约保证金吗？",
+      "gold_chunk_ids": [
+        "zdcg-2023-001#c021"
+      ],
+      "retrieved": [
+        "zdcg-2023-001#c021",
+        "zdcg-2024-003#c015",
+        "zdcg-2023-001#c016",
+        "zdcg-2023-001#c020",
+        "zdcg-2024-003#c013"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "可以。供应商出现以下任一情形，公司可以扣减履约保证金：[c01]\n\n- 交付物质量不符合合同约定；[c01]\n- 擅自变更合同主要条款；[c01][c03]\n- 无正当理由延期交付超过15日。[c01]\n\n其中，合同主要条款包括标的、金额、付款方式、履约期限等，不得擅自变更。[c03]若因供应商违约解除合同，还应同步启动履约保证金扣减和损失追偿程序；解除合同须经法律事务岗审核并报分管副总经理批准。[c02]",
+      "refused": false,
+      "ttft_ms": 1491,
+      "elapsed_ms": 3388,
+      "invalid_citations": [],
+      "timed_out": false
+    },
+    {
+      "qid": "a-007",
+      "split": "single_hop",
+      "answerable": true,
+      "question": "如果发生了一般网络安全事件，是由哪个部门负责处理，还需要向谁报备？",
+      "gold_chunk_ids": [
+        "zdww-2025-012#c020"
+      ],
+      "retrieved": [
+        "zdww-2025-012#c020",
+        "zdww-2025-012#c031",
+        "zdww-2025-012#c006",
+        "zdww-2025-012#c025",
+        "zdww-2025-012#c024"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "**结论：**一般网络安全事件由事件发生部门自行处置，并报信息安全部备案。[c01]",
+      "refused": false,
+      "ttft_ms": 1373,
+      "elapsed_ms": 2164,
+      "invalid_citations": [],
+      "timed_out": false
+    },
+    {
+      "qid": "a-008",
+      "split": "single_hop",
+      "answerable": true,
+      "question": "我对公司的处理结果不满意，应该在多久内向哪个部门提出申诉？",
+      "gold_chunk_ids": [
+        "zdrl-2025-009#c001"
+      ],
+      "retrieved": [
+        "zdrl-2025-009#c015",
+        "zdrl-2025-009#c010",
+        "zdrl-2025-009#c009",
+        "zdcg-2024-003#c018",
+        "zdrl-2025-009#c021"
+      ],
+      "recall_hit": false,
+      "recall_all_hit": false,
+      "answer": "结论：应在知道或者应当知道权益受到侵害之日起30日内提出申诉；因不可抗力或者其他正当理由延误的，可以申请延期，延期不超过15日。[c03] 申诉材料提交给人力资源部，人力资源部收到后应在3个工作日内完成形式审查。[c02]",
+      "refused": false,
+      "ttft_ms": 1476,
+      "elapsed_ms": 2761,
+      "invalid_citations": [],
+      "timed_out": false
+    },
+    {
+      "qid": "a-009",
+      "split": "single_hop",
+      "answerable": true,
+      "question": "公司为什么要制定供应商管理细则？",
+      "gold_chunk_ids": [
+        "zdcg-2023-002#c002"
+      ],
+      "retrieved": [
+        "zdcg-2023-002#c002",
+        "zdcg-2025-004#c002",
+        "zdcg-2023-002#c003",
+        "zdcg-2024-003#c002",
+        "zdcg-2025-004#c003"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "**结论：**公司制定供应商管理细则，是为了加强供应商管理，建立统一准入、分级管理、动态评价、优胜劣汰的供应商管理机制。[c01]\n\n**时效说明：**该细则自2024年1月1日起执行，试行期两年；材料未说明试行期满后的修订或延续情况。[c06]",
+      "refused": false,
+      "ttft_ms": 2746,
+      "elapsed_ms": 4036,
+      "invalid_citations": [],
+      "timed_out": false
+    },
+    {
+      "qid": "a-010",
+      "split": "single_hop",
+      "answerable": true,
+      "question": "公司制定采购合同管理细则，主要是为了避免哪些问题？",
+      "gold_chunk_ids": [
+        "zdcg-2024-003#c002"
+      ],
+      "retrieved": [
+        "zdcg-2024-003#c002",
+        "zdcg-2025-004#c002",
+        "zdcg-2025-004#c003",
+        "zdcg-2023-001#c004",
+        "zdcg-2024-003#c003"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "结论：采购合同管理细则主要是为了规范采购合同的订立、履行和归档管理，减少合同纠纷、防范法律风险。[c01]",
+      "refused": false,
+      "ttft_ms": 2042,
+      "elapsed_ms": 2979,
+      "invalid_citations": [],
+      "timed_out": false
+    },
+    {
+      "qid": "a-011",
+      "split": "single_hop",
+      "answerable": true,
+      "question": "什么情况下可以直接找一家供应商采购，还需要做哪些论证？",
+      "gold_chunk_ids": [
+        "zdcg-2023-001#c012"
+      ],
+      "retrieved": [
+        "zdcg-2023-001#c012",
+        "zdcg-2023-001#c011",
+        "zdcg-2025-004#c008",
+        "zdcg-2023-001#c010",
+        "zdcg-2023-001#c015"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "结论：符合以下任一情形，可以采用单一来源采购，也就是直接向一家供应商采购：[c01]\n\n- 只能从唯一供应商处采购；[c01]\n- 发生不可预见的紧急情况，不能从其他供应商处采购；[c01]\n- 为保证原有采购项目一致性或服务配套，需要继续向原供应商采购。[c01]\n\n论证要求：应组织不少于三名专家论证并形成书面论证意见；若单笔金额在500万元以上，还须在提交总经理办公会审议前完成专家论证和价格合理性审核，并按规定提交总经理办公会审议。[c01][c03]\n\n版本说明：《采购管理办法》自2023年4月1日起施行；《采购审批权限实施细则》自2025年3月1日起施行。材料说明《采购管理办法》第十二条关于采购审批权限的规定已同时废止，其他条款继续有效；上述单一来源条件和专家论证要求分别见该办法第十一条及实施细则第七条。[c06][c08]",
+      "refused": false,
+      "ttft_ms": 1393,
+      "elapsed_ms": 4139,
+      "invalid_citations": [],
+      "timed_out": false
+    },
+    {
+      "qid": "a-012",
+      "split": "single_hop",
+      "answerable": true,
+      "question": "公司对外付款必须转账吗？什么情况下可以用现金，最多能付多少？",
+      "gold_chunk_ids": [
+        "zdcw-2023-005#c011"
+      ],
+      "retrieved": [
+        "zdcw-2023-005#c011",
+        "zdcw-2023-005#c019",
+        "zdcw-2023-005#c003",
+        "zdcw-2023-005#c009",
+        "zdcw-2023-005#c018"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "结论：公司对外付款原则上应采用银行转账；确需使用现金的，单笔不得超过5000元，并须经财务部负责人批准。[c01]",
+      "refused": false,
+      "ttft_ms": 1545,
+      "elapsed_ms": 2485,
+      "invalid_citations": [],
+      "timed_out": false
+    },
+    {
+      "qid": "a-013",
+      "split": "single_hop",
+      "answerable": true,
+      "question": "员工申诉、劳动争议调解、违纪问题核查和仲裁诉讼分别该找哪个部门？",
+      "gold_chunk_ids": [
+        "zdrl-2025-009#c005"
+      ],
+      "retrieved": [
+        "zdrl-2025-009#c005",
+        "zdrl-2025-009#c021",
+        "zdrl-2025-009#c022",
+        "zdcg-2024-003#c018",
+        "zdrl-2025-009#c001"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "- **员工申诉**：找人力资源部，该部门负责申诉受理、登记、转办、跟踪和归档。[c01]\n- **劳动争议调解**：由工会参与调解。[c01]\n- **违纪违规问题核查**：由纪检监察部门负责。[c01]\n- **劳动争议仲裁和诉讼应对**：找法律事务岗负责；人力资源部收到仲裁或诉讼材料后，应在2个工作日内报法律事务岗，并组织相关部门准备证据材料。[c01][c02]\n\n以上依据的《员工申诉与劳动争议处理办法》标注为现行，自2025年3月1日起生效。[c05]",
+      "refused": false,
+      "ttft_ms": 1368,
+      "elapsed_ms": 3366,
+      "invalid_citations": [],
+      "timed_out": false
+    },
+    {
+      "qid": "a-014",
+      "split": "single_hop",
+      "answerable": true,
+      "question": "审计单位要查看我们的采购合同，需要先走什么流程？",
+      "gold_chunk_ids": [
+        "zdcg-2024-003#c022"
+      ],
+      "retrieved": [
+        "zdcg-2023-001#c023",
+        "zdcg-2024-003#c022",
+        "zdcg-2023-001#c015",
+        "zdcg-2025-004#c009",
+        "zdcg-2025-004#c021"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "**结论：**外部审计单位因审计需要调阅采购合同，应先履行审批手续，并进行登记；未经批准不得对外提供合同文本。[c02]\n\n**依据与时效：**合同文本属于公司内部资料。[c02] 材料未说明审批的具体层级或办理方式，需咨询相关部门确认。采购管理办法自2023年4月1日起施行；采购审批权限实施细则自2025年3月1日起施行，并废止该办法第十二条关于采购审批权限的规定，但材料未显示这影响合同调阅流程。[c06][c08]",
+      "refused": false,
+      "ttft_ms": 2893,
+      "elapsed_ms": 4996,
+      "invalid_citations": [],
+      "timed_out": false
+    },
+    {
+      "qid": "a-015",
+      "split": "single_hop",
+      "answerable": true,
+      "question": "采购项目结束后，相关材料要在多久内归档，至少保存几年？",
+      "gold_chunk_ids": [
+        "zdcg-2023-001#c022"
+      ],
+      "retrieved": [
+        "zdcg-2023-001#c022",
+        "zdcg-2024-003#c021",
+        "zdcg-2023-002#c024",
+        "zdcg-2025-004#c018",
+        "zdww-2024-011#c023"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "采购项目完成后30日内应整理归档，保存期限不少于10年。[c01]\n\n注意：采购合同履行完毕后，合同相关材料也应在30日内移交归档，保存期限不少于10年。[c02]",
+      "refused": false,
+      "ttft_ms": 1531,
+      "elapsed_ms": 2836,
+      "invalid_citations": [],
+      "timed_out": false
+    },
+    {
+      "qid": "a-016",
+      "split": "single_hop",
+      "answerable": true,
+      "question": "一个采购项目分几次做，怎么确定审批层级？故意拆开来审批会有什么后果？",
+      "gold_chunk_ids": [
+        "zdcg-2025-004#c012"
+      ],
+      "retrieved": [
+        "zdcg-2025-004#c012",
+        "zdcg-2025-004#c004",
+        "zdcg-2025-004#c016",
+        "zdcg-2025-004#c006",
+        "zdcg-2025-004#c011"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "**结论：**同一采购项目在12个月内分次实施，应按累计金额确定审批层级；故意拆分项目规避审批的，将追究经办人和审批人责任。[c01]\n\n此外，审批人不得越权审批，也不得将单个项目拆分为多个项目规避审批。[c02] 以上规定属于自2025年3月1日起施行的《采购审批权限实施细则》；材料说明，原《采购管理办法》关于采购审批权限的规定同时废止。[c06]",
+      "refused": false,
+      "ttft_ms": 1435,
+      "elapsed_ms": 3131,
+      "invalid_citations": [],
+      "timed_out": false
+    }
+  ],
+  "gate": {
+    "verdict": "FAIL —— 以下门禁未通过：TTFT p95（另有 3 项未测）",
+    "rows": [
+      {
+        "metric": "Chunk-ID Recall@5",
+        "threshold": "≥90%",
+        "actual": "91.67%",
+        "status": "PASS"
+      },
+      {
+        "metric": "答案正确率",
+        "threshold": "≥85%",
+        "actual": "—（未启用 judge）",
+        "status": "SKIP"
+      },
+      {
+        "metric": "Faithfulness（1−幻觉率）",
+        "threshold": "≥90%",
+        "actual": "—（未启用 judge）",
+        "status": "SKIP"
+      },
+      {
+        "metric": "应拒答率",
+        "threshold": "≥90%",
+        "actual": "—（本数据集无不可回答项）",
+        "status": "SKIP"
+      },
+      {
+        "metric": "误拒率",
+        "threshold": "≤5%",
+        "actual": "0.00%",
+        "status": "PASS"
+      },
+      {
+        "metric": "引用可定位率",
+        "threshold": "≥95%",
+        "actual": "100.00%",
+        "status": "PASS"
+      },
+      {
+        "metric": "TTFT p95",
+        "threshold": "≤1000ms",
+        "actual": "2640ms",
+        "status": "FAIL"
+      },
+      {
+        "metric": "完成 p95",
+        "threshold": "≤5000ms",
+        "actual": "4540ms",
+        "status": "PASS"
+      }
+    ]
+  }
+}

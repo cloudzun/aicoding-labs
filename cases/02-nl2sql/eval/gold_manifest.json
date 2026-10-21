@@ -1,0 +1,21 @@
+{
+  "total": 150,
+  "by_split": {
+    "single_hop": 40,
+    "two_join": 30,
+    "three_join": 20,
+    "aggregate": 30,
+    "time_window": 15,
+    "negation_null": 15
+  },
+  "quota": {
+    "single_hop": 40,
+    "two_join": 30,
+    "three_join": 20,
+    "aggregate": 30,
+    "time_window": 15,
+    "negation_null": 15
+  },
+  "sha256": "6f8a29116be28e57a3e64dd9eca58c05695e613811eaf26454cb719e42fd690c",
+  "note": "先执行 SQL 得 gold，再生成问题；EX 只看结果集"
+}

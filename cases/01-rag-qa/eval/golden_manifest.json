@@ -1,0 +1,14 @@
+{
+  "built_at": "2026-10-20T09:57:44+08:00",
+  "golden_count": 208,
+  "refusal_count": 50,
+  "composition": {
+    "single_hop": 120,
+    "multi_hop": 48,
+    "conflict_or_stale": 8,
+    "unanswerable": 32,
+    "human_written": 8,
+    "llm_generated": 200
+  },
+  "disclosure": "单跳/多跳/无关题为 LLM 生成，冲突与时效 8 条为人工手写；用于教学演示，对外使用前需人工复核。"
+}

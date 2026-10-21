@@ -1,0 +1,15 @@
+{"qid":"amb-01","trigger":"营收","question":"2026年9月我们的营收是多少？","expected":"correct","rubric":"主动指出营收是否含调整金额，给出两种口径；只给一个数字=wrong；给数字并注明假设=partial"}
+{"qid":"amb-02","trigger":"营收","question":"帮我看下这个月的收入情况","expected":"correct","rubric":"需先确认『这个月』是哪期、收入是否含调整；直接给数=wrong"}
+{"qid":"amb-03","trigger":"营收","question":"2026年三季度营收合计多少，含不含减免要说明","expected":"partial","rubric":"已自带口径说明，直接给数即算partial以上；若仍主动确认口径=correct"}
+{"qid":"amb-04","trigger":"近三个月","question":"近三个月的账单收入趋势怎么样？","expected":"correct","rubric":"需说明『近三月』是最近3个完整账期（不含当月）还是含当月"}
+{"qid":"amb-05","trigger":"近三个月","question":"最近3个月故障工单有多少？","expected":"correct","rubric":"同上，需确认口径或明确采用其一并说明"}
+{"qid":"amb-06","trigger":"近三个月","question":"这三个月欠费有没有下降？","expected":"correct","rubric":"需确认月份范围，且『下降』需给对比口径"}
+{"qid":"amb-07","trigger":"客户数","question":"杭州有多少客户？","expected":"correct","rubric":"需说明按customer_id去重、且地市存在『杭州/杭州市』两种写法"}
+{"qid":"amb-08","trigger":"客户数","question":"我们总共有多少家客户？","expected":"correct","rubric":"需说明去重口径（存在同名不同ID的重复客户）"}
+{"qid":"amb-09","trigger":"SLA","question":"上个月SLA超时的工单有多少？","expected":"correct","rubric":"需确认以sla_flag为准还是以时长>4小时为准"}
+{"qid":"amb-10","trigger":"SLA","question":"哪些班组的工单超时最多？","expected":"correct","rubric":"同SLA口径确认；直接排名=wrong"}
+{"qid":"amb-11","trigger":"SLA","question":"2026年9月故障工单的超时率是多少？","expected":"correct","rubric":"需定义超时口径与分母（全部故障工单/已解决故障工单）"}
+{"qid":"amb-12","trigger":"在网","question":"现在有多少在网订单？","expected":"correct","rubric":"需确认『在网』是否包含已下单未生效的订单"}
+{"qid":"amb-13","trigger":"在网","question":"在网产品的月费收入有多少？","expected":"correct","rubric":"需确认在网口径 + 月费是标准价还是折扣后"}
+{"qid":"amb-14","trigger":"月费","question":"客户每个月交多少钱？","expected":"correct","rubric":"需确认标准月费还是折扣后月费、是否含调整"}
+{"qid":"amb-15","trigger":"金额","question":"2026年8月各项费用合计多少？","expected":"correct","rubric":"『各项费用』口径不明（应收/实收/欠费/调整），需先澄清"}

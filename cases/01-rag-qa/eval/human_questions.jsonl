@@ -1,0 +1,20 @@
+{"qid":"u-001","question":"采购合同签得太晚了，公司有没有时限要求？","gold_docs":["zdcg-2023-001","zdcg-2024-003"],"gold_clauses":["第十八条","第九条"],"note":"存在版本冲突"}
+{"qid":"u-002","question":"多大金额的采购必须上总经理办公会？","gold_docs":["zdcg-2025-004","zdcg-2023-001"],"gold_clauses":["第十条","第十二条"],"note":"A1 埋点"}
+{"qid":"u-003","question":"履约保证金一般交多少？","gold_docs":["zdcg-2023-001"],"gold_clauses":["第十九条"],"note":""}
+{"qid":"u-004","question":"保证金交上去以后什么时候能退回来？","gold_docs":["zdcg-2023-001"],"gold_clauses":["第十九条"],"note":"制度未规定时限"}
+{"qid":"u-005","question":"对外付款超过多少钱需要总经理签字？","gold_docs":["zdcw-2023-005"],"gold_clauses":["第八条","第十九条"],"note":"B1 埋点"}
+{"qid":"u-006","question":"出重大故障后多长时间内必须报上去？","gold_docs":["zdww-2023-010"],"gold_clauses":["第十四条","第二十六条"],"note":"B2 埋点"}
+{"qid":"u-007","question":"供应商准入分成哪几个等级？","gold_docs":["zdcg-2023-002"],"gold_clauses":[],"note":"文档级"}
+{"qid":"u-008","question":"供应商评价好的话评审时能加分吗？","gold_docs":["zdcg-2023-002"],"gold_clauses":[],"note":"文档级"}
+{"qid":"u-009","question":"员工对申诉结果不满意还能怎么办？","gold_docs":["zdrl-2025-009"],"gold_clauses":["第十四条"],"note":"C2 埋点"}
+{"qid":"u-010","question":"申诉复核要多久出结果？","gold_docs":["zdrl-2025-009"],"gold_clauses":["第十四条"],"note":""}
+{"qid":"u-011","question":"预算外的支出由谁审批？","gold_docs":["zdcw-2024-006"],"gold_clauses":["第十五条"],"note":""}
+{"qid":"u-012","question":"数字化服务成本这个科目立项怎么批？","gold_docs":["zdcw-2024-006"],"gold_clauses":["第二十四条"],"note":"D2 埋点"}
+{"qid":"u-013","question":"部门明年的预算谁负责编制？","gold_docs":["zdcw-2024-006"],"gold_clauses":[],"note":"文档级"}
+{"qid":"u-014","question":"岗位竞聘面试考官要几个人、有外部考官吗？","gold_docs":["zdrl-2024-008"],"gold_clauses":[],"note":"文档级"}
+{"qid":"u-015","question":"竞聘时报材料造假会被怎么处理？","gold_docs":["zdrl-2024-008"],"gold_clauses":[],"note":"文档级"}
+{"qid":"u-016","question":"网络割接之前要做哪些风险评估？","gold_docs":["zdww-2024-011"],"gold_clauses":[],"note":"文档级"}
+{"qid":"u-017","question":"割接方案要报到哪一级审批？","gold_docs":["zdww-2024-011"],"gold_clauses":[],"note":"文档级"}
+{"qid":"u-018","question":"网络安全事件是怎么分级的？","gold_docs":["zdww-2025-012"],"gold_clauses":[],"note":"文档级"}
+{"qid":"u-019","question":"出差住宿超过标准的部分怎么处理？","gold_docs":["zdcw-2025-007"],"gold_clauses":[],"note":"文档级"}
+{"qid":"u-020","question":"报销单有没有提交时限？","gold_docs":["zdcw-2025-007"],"gold_clauses":[],"note":"文档级"}

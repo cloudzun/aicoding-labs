@@ -1,0 +1,89 @@
+# 合同审查规则清单 v1.0.0（27 条）
+# 字段说明：
+#   category  存在型 / 缺失型 / 数值型 / 语义型 / 结构性
+#   expect    present（应存在）/ limit（数值阈值）/ semantic（交 LLM）/ structure（结构校验）
+#   detector  deterministic / llm / hybrid
+#   severity  高 / 中 / 低（默认等级，实际等级可由数值偏离度上调）
+version: 1.1.0
+stance: 甲方（采购方）
+stance_note: >
+  本审查代表甲方（采购方）利益。对甲方有利的约定不构成风险；对甲方不利的约定构成风险。
+  例：争议提交甲方所在地法院 = 有利（正常）；提交乙方所在地法院 = 不利（风险）。
+severity_map: {高: 3, 中: 2, 低: 1}
+
+rules:
+  # ---------- 存在型（8）----------
+  - {id: R01, name: 保密条款, category: 存在型, expect: present, detector: deterministic, severity: 高,
+     keywords: [保密], heading: 保密, scope: 全篇, remediation: "补充保密义务、保密期限与违约后果"}
+  - {id: R02, name: 发票与税率条款, category: 存在型, expect: present, detector: deterministic, severity: 中,
+     keywords: [发票], heading: 发票, scope: 全篇, remediation: "明确发票类型、税率与开票时点"}
+  - {id: R03, name: 服务标准/SLA, category: 存在型, expect: present, detector: deterministic, severity: 高,
+     keywords: [服务标准, SLA, 响应时], heading: 服务标准, scope: 全篇, remediation: "补充服务水平指标与未达标的补救"}
+  - {id: R04, name: 数据与个人信息条款, category: 存在型, expect: present, detector: deterministic, severity: 高,
+     keywords: [个人信息, 数据安全], heading: 数据, scope: 全篇, remediation: "补充数据处理目的、范围、安全措施与删除义务"}
+  - {id: R05, name: 争议解决条款, category: 存在型, expect: present, detector: deterministic, severity: 高,
+     keywords: [争议解决, 仲裁, 诉讼], heading: 争议解决, scope: 全篇, remediation: "明确适用法律、管辖法院或仲裁机构"}
+  - {id: R06, name: 不可抗力条款, category: 存在型, expect: present, detector: deterministic, severity: 低,
+     keywords: [不可抗力], heading: 不可抗力, scope: 全篇, remediation: "补充不可抗力定义与通知、免责范围"}
+  - {id: R07, name: 验收标准条款, category: 存在型, expect: present, detector: deterministic, severity: 中,
+     keywords: [验收], heading: 验收标准, scope: 全篇, remediation: "明确验收标准、期限与不通过的处理"}
+  - {id: R08, name: 合同转让限制, category: 存在型, expect: present, detector: deterministic, severity: 低,
+     keywords: [转让], heading: 转让, scope: 全篇, remediation: "约定未经对方书面同意不得转让"}
+
+  # ---------- 缺失型（必查项，5）----------
+  - {id: R09, name: 合同期限条款, category: 缺失型, expect: present, detector: deterministic, severity: 高,
+     keywords: [有效期, 期限], heading: 合同期限, heading_aliases: [有效期], scope: 全篇, remediation: "明确起止日期与续期方式"}
+  - {id: R10, name: 付款方式与节点, category: 缺失型, expect: present, detector: deterministic, severity: 高,
+     keywords: [付款], heading: 付款方式, scope: 全篇, remediation: "明确付款节点、比例与前提条件"}
+  - {id: R11, name: 违约责任条款, category: 缺失型, expect: present, detector: deterministic, severity: 高,
+     keywords: [违约责任, 违约金], heading: 违约责任, heading_aliases: [责任承担, 违约处理], scope: 全篇, remediation: "约定违约情形、违约金标准与救济方式"}
+  - {id: R12, name: 知识产权归属, category: 缺失型, expect: present, detector: deterministic, severity: 高,
+     keywords: [知识产权], heading: 知识产权, heading_aliases: [成果权属], scope: 全篇, remediation: "明确成果归属、许可范围与侵权责任"}
+  - {id: R13, name: 签署与盖章条款, category: 缺失型, expect: present, detector: deterministic, severity: 中,
+     keywords: [盖章, 签字], heading: 签署与盖章, scope: 全篇, remediation: "补充签署方式、份数与生效条件"}
+
+  # ---------- 数值型（6）----------
+  - {id: R14, name: 违约金日费率, category: 数值型, expect: limit, detector: deterministic, severity: 高,
+     pattern: "违约金[^。；]{0,24}?(\\d+(?:\\.\\d+)?)\\s*‰\\s*/?\\s*日", threshold: 0.3, op: ">=", unit: "‰/日",
+     remediation: "违约金比例建议不低于 0.3‰/日"}
+  - {id: R15, name: 付款周期, category: 数值型, expect: limit, detector: deterministic, severity: 中,
+     pattern: "(?:付款[^。；]{0,40}?(\\d+)\\s*(?:个工作日|工作日|日|天))|(?:(\\d+)\\s*(?:个工作日|工作日|日|天)[^。；]{0,12}?付款)", threshold: 60, op: "<=", unit: "天",
+     remediation: "付款周期建议不超过 60 天"}
+  - {id: R16, name: 质保期, category: 数值型, expect: limit, detector: deterministic, severity: 中,
+     pattern: "质保[^。；]{0,24}?(\\d+)\\s*个月", threshold: 12, op: ">=", unit: "月",
+     remediation: "质保期建议不少于 12 个月"}
+  - {id: R17, name: 通知期限, category: 数值型, expect: limit, detector: deterministic, severity: 低,
+     pattern: "通知[^。；]{0,24}?(\\d+)\\s*(?:日|天)", threshold: 15, op: ">=", unit: "日",
+     remediation: "重要通知期限建议不少于 15 日"}
+  - {id: R18, name: 预付款比例, category: 数值型, expect: limit, detector: deterministic, severity: 中,
+     pattern: "预付[^。；]{0,24}?(\\d+(?:\\.\\d+)?)\\s*%", threshold: 30, op: "<=", unit: "%",
+     remediation: "预付款比例建议不超过 30%"}
+  - {id: R19, name: 赔偿上限比例, category: 数值型, expect: limit, detector: deterministic, severity: 高,
+     pattern: "(?:赔偿|责任)[^。；]{0,20}?(?:不超过|上限)[^。；]{0,10}?(\\d+(?:\\.\\d+)?)\\s*%", threshold: 100, op: ">=", unit: "%",
+     remediation: "赔偿上限建议不低于合同总额的 100%"}
+
+  # ---------- 语义型（6，交 LLM，必须给原文引用）----------
+  - {id: R20, name: 单方无责解除权, category: 语义型, expect: semantic, detector: llm, severity: 高,
+     question: "合同是否赋予一方在无对方违约情况下的单方解除权（且不承担赔偿）？",
+     remediation: "应对解除权设置条件或对等补偿"}
+  - {id: R21, name: 自动续期且无提示义务, category: 语义型, expect: semantic, detector: llm, severity: 中,
+     question: "合同是否自动续期，且未约定续期前的提示/确认义务？",
+     remediation: "自动续期应约定提前提示与书面确认"}
+  - {id: R22, name: 责任上限缺失或无限责任, category: 语义型, expect: semantic, detector: llm, severity: 高,
+     question: "合同是否缺少责任上限，或约定一方承担无限责任？",
+     remediation: "明确责任上限（如不超过合同总额的 100%）"}
+  - {id: R23, name: 管辖地对对方不利, category: 语义型, expect: semantic, detector: llm, severity: 中,
+     question: "争议管辖法院/仲裁地是否约定在对方所在地或明显不利地点？",
+     remediation: "改为己方所在地法院或中立仲裁机构", stance_hint: "若管辖地/仲裁地在乙方所在地或明显对甲方不利，才算风险；在甲方所在地不算"}
+  - {id: R24, name: 知识产权归属模糊, category: 语义型, expect: semantic, detector: llm, severity: 高,
+     question: "知识产权归属是否表述模糊（如未明确成果所有权、许可范围）？",
+     remediation: "明确成果所有权归属与使用许可范围"}
+  - {id: R25, name: 权利义务显失对等, category: 语义型, expect: semantic, detector: llm, severity: 中,
+     question: "双方权利义务是否明显不对等（如违约责任仅约束一方）？",
+     remediation: "调整为双向对等条款", stance_hint: "以甲方视角判断：加重甲方义务或免除乙方责任的条款属风险"}
+
+  # ---------- 结构性（2）----------
+  - {id: R26, name: 双方主体信息完整, category: 结构性, expect: structure, detector: deterministic, severity: 高,
+     remediation: "补齐名称、地址、联系人、统一社会信用代码"}
+  - {id: R27, name: 签署日期与生效日期一致, category: 结构性, expect: structure, detector: deterministic, severity: 低,
+     remediation: "核对签署日期与生效日期，避免倒签或空白"}

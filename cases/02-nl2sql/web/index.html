@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>政企问数 · NL2SQL demo</title>
+<style>
+  :root{--bg:#f7f8fa;--panel:#fff;--line:#e3e6ea;--text:#1f2329;--muted:#6b7280;--brand:#1a5fb4;--warn:#fff7e6;--warnline:#f0c36d;--ok:#e8f5e9;--bad:#fdecec}
+  *{box-sizing:border-box}
+  body{margin:0;font:15px/1.6 "Segoe UI","Microsoft YaHei",system-ui,sans-serif;background:var(--bg);color:var(--text)}
+  header{padding:14px 22px;background:var(--panel);border-bottom:1px solid var(--line);display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  header h1{font-size:16px;margin:0}
+  .badge{font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 10px}
+  #banner{background:var(--warn);border-bottom:1px solid var(--warnline);padding:8px 22px;font-size:12.5px;color:#7a5b18}
+  main{max-width:1180px;margin:0 auto;padding:18px 22px 120px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;margin-bottom:14px;overflow:hidden}
+  .card h2{font-size:13px;margin:0;padding:10px 14px;border-bottom:1px solid var(--line);color:var(--muted);font-weight:600;letter-spacing:.03em}
+  .card .body{padding:12px 14px}
+  textarea{width:100%;height:64px;padding:12px;border:1px solid var(--line);border-radius:8px;font:inherit;resize:vertical;outline:none}
+  textarea:focus{border-color:var(--brand)}
+  .row{display:flex;gap:10px;margin-top:10px;align-items:center;flex-wrap:wrap}
+  button{padding:8px 18px;border:0;border-radius:8px;background:var(--brand);color:#fff;font:inherit;cursor:pointer}
+  button:disabled{background:#9db4d4;cursor:default}
+  pre{margin:0;padding:10px 12px;background:#0f172a;color:#e2e8f0;border-radius:8px;overflow:auto;font:12.5px/1.55 Consolas,monospace}
+  table{border-collapse:collapse;width:100%;font-size:13px}
+  th,td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+  th{background:#f4f7fb;color:#374151;font-weight:600}
+  .kv{display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
+  .chip{display:inline-block;font-size:12px;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 4px 2px 0;background:#f9fafb}
+  .clar{background:#eef4ff;border:1px solid #b9d2f5;border-radius:8px;padding:10px 12px}
+  .rej{background:var(--bad);border:1px solid #f3b6b6;border-radius:8px;padding:10px 12px;color:#8a1f1f}
+  .err{color:#8a1f1f}
+  summary{cursor:pointer;color:var(--brand)}
+</style>
+</head>
+<body>
+<header>
+  <h1>政企问数</h1>
+  <span class="badge" id="health">连接中…</span>
+  <span class="badge">只读 · 表白名单 · 强制 LIMIT · 超时</span>
+  <span class="badge">SQL 可见 · 口径可查</span>
+</header>
+<div id="banner">
+  <b>合规声明：</b>本 demo 使用 <b>完全虚构的合成数据</b>（浙东省通信服务有限公司体系），不含任何真实客户信息；生成经本地网关 magpie，上游为云端模型。仅用于教学演示。
+</div>
+
+<main>
+  <section class="card">
+    <h2>提问</h2>
+    <div class="body">
+      <textarea id="q" placeholder="例如：2026年9月应收合计多少元？（Enter 提交）"></textarea>
+      <div class="row">
+        <button id="send">查询</button>
+        <span class="kv" id="hint">支持单表/多表关联/聚合/时间窗口；口径歧义会先反问你</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" id="clarCard" style="display:none">
+    <h2>需要先确认口径</h2>
+    <div class="body"><div class="clar" id="clar"></div></div>
+  </section>
+
+  <section class="card" id="rejCard" style="display:none">
+    <h2>已拒绝</h2>
+    <div class="body"><div class="rej" id="rej"></div></div>
+  </section>
+
+  <section class="card" id="sqlCard" style="display:none">
+    <h2>生成的 SQL（经安全闸后）</h2>
+    <div class="body"><pre id="sql"></pre></div>
+  </section>
+
+  <section class="card" id="resCard" style="display:none">
+    <h2>结果 <span id="resMeta" class="kv" style="display:inline"></span></h2>
+    <div class="body" style="overflow:auto"><table id="tbl"></table></div>
+  </section>
+
+  <section class="card" id="chartCard" style="display:none">
+    <h2>图表 <span id="chartMeta" class="kv" style="display:inline"></span></h2>
+    <div class="body" id="chartBody" style="text-align:center"></div>
+  </section>
+
+  <section class="card" id="metaCard" style="display:none">
+    <h2>口径与运行信息</h2>
+    <div class="body">
+      <div id="metrics"></div>
+      <div class="kv" id="meta" style="margin-top:8px"></div>
+    </div>
+  </section>
+</main>
+
+<script>
+// 兼容两种写法：'#id' 与裸 'id'（show() 传的是裸 id，2026-10-21 修复）
+const $ = s => document.querySelector(s.startsWith('#') ? s : '#' + s);
+let busy = false;
+
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+
+function show(sel, on){ $(sel).style.display = on ? 'block' : 'none'; }
+
+/* ---------- 图表渲染（2026-10-21 新增）----------
+   只读后端返回的 chart.type / chart.x / chart.y，前端不重新猜；纯内联 SVG，零依赖。
+   展示层，不参与 EX 判定，也不改 SQL 或行数。table/empty 回落表格（不显示图表卡）。 */
+function cNum(v){ const n = typeof v==='number' ? v : parseFloat(String(v==null?'':v).replace(/,/g,'')); return Number.isFinite(n) ? n : null; }
+function cFmt(n){
+  if(n==null) return '-';
+  const a = Math.abs(n);
+  if(a >= 1e8) return (n/1e8).toFixed(2)+'亿';
+  if(a >= 1e4) return (n/1e4).toFixed(1)+'万';
+  return (Math.round(n*100)/100).toLocaleString('zh-CN');
+}
+function cClip(s, n){ s = String(s==null?'':s); return s.length > n ? s.slice(0,n)+'…' : s; }
+function cIdx(cols, name){ return name==null ? -1 : cols.indexOf(name); }
+
+function renderChart(d){
+  const body = $('#chartBody'), meta = $('#chartMeta');
+  const ch = d.chart || {}, cols = d.columns || [], rows = d.rows || [];
+  const t = ch.type || 'table';
+  const OK = ['kpi','kpi_group','line','bar','bar_h','pie','scatter'];
+  if(!rows.length || !OK.includes(t)){ show('chartCard', false); return; }
+
+  const W = 700, H = 300, L = 72, R = 18, T = 18, B = 46;
+  const inn = [];
+
+  /* 单值 / 单行多指标：大字 KPI */
+  if(t === 'kpi' || t === 'kpi_group'){
+    const names = Array.isArray(ch.y) ? ch.y : (ch.y ? [ch.y] : cols);
+    const kFmt = n => n == null ? '-' : (Number.isInteger(n) ? n.toLocaleString('zh-CN')
+      : (Math.round(n * 100) / 100).toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
+    const parts = names.map(nm => {
+      const i = cIdx(cols, nm);
+      const v = i >= 0 ? rows[0][i] : null;
+      return `<div style="min-width:150px"><div style="color:#6b7280;font-size:12px">${esc(nm)}</div>`
+           + `<div style="font-size:28px;font-weight:700;color:#1a5fb4;line-height:1.3">${esc(kFmt(cNum(v)))}</div></div>`;
+    }).join('');
+    body.innerHTML = `<div style="display:flex;gap:26px;flex-wrap:wrap;padding:14px 4px">${parts}</div>`;
+    meta.innerHTML = `<b>${esc(t)}</b> · ${esc(ch.reason || '')}`;
+    show('chartCard', true);
+    return;
+  }
+
+  /* 其余类型：先定序列与坐标 */
+  const yI = cIdx(cols, ch.y) >= 0 ? cIdx(cols, ch.y) : cols.findIndex((c, i) => cNum(rows[0][i]) != null);
+  if(yI < 0){ show('chartCard', false); return; }
+  const vRaw = rows.map(r => cNum(r[yI]));
+  const vals = vRaw.map(v => v == null ? 0 : v);
+  const xI = cIdx(cols, ch.x) >= 0 ? cIdx(cols, ch.x) : 0;
+  const cats = rows.map(r => String(r[xI] == null ? '' : r[xI]));
+  let vmax = Math.max(...vals, 0), vmin = Math.min(...vals, 0);
+  if(vmax === vmin) vmax = vmin + 1;
+  const px = i => L + (W - L - R) * (rows.length <= 1 ? 0.5 : i / (rows.length - 1));
+  const py = v => (H - B) - (v - vmin) / (vmax - vmin) * (H - B - T);
+
+  for(let k = 0; k <= 4; k++){
+    const v = vmin + (vmax - vmin) * k / 4, y = py(v);
+    inn.push(`<line x1="${L}" x2="${W-R}" y1="${y}" y2="${y}" stroke="#eef0f3"/>`);
+    inn.push(`<text x="${L-8}" y="${y+4}" text-anchor="end" font-size="11" fill="#9aa3af">${esc(cFmt(v))}</text>`);
+  }
+
+  if(t === 'line'){
+    inn.push(`<polyline points="${rows.map((r,i)=>`${px(i)},${py(vals[i])}`).join(' ')}" fill="none" stroke="#1a5fb4" stroke-width="2"/>`);
+    const step = Math.max(1, Math.ceil(rows.length / 10));
+    rows.forEach((r, i) => {
+      if(i % step === 0 || i === rows.length - 1){
+        inn.push(`<circle cx="${px(i)}" cy="${py(vals[i])}" r="3" fill="#1a5fb4"/>`);
+        inn.push(`<text x="${px(i)}" y="${H-B+18}" text-anchor="middle" font-size="11" fill="#6b7280">${esc(cClip(cats[i],10))}</text>`);
+      }
+    });
+  } else if(t === 'bar' || t === 'bar_h'){
+    const horiz = (t === 'bar_h') || rows.length > 12;
+    if(horiz){
+      const n = Math.min(rows.length, 15), slot = (H - B - T) / n;
+      const xw = v => (W - L - R) * (v - vmin) / (vmax - vmin);
+      for(let i = 0; i < n; i++){
+        const y = T + i * slot + 4, h = slot - 8;
+        const x0 = Math.min(xw(0), xw(vals[i])), w = Math.max(1, Math.abs(xw(vals[i]) - xw(0)));
+        inn.push(`<text x="${L-8}" y="${y+h*0.72}" text-anchor="end" font-size="11" fill="#6b7280">${esc(cClip(cats[i],12))}</text>`);
+        inn.push(`<rect x="${x0}" y="${y}" width="${w}" height="${h}" fill="#1a5fb4" opacity=".85"/>`);
+        inn.push(`<text x="${x0+w+6}" y="${y+h*0.72}" font-size="11" fill="#374151">${esc(cFmt(vals[i]))}</text>`);
+      }
+      if(rows.length > 15) inn.push(`<text x="${W-R}" y="${H-8}" text-anchor="end" font-size="11" fill="#9aa3af">仅显示前 15 / ${rows.length}</text>`);
+    } else {
+      const n = rows.length, slot = (W - L - R) / n;
+      rows.forEach((r, i) => {
+        const x = L + i * slot + slot * 0.2, w = slot * 0.6;
+        const y = Math.min(py(0), py(vals[i])), h = Math.abs(py(0) - py(vals[i]));
+        inn.push(`<rect x="${x}" y="${y}" width="${w}" height="${Math.max(1,h)}" fill="#1a5fb4" opacity=".85"/>`);
+        inn.push(`<text x="${x+w/2}" y="${y-5}" text-anchor="middle" font-size="11" fill="#374151">${esc(cFmt(vals[i]))}</text>`);
+        inn.push(`<text x="${x+w/2}" y="${H-B+18}" text-anchor="middle" font-size="11" fill="#6b7280">${esc(cClip(cats[i],8))}</text>`);
+      });
+    }
+  } else if(t === 'pie'){
+    const tot = vals.reduce((a, b) => a + Math.max(0, b), 0) || 1;
+    const cx = L + (W - L - R) / 2 - 70, cy = (T + H - B) / 2, rad = Math.min((H - B - T) / 2, 88);
+    const colors = ['#1a5fb4','#4b8bd6','#7fb0e6','#a8cbf2','#cfe2f8','#e8f1fb'];
+    let acc = -Math.PI / 2;
+    rows.forEach((r, i) => {
+      const frac = Math.max(0, vals[i]) / tot, a2 = acc + frac * 2 * Math.PI;
+      if(frac > 0){
+        const x1 = cx + rad * Math.cos(acc), y1 = cy + rad * Math.sin(acc);
+        const x2 = cx + rad * Math.cos(a2), y2 = cy + rad * Math.sin(a2);
+        inn.push(`<path d="M${cx},${cy} L${x1},${y1} A${rad},${rad} 0 ${frac>0.5?1:0} 1 ${x2},${y2} Z" fill="${colors[i%colors.length]}" stroke="#fff"/>`);
+      }
+      acc = a2;
+    });
+    rows.forEach((r, i) => {
+      const y = T + i * 20;
+      inn.push(`<rect x="${W-R-160}" y="${y}" width="10" height="10" fill="${colors[i%colors.length]}"/>`);
+      inn.push(`<text x="${W-R-144}" y="${y+9}" font-size="11" fill="#374151">${esc(cClip(cats[i],10))} ${esc((Math.max(0,vals[i])/tot*100).toFixed(1))}%</text>`);
+    });
+  } else if(t === 'scatter'){
+    const xi = cIdx(cols, ch.x) >= 0 ? cIdx(cols, ch.x) : 0;
+    const xv = rows.map(r => cNum(r[xi]) || 0);
+    const xmin = Math.min(...xv), xmax = Math.max(...xv);
+    const xs = i => L + (W - L - R) * (xmax === xmin ? 0.5 : (xv[i] - xmin) / (xmax - xmin));
+    rows.forEach((r, i) => inn.push(`<circle cx="${xs(i)}" cy="${py(vals[i])}" r="4" fill="#1a5fb4" opacity=".75"/>`));
+  }
+
+  if(!inn.length){ show('chartCard', false); return; }
+  body.innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" style="max-width:100%;height:auto;display:block" role="img" aria-label="图表">${inn.join('')}</svg>`;
+  meta.innerHTML = `<b>${esc(t)}</b> · ${esc(ch.reason || '')}${d.truncated ? ' · <span style="color:#8a5a00">结果已截断</span>' : ''}`;
+  show('chartCard', true);
+}
+
+async function ask(){
+  const q = $('#q').value.trim();
+  if(!q || busy) return;
+  busy = true; $('#send').disabled = true;
+  ['clarCard','rejCard','sqlCard','resCard','chartCard','metaCard'].forEach(s=>show(s,false));
+  try{
+    const r = await fetch('/api/ask', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({question:q, clarify:true})
+    });
+    if(!r.ok){ alert('请求失败：'+await r.text()); return; }
+    const d = await r.json();
+    if(d.clarification){
+      const blocking = d.clarification.blocking || d.clarification.level === 'blocking';
+      const hint = blocking ? '请在问题里写清采用哪种口径，我再查。' : '已按语义层默认口径作答（见下方结果）。';
+      $('#clar').innerHTML = `<b>${esc(d.clarification.question)}</b><div style="margin-top:6px">${(d.clarification.options||[]).map(o=>'<span class="chip">'+esc(o)+'</span>').join('')}</div><div style="margin-top:6px;color:#6b7280;font-size:12.5px">${hint}</div>`;
+      show('clarCard', true);
+      if(blocking) return;   // 仅阻塞式返回；提示式继续渲染结果
+    }
+    if(d.rejected){
+      $('#rej').innerHTML = `<b>${esc(d.rejected.reason)}</b>` + (d.rejected.sql?`<pre style="margin-top:8px">${esc(d.rejected.sql)}</pre>`:'');
+      show('rejCard', true);
+    }
+    if(d.sql){
+      $('#sql').textContent = d.sql; show('sqlCard', true);
+      const cols = d.columns||[], rows = d.rows||[];
+      $('#tbl').innerHTML = '<thead><tr>' + cols.map(c=>`<th>${esc(c)}</th>`).join('') + '</tr></thead><tbody>' +
+        rows.map(r=>'<tr>'+r.map(v=>`<td>${esc(v ?? '')}</td>`).join('')+'</tr>').join('') + '</tbody>';
+      $('#resMeta').innerHTML = `行数 ${d.row_count}${d.truncated?'（已截断）':''} · 图表建议 <b>${esc(d.chart.type)}</b>（${esc(d.chart.reason)}）`;
+      show('resCard', true);
+      renderChart(d);
+      $('#metrics').innerHTML = (d.metrics_used||[]).length
+        ? (d.metrics_used||[]).map(m=>`<div class="chip">${esc(m)}</div>`).join('')
+        : '<span style="color:#6b7280;font-size:12.5px">本题未命中语义层指标</span>';
+      $('#meta').innerHTML = `尝试 ${d.attempts} 次 · 生成 ${d.timings_ms.generate}ms · 执行 ${d.timings_ms.execute}ms · 总计 ${d.timings_ms.total}ms · trace ${esc(d.trace_id)}`;
+      show('metaCard', true);
+    }
+  } catch(e){ alert('网络错误：'+e); }
+  finally { busy=false; $('#send').disabled=false; $('#q').focus(); }
+}
+
+$('#send').onclick = ask;
+$('#q').addEventListener('keydown', e=>{ if(e.key==='Enter' && !e.shiftKey){ e.preventDefault(); ask(); }});
+fetch('/api/health').then(r=>r.json()).then(h=>{
+  $('#health').textContent = `库就绪：${h.tables.length} 表 · 语义层 v${h.semantic_version}`;
+}).catch(()=>{ $('#health').textContent='健康检查失败'; });
+</script>
+</body>
+</html>

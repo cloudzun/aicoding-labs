@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>政企制度问答 · RAG demo</title>
+<style>
+  :root {
+    --bg: #f7f8fa; --panel: #ffffff; --line: #e3e6ea; --text: #1f2329;
+    --muted: #6b7280; --brand: #1a5fb4; --warn-bg: #fff7e6; --warn-line: #f0c36d;
+    --src-bg: #f4f7fb;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 15px/1.65 "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
+         background: var(--bg); color: var(--text); }
+  header { padding: 14px 22px; background: var(--panel); border-bottom: 1px solid var(--line);
+           display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  header h1 { font-size: 16px; margin: 0; font-weight: 600; }
+  .badge { font-size: 12px; color: var(--muted); border: 1px solid var(--line);
+           border-radius: 999px; padding: 2px 10px; }
+  #banner { background: var(--warn-bg); border-bottom: 1px solid var(--warn-line);
+            padding: 8px 22px; font-size: 12.5px; color: #7a5b18; }
+  main { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(320px, 1fr);
+         gap: 16px; padding: 16px 22px 96px; max-width: 1320px; margin: 0 auto; }
+  @media (max-width: 900px) { main { grid-template-columns: 1fr; } }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; }
+  #chat { min-height: 62vh; padding: 16px; overflow-y: auto; display: flex; flex-direction: column; gap: 14px; }
+  .msg { max-width: 92%; padding: 11px 14px; border-radius: 10px; white-space: pre-wrap; word-break: break-word; }
+  .msg.user { align-self: flex-end; background: var(--brand); color: #fff; border-bottom-right-radius: 3px; }
+  .msg.bot { align-self: flex-start; background: #f2f4f7; border-bottom-left-radius: 3px; }
+  .msg.err { align-self: flex-start; background: #fdecec; color: #8a1f1f; }
+  .meta-line { font-size: 11.5px; color: var(--muted); margin-top: 6px; }
+  .cite { display: inline-block; min-width: 34px; text-align: center; font-size: 12px;
+          background: #dbe9ff; color: #12447f; border-radius: 4px; padding: 0 5px; margin: 0 2px;
+          cursor: pointer; border: 1px solid #b9d2f5; }
+  .cite.bad { background: #fdd; color: #8a1f1f; border-color: #f3b6b6; }
+  .cite:hover { background: #c7dcff; }
+  #side { display: flex; flex-direction: column; gap: 12px; }
+  #side h2 { font-size: 13px; margin: 0; padding: 10px 14px; border-bottom: 1px solid var(--line);
+             color: var(--muted); font-weight: 600; letter-spacing: .04em; }
+  #sources { padding: 10px 14px; max-height: 66vh; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; }
+  .src { border: 1px solid var(--line); border-radius: 8px; padding: 9px 11px; background: var(--src-bg); font-size: 12.8px; }
+  .src.hl { outline: 2px solid var(--brand); background: #eaf2ff; }
+  .src .h { display: flex; gap: 8px; align-items: baseline; margin-bottom: 4px; flex-wrap: wrap; }
+  .src .idx { font-weight: 700; color: var(--brand); }
+  .src .t { font-weight: 600; }
+  .src .tag { font-size: 11px; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; }
+  .src .tag.demo { color: #8a5a00; border-color: #e8c98a; background: #fffaf0; }
+  .src .body { color: #333a44; }
+  .src .foot { margin-top: 5px; font-size: 11.5px; color: var(--muted); }
+  footer { position: fixed; left: 0; right: 0; bottom: 0; background: var(--panel);
+           border-top: 1px solid var(--line); padding: 12px 22px; }
+  .composer { display: flex; gap: 10px; max-width: 1320px; margin: 0 auto; }
+  textarea { flex: 1; resize: none; height: 52px; padding: 12px 14px; border: 1px solid var(--line);
+             border-radius: 10px; font: inherit; outline: none; }
+  textarea:focus { border-color: var(--brand); }
+  button { padding: 0 20px; border: 0; border-radius: 10px; background: var(--brand); color: #fff;
+           font: inherit; cursor: pointer; }
+  button:disabled { background: #9db4d4; cursor: default; }
+  .hint { max-width: 1320px; margin: 6px auto 0; font-size: 11.5px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header>
+  <h1>政企制度问答</h1>
+  <span class="badge" id="health">连接中…</span>
+  <span class="badge">答案可点回原文段落</span>
+  <span class="badge">资料不足会明确拒答</span>
+</header>
+
+<div id="banner">
+  <b>合规声明：</b>嵌入与重排经公网 API（硅基流动），生成经本地网关（magpie）；知识库为
+  <b>虚构示例语料</b>（浙东省通信服务有限公司），不含真实企业制度。本 demo 用于教学演示，不构成任何合规结论。
+</div>
+
+<main>
+  <section class="card" id="chat" aria-live="polite"></section>
+  <aside id="side">
+    <div class="card">
+      <h2>引用来源（点击答案中的 [cNN] 可定位）</h2>
+      <div id="sources"><span style="color:var(--muted);font-size:12.5px">尚未提问</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <div class="composer">
+    <textarea id="q" placeholder="例如：单笔采购金额 500 万元以上需要提交什么会议审议？（Enter 发送，Shift+Enter 换行）"></textarea>
+    <button id="send">发送</button>
+  </div>
+  <div class="hint" id="hint">提示：先问审批额度，再问「那需要几个人签字」，可看到多轮追问。</div>
+</footer>
+
+<script>
+const chatEl = document.getElementById('chat');
+const srcEl = document.getElementById('sources');
+const qEl = document.getElementById('q');
+const sendEl = document.getElementById('send');
+const healthEl = document.getElementById('health');
+let history = [];
+let lastSources = [];
+
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function renderAnswer(text, invalid) {
+  const bad = new Set(invalid || []);
+  return esc(text).replace(/\[c(\d{2})\]/g, (m, n) => {
+    const idx = 'c' + n;
+    const cls = bad.has(idx) ? 'cite bad' : 'cite';
+    return `<span class="${cls}" data-idx="${idx}">[${idx}]</span>`;
+  });
+}
+
+function addMsg(role, html, extra) {
+  const d = document.createElement('div');
+  d.className = 'msg ' + role;
+  d.innerHTML = html + (extra ? `<div class="meta-line">${esc(extra)}</div>` : '');
+  chatEl.appendChild(d);
+  chatEl.scrollTop = chatEl.scrollHeight;
+  return d;
+}
+
+function renderSources(sources) {
+  lastSources = sources || [];
+  if (!lastSources.length) {
+    srcEl.innerHTML = '<span style="color:var(--muted);font-size:12.5px">本轮未检索到材料（已拒答）</span>';
+    return;
+  }
+  srcEl.innerHTML = lastSources.map(s => {
+    const demo = s.corpus === 'synthetic' ? '<span class="tag demo">示例文本</span>' : '';
+    const date = s.effective_date ? `<span class="tag">生效 ${esc(s.effective_date)}</span>` : '';
+    const status = s.status ? `<span class="tag">${esc(s.status)}</span>` : '';
+    return `<div class="src" id="src-${esc(s.idx)}">
+      <div class="h"><span class="idx">[${esc(s.idx)}]</span><span class="t">《${esc(s.doc_title)}》</span>
+        <span class="tag">${esc(s.clause_no)}</span>${date}${status}${demo}</div>
+      <div class="body">${esc(s.text)}</div>
+      <div class="foot">${esc(s.section || '')} ｜ score ${s.score}</div>
+    </div>`;
+  }).join('');
+}
+
+srcEl.addEventListener('click', () => {});
+document.addEventListener('click', e => {
+  const el = e.target.closest('.cite');
+  if (!el) return;
+  const idx = el.dataset.idx;
+  const card = document.getElementById('src-' + idx);
+  if (!card) return;
+  document.querySelectorAll('.src.hl').forEach(x => x.classList.remove('hl'));
+  card.classList.add('hl');
+  card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+});
+
+async function ask() {
+  const q = qEl.value.trim();
+  if (!q || sendEl.disabled) return;
+  qEl.value = '';
+  sendEl.disabled = true;
+  addMsg('user', esc(q));
+
+  const bot = addMsg('bot', '<span style="color:#6b7280">检索中…</span>');
+  let answer = '';
+  let invalid = [];
+  let started = performance.now();
+
+  try {
+    const resp = await fetch('/api/chat', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({question: q, history})
+    });
+    if (!resp.ok) {
+      const detail = await resp.text();
+      bot.className = 'msg err';
+      bot.textContent = '请求失败：' + detail;
+      sendEl.disabled = false;
+      return;
+    }
+    const reader = resp.body.getReader();
+    const dec = new TextDecoder();
+    let buf = '';
+    let sourcesRendered = false;
+
+    while (true) {
+      const {done, value} = await reader.read();
+      if (done) break;
+      buf += dec.decode(value, {stream: true});
+      let idx;
+      while ((idx = buf.indexOf('\n\n')) >= 0) {
+        const block = buf.slice(0, idx); buf = buf.slice(idx + 2);
+        const evLine = block.split('\n').find(l => l.startsWith('event:'));
+        const dataLine = block.split('\n').find(l => l.startsWith('data:'));
+        if (!evLine || !dataLine) continue;
+        const ev = evLine.slice(6).trim();
+        const data = JSON.parse(dataLine.slice(5).trim());
+        if (ev === 'meta') {
+          renderSources(data.sources);
+          sourcesRendered = true;
+        } else if (ev === 'delta') {
+          answer += data.text;
+          bot.innerHTML = renderAnswer(answer, invalid);
+          chatEl.scrollTop = chatEl.scrollHeight;
+        } else if (ev === 'done') {
+          answer = data.answer || answer;
+          invalid = data.invalid_citations || [];
+          bot.innerHTML = renderAnswer(answer, invalid);
+          const kinds = [];
+          if (data.refused) kinds.push('拒答');
+          if (data.timed_out) kinds.push('生成超时（部分结果）');
+          if (invalid.length) kinds.push('无效引用 ' + invalid.join(','));
+          const took = ((performance.now() - started) / 1000).toFixed(2);
+          addMsg('meta', '', '') // placeholder removed below
+          chatEl.lastChild.remove();
+          bot.insertAdjacentHTML('beforeend',
+            `<div class="meta-line">${took}s ｜ ${esc(data.model || '')} ｜ ttft ${data.ttft_ms ?? '-'}ms` +
+            (kinds.length ? ` ｜ ${esc(kinds.join(' ｜ '))}` : '') +
+            (data.trace_id ? ` ｜ trace ${esc(data.trace_id)}` : '') + '</div>');
+          history.push({role: 'user', content: q});
+          history.push({role: 'assistant', content: answer.slice(0, 800)});
+        } else if (ev === 'error') {
+          bot.className = 'msg err';
+          bot.textContent = '服务错误：' + data.error;
+        }
+      }
+    }
+    if (!sourcesRendered) renderSources([]);
+  } catch (err) {
+    bot.className = 'msg err';
+    bot.textContent = '网络错误：' + err;
+  } finally {
+    sendEl.disabled = false;
+    qEl.focus();
+  }
+}
+
+sendEl.addEventListener('click', ask);
+qEl.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); ask(); }
+});
+
+fetch('/api/health').then(r => r.json()).then(h => {
+  if (!h.ok) { healthEl.textContent = '未就绪：' + (h.error || ''); return; }
+  healthEl.textContent = `索引就绪：${h.index.chunk_count} chunk / ${h.index.docs} 文档 / ${h.index.embed_dim} 维`;
+}).catch(() => { healthEl.textContent = '健康检查失败'; });
+</script>
+</body>
+</html>

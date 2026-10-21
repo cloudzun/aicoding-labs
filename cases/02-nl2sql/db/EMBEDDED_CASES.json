@@ -1,0 +1,72 @@
+[
+  {
+    "code": "A",
+    "type": "重复客户",
+    "desc": "3 组客户同名同城，ID 带 -DUP，均标正常",
+    "detect_sql": "SELECT customer_name, COUNT(*) c FROM dim_customer GROUP BY customer_name HAVING c>1;",
+    "expect": "指标若按客户名去重/计数会偏大"
+  },
+  {
+    "code": "B",
+    "type": "地市名不统一",
+    "desc": "约 15% 客户 city 写作『杭州市』等带市后缀",
+    "detect_sql": "SELECT city, COUNT(*) FROM dim_customer GROUP BY city ORDER BY 2 DESC;",
+    "expect": "按 city 分组会分裂成两个值"
+  },
+  {
+    "code": "C",
+    "type": "产品同名不同规格",
+    "desc": "同名产品存在多个 product_id（不同带宽/价格）",
+    "detect_sql": "SELECT product_name, COUNT(*) c FROM dim_product GROUP BY product_name HAVING c>1;",
+    "expect": "按产品名 JOIN 会放大行数"
+  },
+  {
+    "code": "D",
+    "type": "客户等级为空",
+    "desc": "约 3% 客户 customer_level 为 NULL",
+    "detect_sql": "SELECT COUNT(*) FROM dim_customer WHERE customer_level IS NULL;",
+    "expect": "按等级分组需处理 NULL 桶"
+  },
+  {
+    "code": "E",
+    "type": "订单未来日期",
+    "desc": "2 条订单 order_date 为 2027-03-15",
+    "detect_sql": "SELECT order_id, order_date FROM fact_order WHERE order_date > date('now');",
+    "expect": "时间窗口统计需排除异常日期"
+  },
+  {
+    "code": "F",
+    "type": "工单未响应/未解决",
+    "desc": "约 2.4% first_response_at 为空、3% resolved_at 为空",
+    "detect_sql": "SELECT COUNT(*) FROM fact_ticket WHERE first_response_at IS NULL;",
+    "expect": "平均响应时长计算需排除 NULL"
+  },
+  {
+    "code": "G",
+    "type": "SLA 标记与时长不一致",
+    "desc": "约 0.8% 工单 sla_flag 与 (resolved-created)<=4h 矛盾",
+    "detect_sql": "SELECT COUNT(*) FROM fact_ticket WHERE (sla_flag='N' AND (julianday(resolved_at)-julianday(created_at))*24<=4) OR (sla_flag='Y' AND (julianday(resolved_at)-julianday(created_at))*24>4);",
+    "expect": "以标记为准还是以时长为准，属口径歧义"
+  },
+  {
+    "code": "H",
+    "type": "应收与月费×折扣不符",
+    "desc": "8 行 limit 金额被改动 3.33 元",
+    "detect_sql": "SELECT b.bill_month, b.order_id, b.amount_due, ROUND(o.monthly_fee*o.discount_rate + b.adjustment,2) calc FROM fact_bill b JOIN fact_order o ON o.order_id=b.order_id WHERE ABS(b.amount_due - (ROUND(o.monthly_fee*o.discount_rate,2)+b.adjustment))>0.01 LIMIT 20;",
+    "expect": "校验类问题会命中"
+  },
+  {
+    "code": "I",
+    "type": "负值调整",
+    "desc": "约 6% 账单 adjustment 为负",
+    "detect_sql": "SELECT COUNT(*) FROM fact_bill WHERE adjustment<0;",
+    "expect": "营收口径需说明是否含调整"
+  },
+  {
+    "code": "J",
+    "type": "退订后仍出账",
+    "desc": "5 个订单在退订月份仍有账单",
+    "detect_sql": "SELECT b.bill_month,b.order_id,o.cancel_date FROM fact_bill b JOIN fact_order o ON o.order_id=b.order_id WHERE o.cancel_date IS NOT NULL AND b.bill_month >= substr(o.cancel_date,1,7) LIMIT 20;",
+    "expect": "『在网收入』口径需明确是否按月过滤"
+  }
+]

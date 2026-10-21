@@ -1,0 +1,322 @@
+{
+  "version": "1.1.3",
+  "updated_at": "2026-10-20",
+  "note": "语义层：指标口径 + 同义词 + 关联规则 + 歧义词表。与 prompt、gold SQL、验收口径三处必须一致。",
+  "tables": {
+    "dim_customer": {
+      "comment": "政企客户维度表，一行一个客户。注意：存在 3 组同名不同 ID 的重复客户，按客户数统计必须按 customer_id 去重；city 存在『杭州/杭州市』两种写法。",
+      "columns": {
+        "customer_id": "客户ID（主键）",
+        "customer_name": "客户名称",
+        "industry": "行业",
+        "city": "地市（存在带/不带『市』后缀两种写法）",
+        "customer_level": "客户等级 A/B/C，可能为空",
+        "sign_date": "签约日期 YYYY-MM-DD",
+        "status": "正常/停用"
+      }
+    },
+    "dim_product": {
+      "comment": "产品维度表。存在同名不同规格产品，关联必须用 product_id，不能用 product_name。",
+      "columns": {
+        "product_id": "产品ID（主键）",
+        "product_name": "产品名称（可能重名）",
+        "product_type": "专线/云/IDC",
+        "bandwidth_mbps": "带宽 Mbps，云与 IDC 为空",
+        "standard_price": "标准月费（元）",
+        "status": "在售/下架"
+      }
+    },
+    "dim_employee": {
+      "comment": "员工维度表：客户经理 / 维护班组 / 客服。",
+      "columns": {
+        "emp_id": "员工ID（主键）",
+        "emp_name": "姓名",
+        "team": "班组",
+        "role": "客户经理/维护班组/客服",
+        "city": "地市"
+      }
+    },
+    "fact_order": {
+      "comment": "订单事实表，一行一笔订单。在网 = cancel_date 为空且 effective_date 已生效。",
+      "columns": {
+        "order_id": "订单号（主键）",
+        "customer_id": "客户ID",
+        "product_id": "产品ID",
+        "order_date": "下单日期",
+        "effective_date": "生效日期",
+        "cancel_date": "退订日期，空表示在网",
+        "monthly_fee": "月费（标准价×浮动）",
+        "discount_rate": "折扣率 0.70~1.00（小数，不是百分数）",
+        "sales_emp_id": "销售员工ID",
+        "status": "在网/已退订/待生效"
+      }
+    },
+    "fact_ticket": {
+      "comment": "工单事实表。first_response_at 可能为空（未响应）；SLA 以时长口径为准。",
+      "columns": {
+        "ticket_id": "工单号（主键）",
+        "customer_id": "客户ID",
+        "product_id": "产品ID",
+        "ticket_type": "故障/投诉/开通",
+        "urgency": "高/中/低",
+        "created_at": "创建时间",
+        "first_response_at": "首次响应时间，可能为空",
+        "resolved_at": "解决时间，可能为空",
+        "sla_flag": "SLA 标记 Y/N（与时长存在矛盾行）",
+        "handle_team": "处理班组"
+      }
+    },
+    "fact_bill": {
+      "comment": "月度账单事实表，主键 (bill_month, order_id)。应收 amount_due = round(月费×折扣,2) + adjustment，少量行刻意不符。",
+      "columns": {
+        "bill_month": "账期 YYYY-MM",
+        "customer_id": "客户ID",
+        "product_id": "产品ID",
+        "amount_due": "应收（元，含调整）",
+        "amount_paid": "实收（元）",
+        "arrears": "欠费（元）",
+        "adjustment": "调整金额（元，可为负）",
+        "order_id": "关联订单，对账必须用此列"
+      }
+    }
+  },
+  "metrics": [
+    {
+      "id": "M01",
+      "name": "营收",
+      "definition": "SUM(fact_bill.amount_due)，含调整金额",
+      "sql_hint": "SUM(b.amount_due)"
+    },
+    {
+      "id": "M02",
+      "name": "实收",
+      "definition": "SUM(fact_bill.amount_paid)",
+      "sql_hint": "SUM(b.amount_paid)"
+    },
+    {
+      "id": "M03",
+      "name": "欠费",
+      "definition": "SUM(fact_bill.arrears)",
+      "sql_hint": "SUM(b.arrears)"
+    },
+    {
+      "id": "M04",
+      "name": "折扣后月费",
+      "definition": "fact_order.monthly_fee * fact_order.discount_rate",
+      "sql_hint": "o.monthly_fee * o.discount_rate"
+    },
+    {
+      "id": "M05",
+      "name": "在网订单",
+      "definition": "cancel_date IS NULL AND effective_date <= 统计日",
+      "sql_hint": "o.cancel_date IS NULL"
+    },
+    {
+      "id": "M06",
+      "name": "新增订单",
+      "definition": "按下单日期 order_date 计，不按生效日期",
+      "sql_hint": "COUNT(DISTINCT o.order_id)"
+    },
+    {
+      "id": "M07",
+      "name": "SLA 超时",
+      "definition": "以时长口径：(resolved_at - created_at) > 4 小时；与 sla_flag 矛盾时以时长口径为准并单独报告矛盾数",
+      "sql_hint": "(julianday(t.resolved_at)-julianday(t.created_at))*24 > 4"
+    },
+    {
+      "id": "M08",
+      "name": "近三个月",
+      "definition": "最近 3 个完整账期，不含当月（以数据最大账期为准）",
+      "sql_hint": "bill_month in (最近3个完整月)"
+    },
+    {
+      "id": "M09",
+      "name": "千兆专线",
+      "definition": "product_type='专线' AND bandwidth_mbps >= 1000",
+      "sql_hint": "p.product_type='专线' AND p.bandwidth_mbps>=1000"
+    },
+    {
+      "id": "M10",
+      "name": "客户数",
+      "definition": "COUNT(DISTINCT customer_id)，不按名称计数",
+      "sql_hint": "COUNT(DISTINCT c.customer_id)"
+    },
+    {
+      "id": "M11",
+      "name": "高优工单",
+      "definition": "urgency='高'",
+      "sql_hint": "t.urgency='高'"
+    },
+    {
+      "id": "M12",
+      "name": "平均响应时长",
+      "definition": "AVG((first_response_at - created_at)) 小时，必须排除未响应(first_response_at IS NULL)",
+      "sql_hint": "AVG((julianday(t.first_response_at)-julianday(t.created_at))*24)"
+    },
+    {
+      "id": "M13",
+      "name": "平均标准月费",
+      "definition": "AVG(dim_product.standard_price)，按产品维度算，不要用订单月费",
+      "sql_hint": "AVG(p.standard_price)"
+    },
+    {
+      "id": "M14",
+      "name": "季度",
+      "definition": "季度标签统一写成 YYYY-Qn（如 2026-Q1），由 bill_month/created_at 推导",
+      "sql_hint": "substr(bill_month,1,4)||'-Q'||((cast(substr(bill_month,6,2) as integer)+2)/3)"
+    }
+  ],
+  "synonyms": {
+    "客户": "dim_customer.customer_id",
+    "政企客户": "dim_customer",
+    "地市": "dim_customer.city",
+    "分公司": "dim_customer.city",
+    "产品": "dim_product.product_id",
+    "专线": "dim_product.product_type='专线'",
+    "电路": "dim_product.product_type='专线'",
+    "线路": "dim_product.product_type='专线'",
+    "云": "dim_product.product_type='云'",
+    "机房": "dim_product.product_type='IDC'",
+    "订单": "fact_order.order_id",
+    "工单": "fact_ticket.ticket_id",
+    "故障": "fact_ticket.ticket_type='故障'",
+    "投诉": "fact_ticket.ticket_type='投诉'",
+    "开通": "fact_ticket.ticket_type='开通'",
+    "账单": "fact_bill",
+    "营收": "M01",
+    "收入": "M01",
+    "实收": "M02",
+    "欠费": "M03",
+    "在网": "M05",
+    "退订": "cancel_date IS NOT NULL",
+    "超时": "M07",
+    "近三月": "M08",
+    "千兆": "M09",
+    "客户经理": "dim_employee.role='客户经理'",
+    "班组": "dim_employee.team"
+  },
+  "joins": [
+    {
+      "left": "fact_order.customer_id",
+      "right": "dim_customer.customer_id",
+      "comment": "订单→客户"
+    },
+    {
+      "left": "fact_order.product_id",
+      "right": "dim_product.product_id",
+      "comment": "订单→产品（禁止用 product_name 关联）"
+    },
+    {
+      "left": "fact_order.sales_emp_id",
+      "right": "dim_employee.emp_id",
+      "comment": "订单→销售"
+    },
+    {
+      "left": "fact_ticket.customer_id",
+      "right": "dim_customer.customer_id",
+      "comment": "工单→客户"
+    },
+    {
+      "left": "fact_ticket.product_id",
+      "right": "dim_product.product_id",
+      "comment": "工单→产品"
+    },
+    {
+      "left": "fact_bill.order_id",
+      "right": "fact_order.order_id",
+      "comment": "账单→订单（对账必须走这层）"
+    },
+    {
+      "left": "fact_bill.customer_id",
+      "right": "dim_customer.customer_id",
+      "comment": "账单→客户（仅用于维度筛选）"
+    }
+  ],
+  "ambiguities": [
+    {
+      "trigger": [
+        "营收",
+        "收入"
+      ],
+      "question": "『营收/收入』是否包含调整金额（减免/补收）？",
+      "options": [
+        "含调整（amount_due 原值）",
+        "不含调整（amount_due - adjustment）"
+      ],
+      "blocking": true,
+      "default": null
+    },
+    {
+      "trigger": [
+        "近三个月",
+        "近3个月",
+        "最近三个月"
+      ],
+      "question": "『近三个月』是指最近 3 个完整账期（不含当月），还是含当月？",
+      "options": [
+        "最近 3 个完整账期（不含当月）",
+        "含当月"
+      ],
+      "blocking": true,
+      "default": null
+    },
+    {
+      "trigger": [
+        "客户数",
+        "多少客户",
+        "客户数量"
+      ],
+      "question": "客户数按 customer_id 去重，还是按客户名称去重？",
+      "options": [
+        "按 customer_id 去重",
+        "按客户名称去重"
+      ],
+      "blocking": false,
+      "default": "按 customer_id 去重"
+    },
+    {
+      "trigger": [
+        "SLA",
+        "超时"
+      ],
+      "question": "SLA 超时以 sla_flag 标记为准，还是以实际时长（>4 小时）为准？",
+      "options": [
+        "以实际时长（>4 小时）",
+        "以 sla_flag 标记"
+      ],
+      "blocking": false,
+      "default": "以实际时长（>4 小时）"
+    },
+    {
+      "trigger": [
+        "在网"
+      ],
+      "question": "『在网』是否包含已下单但尚未生效的订单？",
+      "options": [
+        "仅已生效（effective_date <= 今天）",
+        "含待生效"
+      ],
+      "blocking": false,
+      "default": "仅已生效（effective_date <= 今天）"
+    },
+    {
+      "trigger": [
+        "月费",
+        "多少钱",
+        "金额"
+      ],
+      "question": "要的是标准月费，还是折扣后月费？",
+      "options": [
+        "折扣后月费（monthly_fee × discount_rate）",
+        "标准月费（monthly_fee）"
+      ],
+      "blocking": false,
+      "default": "折扣后月费（monthly_fee × discount_rate）"
+    }
+  ],
+  "formats": {
+    "quarter": "YYYY-Qn（例 2026-Q1）",
+    "month": "YYYY-MM",
+    "datetime": "YYYY-MM-DD HH:MM:SS"
+  }
+}

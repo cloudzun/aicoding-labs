@@ -1,0 +1,36 @@
+# ===== 密钥与本地环境（绝不入库）=====
+.env
+*.env
+!*.env.example
+**/.env
+
+# ===== 运行时产物（可重新生成）=====
+**/data/cache/
+**/data/traces/
+**/data/uploads/
+**/data/*.db
+**/data/index/emb.npy.tmp
+**/__pycache__/
+**/*.pyc
+**/.pytest_cache/
+*.log
+*.tmp
+
+# ===== 证据原始件（体积大，且含历史路径）=====
+**/evidence/*raw*.txt
+**/evidence/*console*.txt
+**/evidence/eval-*.json
+**/evidence/probe-*.json
+**/evidence/server-*.txt
+
+# ===== 系统与编辑器 =====
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ===== 生成物（clone 后按 QUICKSTART 一条命令生成）=====
+cases/*/evidence/
+cases/*/data/contracts/
+cases/*/data/manifest.json
+cases/*/data/truth/__pycache__/

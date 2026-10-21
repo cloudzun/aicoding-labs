@@ -1,0 +1,8 @@
+# 案例二 NL2SQL 问数 · 运行依赖
+# 依据：本目录 src/ 与 scripts/ 的实际 import 扫描（HANDOFF §2.5）
+# 版本：取 2026-10-21 本机现网（Python 3.12.10），非全量 pip freeze
+# 说明：数据库用 stdlib sqlite3，不需要额外驱动
+fastapi==0.136.3
+uvicorn==0.41.0
+httpx==0.28.1
+pydantic==2.12.5

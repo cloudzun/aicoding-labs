@@ -1,0 +1,11 @@
+# 案例三 合同审查 · 运行依赖
+# 依据：本目录 src/ 与 scripts/ 的实际 import 扫描（HANDOFF §2.5）
+# 版本：取 2026-10-21 本机现网（Python 3.12.10），非全量 pip freeze
+fastapi==0.136.3
+uvicorn==0.41.0
+httpx==0.28.1
+pydantic==2.12.5
+python-docx==1.2.0
+PyYAML==6.0.3
+# /api/upload 的 multipart 解析，FastAPI 必需（代码中无显式 import）
+python-multipart==0.0.22

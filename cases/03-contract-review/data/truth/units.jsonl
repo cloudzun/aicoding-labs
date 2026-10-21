@@ -1,0 +1,810 @@
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R01", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第八条 保密\n双方对因履行本合同知悉的对方商业秘密承担保密义务，保密期限为合同终止后三年。"}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R02", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第九条 发票与税率\n乙方应开具税率为6%的增值税专用发票，甲方收到发票后付款。"}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R05", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 争议解决\n因本合同发生争议，双方应协商解决；协商不成的，提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R09", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二条 合同期限\n本合同有效期自生效之日起十二个月。"}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R11", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 违约责任\n任何一方违约的，应赔偿对方因此遭受的直接损失。"}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R12", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 知识产权\n乙方交付成果的知识产权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后30日内付款。 质保期为24个月。 变更通知应提前20日送达。 预付款比例为20%。 赔偿"}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R15", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R17", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R19", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R20", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十八条 合同解除\n一方严重违约且经催告三十日仍未纠正的，对方有权解除本合同。"}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R21", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十九条 续期\n本合同期满前六十日双方书面确认是否续期，未确认的到期终止。"}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R24", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 成果归属\n乙方交付成果的所有权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R25", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二十条 对等责任\n双方违约责任对等，逾期均按合同总额的0.5‰/日计违约金。"}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT001", "contract_type": "采购合同", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R01", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第八条 保密\n双方对因履行本合同知悉的对方商业秘密承担保密义务，保密期限为合同终止后三年。"}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R02", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第九条 发票与税率\n乙方应开具税率为6%的增值税专用发票，甲方收到发票后付款。"}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R05", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 争议解决\n因本合同发生争议，双方应协商解决；协商不成的，提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R09", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二条 合同期限\n本合同有效期自生效之日起十二个月。"}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R11", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 违约责任\n任何一方违约的，应赔偿对方因此遭受的直接损失。"}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R12", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 知识产权\n乙方交付成果的知识产权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后30日内付款。 质保期为24个月。 变更通知应提前20日送达。 预付款比例为20%。 赔偿"}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R15", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R17", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R19", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R20", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十八条 合同解除\n一方严重违约且经催告三十日仍未纠正的，对方有权解除本合同。"}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R21", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十九条 续期\n本合同期满前六十日双方书面确认是否续期，未确认的到期终止。"}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R24", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 成果归属\n乙方交付成果的所有权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R25", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二十条 对等责任\n双方违约责任对等，逾期均按合同总额的0.5‰/日计违约金。"}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT002", "contract_type": "采购合同", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R01", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第八条 保密\n双方对因履行本合同知悉的对方商业秘密承担保密义务，保密期限为合同终止后三年。"}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R02", "present": false, "risk": true, "level": "中", "defect_code": "D09", "evidence_expected": ""}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R05", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 争议解决\n因本合同发生争议，双方应协商解决；协商不成的，提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R09", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二条 合同期限\n本合同有效期自生效之日起十二个月。"}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R11", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 违约责任\n任何一方违约的，应赔偿对方因此遭受的直接损失。"}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R12", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 知识产权\n乙方交付成果的知识产权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后30日内付款。 质保期为24个月。 变更通知应提前20日送达。 预付款比例为20%。 赔偿"}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R15", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R17", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R19", "present": true, "risk": true, "level": "高", "defect_code": "假R19", "evidence_expected": ""}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R20", "present": true, "risk": true, "level": "高", "defect_code": "D04", "evidence_expected": "第十八条 合同解除\n任何一方提前三十日书面通知即可解除本合同，无需承担赔偿责任。"}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R21", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十九条 续期\n本合同期满前六十日双方书面确认是否续期，未确认的到期终止。"}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R24", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 成果归属\n乙方交付成果的所有权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R25", "present": true, "risk": true, "level": "中", "defect_code": "D13", "evidence_expected": "第二十条 对等责任\n甲方逾期付款的，应按日千分之一向乙方支付违约金；乙方逾期交付的，不承担责任。"}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT003", "contract_type": "采购合同", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R01", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第八条 保密\n双方对因履行本合同知悉的对方商业秘密承担保密义务，保密期限为合同终止后三年。"}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R02", "present": false, "risk": true, "level": "中", "defect_code": "D09", "evidence_expected": ""}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R05", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 争议解决\n因本合同发生争议，双方应协商解决；协商不成的，提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R08", "present": false, "risk": true, "level": "低", "defect_code": "缺R08", "evidence_expected": ""}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R09", "present": false, "risk": true, "level": "高", "defect_code": "缺R09", "evidence_expected": ""}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R11", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 违约责任\n任何一方违约的，应赔偿对方因此遭受的直接损失。"}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R12", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 知识产权\n乙方交付成果的知识产权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后30日内付款。 质保期为24个月。 变更通知应提前20日送达。 预付款比例为20%。 赔偿"}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R15", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R17", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R19", "present": true, "risk": true, "level": "高", "defect_code": "假R19", "evidence_expected": ""}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R20", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十八条 合同解除\n一方严重违约且经催告三十日仍未纠正的，对方有权解除本合同。"}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R21", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十九条 续期\n本合同期满前六十日双方书面确认是否续期，未确认的到期终止。"}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R24", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 成果归属\n乙方交付成果的所有权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R25", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二十条 对等责任\n双方违约责任对等，逾期均按合同总额的0.5‰/日计违约金。"}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT004", "contract_type": "采购合同", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R01", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第八条 保密\n双方对因履行本合同知悉的对方商业秘密承担保密义务，保密期限为合同终止后三年。"}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R02", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第九条 发票与税率\n乙方应开具税率为6%的增值税专用发票，甲方收到发票后付款。"}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R04", "present": false, "risk": true, "level": "高", "defect_code": "D11", "evidence_expected": ""}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R05", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 争议解决\n因本合同发生争议，双方应协商解决；协商不成的，提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R09", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二条 合同期限\n本合同有效期自生效之日起十二个月。"}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R11", "present": false, "risk": true, "level": "高", "defect_code": "缺R11", "evidence_expected": ""}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R12", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 知识产权\n乙方交付成果的知识产权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后30日内付款。 质保期为24个月。 变更通知应提前3日送达。 预付款比例为20%。 赔偿总"}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R15", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R17", "present": true, "risk": true, "level": "低", "defect_code": "假R17", "evidence_expected": ""}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R19", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R20", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十八条 合同解除\n一方严重违约且经催告三十日仍未纠正的，对方有权解除本合同。"}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R21", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十九条 续期\n本合同期满前六十日双方书面确认是否续期，未确认的到期终止。"}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R24", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 成果归属\n乙方交付成果的所有权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R25", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二十条 对等责任\n双方违约责任对等，逾期均按合同总额的0.5‰/日计违约金。"}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT005", "contract_type": "采购合同", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R01", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第八条 保密\n双方对因履行本合同知悉的对方商业秘密承担保密义务，保密期限为合同终止后三年。"}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R02", "present": false, "risk": true, "level": "中", "defect_code": "D09", "evidence_expected": ""}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R05", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 争议解决\n因本合同发生争议，双方应协商解决；协商不成的，提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R09", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二条 合同期限\n本合同有效期自生效之日起十二个月。"}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R10", "present": false, "risk": true, "level": "高", "defect_code": "缺R10", "evidence_expected": ""}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R11", "present": false, "risk": true, "level": "高", "defect_code": "缺R11", "evidence_expected": ""}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R12", "present": false, "risk": true, "level": "高", "defect_code": "缺R12", "evidence_expected": ""}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后30日内付款。 质保期为24个月。 变更通知应提前20日送达。 预付款比例为20%。 赔偿"}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R15", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R17", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R19", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R20", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十八条 合同解除\n一方严重违约且经催告三十日仍未纠正的，对方有权解除本合同。"}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R21", "present": true, "risk": true, "level": "中", "defect_code": "D05", "evidence_expected": "第十九条 续期\n本合同期满后自动续期一年。"}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R24", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 成果归属\n乙方交付成果的所有权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R25", "present": true, "risk": true, "level": "中", "defect_code": "D13", "evidence_expected": "第二十条 对等责任\n甲方逾期付款的，应按日千分之一向乙方支付违约金；乙方逾期交付的，不承担责任。"}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT006", "contract_type": "采购合同", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R01", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第八条 保密\n双方对因履行本合同知悉的对方商业秘密承担保密义务，保密期限为合同终止后三年。"}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R02", "present": false, "risk": true, "level": "中", "defect_code": "D09", "evidence_expected": ""}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R05", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 争议解决\n因本合同发生争议，双方应协商解决；协商不成的，提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R09", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二条 合同期限\n本合同有效期自生效之日起十二个月。"}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R11", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 违约责任\n任何一方违约的，应赔偿对方因此遭受的直接损失。"}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R12", "present": false, "risk": true, "level": "高", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后30日内付款。 质保期为24个月。 变更通知应提前3日送达。 预付款比例为20%。 赔偿总"}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R15", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R17", "present": true, "risk": true, "level": "低", "defect_code": "假R17", "evidence_expected": ""}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R19", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R20", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十八条 合同解除\n一方严重违约且经催告三十日仍未纠正的，对方有权解除本合同。"}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R21", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十九条 续期\n本合同期满前六十日双方书面确认是否续期，未确认的到期终止。"}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R24", "present": true, "risk": true, "level": "高", "defect_code": "D08", "evidence_expected": "第十六条 成果归属\n成果归属双方另行协商确定。"}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R25", "present": true, "risk": true, "level": "中", "defect_code": "D13", "evidence_expected": "第二十条 对等责任\n甲方逾期付款的，应按日千分之一向乙方支付违约金；乙方逾期交付的，不承担责任。"}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT007", "contract_type": "采购合同", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R01", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第八条 保密\n双方对因履行本合同知悉的对方商业秘密承担保密义务，保密期限为合同终止后三年。"}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R02", "present": false, "risk": true, "level": "中", "defect_code": "D09", "evidence_expected": ""}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R05", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 争议解决\n因本合同发生争议，双方应协商解决；协商不成的，提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R09", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二条 合同期限\n本合同有效期自生效之日起十二个月。"}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R11", "present": false, "risk": true, "level": "高", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R12", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 知识产权\n乙方交付成果的知识产权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R14", "present": true, "risk": true, "level": "高", "defect_code": "假R14", "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.1‰/日计算。 甲方应在验收后30日内付款。 质保期为24个月。 变更通知应提前20日送达。 预付款比例为20%。 赔偿"}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R15", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R17", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R19", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R20", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十八条 合同解除\n一方严重违约且经催告三十日仍未纠正的，对方有权解除本合同。"}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R21", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十九条 续期\n本合同期满前六十日双方书面确认是否续期，未确认的到期终止。"}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R22", "present": true, "risk": true, "level": "高", "defect_code": "D06", "evidence_expected": "第七条 赔偿责任\n乙方违约应赔偿甲方全部损失，包括间接损失。"}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R24", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 成果归属\n乙方交付成果的所有权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R25", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二十条 对等责任\n双方违约责任对等，逾期均按合同总额的0.5‰/日计违约金。"}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT008", "contract_type": "采购合同", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R01", "present": false, "risk": true, "level": "高", "defect_code": "D01", "evidence_expected": ""}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R02", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第九条 发票与税率\n乙方应开具税率为6%的增值税专用发票，甲方收到发票后付款。"}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R05", "present": false, "risk": true, "level": "高", "defect_code": "缺R05", "evidence_expected": ""}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R09", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二条 合同期限\n本合同有效期自生效之日起十二个月。"}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R11", "present": false, "risk": true, "level": "高", "defect_code": "缺R11", "evidence_expected": ""}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R12", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 知识产权\n乙方交付成果的知识产权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后90日内付款。 质保期为24个月。 变更通知应提前20日送达。 预付款比例为20%。 赔偿"}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R15", "present": true, "risk": true, "level": "中", "defect_code": "假R15", "evidence_expected": ""}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R17", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R19", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R20", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十八条 合同解除\n一方严重违约且经催告三十日仍未纠正的，对方有权解除本合同。"}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R21", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十九条 续期\n本合同期满前六十日双方书面确认是否续期，未确认的到期终止。"}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R24", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 成果归属\n乙方交付成果的所有权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R25", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二十条 对等责任\n双方违约责任对等，逾期均按合同总额的0.5‰/日计违约金。"}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT009", "contract_type": "采购合同", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R01", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第八条 保密\n双方对因履行本合同知悉的对方商业秘密承担保密义务，保密期限为合同终止后三年。"}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R02", "present": false, "risk": true, "level": "中", "defect_code": "D09", "evidence_expected": ""}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R05", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 争议解决\n因本合同发生争议，双方应协商解决；协商不成的，提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R09", "present": false, "risk": true, "level": "高", "defect_code": "缺R09", "evidence_expected": ""}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R11", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 违约责任\n任何一方违约的，应赔偿对方因此遭受的直接损失。"}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R12", "present": false, "risk": true, "level": "高", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后90日内付款。 质保期为24个月。 变更通知应提前20日送达。 预付款比例为20%。 赔偿"}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R15", "present": true, "risk": true, "level": "中", "defect_code": "假R15", "evidence_expected": ""}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R17", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R19", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R20", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十八条 合同解除\n一方严重违约且经催告三十日仍未纠正的，对方有权解除本合同。"}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R21", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十九条 续期\n本合同期满前六十日双方书面确认是否续期，未确认的到期终止。"}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R24", "present": true, "risk": true, "level": "高", "defect_code": "D08", "evidence_expected": "第十六条 成果归属\n成果归属双方另行协商确定。"}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R25", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二十条 对等责任\n双方违约责任对等，逾期均按合同总额的0.5‰/日计违约金。"}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT010", "contract_type": "采购合同", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R01", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第八条 保密\n双方对因履行本合同知悉的对方商业秘密承担保密义务，保密期限为合同终止后三年。"}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R02", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第九条 发票与税率\n乙方应开具税率为6%的增值税专用发票，甲方收到发票后付款。"}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R05", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 争议解决\n因本合同发生争议，双方应协商解决；协商不成的，提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R09", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二条 合同期限\n本合同有效期自生效之日起十二个月。"}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R11", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 违约责任\n任何一方违约的，应赔偿对方因此遭受的直接损失。"}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R12", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 知识产权\n乙方交付成果的知识产权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后30日内付款。 质保期为24个月。 变更通知应提前20日送达。 预付款比例为20%。 赔偿"}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R15", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R17", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R19", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R20", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十八条 合同解除\n一方严重违约且经催告三十日仍未纠正的，对方有权解除本合同。"}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R21", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十九条 续期\n本合同期满前六十日双方书面确认是否续期，未确认的到期终止。"}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R24", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 成果归属\n乙方交付成果的所有权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R25", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二十条 对等责任\n双方违约责任对等，逾期均按合同总额的0.5‰/日计违约金。"}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT011", "contract_type": "服务合同", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R01", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第八条 保密\n双方对因履行本合同知悉的对方商业秘密承担保密义务，保密期限为合同终止后三年。"}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R02", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第九条 发票与税率\n乙方应开具税率为6%的增值税专用发票，甲方收到发票后付款。"}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R05", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 争议解决\n因本合同发生争议，双方应协商解决；协商不成的，提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R09", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二条 合同期限\n本合同有效期自生效之日起十二个月。"}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R11", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 违约责任\n任何一方违约的，应赔偿对方因此遭受的直接损失。"}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R12", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 知识产权\n乙方交付成果的知识产权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后30日内付款。 质保期为24个月。 变更通知应提前20日送达。 预付款比例为20%。 赔偿"}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R15", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R17", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R19", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R20", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十八条 合同解除\n一方严重违约且经催告三十日仍未纠正的，对方有权解除本合同。"}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R21", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十九条 续期\n本合同期满前六十日双方书面确认是否续期，未确认的到期终止。"}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R24", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 成果归属\n乙方交付成果的所有权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R25", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二十条 对等责任\n双方违约责任对等，逾期均按合同总额的0.5‰/日计违约金。"}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT012", "contract_type": "服务合同", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R01", "present": false, "risk": true, "level": "高", "defect_code": "D01", "evidence_expected": ""}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R02", "present": false, "risk": true, "level": "中", "defect_code": "D09", "evidence_expected": ""}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R05", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 争议解决\n因本合同发生争议，双方应协商解决；协商不成的，提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R09", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二条 合同期限\n本合同有效期自生效之日起十二个月。"}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R11", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 违约责任\n任何一方违约的，应赔偿对方因此遭受的直接损失。"}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R12", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 知识产权\n乙方交付成果的知识产权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后30日内付款。 质保期为24个月。 变更通知应提前20日送达。 预付款比例为20%。 赔偿"}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R15", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R17", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R19", "present": true, "risk": true, "level": "高", "defect_code": "假R19", "evidence_expected": ""}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R20", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十八条 合同解除\n一方严重违约且经催告三十日仍未纠正的，对方有权解除本合同。"}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R21", "present": true, "risk": true, "level": "中", "defect_code": "D05", "evidence_expected": "第十九条 续期\n本合同期满后自动续期一年。"}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R24", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 成果归属\n乙方交付成果的所有权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R25", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二十条 对等责任\n双方违约责任对等，逾期均按合同总额的0.5‰/日计违约金。"}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT013", "contract_type": "服务合同", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R01", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第八条 保密\n双方对因履行本合同知悉的对方商业秘密承担保密义务，保密期限为合同终止后三年。"}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R02", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第九条 发票与税率\n乙方应开具税率为6%的增值税专用发票，甲方收到发票后付款。"}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R05", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 争议解决\n因本合同发生争议，双方应协商解决；协商不成的，提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R09", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二条 合同期限\n本合同有效期自生效之日起十二个月。"}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R11", "present": false, "risk": true, "level": "高", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R12", "present": false, "risk": true, "level": "高", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R14", "present": true, "risk": true, "level": "高", "defect_code": "假R14", "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.1‰/日计算。 甲方应在验收后30日内付款。 质保期为24个月。 变更通知应提前20日送达。 预付款比例为20%。 赔偿"}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R15", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R17", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R19", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R20", "present": true, "risk": true, "level": "高", "defect_code": "D04", "evidence_expected": "第十八条 合同解除\n任何一方提前三十日书面通知即可解除本合同，无需承担赔偿责任。"}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R21", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十九条 续期\n本合同期满前六十日双方书面确认是否续期，未确认的到期终止。"}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R22", "present": true, "risk": true, "level": "高", "defect_code": "D06", "evidence_expected": "第七条 赔偿责任\n乙方违约应赔偿甲方全部损失，包括间接损失。"}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R24", "present": true, "risk": true, "level": "高", "defect_code": "D08", "evidence_expected": "第十六条 成果归属\n成果归属双方另行协商确定。"}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R25", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二十条 对等责任\n双方违约责任对等，逾期均按合同总额的0.5‰/日计违约金。"}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT014", "contract_type": "服务合同", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R01", "present": false, "risk": true, "level": "高", "defect_code": "D01", "evidence_expected": ""}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R02", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第九条 发票与税率\n乙方应开具税率为6%的增值税专用发票，甲方收到发票后付款。"}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R05", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 争议解决\n因本合同发生争议，双方应协商解决；协商不成的，提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R06", "present": false, "risk": true, "level": "低", "defect_code": "缺R06", "evidence_expected": ""}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R09", "present": false, "risk": true, "level": "高", "defect_code": "缺R09", "evidence_expected": ""}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R11", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 违约责任\n任何一方违约的，应赔偿对方因此遭受的直接损失。"}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R12", "present": false, "risk": true, "level": "高", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R14", "present": true, "risk": true, "level": "高", "defect_code": "假R14", "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.1‰/日计算。 甲方应在验收后30日内付款。 质保期为24个月。 变更通知应提前20日送达。 预付款比例为20%。 赔偿"}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R15", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R17", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R19", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R20", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十八条 合同解除\n一方严重违约且经催告三十日仍未纠正的，对方有权解除本合同。"}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R21", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十九条 续期\n本合同期满前六十日双方书面确认是否续期，未确认的到期终止。"}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R24", "present": true, "risk": true, "level": "高", "defect_code": "D08", "evidence_expected": "第十六条 成果归属\n成果归属双方另行协商确定。"}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R25", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二十条 对等责任\n双方违约责任对等，逾期均按合同总额的0.5‰/日计违约金。"}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R26", "present": false, "risk": true, "level": "高", "defect_code": "D12", "evidence_expected": ""}
+{"contract_id": "CT015", "contract_type": "服务合同", "rule_id": "R27", "present": false, "risk": true, "level": "低", "defect_code": "D12", "evidence_expected": ""}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R01", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第八条 保密\n双方对因履行本合同知悉的对方商业秘密承担保密义务，保密期限为合同终止后三年。"}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R02", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第九条 发票与税率\n乙方应开具税率为6%的增值税专用发票，甲方收到发票后付款。"}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R03", "present": false, "risk": true, "level": "高", "defect_code": "D10", "evidence_expected": ""}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R05", "present": false, "risk": true, "level": "高", "defect_code": "缺R05", "evidence_expected": ""}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R09", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二条 合同期限\n本合同有效期自生效之日起十二个月。"}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R10", "present": false, "risk": true, "level": "高", "defect_code": "缺R10", "evidence_expected": ""}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R11", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 违约责任\n任何一方违约的，应赔偿对方因此遭受的直接损失。"}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R12", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 知识产权\n乙方交付成果的知识产权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后90日内付款。 质保期为24个月。 变更通知应提前20日送达。 预付款比例为50%。 赔偿"}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R15", "present": true, "risk": true, "level": "中", "defect_code": "假R15", "evidence_expected": ""}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R17", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R18", "present": true, "risk": true, "level": "中", "defect_code": "假R18", "evidence_expected": ""}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R19", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R20", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十八条 合同解除\n一方严重违约且经催告三十日仍未纠正的，对方有权解除本合同。"}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R21", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十九条 续期\n本合同期满前六十日双方书面确认是否续期，未确认的到期终止。"}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R24", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 成果归属\n乙方交付成果的所有权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R25", "present": true, "risk": true, "level": "中", "defect_code": "D13", "evidence_expected": "第二十条 对等责任\n甲方逾期付款的，应按日千分之一向乙方支付违约金；乙方逾期交付的，不承担责任。"}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT016", "contract_type": "服务合同", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R01", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第八条 保密\n双方对因履行本合同知悉的对方商业秘密承担保密义务，保密期限为合同终止后三年。"}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R02", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第九条 发票与税率\n乙方应开具税率为6%的增值税专用发票，甲方收到发票后付款。"}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R05", "present": false, "risk": true, "level": "高", "defect_code": "缺R05", "evidence_expected": ""}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R09", "present": false, "risk": true, "level": "高", "defect_code": "缺R09", "evidence_expected": ""}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R11", "present": false, "risk": true, "level": "高", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R12", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 知识产权\n乙方交付成果的知识产权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后90日内付款。 质保期为24个月。 变更通知应提前20日送达。 预付款比例为50%。 赔偿"}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R15", "present": true, "risk": true, "level": "中", "defect_code": "假R15", "evidence_expected": ""}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R17", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R18", "present": true, "risk": true, "level": "中", "defect_code": "假R18", "evidence_expected": ""}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R19", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R20", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十八条 合同解除\n一方严重违约且经催告三十日仍未纠正的，对方有权解除本合同。"}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R21", "present": true, "risk": true, "level": "中", "defect_code": "D05", "evidence_expected": "第十九条 续期\n本合同期满后自动续期一年。"}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R22", "present": true, "risk": true, "level": "高", "defect_code": "D06", "evidence_expected": "第七条 赔偿责任\n乙方违约应赔偿甲方全部损失，包括间接损失。"}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R24", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 成果归属\n乙方交付成果的所有权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R25", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二十条 对等责任\n双方违约责任对等，逾期均按合同总额的0.5‰/日计违约金。"}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT017", "contract_type": "服务合同", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R01", "present": false, "risk": true, "level": "高", "defect_code": "D01", "evidence_expected": ""}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R02", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第九条 发票与税率\n乙方应开具税率为6%的增值税专用发票，甲方收到发票后付款。"}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R05", "present": false, "risk": true, "level": "高", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R07", "present": false, "risk": true, "level": "中", "defect_code": "缺R07", "evidence_expected": ""}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R09", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二条 合同期限\n本合同有效期自生效之日起十二个月。"}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R11", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 违约责任\n任何一方违约的，应赔偿对方因此遭受的直接损失。"}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R12", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 知识产权\n乙方交付成果的知识产权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后30日内付款。 质保期为24个月。 变更通知应提前3日送达。 预付款比例为20%。 赔偿总"}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R15", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R17", "present": true, "risk": true, "level": "低", "defect_code": "假R17", "evidence_expected": ""}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R19", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R20", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十八条 合同解除\n一方严重违约且经催告三十日仍未纠正的，对方有权解除本合同。"}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R21", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十九条 续期\n本合同期满前六十日双方书面确认是否续期，未确认的到期终止。"}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R23", "present": true, "risk": true, "level": "中", "defect_code": "D07", "evidence_expected": "第十二条 管辖\n争议提交乙方所在地人民法院诉讼解决。"}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R24", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 成果归属\n乙方交付成果的所有权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R25", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二十条 对等责任\n双方违约责任对等，逾期均按合同总额的0.5‰/日计违约金。"}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT018", "contract_type": "服务合同", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R01", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第八条 保密\n双方对因履行本合同知悉的对方商业秘密承担保密义务，保密期限为合同终止后三年。"}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R02", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第九条 发票与税率\n乙方应开具税率为6%的增值税专用发票，甲方收到发票后付款。"}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R05", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 争议解决\n因本合同发生争议，双方应协商解决；协商不成的，提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R09", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二条 合同期限\n本合同有效期自生效之日起十二个月。"}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R11", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 违约责任\n任何一方违约的，应赔偿对方因此遭受的直接损失。"}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R12", "present": false, "risk": true, "level": "高", "defect_code": "缺R12", "evidence_expected": ""}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后90日内付款。 质保期为6个月。 变更通知应提前20日送达。 预付款比例为20%。 赔偿总"}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R15", "present": true, "risk": true, "level": "中", "defect_code": "假R15", "evidence_expected": ""}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R16", "present": true, "risk": true, "level": "中", "defect_code": "假R16", "evidence_expected": ""}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R17", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R19", "present": true, "risk": true, "level": "高", "defect_code": "假R19", "evidence_expected": ""}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R20", "present": true, "risk": true, "level": "高", "defect_code": "D04", "evidence_expected": "第十八条 合同解除\n任何一方提前三十日书面通知即可解除本合同，无需承担赔偿责任。"}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R21", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十九条 续期\n本合同期满前六十日双方书面确认是否续期，未确认的到期终止。"}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R24", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 成果归属\n乙方交付成果的所有权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R25", "present": true, "risk": true, "level": "中", "defect_code": "D13", "evidence_expected": "第二十条 对等责任\n甲方逾期付款的，应按日千分之一向乙方支付违约金；乙方逾期交付的，不承担责任。"}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT019", "contract_type": "服务合同", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R01", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第八条 保密\n双方对因履行本合同知悉的对方商业秘密承担保密义务，保密期限为合同终止后三年。"}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R02", "present": false, "risk": true, "level": "中", "defect_code": "D09", "evidence_expected": ""}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R05", "present": false, "risk": true, "level": "高", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R07", "present": false, "risk": true, "level": "中", "defect_code": "缺R07", "evidence_expected": ""}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R08", "present": false, "risk": true, "level": "低", "defect_code": "缺R08", "evidence_expected": ""}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R09", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二条 合同期限\n本合同有效期自生效之日起十二个月。"}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R11", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 违约责任\n任何一方违约的，应赔偿对方因此遭受的直接损失。"}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R12", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 知识产权\n乙方交付成果的知识产权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R13", "present": false, "risk": true, "level": "中", "defect_code": "缺R13", "evidence_expected": ""}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后30日内付款。 质保期为24个月。 变更通知应提前20日送达。 预付款比例为20%。 赔偿"}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R15", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R17", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R19", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R20", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十八条 合同解除\n一方严重违约且经催告三十日仍未纠正的，对方有权解除本合同。"}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R21", "present": true, "risk": true, "level": "中", "defect_code": "D05", "evidence_expected": "第十九条 续期\n本合同期满后自动续期一年。"}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R23", "present": true, "risk": true, "level": "中", "defect_code": "D07", "evidence_expected": "第十二条 管辖\n争议提交乙方所在地人民法院诉讼解决。"}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R24", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 成果归属\n乙方交付成果的所有权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R25", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二十条 对等责任\n双方违约责任对等，逾期均按合同总额的0.5‰/日计违约金。"}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT020", "contract_type": "服务合同", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R01", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第八条 保密\n双方对因履行本合同知悉的对方商业秘密承担保密义务，保密期限为合同终止后三年。"}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R02", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第九条 发票与税率\n乙方应开具税率为6%的增值税专用发票，甲方收到发票后付款。"}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R05", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 争议解决\n因本合同发生争议，双方应协商解决；协商不成的，提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R09", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二条 合同期限\n本合同有效期自生效之日起十二个月。"}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R11", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 违约责任\n任何一方违约的，应赔偿对方因此遭受的直接损失。"}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R12", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 知识产权\n乙方交付成果的知识产权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后30日内付款。 质保期为24个月。 变更通知应提前20日送达。 预付款比例为20%。 赔偿"}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R15", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R17", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R19", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R20", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十八条 合同解除\n一方严重违约且经催告三十日仍未纠正的，对方有权解除本合同。"}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R21", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十九条 续期\n本合同期满前六十日双方书面确认是否续期，未确认的到期终止。"}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R24", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 成果归属\n乙方交付成果的所有权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R25", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二十条 对等责任\n双方违约责任对等，逾期均按合同总额的0.5‰/日计违约金。"}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT021", "contract_type": "框架协议", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R01", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第八条 保密\n双方对因履行本合同知悉的对方商业秘密承担保密义务，保密期限为合同终止后三年。"}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R02", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第九条 发票与税率\n乙方应开具税率为6%的增值税专用发票，甲方收到发票后付款。"}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R05", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 争议解决\n因本合同发生争议，双方应协商解决；协商不成的，提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R09", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二条 合同期限\n本合同有效期自生效之日起十二个月。"}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R11", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 违约责任\n任何一方违约的，应赔偿对方因此遭受的直接损失。"}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R12", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 知识产权\n乙方交付成果的知识产权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后30日内付款。 质保期为24个月。 变更通知应提前20日送达。 预付款比例为20%。 赔偿"}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R15", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R17", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R19", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R20", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十八条 合同解除\n一方严重违约且经催告三十日仍未纠正的，对方有权解除本合同。"}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R21", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十九条 续期\n本合同期满前六十日双方书面确认是否续期，未确认的到期终止。"}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R24", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 成果归属\n乙方交付成果的所有权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R25", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二十条 对等责任\n双方违约责任对等，逾期均按合同总额的0.5‰/日计违约金。"}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT022", "contract_type": "框架协议", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R01", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第八条 保密\n双方对因履行本合同知悉的对方商业秘密承担保密义务，保密期限为合同终止后三年。"}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R02", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第九条 发票与税率\n乙方应开具税率为6%的增值税专用发票，甲方收到发票后付款。"}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R05", "present": false, "risk": true, "level": "高", "defect_code": "缺R05", "evidence_expected": ""}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R09", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二条 合同期限\n本合同有效期自生效之日起十二个月。"}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R10", "present": false, "risk": true, "level": "高", "defect_code": "缺R10", "evidence_expected": ""}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R11", "present": false, "risk": true, "level": "高", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R12", "present": false, "risk": true, "level": "高", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后30日内付款。 质保期为6个月。 变更通知应提前20日送达。 预付款比例为20%。 赔偿总"}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R15", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R16", "present": true, "risk": true, "level": "中", "defect_code": "假R16", "evidence_expected": ""}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R17", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R19", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R20", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十八条 合同解除\n一方严重违约且经催告三十日仍未纠正的，对方有权解除本合同。"}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R21", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十九条 续期\n本合同期满前六十日双方书面确认是否续期，未确认的到期终止。"}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R22", "present": true, "risk": true, "level": "高", "defect_code": "D06", "evidence_expected": "第七条 赔偿责任\n乙方违约应赔偿甲方全部损失，包括间接损失。"}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R24", "present": true, "risk": true, "level": "高", "defect_code": "D08", "evidence_expected": "第十六条 成果归属\n成果归属双方另行协商确定。"}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R25", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二十条 对等责任\n双方违约责任对等，逾期均按合同总额的0.5‰/日计违约金。"}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT023", "contract_type": "框架协议", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R01", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第八条 保密\n双方对因履行本合同知悉的对方商业秘密承担保密义务，保密期限为合同终止后三年。"}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R02", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第九条 发票与税率\n乙方应开具税率为6%的增值税专用发票，甲方收到发票后付款。"}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R05", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 争议解决\n因本合同发生争议，双方应协商解决；协商不成的，提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R08", "present": false, "risk": true, "level": "低", "defect_code": "缺R08", "evidence_expected": ""}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R09", "present": false, "risk": true, "level": "高", "defect_code": "缺R09", "evidence_expected": ""}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R11", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 违约责任\n任何一方违约的，应赔偿对方因此遭受的直接损失。"}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R12", "present": false, "risk": true, "level": "高", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后30日内付款。 质保期为24个月。 变更通知应提前3日送达。 预付款比例为20%。 赔偿总"}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R15", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R17", "present": true, "risk": true, "level": "低", "defect_code": "假R17", "evidence_expected": ""}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R19", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R20", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十八条 合同解除\n一方严重违约且经催告三十日仍未纠正的，对方有权解除本合同。"}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R21", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十九条 续期\n本合同期满前六十日双方书面确认是否续期，未确认的到期终止。"}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R24", "present": true, "risk": true, "level": "高", "defect_code": "D08", "evidence_expected": "第十六条 成果归属\n成果归属双方另行协商确定。"}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R25", "present": true, "risk": true, "level": "中", "defect_code": "D13", "evidence_expected": "第二十条 对等责任\n甲方逾期付款的，应按日千分之一向乙方支付违约金；乙方逾期交付的，不承担责任。"}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT024", "contract_type": "框架协议", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R01", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第八条 保密\n双方对因履行本合同知悉的对方商业秘密承担保密义务，保密期限为合同终止后三年。"}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R02", "present": false, "risk": true, "level": "中", "defect_code": "D09", "evidence_expected": ""}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R04", "present": false, "risk": true, "level": "高", "defect_code": "D11", "evidence_expected": ""}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R05", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 争议解决\n因本合同发生争议，双方应协商解决；协商不成的，提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R09", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二条 合同期限\n本合同有效期自生效之日起十二个月。"}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R11", "present": false, "risk": true, "level": "高", "defect_code": "缺R11", "evidence_expected": ""}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R12", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 知识产权\n乙方交付成果的知识产权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后30日内付款。 质保期为6个月。 变更通知应提前3日送达。 预付款比例为20%。 赔偿总额"}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R15", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R16", "present": true, "risk": true, "level": "中", "defect_code": "假R16", "evidence_expected": ""}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R17", "present": true, "risk": true, "level": "低", "defect_code": "假R17", "evidence_expected": ""}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R19", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R20", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十八条 合同解除\n一方严重违约且经催告三十日仍未纠正的，对方有权解除本合同。"}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R21", "present": true, "risk": true, "level": "中", "defect_code": "D05", "evidence_expected": "第十九条 续期\n本合同期满后自动续期一年。"}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R24", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 成果归属\n乙方交付成果的所有权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R25", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二十条 对等责任\n双方违约责任对等，逾期均按合同总额的0.5‰/日计违约金。"}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT025", "contract_type": "框架协议", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R01", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第八条 保密\n双方对因履行本合同知悉的对方商业秘密承担保密义务，保密期限为合同终止后三年。"}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R02", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第九条 发票与税率\n乙方应开具税率为6%的增值税专用发票，甲方收到发票后付款。"}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R05", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 争议解决\n因本合同发生争议，双方应协商解决；协商不成的，提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R09", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二条 合同期限\n本合同有效期自生效之日起十二个月。"}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R11", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 违约责任\n任何一方违约的，应赔偿对方因此遭受的直接损失。"}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R12", "present": false, "risk": true, "level": "高", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后30日内付款。 质保期为6个月。 变更通知应提前20日送达。 预付款比例为20%。 赔偿总"}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R15", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R16", "present": true, "risk": true, "level": "中", "defect_code": "假R16", "evidence_expected": ""}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R17", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R19", "present": true, "risk": true, "level": "高", "defect_code": "假R19", "evidence_expected": ""}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R20", "present": true, "risk": true, "level": "高", "defect_code": "D04", "evidence_expected": "第十八条 合同解除\n任何一方提前三十日书面通知即可解除本合同，无需承担赔偿责任。"}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R21", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十九条 续期\n本合同期满前六十日双方书面确认是否续期，未确认的到期终止。"}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R24", "present": true, "risk": true, "level": "高", "defect_code": "D08", "evidence_expected": "第十六条 成果归属\n成果归属双方另行协商确定。"}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R25", "present": true, "risk": true, "level": "中", "defect_code": "D13", "evidence_expected": "第二十条 对等责任\n甲方逾期付款的，应按日千分之一向乙方支付违约金；乙方逾期交付的，不承担责任。"}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT026", "contract_type": "框架协议", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R01", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第八条 保密\n双方对因履行本合同知悉的对方商业秘密承担保密义务，保密期限为合同终止后三年。"}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R02", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第九条 发票与税率\n乙方应开具税率为6%的增值税专用发票，甲方收到发票后付款。"}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R05", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 争议解决\n因本合同发生争议，双方应协商解决；协商不成的，提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R07", "present": false, "risk": true, "level": "中", "defect_code": "缺R07", "evidence_expected": ""}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R09", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二条 合同期限\n本合同有效期自生效之日起十二个月。"}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R11", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 违约责任\n任何一方违约的，应赔偿对方因此遭受的直接损失。"}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R12", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 知识产权\n乙方交付成果的知识产权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R13", "present": false, "risk": true, "level": "中", "defect_code": "缺R13", "evidence_expected": ""}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后30日内付款。 质保期为24个月。 变更通知应提前20日送达。 预付款比例为20%。 赔偿"}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R15", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R17", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R19", "present": true, "risk": true, "level": "高", "defect_code": "假R19", "evidence_expected": ""}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R20", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十八条 合同解除\n一方严重违约且经催告三十日仍未纠正的，对方有权解除本合同。"}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R21", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十九条 续期\n本合同期满前六十日双方书面确认是否续期，未确认的到期终止。"}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R24", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 成果归属\n乙方交付成果的所有权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R25", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二十条 对等责任\n双方违约责任对等，逾期均按合同总额的0.5‰/日计违约金。"}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT027", "contract_type": "框架协议", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R01", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第八条 保密\n双方对因履行本合同知悉的对方商业秘密承担保密义务，保密期限为合同终止后三年。"}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R02", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第九条 发票与税率\n乙方应开具税率为6%的增值税专用发票，甲方收到发票后付款。"}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R05", "present": false, "risk": true, "level": "高", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R06", "present": false, "risk": true, "level": "低", "defect_code": "缺R06", "evidence_expected": ""}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R09", "present": false, "risk": true, "level": "高", "defect_code": "缺R09", "evidence_expected": ""}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R11", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 违约责任\n任何一方违约的，应赔偿对方因此遭受的直接损失。"}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R12", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 知识产权\n乙方交付成果的知识产权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后30日内付款。 质保期为24个月。 变更通知应提前20日送达。 预付款比例为20%。 赔偿"}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R15", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R17", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R19", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R20", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十八条 合同解除\n一方严重违约且经催告三十日仍未纠正的，对方有权解除本合同。"}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R21", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十九条 续期\n本合同期满前六十日双方书面确认是否续期，未确认的到期终止。"}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R23", "present": true, "risk": true, "level": "中", "defect_code": "D07", "evidence_expected": "第十二条 管辖\n争议提交乙方所在地人民法院诉讼解决。"}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R24", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 成果归属\n乙方交付成果的所有权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R25", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二十条 对等责任\n双方违约责任对等，逾期均按合同总额的0.5‰/日计违约金。"}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R26", "present": false, "risk": true, "level": "高", "defect_code": "D12", "evidence_expected": ""}
+{"contract_id": "CT028", "contract_type": "框架协议", "rule_id": "R27", "present": false, "risk": true, "level": "低", "defect_code": "D12", "evidence_expected": ""}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R01", "present": false, "risk": true, "level": "高", "defect_code": "D01", "evidence_expected": ""}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R02", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第九条 发票与税率\n乙方应开具税率为6%的增值税专用发票，甲方收到发票后付款。"}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R04", "present": false, "risk": true, "level": "高", "defect_code": "D11", "evidence_expected": ""}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R05", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 争议解决\n因本合同发生争议，双方应协商解决；协商不成的，提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R09", "present": false, "risk": true, "level": "高", "defect_code": "缺R09", "evidence_expected": ""}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R11", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 违约责任\n任何一方违约的，应赔偿对方因此遭受的直接损失。"}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R12", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 知识产权\n乙方交付成果的知识产权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R13", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十七条 签署与盖章\n本合同一式肆份，双方签字并加盖公章后生效。"}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后30日内付款。 质保期为24个月。 变更通知应提前20日送达。 预付款比例为20%。 赔偿"}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R15", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R17", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R19", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R20", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十八条 合同解除\n一方严重违约且经催告三十日仍未纠正的，对方有权解除本合同。"}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R21", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十九条 续期\n本合同期满前六十日双方书面确认是否续期，未确认的到期终止。"}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R24", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 成果归属\n乙方交付成果的所有权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R25", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二十条 对等责任\n双方违约责任对等，逾期均按合同总额的0.5‰/日计违约金。"}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT029", "contract_type": "框架协议", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R01", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第八条 保密\n双方对因履行本合同知悉的对方商业秘密承担保密义务，保密期限为合同终止后三年。"}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R02", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第九条 发票与税率\n乙方应开具税率为6%的增值税专用发票，甲方收到发票后付款。"}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R03", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十条 服务标准\n乙方承诺故障响应时间不超过4小时，服务标准详见附件SLA。"}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R04", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十一条 数据与个人信息\n乙方处理甲方数据应遵守数据安全要求，涉及个人信息的应取得合法授权，合同终止后删除。"}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R05", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 争议解决\n因本合同发生争议，双方应协商解决；协商不成的，提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R06", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十三条 不可抗力\n因不可抗力导致不能履行的，遭遇方应在15日内通知对方并提供证明，可部分或全部免责。"}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R07", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十四条 验收标准\n交付物按附件验收标准验收，甲方应在10个工作日内完成验收，不通过的一次性书面说明。"}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R08", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十五条 合同转让\n未经对方书面同意，任何一方不得转让本合同项下的权利义务。"}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R09", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二条 合同期限\n本合同有效期自生效之日起十二个月。"}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R10", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第六条 付款方式\n甲方按进度分两期付款，验收合格后支付尾款。"}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R11", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 违约责任\n任何一方违约的，应赔偿对方因此遭受的直接损失。"}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R12", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 知识产权\n乙方交付成果的知识产权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R13", "present": false, "risk": true, "level": "中", "defect_code": "缺R13", "evidence_expected": ""}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R14", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第五条 履约要求\n违约金按合同总额的0.5‰/日计算。 甲方应在验收后90日内付款。 质保期为24个月。 变更通知应提前20日送达。 预付款比例为20%。 赔偿"}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R15", "present": true, "risk": true, "level": "中", "defect_code": "假R15", "evidence_expected": ""}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R16", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R17", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R18", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R19", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R20", "present": true, "risk": true, "level": "高", "defect_code": "D04", "evidence_expected": "第十八条 合同解除\n任何一方提前三十日书面通知即可解除本合同，无需承担赔偿责任。"}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R21", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十九条 续期\n本合同期满前六十日双方书面确认是否续期，未确认的到期终止。"}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R22", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第七条 赔偿责任\n任何一方违约应赔偿对方直接损失，赔偿总额不超过合同总额的100%。"}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R23", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十二条 管辖\n争议提交甲方所在地人民法院诉讼解决。"}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R24", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第十六条 成果归属\n乙方交付成果的所有权归甲方所有，乙方保留通用组件的使用权。"}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R25", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": "第二十条 对等责任\n双方违约责任对等，逾期均按合同总额的0.5‰/日计违约金。"}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R26", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}
+{"contract_id": "CT030", "contract_type": "框架协议", "rule_id": "R27", "present": true, "risk": false, "level": "无", "defect_code": null, "evidence_expected": ""}

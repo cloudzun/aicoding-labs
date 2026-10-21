@@ -1,0 +1,4042 @@
+{
+  "generated_at": "2026-10-20T12:07:56+08:00",
+  "metric_version": "v0.2",
+  "model": "opencode-go/gpt-6-luna",
+  "judge_model": "opencode-go/deepseek-v4.1-flash",
+  "n_total": 80,
+  "n_answered": 79,
+  "n_judged_valid": 77,
+  "n_judge_error": 2,
+  "judge_fail_rate": 0.0253,
+  "accuracy_v2": 0.5065,
+  "partial_rate": 0.4805,
+  "wrong_rate": 0.013,
+  "refusal_rate_on_answerable": 0.0125,
+  "recall_at_5": 1.0,
+  "claim_support_rate": 0.7806,
+  "ttft_p50_ms": 2510.0,
+  "ttft_p95_ms": 4041.6,
+  "elapsed_p50_ms": 3793.0,
+  "elapsed_p95_ms": 5591.2,
+  "by_split": {
+    "conflict_or_stale": {
+      "n": 8,
+      "correct": 5,
+      "partial": 2,
+      "judge_error": 0
+    },
+    "multi_hop": {
+      "n": 30,
+      "correct": 14,
+      "partial": 14,
+      "judge_error": 1
+    },
+    "single_hop": {
+      "n": 42,
+      "correct": 20,
+      "partial": 21,
+      "judge_error": 1
+    }
+  },
+  "failures": [
+    {
+      "qid": "h-04",
+      "split": "conflict_or_stale",
+      "verdict": "wrong",
+      "missing_facts": null,
+      "hallucinations": null,
+      "reason": "只答第二十六条的30分钟，未提及第十四条的15分钟，也未指出起算点差异；按埋点期望应并列两处并说明不一致"
+    },
+    {
+      "qid": "h-05",
+      "split": "conflict_or_stale",
+      "verdict": "partial",
+      "missing_facts": null,
+      "hallucinations": null,
+      "reason": "正确给出5%比例、缴纳方式与退还条件，并声明未规定提交时限；但未明确说明『退还时限也未规定』，覆盖不完整"
+    },
+    {
+      "qid": "h-08",
+      "split": "conflict_or_stale",
+      "verdict": "partial",
+      "missing_facts": null,
+      "hallucinations": null,
+      "reason": "正确说明过渡安排已于发布后6个月失效；但未按第十五条给出失效后的现行审批权限，只说『材料未说明』，未完成期望行为"
+    },
+    {
+      "qid": "a-100",
+      "split": "single_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "成员包括网络运行维护中心、信息安全部、市场经营部、客户服务部、综合部和法律事务岗负责人"
+      ],
+      "hallucinations": [],
+      "reason": "答案覆盖了指挥部设立及总指挥、副总指挥，但遗漏标准答案中的成员构成；其余关于一级响应和分级处置的表述均有材料支持。"
+    },
+    {
+      "qid": "a-059",
+      "split": "single_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "网络运行维护中心是割接管理的归口部门"
+      ],
+      "hallucinations": [],
+      "reason": "答案覆盖了各部门的具体职责，但未明确网络运行维护中心是割接管理的归口部门，故为部分覆盖。"
+    },
+    {
+      "qid": "a-084",
+      "split": "single_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "各市分公司应根据本办法制定属地故障处置细则",
+        "本办法由网络运行维护中心负责解释"
+      ],
+      "hallucinations": [],
+      "reason": "答案正确指出备案对象，但未覆盖标准答案中制定细则的主体及解释权条款。"
+    },
+    {
+      "qid": "a-105",
+      "split": "single_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "包括集中采购、分散采购、框架协议采购和紧急采购"
+      ],
+      "hallucinations": [
+        "《明州数智服务有限公司采购管理办法》"
+      ],
+      "reason": "答案覆盖了适用主体和合同采购服务属于适用范围的核心事实，但遗漏了四种采购方式列举，且引用的办法名称在材料中无依据。"
+    },
+    {
+      "qid": "a-028",
+      "split": "single_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "本办法由人力资源部负责解释",
+        "本办法自2024年4月1日起施行"
+      ],
+      "hallucinations": [
+        "《员工岗位竞聘管理办法》"
+      ],
+      "reason": "核心备案对象正确，但办法名称无材料支持，且未覆盖标准答案中解释与施行日期条款。"
+    },
+    {
+      "qid": "a-062",
+      "split": "single_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "造成地市级以上核心节点全阻也属于一级故障"
+      ],
+      "hallucinations": [],
+      "reason": "答案准确覆盖问题涉及的两类一级故障情形，但未覆盖标准答案中“地市级以上核心节点全阻”这一事实点，故为部分正确。"
+    },
+    {
+      "qid": "a-110",
+      "split": "single_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "故障等级由网络运行维护中心值班室初步判定"
+      ],
+      "hallucinations": [],
+      "reason": "答案覆盖了可升级或降级及变更记录要求，但未说明故障等级由网络运行维护中心值班室初步判定这一事实点。"
+    },
+    {
+      "qid": "a-011",
+      "split": "single_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "大额支付是指单笔金额在300万元以上的支付"
+      ],
+      "hallucinations": [],
+      "reason": "答案准确覆盖审批主体和备案时限，但未明确复述标准答案中大额支付的定义。"
+    },
+    {
+      "qid": "a-005",
+      "split": "single_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "人力资源部负责申诉登记、转办、跟踪和归档",
+        "工会参与劳动争议调解",
+        "纪检监察部门负责涉及违纪违规问题的核查",
+        "法律事务岗负责劳动争议仲裁和诉讼的应对"
+      ],
+      "hallucinations": [
+        "材料未说明其他类型工作问题的受理部门"
+      ],
+      "reason": "答案仅覆盖人力资源部归口受理员工申诉，遗漏工会、纪检监察违纪违规核查、法律事务岗等标准答案事实点，且断言材料未说明其他类型受理部门与材料不符。"
+    },
+    {
+      "qid": "a-066",
+      "split": "single_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "第二十六条：本办法由人力资源部负责解释",
+        "第二十七条：本办法自2025年3月1日起施行"
+      ],
+      "hallucinations": [],
+      "reason": "答案准确覆盖了第二十五条关于明确经办岗位和报人力资源部备案的核心事实，但未覆盖标准答案中第二十六条、第二十七条的内容。"
+    },
+    {
+      "qid": "a-027",
+      "split": "single_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "未提及《采购管理办法》的文号（浙东通信采〔2023〕7号）"
+      ],
+      "hallucinations": [],
+      "reason": "答案覆盖施行日期、第十二条废止及其他条款继续有效，但遗漏被废止规定所属文件的文号。"
+    },
+    {
+      "qid": "a-055",
+      "split": "single_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "财务部负责调整受理",
+        "财务部负责考核数据提供"
+      ],
+      "hallucinations": [],
+      "reason": "答案覆盖了业务归口部门编制执行和财务部日常管理的主要事实，但未明确覆盖财务部调整受理和考核数据提供职责，故为部分正确。"
+    },
+    {
+      "qid": "a-012",
+      "split": "single_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "员工对申诉处理结论不服的，可以向公司有关部门提出复核申请"
+      ],
+      "hallucinations": [],
+      "reason": "答案覆盖了复核时限和书面告知两个事实点，但未覆盖员工不服可提出复核申请这一事实点，且无材料不支持的内容。"
+    },
+    {
+      "qid": "a-086",
+      "split": "single_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "履约评价采用百分制"
+      ],
+      "hallucinations": [
+        "材料未说明试行期满后的规定"
+      ],
+      "reason": "答案覆盖了四项评价维度及分值、低于70分书面说明，但未明确“百分制”，且关于“材料未说明试行期满后的规定”与检索材料第二十七条相反。"
+    },
+    {
+      "qid": "a-068",
+      "split": "single_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "造成汇聚层以上设备退服也属于二级故障的判定情形"
+      ],
+      "hallucinations": [],
+      "reason": "答案覆盖了问题所问的两个二级故障情形，但未覆盖标准答案中“汇聚层以上设备退服”这一并列事实点，故为部分覆盖。"
+    },
+    {
+      "qid": "a-015",
+      "split": "single_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "未超过10%的，由原审批人审批"
+      ],
+      "hallucinations": [
+        "《采购审批权限实施细则》第十五条",
+        "《采购管理办法》第十六条曾规定"
+      ],
+      "reason": "答案覆盖超过10%重新确定审批层级，但漏掉未超过10%由原审批人审批，且细则名称及第十六条归属在材料中未被明确支持。"
+    },
+    {
+      "qid": "a-035",
+      "split": "single_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "网络运行维护中心是故障管理的归口部门",
+        "网络运行维护中心负责信息发布和统计分析",
+        "网络优化部门负责故障后的网络性能评估"
+      ],
+      "hallucinations": [],
+      "reason": "答案覆盖了问题所问三项职责的对应部门，但未覆盖标准答案中归口部门、信息发布和统计分析、网络优化评估等事实点。"
+    },
+    {
+      "qid": "a-053",
+      "split": "single_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "劳动争议调解委员会由员工代表、公司代表和工会代表组成",
+        "人数为单数"
+      ],
+      "hallucinations": [],
+      "reason": "答案仅覆盖员工代表和工会代表合计不少于二分之一这一事实点，未提及调解委员会的组成和人数为单数，且无材料不支持的断言。"
+    },
+    {
+      "qid": "a-109",
+      "split": "single_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "专项调整还可因政策变化引起",
+        "专项调整还可因重大市场变动引起"
+      ],
+      "hallucinations": [],
+      "reason": "答案正确回答了重大突发事件可随时提出专项调整，但未完整覆盖标准答案中专项调整的其他触发情形。"
+    },
+    {
+      "qid": "a-057",
+      "split": "single_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "第二十四条 本细则由采购与供应链部负责解释",
+        "第二十五条 本细则自2024年9月1日起施行"
+      ],
+      "hallucinations": [],
+      "reason": "答案覆盖了未尽事宜按《采购管理办法》执行这一事实点，但未提及解释部门和施行日期，补充的废止信息有材料支持。"
+    },
+    {
+      "qid": "a-098",
+      "split": "single_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "擅自变更合同主要条款的，公司可以扣减履约保证金"
+      ],
+      "hallucinations": [
+        "现行《采购管理办法》规定"
+      ],
+      "reason": "答案覆盖质量不符和无正当理由延期超15日两项扣减情形，但遗漏擅自变更合同主要条款，且“现行《采购管理办法》”名称在材料中无依据。"
+    },
+    {
+      "qid": "m-049",
+      "split": "multi_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "干扰考评秩序"
+      ],
+      "hallucinations": [],
+      "reason": "答案覆盖了竞聘造假拉票处理及网络安全应急指挥部组成的主要事实，但遗漏了“干扰考评秩序”这一适用情形。"
+    },
+    {
+      "qid": "m-056",
+      "split": "multi_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "本办法由人力资源部负责解释",
+        "本办法自2025年3月1日起施行"
+      ],
+      "hallucinations": [],
+      "reason": "答案准确覆盖了名单备案部门和网络故障各相关部门职责，但未覆盖标准答案中关于解释部门和施行日期的条款。"
+    },
+    {
+      "qid": "m-004",
+      "split": "multi_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "明州数智服务有限公司（公司）"
+      ],
+      "hallucinations": [
+        "相关报销管理办法自2025年5月1日起试行，试行期两年；试行期间如国家或上级单位出台新规定，从其规定。"
+      ],
+      "reason": "答案覆盖了目的和招待限制的核心事实，但遗漏公司名称，且将材料中“本办法”的试行条款错误关联为“相关报销管理办法”。"
+    },
+    {
+      "qid": "m-043",
+      "split": "multi_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "预算调整分为定期调整和专项调整"
+      ],
+      "hallucinations": [
+        "该报销规定自2025年5月1日起试行。"
+      ],
+      "reason": "答案覆盖了报销期限和预算调整时间的主要规定，但包含材料未支持的2025年5月1日起试行说法，且未明确预算调整分为定期和专项两类。"
+    },
+    {
+      "qid": "m-026",
+      "split": "multi_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "年度采购计划确需调整的，应在每季度末前提出书面调整申请",
+        "财务部是预算管理的日常办事机构",
+        "财务部负责考核数据提供"
+      ],
+      "hallucinations": [],
+      "reason": "答案覆盖采购计划汇总审批和预算编制职责，但遗漏采购计划调整申请时限及财务部考核数据提供等标准答案事实点，额外引用的预算调整审批权限有材料支持。"
+    },
+    {
+      "qid": "m-014",
+      "split": "multi_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "住宿费分地区限额标准：省会城市及计划单列市每人每天不超过500元，其他地级市不超过400元，县级及以下地区不超过300元",
+        "履约评价采用百分制，其中交付质量40分、交付及时性25分、价格合理性20分、服务响应15分"
+      ],
+      "hallucinations": [],
+      "reason": "答案准确回答了两个问题，但未覆盖标准答案中的住宿限额具体标准和履约评价分值构成。"
+    },
+    {
+      "qid": "m-058",
+      "split": "multi_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "财务部是费用报销的归口管理部门",
+        "人力资源部负责培训费和劳动保护费的标准制定"
+      ],
+      "hallucinations": [
+        "该报销管理办法自2025年5月1日起试行，试行期两年。"
+      ],
+      "reason": "答案覆盖报销审核主体和虚假材料后果，但漏列财务部归口管理及人力资源部标准制定职责，且将“本办法”试行期断言为报销管理办法缺乏材料明确支持。"
+    },
+    {
+      "qid": "m-015",
+      "split": "multi_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "履约评价采用百分制，其中交付质量40分、交付及时性25分、价格合理性20分、服务响应15分"
+      ],
+      "hallucinations": [
+        "材料未说明试行期届满后的规定或是否修订"
+      ],
+      "reason": "核心处理与归档事实已覆盖，但遗漏评分构成，且关于试行期满未说明的断言与材料第二十七条不符。"
+    },
+    {
+      "qid": "m-054",
+      "split": "multi_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "拉票贿选",
+        "干扰考评秩序"
+      ],
+      "hallucinations": [],
+      "reason": "竞聘造假部分仅覆盖提供虚假材料，遗漏拉票贿选和干扰考评秩序；重大网络安全事件部分完整覆盖标准答案。"
+    },
+    {
+      "qid": "m-007",
+      "split": "multi_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "拓宽选人用人渠道",
+        "根据公司人力资源管理有关规定，制定本办法"
+      ],
+      "hallucinations": [],
+      "reason": "答案覆盖了风险评估全部要点及岗位竞聘的机制和活力目标，但未覆盖标准答案中“拓宽选人用人渠道”和制定依据。"
+    },
+    {
+      "qid": "m-001",
+      "split": "multi_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "采购与供应链部负责本细则的组织实施和审批事项的日常受理"
+      ],
+      "hallucinations": [],
+      "reason": "答案覆盖了预算调整及财务部、审计部职责，但遗漏采购与供应链部的组织实施和审批事项日常受理职责。"
+    },
+    {
+      "qid": "m-023",
+      "split": "multi_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "只能从唯一供应商处采购的情形",
+        "发生不可预见的紧急情况，不能从其他供应商处采购的情形",
+        "为保证原有采购项目一致性或者服务配套要求，需要继续从原供应商处采购的情形",
+        "本办法由人力资源部负责解释",
+        "本办法自2025年3月1日起施行"
+      ],
+      "hallucinations": [],
+      "reason": "答案覆盖了单一来源采购的论证要求和向人力资源部备案人员名单的核心内容，但未完整覆盖标准答案中列举的三类单一来源采购情形及解释、施行日期等事实点。"
+    },
+    {
+      "qid": "m-038",
+      "split": "multi_hop",
+      "verdict": "partial",
+      "missing_facts": [
+        "采购与供应链部负责本细则的组织实施"
+      ],
+      "hallucinations": [],
+      "reason": "指挥部组成及三项职责负责人均正确，但未覆盖标准答案中采购与供应链部负责本细则组织实施这一事实点。"
+    },
+    {
+      "qid": "m-021",
+      "split": "multi_hop",
+      "verdict": "partial",
+      "missing_facts": [],
+      "hallucinations": [
+        "《成本费用报销管理办法》",
+        "网络安全事件管理办法"
+      ],
+      "reason": "标准答案事实点已全部覆盖，但答案中出现的办法名称在材料中未明确出现，属于材料无法支持的断言。"
+    }
+  ],
+  "results": [
+    {
+      "qid": "h-01",
+      "split": "conflict_or_stale",
+      "question": "单笔采购金额500万元以上的采购项目，需要提交什么会议审议？",
+      "facts": [
+        "500万元以上采购项目提交总经理办公会审议",
+        "2023年办法第十二条关于采购审批权限的规定已被2025年细则第二十六条废止"
+      ],
+      "facts_source": "human",
+      "retrieved": [
+        "zdcg-2025-004#c010",
+        "zdcg-2025-004#c007",
+        "zdcg-2023-001#c012",
+        "zdcg-2025-004#c013",
+        "zdcw-2024-006#c020"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": false,
+      "answer": "单笔采购金额在500万元以上的采购项目，其采购方式、采购文件和采购结果应提交总经理办公会审议。[c01] 该权限规定自2025年3月1日起施行；《采购管理办法》第十二条的旧采购审批权限规定已同时废止。[c08]",
+      "refused": false,
+      "ttft_ms": 1908,
+      "elapsed_ms": 2665,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "correct",
+      "verdict_source": "human",
+      "verdict_reason": "给出500万元现行口径，并说明《采购管理办法》第十二条关于采购审批权限的规定已被2025年细则废止、其余条款继续有效（三要素齐全：现行口径+废止声明+适用范围）"
+    },
+    {
+      "qid": "h-02",
+      "split": "conflict_or_stale",
+      "question": "中标供应商应在多少天内与公司签订书面合同？",
+      "facts": [
+        "《采购管理办法》规定合同签订期限为30日",
+        "《采购合同管理细则》规定为15个工作日",
+        "两文件均现行且未相互废止，存在冲突需确认"
+      ],
+      "facts_source": "human",
+      "retrieved": [
+        "zdcg-2024-003#c009",
+        "zdcg-2023-001#c018",
+        "zdcg-2024-003#c010",
+        "zdcg-2023-001#c013",
+        "zdcg-2024-003#c004"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "**需确认：材料存在两种期限规定，无法判定统一适用期限。**\n\n- 《采购合同管理细则》规定，中标供应商应在中标通知书发出之日起 **15个工作日内**签订书面合同；因不可抗力或双方书面协商一致需要延长的，可延长不超过10个工作日。[c01]\n- 《采购管理办法》规定，应在中标通知书发出之日起 **30日内**签订书面合同；该办法自2023年4月1日起施行，状态为现行。[c02][c06]\n- 细则自2024年9月1日起施行，状态为现行；材料未说明其是否废止或替代《采购管理办法》的上述期限，因此两种期限的适用关系无法判定，建议咨询采购与供应链部确认。[c01][c02]",
+      "refused": false,
+      "ttft_ms": 2223,
+      "elapsed_ms": 4446,
+      "invalid_citations": [],
+      "claim_support_rate": 0.6667,
+      "unsupported_claims": [
+        "材料未说明其是否废止或替代《采购管理办法》的上述期限，因此两种期限的适用关系无法判定，建议咨询采购与供应链部确认。"
+      ],
+      "timed_out": false,
+      "verdict": "correct",
+      "verdict_source": "human",
+      "verdict_reason": "并列15个工作日与30日两个期限，标注均现行、未说明协调规则，并明确『无法判定、需确认』，符合会审 D1-01 的三要素标准"
+    },
+    {
+      "qid": "h-03",
+      "split": "conflict_or_stale",
+      "question": "单笔资金支付达到多少金额需要报总经理审批？",
+      "facts": [
+        "第八条规定200万元以上报总经理审批",
+        "第十九条规定大额支付为300万元以上",
+        "同一办法内两个金额门槛不一致"
+      ],
+      "facts_source": "human",
+      "retrieved": [
+        "zdcw-2023-005#c008",
+        "zdcw-2023-005#c019",
+        "zdcw-2024-006#c015",
+        "zdcg-2025-004#c013",
+        "zdcg-2025-004#c007"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 单笔资金支付审批金额\n\n材料规定，单笔支付金额**200万元以上**的，须经总会计师审核后报总经理审批；**200万元以下**的，由财务部负责人审批。[c01]\n\n另有规定将单笔金额**300万元以上**的支付定义为大额支付，并要求经总会计师审核后报总经理审批，同时在支付完成后5个工作日内报总经理办公会备案。[c02]\n\n两条规定对 **200万元**及边界金额的适用表述存在重叠或不明确之处；材料未说明如何协调，需向相关部门确认。[c01][c02]",
+      "refused": false,
+      "ttft_ms": 2803,
+      "elapsed_ms": 4556,
+      "invalid_citations": [],
+      "claim_support_rate": 0.6667,
+      "unsupported_claims": [
+        "材料未说明如何协调，需向相关部门确认。"
+      ],
+      "timed_out": false,
+      "verdict": "correct",
+      "verdict_source": "human",
+      "verdict_reason": "并列第八条200万元与第十九条300万元两个门槛，指出同一办法内表述不同、材料未说明协调方式，需向相关部门确认"
+    },
+    {
+      "qid": "h-04",
+      "split": "conflict_or_stale",
+      "question": "发生重大通信故障后，应在多长时间内上报省公司网络运行维护中心？",
+      "facts": [
+        "第十四条规定15分钟内上报",
+        "第二十六条规定30分钟内报送",
+        "两处时限与起算点不一致"
+      ],
+      "facts_source": "human",
+      "retrieved": [
+        "zdww-2023-010#c014",
+        "zdww-2023-010#c026",
+        "zdww-2023-010#c015",
+        "zdww-2023-010#c013",
+        "zdww-2023-010#c011"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 上报时限\n\n重大故障信息应自故障确认之日起 **30分钟内**报送省公司网络运行维护中心。[c02]",
+      "refused": false,
+      "ttft_ms": 2347,
+      "elapsed_ms": 2741,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "wrong",
+      "verdict_source": "human",
+      "verdict_reason": "只答第二十六条的30分钟，未提及第十四条的15分钟，也未指出起算点差异；按埋点期望应并列两处并说明不一致"
+    },
+    {
+      "qid": "h-05",
+      "split": "conflict_or_stale",
+      "question": "履约保证金什么时候提交，什么时候退还？",
+      "facts": [
+        "履约保证金为合同金额5%",
+        "制度未规定提交时限",
+        "制度未规定退还时限"
+      ],
+      "facts_source": "human",
+      "retrieved": [
+        "zdcg-2023-001#c019",
+        "zdcg-2023-001#c020",
+        "zdcg-2024-003#c011",
+        "zdcg-2024-003#c012",
+        "zdcg-2024-003#c014"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "## 提交时间\n材料只规定中标供应商应提交合同金额5%的履约保证金，可通过银行保函或转账方式缴纳；**未说明具体提交时间**。[c01]\n\n## 退还时间\n履约期满且无违约情形后，由采购与供应链部办理退还手续；材料未说明办理或到账的具体期限。[c01]",
+      "refused": false,
+      "ttft_ms": 2594,
+      "elapsed_ms": 3458,
+      "invalid_citations": [],
+      "claim_support_rate": 0.0,
+      "unsupported_claims": [
+        "**未说明具体提交时间**。",
+        "材料未说明办理或到账的具体期限。"
+      ],
+      "timed_out": false,
+      "verdict": "partial",
+      "verdict_source": "human",
+      "verdict_reason": "正确给出5%比例、缴纳方式与退还条件，并声明未规定提交时限；但未明确说明『退还时限也未规定』，覆盖不完整"
+    },
+    {
+      "qid": "h-06",
+      "split": "conflict_or_stale",
+      "question": "员工对申诉处理结论不服，应向哪个部门申请复核？",
+      "facts": [
+        "复核受理部门写作公司有关部门",
+        "未指定具体责任部门"
+      ],
+      "facts_source": "human",
+      "retrieved": [
+        "zdrl-2025-009#c014",
+        "zdrl-2025-009#c004",
+        "zdcg-2023-002#c017",
+        "zdrl-2025-009#c003",
+        "zdrl-2025-009#c015"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "员工对申诉处理结论不服，可以向公司有关部门提出复核申请；材料未明确指定具体部门。[c01]",
+      "refused": false,
+      "ttft_ms": 3823,
+      "elapsed_ms": 4184,
+      "invalid_citations": [],
+      "claim_support_rate": 0.0,
+      "unsupported_claims": [
+        "材料未明确指定具体部门。"
+      ],
+      "timed_out": false,
+      "verdict": "correct",
+      "verdict_source": "human",
+      "verdict_reason": "明确指出条文只写『公司有关部门』、未指定具体复核部门，未编造部门名称"
+    },
+    {
+      "qid": "h-07",
+      "split": "conflict_or_stale",
+      "question": "供应商管理实施细则现在还有效吗？",
+      "facts": [
+        "试行期为两年",
+        "自2024年1月1日起算、2026年1月1日届满",
+        "未见转正或废止文件"
+      ],
+      "facts_source": "human",
+      "retrieved": [
+        "zdcg-2025-004#c025",
+        "zdcg-2023-002#c026",
+        "zdcg-2023-002#c002",
+        "zdcg-2024-003#c023",
+        "zdcg-2023-002#c001"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 供应商管理实施细则现在还有效吗？\n\n**无法判定。**该细则自2024年1月1日起施行，试行期两年，期满后由采购与供应链部组织评估并根据评估结果修订；材料没有说明试行期满后的评估结果、修订情况或当前效力状态。[c02] 材料也未说明该细则已废止。[c02]\n\n建议向采购与供应链部确认该细则目前是否继续适用。[c02]",
+      "refused": false,
+      "ttft_ms": 3285,
+      "elapsed_ms": 4736,
+      "invalid_citations": [],
+      "claim_support_rate": 0.0,
+      "unsupported_claims": [
+        "材料没有说明试行期满后的评估结果、修订情况或当前效力状态。",
+        "材料也未说明该细则已废止。",
+        "建议向采购与供应链部确认该细则目前是否继续适用。"
+      ],
+      "timed_out": false,
+      "verdict": "correct",
+      "verdict_source": "human",
+      "verdict_reason": "说明试行期两年自2024年1月1日起算、材料未说明期满评估结果，结论为『资料不足、建议确认』；注意：该答案被服务端误标 refused=true（因开头含『资料不足』），属判定标记缺陷，见 R-29"
+    },
+    {
+      "qid": "h-08",
+      "split": "conflict_or_stale",
+      "question": "数字化服务成本科目的立项由谁审批？",
+      "facts": [
+        "第二十四条过渡安排自发布之日起6个月后失效",
+        "2024年2月28日发布、2024年8月28日失效",
+        "现行按第十五条预算外支出审批权限办理"
+      ],
+      "facts_source": "human",
+      "retrieved": [
+        "zdcw-2024-006#c024",
+        "zdcg-2025-004#c005",
+        "zdcw-2025-007#c015",
+        "zdcw-2024-006#c020",
+        "zdcg-2025-004#c006"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": false,
+      "answer": "由归口部门负责人签批后即可执行。[c01] 但该简化流程是2024年度预算执行中的过渡期安排，已自办法发布之日起6个月后失效；材料未说明其失效后的立项审批规定，建议咨询归口部门确认。[c01]",
+      "refused": false,
+      "ttft_ms": 4132,
+      "elapsed_ms": 5041,
+      "invalid_citations": [],
+      "claim_support_rate": 0.5,
+      "unsupported_claims": [
+        "材料未说明其失效后的立项审批规定，建议咨询归口部门确认。"
+      ],
+      "timed_out": false,
+      "verdict": "partial",
+      "verdict_source": "human",
+      "verdict_reason": "正确说明过渡安排已于发布后6个月失效；但未按第十五条给出失效后的现行审批权限，只说『材料未说明』，未完成期望行为"
+    },
+    {
+      "qid": "a-100",
+      "split": "single_hop",
+      "question": "公司发生网络安全事件时，谁负责统一指挥应急处置？",
+      "facts": [
+        "公司设立网络安全应急指挥部。",
+        "公司总经理任网络安全应急指挥部总指挥。",
+        "分管网络运行的副总经理任网络安全应急指挥部副总指挥。",
+        "网络运行维护中心、信息安全部、市场经营部、客户服务部、综合部和法律事务岗负责人为网络安全应急指挥部成员。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdww-2025-012#c004",
+        "zdww-2025-012#c005",
+        "zdww-2023-010#c017",
+        "zdww-2025-012#c018",
+        "zdww-2025-012#c019"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "网络安全事件应急处置由应急指挥部统一指挥的情形，是特别重大、重大事件启动一级响应时；指挥部成员单位和外部技术支持单位同步到场。[c04] 一般而言，公司设立网络安全应急指挥部，由总经理担任总指挥，分管网络运行的副总经理担任副总指挥。[c01] 较大事件由信息安全部负责人组织处置，一般事件由事件发生部门自行处置并报信息安全部备案。[c05]",
+      "refused": false,
+      "ttft_ms": 2439,
+      "elapsed_ms": 3664,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "公司设立网络安全应急指挥部",
+          "由总经理任总指挥",
+          "分管网络运行的副总经理任副总指挥"
+        ],
+        "missing_facts": [
+          "成员包括网络运行维护中心、信息安全部、市场经营部、客户服务部、综合部和法律事务岗负责人"
+        ],
+        "hallucinations": [],
+        "reason": "答案覆盖了指挥部设立及总指挥、副总指挥，但遗漏标准答案中的成员构成；其余关于一级响应和分级处置的表述均有材料支持。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-059",
+      "split": "single_hop",
+      "question": "网络割接前后分别由哪些部门负责哪些事情？",
+      "facts": [
+        "网络运行维护中心是割接管理的归口部门，负责割接计划汇总、方案审核、窗口安排和割接结果通报。",
+        "割接实施单位负责割接方案编制、风险评估和现场实施。",
+        "客户服务部负责重点客户告知。",
+        "网络优化部门负责割接后的性能验证。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdww-2024-011#c004",
+        "zdww-2025-012#c005",
+        "zdww-2024-011#c016",
+        "zdww-2024-011#c021",
+        "zdww-2024-011#c012"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 割接前\n- **割接实施单位**负责编制割接方案、开展风险评估和现场实施；割接实施前还应完成数据备份、配置备份和备件准备，并向网络运行维护中心值班室报备。[c01][c03]\n- **网络运行维护中心**负责汇总割接计划、审核方案和安排窗口；方案审核按风险等级分级进行：三级及以下由专业室审核，二级由中心负责人审核，一级由分管副总经理组织专家评审。[c01][c05]\n- **客户服务部**负责重点客户告知。[c01]\n\n### 割接后\n- **网络优化部门**负责割接后的性能验证，并应在割接完成后3个工作日内完成验证、出具验证结论。[c01][c04]\n- **网络运行维护中心**负责割接结果通报。[c01]",
+      "refused": false,
+      "ttft_ms": 3112,
+      "elapsed_ms": 5169,
+      "invalid_citations": [],
+      "claim_support_rate": 0.6,
+      "unsupported_claims": [
+        "- **客户服务部**负责重点客户告知。",
+        "- **网络运行维护中心**负责割接结果通报。"
+      ],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "网络运行维护中心负责割接计划汇总、方案审核、窗口安排和割接结果通报",
+          "割接实施单位负责方案编制、风险评估和现场实施",
+          "客户服务部负责重点客户告知",
+          "网络优化部门负责割接后的性能验证"
+        ],
+        "missing_facts": [
+          "网络运行维护中心是割接管理的归口部门"
+        ],
+        "hallucinations": [],
+        "reason": "答案覆盖了各部门的具体职责，但未明确网络运行维护中心是割接管理的归口部门，故为部分覆盖。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-096",
+      "split": "single_hop",
+      "question": "申请成为合格供应商要经过哪些审批流程，材料不全时会怎么处理？",
+      "facts": [
+        "采购与供应链部负责受理供应商准入材料并进行初审。",
+        "采购与供应链部会同需求部门、财务部会签供应商准入材料。",
+        "供应商准入经分管副总经理批准后纳入合格供应商库。",
+        "供应商准入材料不齐时，应一次性告知补正要求。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcg-2023-002#c006",
+        "zdcg-2025-004#c018",
+        "zdcg-2025-004#c019",
+        "zdcg-2023-002#c005",
+        "zdcg-2025-004#c017"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "## 审批流程\n申请成为合格供应商后，由采购与供应链部受理并初审材料，再会同需求部门、财务部会签，报分管副总经理批准后纳入合格供应商库。[c01]\n\n## 材料不全时的处理\n材料不齐的，采购与供应链部应一次性告知补正要求。[c01] 材料补充完整后，各审批环节应在收到完整材料后3个工作日内完成审批；补正所用时间不计入审批时限。[c02]",
+      "refused": false,
+      "ttft_ms": 2378,
+      "elapsed_ms": 3699,
+      "invalid_citations": [],
+      "claim_support_rate": 0.6667,
+      "unsupported_claims": [
+        "补正所用时间不计入审批时限。"
+      ],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "采购与供应链部受理并初审材料",
+          "会同需求部门、财务部会签",
+          "报分管副总经理批准后纳入合格供应商库",
+          "材料不齐的，应一次性告知补正要求"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整覆盖标准答案的审批流程和材料不全处理要求，额外内容有第十八条材料支持。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-084",
+      "split": "single_hop",
+      "question": "我们市分公司要制定故障处置细则，制定好后需要报给谁备案？",
+      "facts": [
+        "各市分公司应根据本办法制定属地故障处置细则。",
+        "各市分公司制定的属地故障处置细则应报网络运行维护中心备案。",
+        "网络运行维护中心负责解释本办法。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdww-2023-010#c029",
+        "zdcg-2023-001#c024",
+        "zdww-2025-012#c030",
+        "zdww-2024-011#c026",
+        "zdww-2023-010#c026"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "应报网络运行维护中心备案。[c01]",
+      "refused": false,
+      "ttft_ms": 2015,
+      "elapsed_ms": 2215,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "报网络运行维护中心备案"
+        ],
+        "missing_facts": [
+          "各市分公司应根据本办法制定属地故障处置细则",
+          "本办法由网络运行维护中心负责解释"
+        ],
+        "hallucinations": [],
+        "reason": "答案正确指出备案对象，但未覆盖标准答案中制定细则的主体及解释权条款。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-105",
+      "split": "single_hop",
+      "question": "市分公司通过合同采购服务，也要按这个办法执行吗？",
+      "facts": [
+        "本办法适用于公司本部、各市分公司及直属单位以合同方式取得货物、工程和服务的采购活动。",
+        "本办法适用的采购活动包括集中采购、分散采购、框架协议采购和紧急采购。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcg-2023-001#c002",
+        "zdcg-2023-001#c024",
+        "zdcg-2024-003#c002",
+        "zdcw-2023-005#c025",
+        "zdcg-2024-003#c022"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "**要执行。**《明州数智服务有限公司采购管理办法》适用于公司本部、各市分公司及直属单位以合同方式取得货物、工程和服务的采购活动；市分公司通过合同采购服务属于该适用范围。[c01]",
+      "refused": false,
+      "ttft_ms": 2956,
+      "elapsed_ms": 3579,
+      "invalid_citations": [],
+      "claim_support_rate": 0.0,
+      "unsupported_claims": [
+        "市分公司通过合同采购服务属于该适用范围。"
+      ],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "本办法适用于公司本部、各市分公司及直属单位",
+          "以合同方式取得货物、工程和服务的采购活动",
+          "市分公司通过合同采购服务属于该适用范围"
+        ],
+        "missing_facts": [
+          "包括集中采购、分散采购、框架协议采购和紧急采购"
+        ],
+        "hallucinations": [
+          "《明州数智服务有限公司采购管理办法》"
+        ],
+        "reason": "答案覆盖了适用主体和合同采购服务属于适用范围的核心事实，但遗漏了四种采购方式列举，且引用的办法名称在材料中无依据。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-041",
+      "split": "single_hop",
+      "question": "采购项目要是采用单一来源方式，应该由谁来审批？",
+      "facts": [
+        "公开招标方式的采购由采购与供应链部负责人审批。",
+        "邀请招标、竞争性谈判和询价方式的采购由分管采购的副总经理审批。",
+        "单一来源方式的采购一律报总经理审批。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcg-2025-004#c006",
+        "zdcg-2025-004#c007",
+        "zdcg-2025-004#c010",
+        "zdcg-2023-001#c012",
+        "zdcg-2025-004#c005"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "采用单一来源方式的采购项目，一律报总经理审批。[c01] 单笔金额在500万元以上的，还须提交总经理办公会审议，并在审议前完成专家论证和价格合理性审核。[c02]",
+      "refused": false,
+      "ttft_ms": 1881,
+      "elapsed_ms": 2385,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "采用单一来源方式的，一律报总经理审批"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案准确覆盖标准答案关于单一来源方式一律报总经理审批的核心事实，补充的500万元以上审议要求有材料第七条支持。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-028",
+      "split": "single_hop",
+      "question": "我们市分公司想自己组织岗位竞聘，需要把方案报给谁备案？",
+      "facts": [
+        "各市分公司可参照本办法组织本单位岗位竞聘。",
+        "各市分公司的竞聘方案应报人力资源部备案。",
+        "人力资源部负责解释本办法。",
+        "本办法自2024年4月1日起施行。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdrl-2024-008#c026",
+        "zdrl-2024-008#c004",
+        "zdrl-2025-009#c025",
+        "zdcg-2023-001#c024",
+        "zdrl-2024-008#c007"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "市分公司可参照《员工岗位竞聘管理办法》组织岗位竞聘，竞聘方案应报**人力资源部备案**。[c01]",
+      "refused": false,
+      "ttft_ms": 2211,
+      "elapsed_ms": 2700,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "各市分公司可参照本办法组织本单位岗位竞聘",
+          "竞聘方案报人力资源部备案"
+        ],
+        "missing_facts": [
+          "本办法由人力资源部负责解释",
+          "本办法自2024年4月1日起施行"
+        ],
+        "hallucinations": [
+          "《员工岗位竞聘管理办法》"
+        ],
+        "reason": "核心备案对象正确，但办法名称无材料支持，且未覆盖标准答案中解释与施行日期条款。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-062",
+      "split": "single_hop",
+      "question": "全省业务都中断了，或者重点客户受影响超过半小时还不能恢复，这算一级故障吗？",
+      "facts": [
+        "造成全省范围内业务全阻的故障属于一级故障。",
+        "造成地市级以上核心节点全阻的故障属于一级故障。",
+        "影响重点客户业务超过30分钟且无法立即恢复的故障属于一级故障。",
+        "一级故障中，影响重点客户业务的时长须超过30分钟。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdww-2023-010#c006",
+        "zdww-2023-010#c005",
+        "zdww-2023-010#c007",
+        "zdww-2023-010#c027",
+        "zdww-2023-010#c014"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "算一级故障。全省范围内业务全阻属于一级故障；重点客户业务受影响超过30分钟且无法立即恢复，也属于一级故障。[c01]",
+      "refused": false,
+      "ttft_ms": 2516,
+      "elapsed_ms": 2904,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "全省范围内业务全阻属于一级故障",
+          "影响重点客户业务超过30分钟且无法立即恢复属于一级故障"
+        ],
+        "missing_facts": [
+          "造成地市级以上核心节点全阻也属于一级故障"
+        ],
+        "hallucinations": [],
+        "reason": "答案准确覆盖问题涉及的两类一级故障情形，但未覆盖标准答案中“地市级以上核心节点全阻”这一事实点，故为部分正确。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-008",
+      "split": "single_hop",
+      "question": "想成为公司的供应商，需要满足哪些条件？",
+      "facts": [
+        "申请准入的供应商应依法设立并有效存续。",
+        "申请准入的供应商营业执照经营范围应覆盖拟供标的。",
+        "申请准入的供应商应具备履行合同所需的资质证书及生产或服务能力。",
+        "申请准入的供应商近三年内应无重大质量事故、重大安全责任事故和严重失信记录，且财务状况正常、未被列为失信被执行人。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcg-2023-002#c004",
+        "zdcg-2023-002#c002",
+        "zdcg-2023-002#c005",
+        "zdcg-2023-002#c006",
+        "zdcg-2023-002#c008"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "## 供应商准入条件\n\n申请成为公司的供应商，应同时满足以下条件：[c01]\n\n1. 依法设立并有效存续，营业执照经营范围覆盖拟供标的；[c01]\n2. 具备履行合同所需的资质证书，以及生产或服务能力；[c01]\n3. 近三年内无重大质量事故、重大安全责任事故和严重失信记录；[c01]\n4. 财务状况正常，且未被列为失信被执行人。[c01]\n\n该细则自2024年1月1日起执行，试行期两年；材料未说明试行期满后的评估或修订结果。[c06]",
+      "refused": false,
+      "ttft_ms": 3131,
+      "elapsed_ms": 4656,
+      "invalid_citations": [],
+      "claim_support_rate": 0.3333,
+      "unsupported_claims": [
+        "申请成为公司的供应商，应同时满足以下条件：",
+        "2. 具备履行合同所需的资质证书，以及生产或服务能力；",
+        "4. 财务状况正常，且未被列为失信被执行人。",
+        "材料未说明试行期满后的评估或修订结果。"
+      ],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "依法设立并有效存续，营业执照经营范围覆盖拟供标的",
+          "具备履行合同所需的资质证书、生产或者服务能力",
+          "近三年内无重大质量事故、重大安全责任事故和严重失信记录",
+          "财务状况正常，未被列为失信被执行人"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整覆盖标准答案四项准入条件，附加执行日期和试行期有材料支持，未发现无材料支持的断言。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-117",
+      "split": "single_hop",
+      "question": "做年度资本预算时，每个项目要报哪些信息？没进滚动规划的项目能不能申报？",
+      "facts": [
+        "资本性支出预算应逐项列明项目名称、建设内容、投资金额、资金来源和预计收益。",
+        "未纳入滚动规划的项目不得列入年度资本预算。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcw-2024-006#c009",
+        "zdcw-2024-006#c002",
+        "zdcw-2024-006#c006",
+        "zdcw-2024-006#c019",
+        "zdcw-2024-006#c017"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 项目需报的信息\n年度资本预算中的资本性支出项目，应逐项列明项目名称、建设内容、投资金额、资金来源和预计收益。[c01]\n\n### 未纳入滚动规划的项目能否申报\n未纳入滚动规划的项目不得列入年度资本预算。[c01]",
+      "refused": false,
+      "ttft_ms": 1857,
+      "elapsed_ms": 2647,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "项目名称",
+          "建设内容",
+          "投资金额",
+          "资金来源",
+          "预计收益",
+          "未纳入滚动规划的项目不得列入年度资本预算"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整复述了标准答案中年度资本预算应列明的信息及未纳入滚动规划项目不得列入的要求，且无材料不支持的断言。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-110",
+      "split": "single_hop",
+      "question": "故障等级判定后发现影响变了，还能调整吗？",
+      "facts": [
+        "故障等级由网络运行维护中心值班室初步判定。",
+        "故障等级判定后可依据实际影响升级或降级。",
+        "故障等级变更应记录时间、原因和决定人。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdww-2023-010#c010",
+        "zdww-2025-012#c011",
+        "zdww-2023-010#c005",
+        "zdcg-2023-002#c012",
+        "zdww-2023-010#c017"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "可以。故障等级初步判定后，可根据实际影响升级或降级；等级变更时应记录时间、原因和决定人。[c01]",
+      "refused": false,
+      "ttft_ms": 1894,
+      "elapsed_ms": 2315,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "判定后可以依据实际影响升级或者降级",
+          "等级变更应记录时间、原因和决定人"
+        ],
+        "missing_facts": [
+          "故障等级由网络运行维护中心值班室初步判定"
+        ],
+        "hallucinations": [],
+        "reason": "答案覆盖了可升级或降级及变更记录要求，但未说明故障等级由网络运行维护中心值班室初步判定这一事实点。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-102",
+      "split": "single_hop",
+      "question": "网络割接要提前多久申请，申请时需要准备哪些内容？",
+      "facts": [
+        "割接实施单位应在割接实施前10个工作日提交割接申请。",
+        "割接申请应包括割接名称、涉及网元、影响范围、实施时间、实施方案、回退方案和应急措施。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdww-2024-011#c006",
+        "zdww-2024-011#c007",
+        "zdww-2024-011#c008",
+        "zdww-2024-011#c016",
+        "zdww-2024-011#c009"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 申请时限\n一般割接应在实施前 **10个工作日**提交申请；影响一级干线和重点客户业务的割接，应提前 **15个工作日**提交申请，并附业务影响评估报告。[c01][c02]\n\n### 申请内容\n申请应包括割接名称、涉及网元、影响范围、实施时间、实施方案、回退方案和应急措施。[c01] 影响一级干线和重点客户业务的割接，还需附业务影响评估报告。[c02]",
+      "refused": false,
+      "ttft_ms": 2671,
+      "elapsed_ms": 3694,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "割接实施单位应在割接实施前10个工作日提交割接申请",
+          "申请内容包括割接名称、涉及网元、影响范围、实施时间、实施方案、回退方案和应急措施"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整覆盖标准答案的申请时限和申请内容，额外提到的15个工作日及业务影响评估报告有检索材料第七条支持，不构成无依据断言。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-064",
+      "split": "single_hop",
+      "question": "公司制定这个采购审批细则，主要是想解决什么问题？",
+      "facts": [
+        "本细则适用于明州数智服务有限公司采购事项的审批层级和审批责任。",
+        "制定本细则的目的是压缩审批链条、提高决策效率。",
+        "本细则依据公司授权管理制度和《采购管理办法》制定。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcg-2025-004#c001",
+        "zdcg-2023-001#c001",
+        "zdcg-2025-004#c002",
+        "zdcg-2024-003#c001",
+        "zdcg-2025-004#c023"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "公司制定采购审批细则，主要是为了明确采购事项的审批层级和审批责任，压缩审批链条、提高决策效率。[c01]",
+      "refused": false,
+      "ttft_ms": 2054,
+      "elapsed_ms": 2445,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "明确采购事项的审批层级",
+          "明确采购事项的审批责任",
+          "压缩审批链条",
+          "提高决策效率"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整覆盖了标准答案中关于制定目的的全部事实点，且无材料不支持的断言。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-011",
+      "split": "single_hop",
+      "question": "单笔付款超过300万元，需要谁审批，付完后多久要备案？",
+      "facts": [
+        "单笔金额在300万元以上的支付属于大额支付。",
+        "大额支付须经总会计师审核后报总经理审批。",
+        "大额支付完成后应在5个工作日内报总经理办公会备案。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcw-2023-005#c019",
+        "zdcw-2023-005#c008",
+        "zdcg-2025-004#c013",
+        "zdcg-2023-001#c012",
+        "zdcg-2025-004#c007"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "单笔付款超过300万元，须经总会计师审核后报总经理审批；付款完成后5个工作日内报总经理办公会备案。[c01]",
+      "refused": false,
+      "ttft_ms": 2135,
+      "elapsed_ms": 2548,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "大额支付须经总会计师审核后报总经理审批",
+          "支付完成后5个工作日内报总经理办公会备案"
+        ],
+        "missing_facts": [
+          "大额支付是指单笔金额在300万元以上的支付"
+        ],
+        "hallucinations": [],
+        "reason": "答案准确覆盖审批主体和备案时限，但未明确复述标准答案中大额支付的定义。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-019",
+      "split": "single_hop",
+      "question": "单一来源采购超过500万元，除了常规审批，还要走哪些程序？",
+      "facts": [
+        "采用单一来源方式且单笔金额在500万元以上的事项，除按第六条规定审批外，还须提交总经理办公会审议。",
+        "单一来源事项提交总经理办公会审议前应完成专家论证和价格合理性审核。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcg-2025-004#c007",
+        "zdcg-2025-004#c013",
+        "zdcg-2025-004#c010",
+        "zdcg-2023-001#c011",
+        "zdcg-2023-001#c006"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "**结论：**单一来源采购单笔金额超过500万元，除按单一来源方式的常规审批报总经理批准外，还应提交总经理办公会审议，并在审议前完成专家论证和价格合理性审核。[c05][c01]\n\n单一来源采购还应组织不少于三名专家论证并形成书面论证意见。[c04]",
+      "refused": false,
+      "ttft_ms": 1932,
+      "elapsed_ms": 2847,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "采用单一来源方式且单笔金额在500万元以上，除按第六条规定审批外",
+          "还应提交总经理办公会审议",
+          "并在审议前完成专家论证和价格合理性审核"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整覆盖标准答案全部事实点，且专家论证不少于三名等内容有材料第十一条支持。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-005",
+      "split": "single_hop",
+      "question": "我想反映工作上的问题，应该找哪个部门受理？",
+      "facts": [
+        "人力资源部是员工申诉的归口受理部门，负责申诉登记、转办、跟踪和归档。",
+        "工会参与劳动争议调解。",
+        "纪检监察部门负责涉及违纪违规问题的核查。",
+        "法律事务岗负责劳动争议仲裁和诉讼的应对。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdrl-2025-009#c004",
+        "zdrl-2024-008#c025",
+        "zdrl-2025-009#c009",
+        "zdrl-2025-009#c011",
+        "zdrl-2025-009#c010"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "工作问题的性质决定受理部门：\n\n- 如果是对公司处理决定或其他工作事项提出员工申诉，由人力资源部归口受理。[c01]\n- 如果是举报岗位竞聘过程中的问题，由纪检监察部门受理，并由其书面反馈受理和处理情况。[c02]\n\n如不确定属于哪类，建议向人力资源部咨询；材料未说明其他类型工作问题的受理部门。[c01]",
+      "refused": false,
+      "ttft_ms": 2041,
+      "elapsed_ms": 3396,
+      "invalid_citations": [],
+      "claim_support_rate": 0.3333,
+      "unsupported_claims": [
+        "- 如果是对公司处理决定或其他工作事项提出员工申诉，由人力资源部归口受理。",
+        "材料未说明其他类型工作问题的受理部门。"
+      ],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "人力资源部是员工申诉的归口受理部门"
+        ],
+        "missing_facts": [
+          "人力资源部负责申诉登记、转办、跟踪和归档",
+          "工会参与劳动争议调解",
+          "纪检监察部门负责涉及违纪违规问题的核查",
+          "法律事务岗负责劳动争议仲裁和诉讼的应对"
+        ],
+        "hallucinations": [
+          "材料未说明其他类型工作问题的受理部门"
+        ],
+        "reason": "答案仅覆盖人力资源部归口受理员工申诉，遗漏工会、纪检监察违纪违规核查、法律事务岗等标准答案事实点，且断言材料未说明其他类型受理部门与材料不符。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-042",
+      "split": "single_hop",
+      "question": "同一个采购项目分几次买，审批要按每次金额还是累计金额来走？",
+      "facts": [
+        "同一采购项目在12个月内分次实施的，应按累计金额确定审批层级。",
+        "故意拆分项目规避审批的，追究经办人和审批人的责任。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcg-2025-004#c011",
+        "zdcg-2025-004#c015",
+        "zdcg-2025-004#c003",
+        "zdcg-2023-001#c016",
+        "zdcg-2023-001#c012"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "结论：同一采购项目在12个月内分次实施的，审批按累计金额确定审批层级，不按每次金额分别确定。[c01]\n\n不得将单个项目拆分为多个项目以规避审批；故意拆分规避审批的，将追究经办人和审批人责任。[c03][c01]",
+      "refused": false,
+      "ttft_ms": 3461,
+      "elapsed_ms": 4270,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "同一采购项目在12个月内分次实施的，应按累计金额确定审批层级",
+          "不得将单个项目拆分为多个项目规避审批",
+          "故意拆分项目规避审批的，追究经办人和审批人责任"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整覆盖标准答案的累计金额审批与拆分追责要点，且均有检索材料支持。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-066",
+      "split": "single_hop",
+      "question": "市分公司负责受理员工申诉的岗位和人员名单要怎么确定、报给谁备案？",
+      "facts": [
+        "各市分公司应明确本单位申诉受理的经办岗位。",
+        "各市分公司应将申诉受理经办人员名单报人力资源部备案。",
+        "本办法由人力资源部负责解释。",
+        "本办法自2025年3月1日起施行。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdrl-2025-009#c025",
+        "zdrl-2025-009#c004",
+        "zdrl-2024-008#c026",
+        "zdcg-2023-001#c024",
+        "zdrl-2025-009#c001"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "各市分公司应明确本单位受理员工申诉的经办岗位，并将人员名单报人力资源部备案。[c01]",
+      "refused": false,
+      "ttft_ms": 2148,
+      "elapsed_ms": 2505,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "各市分公司应明确本单位申诉受理的经办岗位",
+          "将人员名单报人力资源部备案"
+        ],
+        "missing_facts": [
+          "第二十六条：本办法由人力资源部负责解释",
+          "第二十七条：本办法自2025年3月1日起施行"
+        ],
+        "hallucinations": [],
+        "reason": "答案准确覆盖了第二十五条关于明确经办岗位和报人力资源部备案的核心事实，但未覆盖标准答案中第二十六条、第二十七条的内容。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-027",
+      "split": "single_hop",
+      "question": "公司新的采购审批权限细则什么时候开始执行，之前办法还有效吗？",
+      "facts": [
+        "本细则自2025年3月1日起施行。",
+        "《采购管理办法》（浙东通信采〔2023〕7号）第十二条关于采购审批权限的规定同时废止。",
+        "《采购管理办法》（浙东通信采〔2023〕7号）的其他条款继续有效。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcg-2025-004#c025",
+        "zdcg-2023-001#c025",
+        "zdcg-2023-002#c026",
+        "zdcw-2025-007#c024",
+        "zdcw-2023-005#c025"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "公司新的采购审批权限细则自 **2025年3月1日** 起施行。[c01]\n\n此前《采购管理办法》中**关于采购审批权限的第十二条规定已同时废止**；该办法的其他条款继续有效。[c01]",
+      "refused": false,
+      "ttft_ms": 2728,
+      "elapsed_ms": 3481,
+      "invalid_citations": [],
+      "claim_support_rate": 0.5,
+      "unsupported_claims": [
+        "该办法的其他条款继续有效。"
+      ],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "细则自2025年3月1日起施行",
+          "《采购管理办法》第十二条关于采购审批权限的规定同时废止",
+          "该办法其他条款继续有效"
+        ],
+        "missing_facts": [
+          "未提及《采购管理办法》的文号（浙东通信采〔2023〕7号）"
+        ],
+        "hallucinations": [],
+        "reason": "答案覆盖施行日期、第十二条废止及其他条款继续有效，但遗漏被废止规定所属文件的文号。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-009",
+      "split": "single_hop",
+      "question": "采购合同里一般要写清楚哪些内容，付款和验收方式也要约定吗？",
+      "facts": [
+        "合同应具备标的与范围、合同金额与计价方式、付款条件与结算方式、交付时间与地点、质量标准与验收方法、违约责任、争议解决方式、廉洁条款和保密条款。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcg-2024-003#c005",
+        "zdcg-2023-001#c015",
+        "zdcg-2023-001#c014",
+        "zdcg-2024-003#c015",
+        "zdcg-2024-003#c004"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 合同一般应写清哪些内容？\n合同应约定标的与范围、合同金额与计价方式、付款条件与结算方式、交付时间与地点、质量标准与验收方法、违约责任、争议解决方式、廉洁条款和保密条款。[c01]\n\n合同的标的、金额、付款方式、履约期限等主要条款，还应与采购文件及中标供应商的应答文件保持一致，不得擅自变更。[c02]\n\n### 付款和验收方式也要约定吗？\n要。合同应明确付款条件与结算方式，以及质量标准与验收方法。[c01] 合同结算须以验收合格为依据；未取得验收合格证明，财务部不得办理结算付款。[c04]",
+      "refused": false,
+      "ttft_ms": 2013,
+      "elapsed_ms": 3738,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "标的与范围",
+          "合同金额与计价方式",
+          "付款条件与结算方式",
+          "交付时间与地点",
+          "质量标准与验收方法",
+          "违约责任",
+          "争议解决方式",
+          "廉洁条款和保密条款"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整覆盖标准答案所列合同主要条款，且付款与验收约定及结算以验收合格为依据均有材料支持。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-032",
+      "split": "single_hop",
+      "question": "公司负责组织岗位竞聘的领导小组都有哪些人参加？",
+      "facts": [
+        "公司设立竞聘工作领导小组。",
+        "竞聘工作领导小组由分管人力资源工作的副总经理任组长。",
+        "竞聘工作领导小组由人力资源部负责人任副组长。",
+        "竞聘工作领导小组成员包括用人单位负责人、纪检监察部门负责人和员工代表。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdrl-2024-008#c005",
+        "zdrl-2024-008#c004",
+        "zdrl-2024-008#c006",
+        "zdrl-2024-008#c018",
+        "zdrl-2024-008#c007"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "竞聘工作领导小组由分管人力资源工作的副总经理任组长，人力资源部负责人任副组长；成员包括用人单位负责人、纪检监察部门负责人和员工代表。[c01]",
+      "refused": false,
+      "ttft_ms": 1952,
+      "elapsed_ms": 2438,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "公司设立竞聘工作领导小组",
+          "由分管人力资源工作的副总经理任组长",
+          "人力资源部负责人任副组长",
+          "成员包括用人单位负责人、纪检监察部门负责人和员工代表"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整复述了标准答案第五条关于竞聘工作领导小组组成人员的内容，且材料中有完全对应原文支持。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-055",
+      "split": "single_hop",
+      "question": "我这边的业务预算要由谁负责编制和执行？",
+      "facts": [
+        "财务部是预算管理的日常办事机构。",
+        "财务部负责预算编制组织、执行监控、调整受理和考核数据提供。",
+        "各业务归口部门负责本专业预算的编制和执行。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcw-2024-006#c004",
+        "zdcw-2024-006#c003",
+        "zdcw-2024-006#c007",
+        "zdcw-2024-006#c006",
+        "zdcg-2025-004#c004"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "业务预算由各业务归口部门负责本专业预算的编制和执行；财务部负责预算编制组织、执行监控等日常管理工作。[c01]",
+      "refused": false,
+      "ttft_ms": 2636,
+      "elapsed_ms": 3051,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "各业务归口部门负责本专业预算的编制和执行",
+          "财务部是预算管理的日常办事机构",
+          "财务部负责预算编制组织、执行监控"
+        ],
+        "missing_facts": [
+          "财务部负责调整受理",
+          "财务部负责考核数据提供"
+        ],
+        "hallucinations": [],
+        "reason": "答案覆盖了业务归口部门编制执行和财务部日常管理的主要事实，但未明确覆盖财务部调整受理和考核数据提供职责，故为部分正确。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-012",
+      "split": "single_hop",
+      "question": "申诉处理结果我不满意，申请复核后多久能收到书面答复？",
+      "facts": [
+        "员工对申诉处理结论不服的，可以向公司有关部门提出复核申请。",
+        "复核部门应在收到复核申请后20个工作日内作出复核结论。",
+        "复核部门应将复核结论书面告知申诉人。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdrl-2025-009#c014",
+        "zdcg-2023-002#c017",
+        "zdrl-2025-009#c009",
+        "zdrl-2025-009#c016",
+        "zdrl-2025-009#c008"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "复核部门应在收到复核申请后20个工作日内作出复核结论，并书面告知申诉人。[c01]",
+      "refused": false,
+      "ttft_ms": 2573,
+      "elapsed_ms": 2966,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "复核部门应在收到复核申请后20个工作日内作出复核结论",
+          "应书面告知申诉人"
+        ],
+        "missing_facts": [
+          "员工对申诉处理结论不服的，可以向公司有关部门提出复核申请"
+        ],
+        "hallucinations": [],
+        "reason": "答案覆盖了复核时限和书面告知两个事实点，但未覆盖员工不服可提出复核申请这一事实点，且无材料不支持的内容。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-072",
+      "split": "single_hop",
+      "question": "公司制定这个网络安全事件应急预案管理办法，主要是为了解决什么问题？",
+      "facts": [
+        "本办法旨在提高明州数智服务有限公司网络安全事件的预防、监测、报告和处置能力。",
+        "本办法旨在保障明州数智服务有限公司网络和信息系统安全稳定运行。",
+        "本办法根据《中华人民共和国网络安全法》等法律法规和上级单位要求制定。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdww-2025-012#c001",
+        "zdww-2025-012#c030",
+        "zdww-2025-012#c002",
+        "zdww-2025-012#c003",
+        "zdww-2025-012#c005"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "公司制定该办法，主要是为了提高网络安全事件的预防、监测、报告和处置能力，保障网络和信息系统安全稳定运行。[c01]",
+      "refused": false,
+      "ttft_ms": 2280,
+      "elapsed_ms": 2678,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "提高网络安全事件的预防、监测、报告和处置能力",
+          "保障网络和信息系统安全稳定运行"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案准确覆盖了标准答案中制定本办法所要解决的核心目的，未出现材料不支持的断言。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-029",
+      "split": "single_hop",
+      "question": "报销差旅费或招待费时，除了发票和报销单，还要准备哪些材料？",
+      "facts": [
+        "报销应提交费用报销单、合规发票、审批单和必要的证明材料。",
+        "差旅费报销应附出差审批单和行程单据。",
+        "招待费报销应附招待申请单和来访人员名单。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcw-2025-007#c013",
+        "zdcw-2023-005#c005",
+        "zdcw-2025-007#c002",
+        "zdcw-2025-007#c014",
+        "zdcw-2025-007#c003"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 差旅费\n除发票和费用报销单外，还应准备审批单、必要的证明材料，以及出差审批单和行程单据。[c01]\n\n### 招待费\n除发票和费用报销单外，还应准备审批单、必要的证明材料，以及招待申请单和来访人员名单。[c01]\n\n上述规定属于自2025年5月1日起试行、试行期两年的办法。[c06]",
+      "refused": false,
+      "ttft_ms": 2105,
+      "elapsed_ms": 3131,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "费用报销单",
+          "合规发票",
+          "审批单",
+          "必要的证明材料",
+          "差旅费附出差审批单和行程单据",
+          "招待费附招待申请单和来访人员名单"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整覆盖第十三条报销材料要求，试行日期和试行期也有第二十五条支持。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-081",
+      "split": "single_hop",
+      "question": "采购金额刚好200万元，应该由谁审批？",
+      "facts": [
+        "单笔采购金额在500万元以上的项目，其采购方式、采购文件和采购结果应提交总经理办公会审议。",
+        "单笔采购金额200万元以上至500万元的项目，由分管副总经理审批。",
+        "单笔采购金额50万元以上至200万元的项目，由采购与供应链部负责人审批。",
+        "单笔采购金额50万元以下的项目，由需求部门负责人审批。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcg-2025-004#c005",
+        "zdcw-2023-005#c008",
+        "zdcg-2025-004#c010",
+        "zdcg-2023-001#c006",
+        "zdcg-2023-001#c012"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "## 采购立项审批\n\n采购金额刚好200万元，属于“50万元以上至200万元”的区间，由需求部门分管副总经理审批。该审批权限规定自2025年3月1日起生效、现行。[c01]\n\n## 采购审批权限\n\n若问的是单笔采购项目的采购方式、采购文件和采购结果审批，刚好200万元也属于“50万元以上至200万元”的区间，由采购与供应链部负责人审批；该规定自2025年3月1日起生效、现行。[c03]\n\n材料对不同审批事项规定了不同审批人，因此需按具体事项区分；若你指的是其他审批环节，材料未说明。[c01][c03]",
+      "refused": false,
+      "ttft_ms": 2186,
+      "elapsed_ms": 3917,
+      "invalid_citations": [],
+      "claim_support_rate": 0.0,
+      "unsupported_claims": [
+        "该审批权限规定自2025年3月1日起生效、现行。",
+        "该规定自2025年3月1日起生效、现行。",
+        "若你指的是其他审批环节，材料未说明。"
+      ],
+      "timed_out": false,
+      "verdict": "judge_error",
+      "judge_error": "parse: JSONDecodeError: Unterminated string starting at: line 1 column 22 (char 21)",
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-086",
+      "split": "single_hop",
+      "question": "供应商履约评价主要看哪些方面，各占多少分？低于多少分需要书面说明原因？",
+      "facts": [
+        "履约评价采用百分制。",
+        "履约评价中交付质量占40分。",
+        "履约评价中交付及时性占25分。",
+        "履约评价中价格合理性占20分，服务响应占15分；评价得分低于70分时，需求部门应书面说明原因。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcg-2023-002#c014",
+        "zdcg-2023-002#c010",
+        "zdcg-2023-002#c015",
+        "zdrl-2024-008#c017",
+        "zdcw-2024-006#c027"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "供应商履约评价主要看以下四个方面：交付质量40分、交付及时性25分、价格合理性20分、服务响应15分。[c01]\n\n评价得分低于70分的，需求部门应书面说明原因。[c01] 该细则自2024年1月1日起试行，试行期两年；材料未说明试行期满后的规定。[c06]",
+      "refused": false,
+      "ttft_ms": 3402,
+      "elapsed_ms": 4169,
+      "invalid_citations": [],
+      "claim_support_rate": 0.6667,
+      "unsupported_claims": [
+        "材料未说明试行期满后的规定。"
+      ],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "交付质量40分",
+          "交付及时性25分",
+          "价格合理性20分",
+          "服务响应15分",
+          "评价得分低于70分的，需求部门应书面说明原因"
+        ],
+        "missing_facts": [
+          "履约评价采用百分制"
+        ],
+        "hallucinations": [
+          "材料未说明试行期满后的规定"
+        ],
+        "reason": "答案覆盖了四项评价维度及分值、低于70分书面说明，但未明确“百分制”，且关于“材料未说明试行期满后的规定”与检索材料第二十七条相反。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-068",
+      "split": "single_hop",
+      "question": "我们市里业务大面积中断，或者重点客户受影响超过15分钟，算二级故障吗？",
+      "facts": [
+        "二级故障包括造成单个地市范围内业务大面积中断的故障。",
+        "二级故障包括造成汇聚层以上设备退服的故障。",
+        "二级故障包括影响重点客户业务超过15分钟的故障。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdww-2023-010#c007",
+        "zdww-2023-010#c005",
+        "zdww-2023-010#c006",
+        "zdww-2023-010#c014",
+        "zdww-2023-010#c017"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "## 市内业务大面积中断\n\n若是**单个地市范围内业务大面积中断**，属于二级故障的判定情形。[c01]\n\n## 重点客户受影响超过15分钟\n\n若故障影响重点客户业务超过15分钟，属于二级故障的判定情形。[c01]\n\n但如果重点客户业务受影响超过30分钟且无法立即恢复，也符合一级故障的判定情形；与二级故障条件的关系，材料未进一步说明。[c03]",
+      "refused": false,
+      "ttft_ms": 2995,
+      "elapsed_ms": 4232,
+      "invalid_citations": [],
+      "claim_support_rate": 0.6667,
+      "unsupported_claims": [
+        "与二级故障条件的关系，材料未进一步说明。"
+      ],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "单个地市范围内业务大面积中断属于二级故障的判定情形",
+          "影响重点客户业务超过15分钟属于二级故障的判定情形"
+        ],
+        "missing_facts": [
+          "造成汇聚层以上设备退服也属于二级故障的判定情形"
+        ],
+        "hallucinations": [],
+        "reason": "答案覆盖了问题所问的两个二级故障情形，但未覆盖标准答案中“汇聚层以上设备退服”这一并列事实点，故为部分覆盖。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-114",
+      "split": "single_hop",
+      "question": "遇到重大故障需要马上采购，来不及走常规流程，应该找谁批准，之后多久补手续？",
+      "facts": [
+        "因自然灾害、重大故障抢修、网络安全事件处置等紧急情况且无法按常规程序实施的采购属于紧急采购。",
+        "紧急采购应经分管副总经理批准。",
+        "紧急采购实施后10个工作日内应补办立项和审批手续。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcg-2025-004#c012",
+        "zdcg-2025-004#c013",
+        "zdww-2023-010#c015",
+        "zdcg-2023-001#c006",
+        "zdcg-2025-004#c017"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 批准人\n重大故障抢修属于材料所列的紧急采购情形，紧急采购应经分管副总经理批准。[c01]\n\n### 后续补办时限\n采购实施后，应在 **10个工作日内**补办立项和审批手续。[c01]",
+      "refused": false,
+      "ttft_ms": 2042,
+      "elapsed_ms": 2798,
+      "invalid_citations": [],
+      "claim_support_rate": 0.5,
+      "unsupported_claims": [
+        "采购实施后，应在 **10个工作日内**补办立项和审批手续。"
+      ],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "重大故障抢修属于紧急采购情形",
+          "紧急采购应经分管副总经理批准",
+          "实施后10个工作日内补办立项和审批手续"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案准确覆盖标准答案中分管副总经理批准及实施后10个工作日内补办立项和审批手续的事实点，且均由材料第十二条支持。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-020",
+      "split": "single_hop",
+      "question": "公司制定这个通信网络故障管理办法，主要是想解决什么问题？",
+      "facts": [
+        "办法适用于明州数智服务有限公司通信网络故障的报告、抢修、恢复和分析。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdww-2023-010#c001",
+        "zdww-2024-011#c001",
+        "zdww-2023-010#c002",
+        "zdww-2023-010#c003",
+        "zdww-2025-012#c001"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "公司制定《通信网络故障管理办法》，主要是为了规范通信网络故障的报告、抢修、恢复和分析，缩短故障历时，提升网络服务质量。[c01]",
+      "refused": false,
+      "ttft_ms": 2302,
+      "elapsed_ms": 2707,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "规范通信网络故障的报告、抢修、恢复和分析",
+          "缩短故障历时",
+          "提升网络服务质量"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整复述了标准答案中制定办法的目的，且未添加材料不支持的断言。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-007",
+      "split": "single_hop",
+      "question": "发现自己的权益被侵害后，最晚多久要提出申诉？有正当理由能延期几天？",
+      "facts": [
+        "申诉应在知道或者应当知道权益受到侵害之日起30日内提出。",
+        "因不可抗力或者其他正当理由延误申诉的，可以申请延期。",
+        "申诉延期不超过15日。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdrl-2025-009#c008",
+        "zdrl-2025-009#c014",
+        "zdrl-2025-009#c009",
+        "zdcg-2023-001#c020",
+        "zdrl-2025-009#c005"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 申诉期限\n应在知道或者应当知道权益受到侵害之日起30日内提出申诉。[c01]\n\n### 有正当理由能延期几天\n因不可抗力或者其他正当理由延误的，可以申请延期，延期不超过15日。[c01]",
+      "refused": false,
+      "ttft_ms": 2105,
+      "elapsed_ms": 2773,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "申诉应在知道或者应当知道权益受到侵害之日起30日内提出",
+          "因不可抗力或者其他正当理由延误的，可以申请延期，延期不超过15日"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整覆盖标准答案中的申诉期限和延期天数两个事实点，且无材料不支持的断言。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-116",
+      "split": "single_hop",
+      "question": "公司制定这个采购合同管理细则，主要是想解决什么问题？",
+      "facts": [
+        "细则规范明州数智服务有限公司采购合同的订立、履行和归档管理。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcg-2024-003#c001",
+        "zdcg-2023-001#c001",
+        "zdcg-2025-004#c001",
+        "zdcg-2023-002#c001",
+        "zdcg-2024-003#c002"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "公司制定《采购合同管理细则》，主要是为了规范采购合同的订立、履行和归档管理，减少合同纠纷、防范法律风险。[c01]",
+      "refused": false,
+      "ttft_ms": 2615,
+      "elapsed_ms": 3037,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "规范采购合同的订立、履行和归档管理",
+          "减少合同纠纷",
+          "防范法律风险"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整复述了标准答案第一条的核心目的，且材料第一条可支持。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-021",
+      "split": "single_hop",
+      "question": "地市业务中断、数据泄露或系统中毒到什么程度，才算重大事件？",
+      "facts": [
+        "重大事件包括造成单个地市范围业务中断的事件。",
+        "重大事件包括数据泄露10万条以上的事件。",
+        "重大事件包括重要信息系统被植入恶意程序且无法立即清除的事件。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdww-2025-012#c008",
+        "zdww-2025-012#c009",
+        "zdww-2025-012#c007",
+        "zdww-2023-010#c007",
+        "zdww-2025-012#c010"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "## 重大事件判定标准\n\n符合以下任一情形，即属于重大事件：\n\n- 造成单个地市范围业务中断；[c01]\n- 数据泄露10万条以上；[c01]\n- 重要信息系统被植入恶意程序且无法立即清除。[c01]",
+      "refused": false,
+      "ttft_ms": 1993,
+      "elapsed_ms": 2756,
+      "invalid_citations": [],
+      "claim_support_rate": 0.6667,
+      "unsupported_claims": [
+        "- 数据泄露10万条以上；"
+      ],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "造成单个地市范围业务中断",
+          "数据泄露10万条以上",
+          "重要信息系统被植入恶意程序且无法立即清除"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整复述标准答案中重大事件的三个判定情形，且无材料外断言。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-015",
+      "split": "single_hop",
+      "question": "采购合同金额变更超过原金额10%，需要重新走什么审批流程？",
+      "facts": [
+        "采购合同变更累计金额超过原合同金额10%的，按变更后合同总额重新确定审批层级。",
+        "采购合同变更累计金额未超过原合同金额10%的，由原审批人审批。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcg-2023-001#c016",
+        "zdcg-2025-004#c015",
+        "zdcg-2024-003#c006",
+        "zdcg-2025-004#c007",
+        "zdcg-2025-004#c013"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "结论：采购合同变更累计金额超过原合同金额10%的，按变更后合同总额重新确定审批层级，并按该层级重新审批。[c02]\n\n依据：该规定来自2025年3月1日起施行的《采购审批权限实施细则》第十五条。[c02] 《采购管理办法》第十六条曾规定超过10%时按该办法第十二条权限重新审批；但《实施细则》同时规定，该办法第十二条关于采购审批权限的规定自2025年3月1日起废止，因此不适用旧的权限规定。[c01][c08]",
+      "refused": false,
+      "ttft_ms": 2774,
+      "elapsed_ms": 4344,
+      "invalid_citations": [],
+      "claim_support_rate": 0.6667,
+      "unsupported_claims": [
+        "依据：该规定来自2025年3月1日起施行的《采购审批权限实施细则》第十五条。"
+      ],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "采购合同变更累计金额超过原合同金额10%的，按变更后合同总额重新确定审批层级"
+        ],
+        "missing_facts": [
+          "未超过10%的，由原审批人审批"
+        ],
+        "hallucinations": [
+          "《采购审批权限实施细则》第十五条",
+          "《采购管理办法》第十六条曾规定"
+        ],
+        "reason": "答案覆盖超过10%重新确定审批层级，但漏掉未超过10%由原审批人审批，且细则名称及第十六条归属在材料中未被明确支持。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-035",
+      "split": "single_hop",
+      "question": "网络出故障后，受理调度、现场抢修和通知重点客户分别由哪个部门负责？",
+      "facts": [
+        "网络运行维护中心是故障管理的归口部门，负责故障受理、指挥调度、信息发布和统计分析。",
+        "各市分公司网络维护部门负责属地故障的现场抢修。",
+        "客户服务部负责向重点客户通报故障进展。",
+        "网络优化部门负责故障后的网络性能评估。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdww-2023-010#c004",
+        "zdww-2024-011#c004",
+        "zdww-2025-012#c005",
+        "zdww-2023-010#c017",
+        "zdww-2023-010#c018"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "- **受理、指挥调度：**由网络运行维护中心负责。[c01]\n- **现场抢修：**由各市分公司网络维护部门负责属地故障的现场抢修。[c01]\n- **通知重点客户：**由客户服务部负责向重点客户通报故障进展。[c01]",
+      "refused": false,
+      "ttft_ms": 2293,
+      "elapsed_ms": 3018,
+      "invalid_citations": [],
+      "claim_support_rate": 0.3333,
+      "unsupported_claims": [
+        "- **受理、指挥调度：**由网络运行维护中心负责。",
+        "- **通知重点客户：**由客户服务部负责向重点客户通报故障进展。"
+      ],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "网络运行维护中心负责故障受理、指挥调度",
+          "各市分公司网络维护部门负责属地故障的现场抢修",
+          "客户服务部负责向重点客户通报故障进展"
+        ],
+        "missing_facts": [
+          "网络运行维护中心是故障管理的归口部门",
+          "网络运行维护中心负责信息发布和统计分析",
+          "网络优化部门负责故障后的网络性能评估"
+        ],
+        "hallucinations": [],
+        "reason": "答案覆盖了问题所问三项职责的对应部门，但未覆盖标准答案中归口部门、信息发布和统计分析、网络优化评估等事实点。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-060",
+      "split": "single_hop",
+      "question": "我想报名参加岗位竞聘，需要满足哪些条件？",
+      "facts": [
+        "报名人员须与公司签订劳动合同，且在本单位工作满两年。",
+        "报名人员近两年年度考核结果须为称职以上。",
+        "报名人员须符合岗位说明书规定的学历、职称、专业经历和技能要求。",
+        "报名人员不得有正在处理的违纪违规问题。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdrl-2024-008#c009",
+        "zdrl-2024-008#c012",
+        "zdrl-2024-008#c003",
+        "zdrl-2024-008#c007",
+        "zdrl-2024-008#c004"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "报名参加岗位竞聘，须同时具备以下条件：\n\n- 与公司签订劳动合同，且在本单位工作满两年；[c01]\n- 近两年年度考核结果为称职以上；[c01]\n- 符合岗位说明书规定的学历、职称、专业经历和技能要求；[c01]\n- 没有正在处理的违纪违规问题。[c01]",
+      "refused": false,
+      "ttft_ms": 3636,
+      "elapsed_ms": 4363,
+      "invalid_citations": [],
+      "claim_support_rate": 0.5,
+      "unsupported_claims": [
+        "- 近两年年度考核结果为称职以上；",
+        "- 没有正在处理的违纪违规问题。"
+      ],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "与公司签订劳动合同且在本单位工作满两年",
+          "近两年年度考核结果为称职以上",
+          "符合岗位说明书规定的学历、职称、专业经历和技能要求",
+          "无正在处理的违纪违规问题"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整且准确覆盖标准答案第九条规定的四项报名条件，未添加材料不支持的断言。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-053",
+      "split": "single_hop",
+      "question": "劳动争议调解委员会里员工和工会代表至少要占多少人？",
+      "facts": [
+        "劳动争议调解委员会由员工代表、公司代表和工会代表组成。",
+        "劳动争议调解委员会人数为单数。",
+        "劳动争议调解委员会中员工代表和工会代表人数不得少于全体委员人数的二分之一。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdrl-2025-009#c018",
+        "zdrl-2025-009#c004",
+        "zdrl-2025-009#c019",
+        "zdrl-2025-009#c017",
+        "zdrl-2025-009#c011"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "员工代表和工会代表合计不得少于调解委员会总人数的二分之一，即至少占一半。[c01]",
+      "refused": false,
+      "ttft_ms": 2267,
+      "elapsed_ms": 2697,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "员工代表和工会代表人数不得少于二分之一"
+        ],
+        "missing_facts": [
+          "劳动争议调解委员会由员工代表、公司代表和工会代表组成",
+          "人数为单数"
+        ],
+        "hallucinations": [],
+        "reason": "答案仅覆盖员工代表和工会代表合计不少于二分之一这一事实点，未提及调解委员会的组成和人数为单数，且无材料不支持的断言。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-036",
+      "split": "single_hop",
+      "question": "人为原因造成一级故障，相关责任人和部门负责人会怎么处理？如果隐瞒或迟报故障会有什么后果？",
+      "facts": [
+        "因人为责任造成一级故障的，责任人和责任部门负责人按公司员工违规行为处理规定处理。",
+        "隐瞒故障的，责任人从重处理。",
+        "迟报或漏报故障的，责任人从重处理。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdww-2023-010#c028",
+        "zdww-2023-010#c017",
+        "zdww-2023-010#c014",
+        "zdww-2023-010#c027",
+        "zdww-2023-010#c005"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 人为原因造成一级故障\n对责任人和责任部门负责人，按公司员工违规行为处理规定处理。[c01]\n\n### 隐瞒或迟报故障\n隐瞒故障，或者迟报、漏报故障的，从重处理。[c01]",
+      "refused": false,
+      "ttft_ms": 2051,
+      "elapsed_ms": 2660,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "因人为责任造成一级故障的，对责任人和责任部门负责人按公司员工违规行为处理规定处理",
+          "隐瞒故障或者迟报、漏报的，从重处理"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整覆盖标准答案的全部事实点，且无材料不支持的断言。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-109",
+      "split": "single_hop",
+      "question": "预算执行中遇到重大突发事件，想调整预算的话要等到7月吗？",
+      "facts": [
+        "预算调整分为定期调整和专项调整。",
+        "预算定期调整每年7月集中办理一次。",
+        "预算专项调整因政策变化、重大市场变动或重大突发事件引起时，可以随时提出。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcw-2024-006#c018",
+        "zdcw-2024-006#c011",
+        "zdcw-2024-006#c023",
+        "zdcw-2024-006#c017",
+        "zdcw-2024-006#c013"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 重大突发事件是否要等到7月？\n\n**不一定要等到7月。**定期预算调整每年7月集中办理一次；但因重大突发事件引起的专项调整可以随时提出。[c01]\n\n预算下达后，单位不得自行调整，确需调整应按办法规定办理。[c02] **材料未说明专项调整的具体审批流程。**[c01] 建议咨询财务部或相关归口部门确认办理要求。",
+      "refused": false,
+      "ttft_ms": 2863,
+      "elapsed_ms": 3926,
+      "invalid_citations": [],
+      "claim_support_rate": 0.6667,
+      "unsupported_claims": [
+        "**"
+      ],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "预算调整包括定期调整和专项调整",
+          "定期调整每年7月集中办理一次",
+          "专项调整因重大突发事件引起可以随时提出",
+          "重大突发事件引起的预算调整不一定要等到7月"
+        ],
+        "missing_facts": [
+          "专项调整还可因政策变化引起",
+          "专项调整还可因重大市场变动引起"
+        ],
+        "hallucinations": [],
+        "reason": "答案正确回答了重大突发事件可随时提出专项调整，但未完整覆盖标准答案中专项调整的其他触发情形。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-057",
+      "split": "single_hop",
+      "question": "这份采购合同管理细则里没写到的事项，应该按什么规定处理？",
+      "facts": [
+        "本细则未尽事宜按照《采购管理办法》（浙东通信采〔2023〕7号）执行。",
+        "本细则由采购与供应链部负责解释。",
+        "本细则自2024年9月1日起施行。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcg-2024-003#c023",
+        "zdcg-2025-004#c024",
+        "zdcg-2024-003#c001",
+        "zdcg-2024-003#c002",
+        "zdcg-2025-004#c002"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 未写明事项的处理\n\n《采购合同管理细则》未尽事宜，按照《采购管理办法》（浙东通信采〔2023〕7号）执行。[c01] 该办法中关于采购审批权限的第十二条已于2025年3月1日同时废止，但其他条款继续有效。[c06]",
+      "refused": false,
+      "ttft_ms": 2504,
+      "elapsed_ms": 3344,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "未尽事宜按照《采购管理办法》（浙东通信采〔2023〕7号）执行"
+        ],
+        "missing_facts": [
+          "第二十四条 本细则由采购与供应链部负责解释",
+          "第二十五条 本细则自2024年9月1日起施行"
+        ],
+        "hallucinations": [],
+        "reason": "答案覆盖了未尽事宜按《采购管理办法》执行这一事实点，但未提及解释部门和施行日期，补充的废止信息有材料支持。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-098",
+      "split": "single_hop",
+      "question": "供应商交付质量不合格，或者无故拖延交货，公司能扣履约保证金吗？",
+      "facts": [
+        "供应商交付物质量不符合合同约定时，公司可以扣减其履约保证金。",
+        "供应商擅自变更合同主要条款时，公司可以扣减其履约保证金。",
+        "供应商无正当理由延期交付超过15日时，公司可以扣减其履约保证金。",
+        "无正当理由延期交付超过15日是公司可以扣减供应商履约保证金的情形。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcg-2023-001#c020",
+        "zdcg-2023-001#c019",
+        "zdcg-2024-003#c012",
+        "zdcg-2023-002#c018",
+        "zdcg-2024-003#c014"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "## 能否扣减履约保证金\n\n可以。现行《采购管理办法》规定，供应商交付物质量不符合合同约定，或者无正当理由延期交付超过15日，公司可以扣减履约保证金。[c01]\n\n履约保证金为合同金额的5%；履约期满且无违约情形的，由采购与供应链部办理退还手续。[c02]\n\n## 需要注意的情形\n\n如果交付延迟可能超过10日，或质量不符合约定并需要返工、退换，履约责任人应在3个工作日内报告采购与供应链部；这是报告要求，不等同于已经满足扣减条件。[c03]\n\n材料没有说明“无故拖延”未超过15日时是否可以扣减，也没有说明质量不合格但不符合合同约定时的处理。具体情形建议向采购与供应链部确认。[c01][c03]",
+      "refused": false,
+      "ttft_ms": 2351,
+      "elapsed_ms": 4253,
+      "invalid_citations": [],
+      "claim_support_rate": 0.5,
+      "unsupported_claims": [
+        "这是报告要求，不等同于已经满足扣减条件。",
+        "具体情形建议向采购与供应链部确认。"
+      ],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "交付物质量不符合合同约定的，公司可以扣减履约保证金",
+          "无正当理由延期交付超过15日的，公司可以扣减履约保证金"
+        ],
+        "missing_facts": [
+          "擅自变更合同主要条款的，公司可以扣减履约保证金"
+        ],
+        "hallucinations": [
+          "现行《采购管理办法》规定"
+        ],
+        "reason": "答案覆盖质量不符和无正当理由延期超15日两项扣减情形，但遗漏擅自变更合同主要条款，且“现行《采购管理办法》”名称在材料中无依据。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "a-115",
+      "split": "single_hop",
+      "question": "我提交申诉材料后，多久能知道是否受理？不符合条件会怎么处理？",
+      "facts": [
+        "人力资源部应在收到申诉材料后3个工作日内完成形式审查。",
+        "符合受理条件的申诉材料应予以登记受理，并书面告知申诉人。",
+        "不符合受理条件的申诉材料应说明理由并退回。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdrl-2025-009#c009",
+        "zdrl-2024-008#c011",
+        "zdrl-2025-009#c010",
+        "zdrl-2025-009#c014",
+        "zdcg-2025-004#c019"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 受理时间\n人力资源部应在收到申诉材料后 **3个工作日内**完成形式审查；符合受理条件的予以登记受理并书面告知你。[c01]\n\n### 不符合受理条件时\n人力资源部应说明理由并退回材料。[c01]申诉材料不齐的，应一次性告知补正要求；补正期间不计入受理期限。[c03]",
+      "refused": false,
+      "ttft_ms": 3752,
+      "elapsed_ms": 4711,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "人力资源部应在收到申诉材料后3个工作日内完成形式审查",
+          "符合受理条件的予以登记受理并书面告知申诉人",
+          "不符合条件的，说明理由并退回材料"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整覆盖标准答案的三个事实点，且补充的补正告知内容有第十条材料支持。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-018",
+      "split": "multi_hop",
+      "question": "网络安全应急指挥部由哪些人组成？采购材料有异议或审批超时，又该怎么处理？",
+      "facts": [
+        "公司设立网络安全应急指挥部。",
+        "网络安全应急指挥部由总经理任总指挥。",
+        "分管网络运行的副总经理任网络安全应急指挥部副总指挥。",
+        "审批人对材料有异议时，应签署书面意见并退回；无正当理由超过10个工作日未审批的，视为同意并由系统自动流转至下一环节，且记录超时情况。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdww-2025-012#c004",
+        "zdcg-2025-004#c019",
+        "zdww-2023-010#c017",
+        "zdww-2025-012#c005",
+        "zdww-2025-012#c018"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 网络安全应急指挥部由哪些人组成？\n公司总经理任总指挥，分管网络运行的副总经理任副总指挥；成员包括网络运行维护中心、信息安全部、市场经营部、客户服务部、综合部和法律事务岗负责人。[c01]\n\n### 采购材料有异议或审批超时，怎么处理？\n审批人对材料有异议时，应签署书面意见并退回。[c02] 无正当理由超过10个工作日未审批的，视为同意，由系统自动流转至下一环节，并记录超时情况。[c02]",
+      "refused": false,
+      "ttft_ms": 4908,
+      "elapsed_ms": 5933,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "网络安全应急指挥部由总经理任总指挥",
+          "分管网络运行的副总经理任副总指挥",
+          "成员包括网络运行维护中心、信息安全部、市场经营部、客户服务部、综合部和法律事务岗负责人",
+          "审批人对材料有异议的，应签署书面意见并退回",
+          "无正当理由超过10个工作日未审批的，视为同意，由系统自动流转至下一环节，并记录超时情况"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整覆盖标准答案的两部分事实点，且所有表述均有检索材料支持。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-006",
+      "split": "multi_hop",
+      "question": "部门负责人审核报销单据要承担什么责任？工程款又应按什么进度和比例支付，剩余款项何时支付？",
+      "facts": [
+        "部门负责人对本部门报销单据的真实性负审核责任。",
+        "因审核不严导致违规报销的，按违规金额的一定比例扣减部门负责人绩效。",
+        "工程类项目累计支付不得超过已完成工程量的80%。",
+        "工程类项目竣工结算审计完成后支付至结算金额的97%，剩余3%作为质量保证金，缺陷责任期满后支付。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcw-2025-007#c021",
+        "zdcw-2023-005#c016",
+        "zdcw-2025-007#c004",
+        "zdcw-2025-007#c017",
+        "zdcw-2025-007#c015"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 部门负责人审核报销单据的责任\n\n部门负责人对本部门报销单据的真实性负审核责任；因审核不严导致违规报销的，按违规金额的一定比例扣减部门负责人绩效。[c01] 该规定属于自2025年5月1日起试行的办法，试行期两年；试行期间如国家或上级单位出台新规定，从其规定。[c06]\n\n### 工程款的支付进度和比例\n\n工程类项目支付应与工程进度匹配，累计支付不得超过已完成工程量的80%。[c02] 竣工结算审计完成后，支付至结算金额的97%；剩余3%作为质量保证金，缺陷责任期满后支付。[c02]",
+      "refused": false,
+      "ttft_ms": 4041,
+      "elapsed_ms": 5638,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "部门负责人对本部门报销单据的真实性负审核责任",
+          "因审核不严导致违规报销的，按违规金额的一定比例扣减部门负责人绩效",
+          "工程类项目支付应与工程进度匹配，累计支付不得超过已完成工程量的80%",
+          "竣工结算审计完成后支付至结算金额的97%",
+          "剩余3%作为质量保证金，缺陷责任期满后支付"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整覆盖标准答案全部事实点，且无材料不支持的断言。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-057",
+      "split": "multi_hop",
+      "question": "供应商等级会影响采购参与和评审，岗位竞聘面试又有哪些考官人数、外部考官及回避要求？",
+      "facts": [
+        "A级供应商可以优先参与框架协议采购。",
+        "A级供应商在同类项目评审中获得的加分不超过3分。",
+        "B级供应商按常规流程参与采购；C级供应商一年内不得参与公司500万元以上项目的投标。",
+        "面试考官不少于5人，其中外部考官不少于1人；与报名人员存在规定亲属关系的考官应当回避。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdrl-2024-008#c014",
+        "zdcg-2023-002#c011",
+        "zdcg-2023-002#c009",
+        "zdcg-2023-002#c016",
+        "zdrl-2024-008#c023"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 供应商等级对采购参与和评审的影响\n\n- 供应商按年度评价结果分为A、B、C三个等级：A级为优质供应商，B级为合格供应商，C级为观察供应商。[c03]\n- A级供应商可以优先参与框架协议采购，并可在同类项目评审中获得不超过3分的加分；B级供应商按常规流程参与采购；C级供应商一年内不得参与公司500万元以上项目的投标。[c02]\n- 上述供应商管理细则自2024年1月1日起执行，试行期两年；材料未说明试行期满后的评估结果或后续效力，相关规定当前是否继续适用需向采购与供应链部确认。[c06]\n\n### 岗位竞聘面试考官要求\n\n- 面试考官不少于5人，其中外部考官不少于1人。[c01]\n- 考官与报名人员存在夫妻、直系血亲、三代以内旁系血亲或近姻亲关系的，应当回避。[c01]",
+      "refused": false,
+      "ttft_ms": 2910,
+      "elapsed_ms": 5229,
+      "invalid_citations": [],
+      "claim_support_rate": 0.8,
+      "unsupported_claims": [
+        "材料未说明试行期满后的评估结果或后续效力，相关规定当前是否继续适用需向采购与供应链部确认。"
+      ],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "A级供应商可以优先参与框架协议采购",
+          "同类项目评审中给予A级供应商不超过3分的加分",
+          "B级供应商按常规流程参与采购",
+          "C级供应商一年内不得参与公司500万元以上项目的投标",
+          "面试考官不少于5人",
+          "外部考官不少于1人",
+          "考官与报名人员有夫妻关系、直系血亲关系、三代以内旁系血亲关系或者近姻亲关系的应当回避"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整覆盖标准答案全部事实点，额外关于分级定义、执行日期和试行期的内容有检索材料支持，未发现材料无法支持的事实性断言。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-049",
+      "split": "multi_hop",
+      "question": "竞聘中造假或拉票会受到什么处理？公司网络安全应急指挥部又由谁负责、哪些部门参与？",
+      "facts": [
+        "报名人员提供虚假材料、拉票贿选或者干扰考评秩序的，应取消竞聘资格。",
+        "有前述行为的报名人员两年内不得参加公司各类竞聘。",
+        "有前述行为的报名人员还应按公司员工违规行为处理规定处理。",
+        "公司设立网络安全应急指挥部，由总经理任总指挥、分管网络运行的副总经理任副总指挥。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdrl-2024-008#c024",
+        "zdww-2025-012#c004",
+        "zdww-2025-012#c005",
+        "zdrl-2024-008#c004",
+        "zdrl-2024-008#c025"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 竞聘中造假或拉票的处理\n\n报名人员提供虚假材料或拉票贿选的，取消竞聘资格，两年内不得参加公司各类竞聘，并按公司员工违规行为处理规定处理。[c01]\n\n### 网络安全应急指挥部的负责人与参与部门\n\n网络安全应急指挥部由总经理任总指挥，分管网络运行的副总经理任副总指挥。[c02] 参与成员包括网络运行维护中心、信息安全部、市场经营部、客户服务部、综合部和法律事务岗负责人。[c02]",
+      "refused": false,
+      "ttft_ms": 3028,
+      "elapsed_ms": 4181,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "报名人员提供虚假材料",
+          "拉票贿选",
+          "取消竞聘资格",
+          "两年内不得参加公司各类竞聘",
+          "按公司员工违规行为处理规定处理",
+          "公司设立网络安全应急指挥部",
+          "由总经理任总指挥",
+          "分管网络运行的副总经理任副总指挥",
+          "成员包括网络运行维护中心、信息安全部、市场经营部、客户服务部、综合部和法律事务岗负责人"
+        ],
+        "missing_facts": [
+          "干扰考评秩序"
+        ],
+        "hallucinations": [],
+        "reason": "答案覆盖了竞聘造假拉票处理及网络安全应急指挥部组成的主要事实，但遗漏了“干扰考评秩序”这一适用情形。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-056",
+      "split": "multi_hop",
+      "question": "各市分公司申诉受理经办人员名单要报给哪个部门备案？网络故障发生后，各相关部门又分别负责哪些工作？",
+      "facts": [
+        "各市分公司应明确本单位申诉受理的经办岗位。",
+        "各市分公司应将申诉受理经办岗位人员名单报人力资源部备案。",
+        "本办法由人力资源部负责解释。",
+        "本办法自2025年3月1日起施行。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdrl-2025-009#c025",
+        "zdww-2023-010#c004",
+        "zdrl-2025-009#c004",
+        "zdww-2023-010#c029",
+        "zdww-2025-012#c005"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 申诉受理经办人员名单报送部门\n各市分公司应明确本单位申诉受理的经办岗位，并将人员名单报**人力资源部备案**。[c01]\n\n### 网络故障发生后各相关部门的职责\n- **网络运行维护中心**：负责故障受理、指挥调度、信息发布和统计分析。[c02]\n- **各市分公司网络维护部门**：负责属地故障的现场抢修。[c02]\n- **客户服务部**：负责向重点客户通报故障进展。[c02]\n- **网络优化部门**：负责故障后的网络性能评估。[c02]",
+      "refused": false,
+      "ttft_ms": 3577,
+      "elapsed_ms": 4894,
+      "invalid_citations": [],
+      "claim_support_rate": 0.6,
+      "unsupported_claims": [
+        "- **客户服务部**：负责向重点客户通报故障进展。",
+        "- **网络优化部门**：负责故障后的网络性能评估。"
+      ],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "各市分公司应明确本单位申诉受理的经办岗位，并将人员名单报人力资源部备案",
+          "网络运行维护中心是故障管理的归口部门，负责故障受理、指挥调度、信息发布和统计分析",
+          "各市分公司网络维护部门负责属地故障的现场抢修",
+          "客户服务部负责向重点客户通报故障进展",
+          "网络优化部门负责故障后的网络性能评估"
+        ],
+        "missing_facts": [
+          "本办法由人力资源部负责解释",
+          "本办法自2025年3月1日起施行"
+        ],
+        "hallucinations": [],
+        "reason": "答案准确覆盖了名单备案部门和网络故障各相关部门职责，但未覆盖标准答案中关于解释部门和施行日期的条款。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-004",
+      "split": "multi_hop",
+      "question": "公司制定通信网络故障管理办法的目的是什么，招待活动在陪餐人数、菜肴酒水和场所方面又有哪些限制？",
+      "facts": [
+        "本办法旨在规范明州数智服务有限公司通信网络故障的报告、抢修、恢复和分析，以缩短故障历时并提升网络服务质量。",
+        "招待活动陪餐人数不得超过来访人数。",
+        "招待活动不得安排高档菜肴或高档酒水，也不得在营业性娱乐场所安排。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcw-2025-007#c009",
+        "zdww-2023-010#c001",
+        "zdww-2024-011#c001",
+        "zdww-2023-010#c002",
+        "zdww-2023-010#c003"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 通信网络故障管理办法的目的\n公司制定该办法，是为了规范通信网络故障的报告、抢修、恢复和分析，缩短故障历时，提升网络服务质量。[c02]\n\n### 招待活动的限制\n- 陪餐人数不得超过来访人数。[c01]\n- 不得安排高档菜肴、高档酒水。[c01]\n- 不得在营业性娱乐场所安排招待活动。[c01]\n- 相关报销管理办法自2025年5月1日起试行，试行期两年；试行期间如国家或上级单位出台新规定，从其规定。[c06]",
+      "refused": false,
+      "ttft_ms": 4047,
+      "elapsed_ms": 5324,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "规范通信网络故障的报告、抢修、恢复和分析",
+          "缩短故障历时",
+          "提升网络服务质量",
+          "陪餐人数不得超过来访人数",
+          "不得安排高档菜肴、高档酒水",
+          "不得在营业性娱乐场所安排招待活动"
+        ],
+        "missing_facts": [
+          "明州数智服务有限公司（公司）"
+        ],
+        "hallucinations": [
+          "相关报销管理办法自2025年5月1日起试行，试行期两年；试行期间如国家或上级单位出台新规定，从其规定。"
+        ],
+        "reason": "答案覆盖了目的和招待限制的核心事实，但遗漏公司名称，且将材料中“本办法”的试行条款错误关联为“相关报销管理办法”。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-043",
+      "split": "multi_hop",
+      "question": "费用发生后多久要申请报销，跨年度费用最晚何时办完？预算调整何时集中办理，哪些情况可以随时提出专项调整？",
+      "facts": [
+        "经办人应在费用发生后30日内完成报销申请。",
+        "跨年度费用应在次年1月31日前报销完毕。",
+        "逾期未报销的费用，除特殊情况经总会计师批准外，不予受理。",
+        "定期预算调整每年7月集中办理一次；专项预算调整因政策变化、重大市场变动或者重大突发事件引起，可以随时提出。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcw-2024-006#c018",
+        "zdcw-2025-007#c012",
+        "zdcw-2024-006#c011",
+        "zdcg-2023-001#c005",
+        "zdcw-2024-006#c023"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 费用报销期限\n费用发生后，经办人应在30日内完成报销申请；跨年度费用应在次年1月31日前报销完毕。逾期未报销的，除特殊情况经总会计师批准外，不予受理。[c02] 该报销规定自2025年5月1日起试行。[c02]\n\n### 预算调整时间\n定期预算调整每年7月集中办理一次。[c01] 因政策变化、重大市场变动或者重大突发事件引起的专项调整，可以随时提出。[c01]",
+      "refused": false,
+      "ttft_ms": 2523,
+      "elapsed_ms": 3865,
+      "invalid_citations": [],
+      "claim_support_rate": 0.75,
+      "unsupported_claims": [
+        "该报销规定自2025年5月1日起试行。"
+      ],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "费用发生后，经办人应在30日内完成报销申请",
+          "跨年度费用应在次年1月31日前报销完毕，逾期未报销的，除特殊情况经总会计师批准外，不予受理",
+          "定期调整每年7月集中办理一次",
+          "专项调整因政策变化、重大市场变动或者重大突发事件引起，可以随时提出"
+        ],
+        "missing_facts": [
+          "预算调整分为定期调整和专项调整"
+        ],
+        "hallucinations": [
+          "该报销规定自2025年5月1日起试行。"
+        ],
+        "reason": "答案覆盖了报销期限和预算调整时间的主要规定，但包含材料未支持的2025年5月1日起试行说法，且未明确预算调整分为定期和专项两类。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-060",
+      "split": "multi_hop",
+      "question": "发现网络安全事件时，先期处置要做哪些事、注意什么？供应商申请准入又要满足哪些条件？",
+      "facts": [
+        "事件发现部门负责实施先期处置，包括隔离受感染主机、封堵攻击源地址、保存日志证据和报告信息安全部。",
+        "先期处置不得破坏证据。",
+        "申请准入的供应商须依法设立并有效存续，且营业执照经营范围覆盖拟供标的。",
+        "申请准入的供应商须具备履行合同所需的资质证书及生产或者服务能力。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdww-2025-012#c017",
+        "zdcg-2023-002#c004",
+        "zdcg-2023-002#c005",
+        "zdww-2025-012#c020",
+        "zdww-2025-012#c005"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 网络安全事件先期处置\n\n先期处置由事件发现部门实施，应隔离受感染主机、封堵攻击源地址、保存日志证据并报告信息安全部；处置时不得破坏证据。[c01] 处置过程中还应优先保障业务连续性；如涉及关停系统，应先评估影响并报应急指挥部批准。[c04]\n\n### 供应商准入条件\n\n供应商申请准入应同时满足：依法设立并有效存续，营业执照经营范围覆盖拟供标的；具备履行合同所需的资质证书及生产或服务能力；近三年内无重大质量事故、重大安全责任事故和严重失信记录；财务状况正常，且未被列为失信被执行人。[c02]\n\n**时效说明：**上述供应商准入条件来自试行规定；该细则自2024年1月1日起执行，试行期两年，期满后由采购与供应链部组织评估并根据评估结果修订。[c02][c06] 材料未说明试行期满后的评估结果或是否已有修订，因此当前适用版本需向采购与供应链部确认。[c06]",
+      "refused": false,
+      "ttft_ms": 2412,
+      "elapsed_ms": 5253,
+      "invalid_citations": [],
+      "claim_support_rate": 0.4,
+      "unsupported_claims": [
+        "处置时不得破坏证据。",
+        "财务状况正常，且未被列为失信被执行人。",
+        "材料未说明试行期满后的评估结果或是否已有修订，因此当前适用版本需向采购与供应链部确认。"
+      ],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "先期处置由事件发现部门实施",
+          "隔离受感染主机",
+          "封堵攻击源地址",
+          "保存日志证据",
+          "报告信息安全部",
+          "先期处置不得破坏证据",
+          "供应商依法设立并有效存续，营业执照经营范围覆盖拟供标的",
+          "具备履行合同所需的资质证书、生产或者服务能力",
+          "近三年内无重大质量事故、重大安全责任事故和严重失信记录",
+          "财务状况正常，未被列为失信被执行人"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整覆盖第十七条先期处置和第四条供应商准入条件的全部事实点，额外引用的业务连续性、关停审批及时效说明均有检索材料支持。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-040",
+      "split": "multi_hop",
+      "question": "采购合同应在什么时点由哪些主体签订？较大和一般网络安全事件分别由谁启动相应响应并负责处置？",
+      "facts": [
+        "采购合同应在采购结果生效后订立。",
+        "采购合同当事人应为公司和中标（成交）供应商，不得以分公司、项目部等非法人名义对外签订合同。",
+        "较大事件启动二级响应，由信息安全部负责人组织处置。",
+        "一般事件启动三级响应，由事件发生部门自行处置并报信息安全部备案。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcg-2024-003#c004",
+        "zdww-2025-012#c019",
+        "zdcg-2023-001#c014",
+        "zdcg-2024-003#c002",
+        "zdcg-2025-004#c014"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 采购合同的签订时点与主体\n采购合同应在采购结果生效后订立，合同当事人应为公司和中标（成交）供应商；不得以分公司、项目部等非法人名义对外签订。[c01]\n\n### 较大和一般网络安全事件的响应与处置\n- **较大事件：**启动二级响应，由信息安全部负责人组织处置。[c02]\n- **一般事件：**启动三级响应，由事件发生部门自行处置，并报信息安全部备案。[c02]",
+      "refused": false,
+      "ttft_ms": 1983,
+      "elapsed_ms": 3031,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "采购合同应在采购结果生效后订立",
+          "合同当事人应为公司和中标（成交）供应商，不得以分公司、项目部等非法人名义对外签订合同",
+          "较大事件启动二级响应，由信息安全部负责人组织处置",
+          "一般事件启动三级响应，由事件发生部门自行处置并报信息安全部备案"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整覆盖标准答案全部事实点，且未出现材料不支持的断言。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-052",
+      "split": "multi_hop",
+      "question": "员工岗位竞聘中，各部门分别负责什么？大额支付又需经过哪些审批和备案流程？",
+      "facts": [
+        "人力资源部负责竞聘工作的组织实施，包括方案制定、公告发布、报名资格审查、考试组织和结果公示。",
+        "用人单位负责岗位说明书编制和专业能力考评。",
+        "纪检监察部门负责竞聘全过程监督。",
+        "单笔金额在300万元以上的支付属于大额支付；大额支付须经总会计师审核后报总经理审批，并于支付完成后5个工作日内报总经理办公会备案。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcw-2023-005#c019",
+        "zdrl-2024-008#c004",
+        "zdcw-2023-005#c008",
+        "zdcw-2023-005#c015",
+        "zdcw-2023-005#c004"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 员工岗位竞聘中，各部门分别负责什么？\n\n- **人力资源部**负责竞聘工作的组织实施，包括方案制定、公告发布、报名资格审查、考试组织和结果公示。[c02]\n- **用人单位**负责岗位说明书编制和专业能力考评。[c02]\n- **纪检监察部门**负责竞聘全过程监督。[c02]\n\n### 大额支付需经过哪些审批和备案流程？\n\n- 大额支付是指**单笔金额在300万元以上**的支付；须经总会计师审核后报总经理审批，并于支付完成后**5个工作日内**报总经理办公会备案。[c01]\n- 大额支付还应提前**3个工作日**向财务部报备；财务部核实资金头寸后安排支付。[c04]\n- 另有一般支付审批规定：单笔支付金额在**200万元以上**的，须经总会计师审核后报总经理审批；**200万元以下**的，由财务部负责人审批。[c03] 大额支付的300万元以上门槛与一般支付的200万元以上审批门槛并列见于材料，具体适用关系材料未说明。[c01][c03]",
+      "refused": false,
+      "ttft_ms": 2510,
+      "elapsed_ms": 5195,
+      "invalid_citations": [],
+      "claim_support_rate": 0.7143,
+      "unsupported_claims": [
+        "- **纪检监察部门**负责竞聘全过程监督。",
+        "大额支付的300万元以上门槛与一般支付的200万元以上审批门槛并列见于材料，具体适用关系材料未说明。"
+      ],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "人力资源部负责竞聘工作的组织实施，包括方案制定、公告发布、报名资格审查、考试组织和结果公示",
+          "用人单位负责岗位说明书编制和专业能力考评",
+          "纪检监察部门负责竞聘全过程监督",
+          "大额支付是指单笔金额在300万元以上的支付",
+          "大额支付须经总会计师审核后报总经理审批",
+          "大额支付须于支付完成后5个工作日内报总经理办公会备案"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整覆盖标准答案全部事实点，额外引用的支付报备和一般支付审批规定均见于检索材料，无材料不支持断言。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-051",
+      "split": "multi_hop",
+      "question": "工程项目采用单一来源采购且金额超过500万元，付款进度和审批审议方面分别要满足什么要求？",
+      "facts": [
+        "工程类项目累计支付不得超过已完成工程量的80%。",
+        "竣工结算审计完成后，工程类项目支付至结算金额的97%，剩余3%作为质量保证金，缺陷责任期满后支付。",
+        "采用单一来源方式且单笔金额在500万元以上的，除按规定审批外，还须提交总经理办公会审议。",
+        "采用单一来源方式且单笔金额在500万元以上的项目，应在审议前完成专家论证和价格合理性审核。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcg-2025-004#c007",
+        "zdcg-2025-004#c010",
+        "zdcg-2025-004#c013",
+        "zdcg-2023-001#c012",
+        "zdcw-2023-005#c008"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": false,
+      "answer": "### 付款进度要求\n资料不足。材料规定了单笔支付金额达到不同门槛时的审核、审批要求，但没有说明工程项目的付款进度安排，也没有说明该要求与采购金额如何对应；建议咨询财务部或相关项目管理部门。[c05]\n\n### 审批审议要求\n单一来源采购单笔金额超过500万元，除按第六条规定审批外，还须提交总经理办公会审议，并在审议前完成专家论证和价格合理性审核；第六条的具体要求未提供，材料未说明。[c01] 此外，单笔采购金额超过500万元的采购方式、采购文件和采购结果，也应提交总经理办公会审议。[c02] 如该项目属于紧急采购，确需超过500万元的，还须报总经理办公会审议，并在事后专项报告中说明紧急情形。[c03]",
+      "refused": true,
+      "ttft_ms": 2596,
+      "elapsed_ms": 4882,
+      "invalid_citations": [],
+      "claim_support_rate": 0.5,
+      "unsupported_claims": [
+        "建议咨询财务部或相关项目管理部门。",
+        "第六条的具体要求未提供，材料未说明。"
+      ],
+      "timed_out": false,
+      "verdict": "not_judged",
+      "verdict_source": "none"
+    },
+    {
+      "qid": "m-026",
+      "split": "multi_hop",
+      "question": "年度采购需求计划由谁负责汇总和审批，预算编制与调整又分别由谁负责？",
+      "facts": [
+        "需求部门应于每年11月30日前将下一年度采购需求计划报采购与供应链部汇总。",
+        "年度采购需求计划经分管副总经理审核、总经理办公会审定后执行。",
+        "年度采购计划确需调整的，需求部门应在每季度末前提出书面调整申请。",
+        "财务部负责预算编制组织、执行监控、调整受理和考核数据提供；各业务归口部门负责本专业预算的编制和执行。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcg-2023-001#c005",
+        "zdcg-2023-001#c004",
+        "zdcw-2024-006#c004",
+        "zdcg-2025-004#c005",
+        "zdcw-2024-006#c020"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 年度采购需求计划的汇总和审批\n\n采购与供应链部负责汇总年度采购需求计划；计划经分管副总经理审核、总经理办公会审定后执行。需求部门应于每年11月30日前报送下一年度采购需求计划。[c01]\n\n### 预算编制与调整\n\n财务部负责组织预算编制、执行监控和调整受理；各业务归口部门负责本专业预算的编制和执行。[c03] 预算调整的审批权限按金额划分：100万元以下由总会计师审批，100万元以上至500万元由总经理审批，500万元以上报总经理办公会审议。[c05]",
+      "refused": false,
+      "ttft_ms": 3193,
+      "elapsed_ms": 4936,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "需求部门应于每年11月30日前将下一年度采购需求计划报采购与供应链部汇总",
+          "采购需求计划经分管副总经理审核、总经理办公会审定后执行",
+          "财务部负责预算编制组织、执行监控、调整受理",
+          "各业务归口部门负责本专业预算的编制和执行"
+        ],
+        "missing_facts": [
+          "年度采购计划确需调整的，应在每季度末前提出书面调整申请",
+          "财务部是预算管理的日常办事机构",
+          "财务部负责考核数据提供"
+        ],
+        "hallucinations": [],
+        "reason": "答案覆盖采购计划汇总审批和预算编制职责，但遗漏采购计划调整申请时限及财务部考核数据提供等标准答案事实点，额外引用的预算调整审批权限有材料支持。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-014",
+      "split": "multi_hop",
+      "question": "出差住宿超限额的部分由谁承担？另外，供应商履约评价低于多少分时，需求部门需要书面说明原因？",
+      "facts": [
+        "省会城市及计划单列市住宿费每人每天不超过500元。",
+        "其他地级市住宿费每人每天不超过400元；县级及以下地区住宿费每人每天不超过300元。",
+        "住宿费超出限额部分由个人承担。",
+        "履约评价采用百分制，交付质量40分、交付及时性25分、价格合理性20分、服务响应15分；评价得分低于70分的，需求部门应书面说明原因。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcg-2023-002#c014",
+        "zdcw-2025-007#c006",
+        "zdcg-2023-002#c003",
+        "zdcg-2023-002#c013",
+        "zdcg-2023-002#c015"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 出差住宿超限额部分由谁承担？\n超出住宿费限额的部分由个人承担。[c02]\n\n### 供应商履约评价低于多少分时，需求部门需要书面说明原因？\n评价得分低于70分时，需求部门应书面说明原因。[c01]",
+      "refused": false,
+      "ttft_ms": 3624,
+      "elapsed_ms": 4416,
+      "invalid_citations": [],
+      "claim_support_rate": 0.5,
+      "unsupported_claims": [
+        "超出住宿费限额的部分由个人承担。"
+      ],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "超出限额部分由个人承担",
+          "评价得分低于70分的，需求部门应书面说明原因"
+        ],
+        "missing_facts": [
+          "住宿费分地区限额标准：省会城市及计划单列市每人每天不超过500元，其他地级市不超过400元，县级及以下地区不超过300元",
+          "履约评价采用百分制，其中交付质量40分、交付及时性25分、价格合理性20分、服务响应15分"
+        ],
+        "hallucinations": [],
+        "reason": "答案准确回答了两个问题，但未覆盖标准答案中的住宿限额具体标准和履约评价分值构成。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-025",
+      "split": "multi_hop",
+      "question": "公司预算管理由谁负责、委员会成员包括哪些部门？供应商不同等级参与采购又有哪些差异化规定？",
+      "facts": [
+        "预算管理实行统一领导、分级管理、归口编制、刚性执行的管理体制。",
+        "预算管理委员会由总经理任主任、总会计师任副主任，成员包括财务部、市场经营部、网络运行维护中心、人力资源部、采购与供应链部负责人。",
+        "A级供应商可以优先参与框架协议采购，同类项目评审中给予不超过3分的加分。",
+        "B级供应商按常规流程参与采购；C级供应商一年内不得参与公司500万元以上项目的投标。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcg-2023-002#c011",
+        "zdcw-2024-006#c003",
+        "zdcg-2023-001#c004",
+        "zdcg-2023-002#c003",
+        "zdcw-2024-006#c004"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 一、预算管理由谁负责？委员会成员包括哪些部门？\n\n预算管理实行统一领导、分级管理、归口编制、刚性执行；材料未说明由某一部门单独“负责”公司整体预算管理。[c02]  \n公司设立预算管理委员会，由总经理任主任、总会计师任副主任；成员包括财务部、市场经营部、网络运行维护中心、人力资源部、采购与供应链部负责人。[c02]  \n财务部是预算管理的日常办事机构，负责预算编制组织、执行监控、调整受理和考核数据提供；各业务归口部门负责本专业预算的编制和执行。[c05]\n\n### 二、供应商不同等级参与采购有哪些差异化规定？\n\nA级供应商可以优先参与框架协议采购，并在同类项目评审中获得不超过3分的加分；B级供应商按常规流程参与采购；C级供应商一年内不得参与公司500万元以上项目的投标。[c01]  \n上述供应商管理细则自2024年1月1日起执行，状态为试行，试行期两年；材料未说明试行期满后的评估或修订结果。[c08]",
+      "refused": false,
+      "ttft_ms": 2944,
+      "elapsed_ms": 5586,
+      "invalid_citations": [],
+      "claim_support_rate": 0.6,
+      "unsupported_claims": [
+        "材料未说明由某一部门单独“负责”公司整体预算管理。",
+        "材料未说明试行期满后的评估或修订结果。"
+      ],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "预算管理实行统一领导、分级管理、归口编制、刚性执行的管理体制",
+          "公司设立预算管理委员会，由总经理任主任、总会计师任副主任",
+          "委员会成员包括财务部、市场经营部、网络运行维护中心、人力资源部、采购与供应链部负责人",
+          "A级供应商可以优先参与框架协议采购，同类项目评审中给予不超过3分加分",
+          "B级供应商按常规流程参与采购",
+          "C级供应商一年内不得参与公司500万元以上项目的投标"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整覆盖标准答案中预算管理体制、委员会构成及供应商A/B/C等级差异化规定，且补充内容均有材料依据，未发现不支持断言。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-010",
+      "split": "multi_hop",
+      "question": "公司哪些网络和设施的故障管理适用该办法？中标供应商签合同的期限及延期条件又是什么？",
+      "facts": [
+        "本办法适用于公司的传输网、数据网、移动核心网、接入网、动力及配套设施故障管理。",
+        "本办法适用于在用网络和承载重点客户业务的专线网络故障管理。",
+        "中标（成交）供应商应在中标通知书发出之日起15个工作日内与公司签订书面合同。",
+        "因不可抗力或双方书面协商一致需要延长签约期限的，延长时间不得超过10个工作日，且应报采购与供应链部备案。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdww-2023-010#c002",
+        "zdcg-2024-003#c009",
+        "zdcg-2023-001#c018",
+        "zdww-2024-011#c002",
+        "zdww-2025-012#c002"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 故障管理适用范围\n该办法适用于公司传输网、数据网、移动核心网、接入网、动力及配套设施的故障管理，包括在用网络和承载重点客户业务的专线网络。[c01]\n\n### 中标供应商签订合同的期限及延期条件\n材料中有两项现行规定，期限表述不同，存在冲突，需向采购与供应链部确认适用口径：\n\n- 《采购合同管理细则》规定：供应商应在中标通知书发出之日起 **15个工作日内**签订书面合同；因不可抗力或者双方书面协商一致需要延长的，可以延长不超过 **10个工作日**，并应将延长情况报采购与供应链部备案。[c02]\n- 《采购管理办法》规定：供应商应在中标通知书发出之日起 **30日内**签订书面合同；逾期未签的，视为放弃中标资格，公司可以按照评审结果顺位确定其他供应商。该办法自2023年4月1日起施行，原《物资采购管理暂行规定》同时废止；材料未说明这项旧办法规定与2024年生效的《采购合同管理细则》之间的适用关系，无法据此判定应采用哪一期限。[c03][c06]",
+      "refused": false,
+      "ttft_ms": 2543,
+      "elapsed_ms": 6046,
+      "invalid_citations": [],
+      "claim_support_rate": 0.6667,
+      "unsupported_claims": [
+        "材料未说明这项旧办法规定与2024年生效的《采购合同管理细则》之间的适用关系，无法据此判定应采用哪一期限。"
+      ],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "公司传输网、数据网、移动核心网、接入网、动力及配套设施的故障管理",
+          "包括在用网络和承载重点客户业务的专线网络",
+          "中标（成交）供应商应在中标通知书发出之日起15个工作日内与公司签订书面合同",
+          "因不可抗力或者双方书面协商一致需要延长的，可以延长不超过10个工作日",
+          "延长情况应报采购与供应链部备案"
+        ],
+        "missing_facts": [],
+        "hallucinations": [
+          "《采购合同管理细则》规定",
+          "《采购管理办法》规定",
+          "材料未说明这项旧办法规定与2024年生效的《采购合同管理细则》之间的适用关系，无法据此判定应采用哪一期限",
+          "两项现行规定"
+        ],
+        "reason": "答案覆盖了标准答案的适用范围和15个工作日及延期备案条件，但引入材料未支持的制度名称、2024年生效表述和现行规定冲突判断，且未直接给出确定结论，故为部分正确。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-058",
+      "split": "multi_hop",
+      "question": "报销审核和岗位竞聘违规处理分别由谁负责，提供虚假材料的后果是什么？",
+      "facts": [
+        "财务部是费用报销的归口管理部门，负责报销单据审核、标准执行和费用分析。",
+        "各部门负责人负责审核本部门费用的真实性。",
+        "人力资源部负责制定培训费和劳动保护费标准。",
+        "报名人员提供虚假材料、拉票贿选或干扰考评秩序的，应取消竞聘资格。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdrl-2024-008#c024",
+        "zdcw-2025-007#c021",
+        "zdcg-2025-004#c022",
+        "zdcw-2025-007#c004",
+        "zdrl-2024-008#c004"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 报销审核由谁负责\n财务部负责报销单据审核、标准执行和费用分析；各部门负责人负责本部门费用真实性审核。[c04] 部门负责人因审核不严导致违规报销的，按违规金额的一定比例扣减绩效。[c02] 该报销管理办法自2025年5月1日起试行，试行期两年。[c08]\n\n### 岗位竞聘违规处理由谁负责\n人力资源部负责竞聘组织实施，用人单位负责岗位说明书编制和专业能力考评，纪检监察部门负责竞聘全过程监督。[c05]\n\n### 提供虚假材料的后果\n竞聘报名人员提供虚假材料的，取消竞聘资格，两年内不得参加公司各类竞聘，并按公司员工违规行为处理规定处理。[c01]",
+      "refused": false,
+      "ttft_ms": 3592,
+      "elapsed_ms": 5367,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "财务部负责报销单据审核、标准执行和费用分析",
+          "各部门负责人负责本部门费用真实性审核",
+          "提供虚假材料取消竞聘资格",
+          "两年内不得参加公司各类竞聘",
+          "按公司员工违规行为处理规定处理"
+        ],
+        "missing_facts": [
+          "财务部是费用报销的归口管理部门",
+          "人力资源部负责培训费和劳动保护费的标准制定"
+        ],
+        "hallucinations": [
+          "该报销管理办法自2025年5月1日起试行，试行期两年。"
+        ],
+        "reason": "答案覆盖报销审核主体和虚假材料后果，但漏列财务部归口管理及人力资源部标准制定职责，且将“本办法”试行期断言为报销管理办法缺乏材料明确支持。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-003",
+      "split": "multi_hop",
+      "question": "网络割接实施前要评估哪些因素并明确什么结论？供应商出现哪些行为会被认定为不良行为？",
+      "facts": [
+        "风险评估应综合考虑业务等级、客户数量、网元重要性、方案复杂度和实施人员经验。",
+        "风险评估结论应明确风险等级和是否具备实施条件。",
+        "供应商提供虚假资质材料或业绩证明的，属于不良行为。",
+        "供应商中标后无正当理由放弃中标或拒不签订合同的，属于不良行为。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdww-2024-011#c013",
+        "zdcg-2023-002#c018",
+        "zdww-2024-011#c024",
+        "zdww-2024-011#c001",
+        "zdww-2024-011#c016"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 网络割接实施前的风险评估\n风险评估应综合考虑业务等级、客户数量、网元重要性、方案复杂度和实施人员经验；评估结论应明确风险等级及是否具备实施条件。[c01]\n\n### 供应商不良行为\n供应商有以下行为的，属于不良行为：[c02]\n- 提供虚假资质材料或者业绩证明；\n- 中标后无正当理由放弃中标或者拒不签订合同；\n- 转包、违法分包项目；\n- 交付物以次充好、偷工减料；\n- 向公司工作人员输送不当利益。\n\n该供应商管理细则自2024年1月1日起执行，试行期两年，期满后由采购与供应链部组织评估并根据评估结果修订；材料未说明试行期满后的评估、修订结果，建议向采购与供应链部确认该细则当前适用情况。[c06]",
+      "refused": false,
+      "ttft_ms": 4156,
+      "elapsed_ms": 6537,
+      "invalid_citations": [],
+      "claim_support_rate": 0.3333,
+      "unsupported_claims": [
+        "供应商有以下行为的，属于不良行为：",
+        "材料未说明试行期满后的评估、修订结果，建议向采购与供应链部确认该细则当前适用情况。"
+      ],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "风险评估应综合考虑业务等级、客户数量、网元重要性、方案复杂度和实施人员经验",
+          "评估结论应明确风险等级和是否具备实施条件",
+          "供应商不良行为：提供虚假资质材料或者业绩证明",
+          "供应商不良行为：中标后无正当理由放弃中标或者拒不签订合同",
+          "供应商不良行为：转包、违法分包项目",
+          "供应商不良行为：交付物以次充好、偷工减料",
+          "供应商不良行为：向公司工作人员输送不当利益"
+        ],
+        "missing_facts": [],
+        "hallucinations": [
+          "该供应商管理细则自2024年1月1日起执行，试行期两年，期满后由采购与供应链部组织评估并根据评估结果修订"
+        ],
+        "reason": "答案完整覆盖标准答案的风险评估要点和五项不良行为，但将材料中第二十七条的“本细则”称为“供应商管理细则”，材料无此表述。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-015",
+      "split": "multi_hop",
+      "question": "供应商履约评价低于70分要怎么处理，合同履行完毕后又要在多久内移交哪些材料归档？",
+      "facts": [
+        "履约评价采用百分制，交付质量占40分。",
+        "履约评价中交付及时性占25分，价格合理性占20分，服务响应占15分。",
+        "履约评价得分低于70分的，需求部门应书面说明原因。",
+        "合同履行完毕后30日内，履约责任人应将合同正本、补充协议、验收材料、结算凭证和往来函件移交采购与供应链部归档。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcg-2024-003#c020",
+        "zdcg-2023-001#c021",
+        "zdcg-2023-002#c014",
+        "zdcg-2023-002#c013",
+        "zdcg-2023-002#c010"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 一、供应商履约评价低于70分怎么处理？\n\n需求部门应书面说明原因。[c02] 该规定属于自2024年1月1日起执行的试行细则，试行期两年；材料未说明试行期届满后的规定或是否修订。[c08]\n\n### 二、合同履行完毕后何时移交、移交哪些材料归档？\n\n合同履行完毕后30日内，履约责任人应将合同正本、补充协议、验收材料、结算凭证和往来函件移交采购与供应链部归档，保存期限不少于10年。[c01]",
+      "refused": false,
+      "ttft_ms": 2399,
+      "elapsed_ms": 4078,
+      "invalid_citations": [],
+      "claim_support_rate": 0.3333,
+      "unsupported_claims": [
+        "需求部门应书面说明原因。",
+        "材料未说明试行期届满后的规定或是否修订。"
+      ],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "评价得分低于70分的，需求部门应书面说明原因",
+          "合同履行完毕后30日内，履约责任人应将合同正本、补充协议、验收材料、结算凭证和往来函件移交采购与供应链部归档",
+          "保存期限不少于10年"
+        ],
+        "missing_facts": [
+          "履约评价采用百分制，其中交付质量40分、交付及时性25分、价格合理性20分、服务响应15分"
+        ],
+        "hallucinations": [
+          "材料未说明试行期届满后的规定或是否修订"
+        ],
+        "reason": "核心处理与归档事实已覆盖，但遗漏评分构成，且关于试行期满未说明的断言与材料第二十七条不符。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-054",
+      "split": "multi_hop",
+      "question": "竞聘报名造假会有什么后果？另外，哪些情况算重大网络安全事件？",
+      "facts": [
+        "报名人员提供虚假材料、拉票贿选或干扰考评秩序的，应取消竞聘资格。",
+        "有上述违规行为的报名人员两年内不得参加公司各类竞聘，并按公司员工违规行为处理规定处理。",
+        "造成单个地市范围业务中断的事件属于重大事件。",
+        "数据泄露10万条以上的事件属于重大事件。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdrl-2024-008#c024",
+        "zdww-2025-012#c024",
+        "zdww-2025-012#c008",
+        "zdww-2025-012#c007",
+        "zdww-2025-012#c006"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 竞聘报名造假会有什么后果？\n提供虚假材料的，取消竞聘资格，两年内不得参加公司各类竞聘，并按公司员工违规行为处理规定处理。[c01]\n\n### 哪些情况算重大网络安全事件？\n符合以下任一情形的，属于重大网络安全事件：造成单个地市范围业务中断；数据泄露10万条以上；重要信息系统被植入恶意程序且无法立即清除。[c03]",
+      "refused": false,
+      "ttft_ms": 3010,
+      "elapsed_ms": 4109,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "提供虚假材料的，取消竞聘资格",
+          "两年内不得参加公司各类竞聘",
+          "按公司员工违规行为处理规定处理",
+          "重大事件是指造成单个地市范围业务中断",
+          "数据泄露10万条以上",
+          "重要信息系统被植入恶意程序且无法立即清除"
+        ],
+        "missing_facts": [
+          "拉票贿选",
+          "干扰考评秩序"
+        ],
+        "hallucinations": [],
+        "reason": "竞聘造假部分仅覆盖提供虚假材料，遗漏拉票贿选和干扰考评秩序；重大网络安全事件部分完整覆盖标准答案。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-007",
+      "split": "multi_hop",
+      "question": "网络割接风险评估要考虑哪些因素、明确什么结论？岗位竞聘又是为了建立怎样的机制、激发什么？",
+      "facts": [
+        "风险评估应综合考虑业务等级、客户数量、网元重要性、方案复杂度和实施人员经验。",
+        "风险评估结论应明确风险等级和是否具备实施条件。",
+        "制定本办法的目的是拓宽选人用人渠道、建立公开平等竞争择优的岗位配置机制并激发员工队伍活力。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdww-2024-011#c013",
+        "zdww-2024-011#c001",
+        "zdrl-2024-008#c001",
+        "zdww-2024-011#c011",
+        "zdrl-2024-008#c003"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 网络割接风险评估\n风险评估应综合考虑业务等级、客户数量、网元重要性、方案复杂度和实施人员经验；评估结论应明确风险等级及是否具备实施条件。[c01]\n\n### 岗位竞聘的目的\n岗位竞聘旨在建立公开、平等、竞争、择优的岗位配置机制，并激发员工队伍活力。[c03]",
+      "refused": false,
+      "ttft_ms": 3184,
+      "elapsed_ms": 4132,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "风险评估应综合考虑业务等级、客户数量、网元重要性、方案复杂度和实施人员经验",
+          "评估结论应明确风险等级和是否具备实施条件",
+          "建立公开、平等、竞争、择优的岗位配置机制",
+          "激发员工队伍活力"
+        ],
+        "missing_facts": [
+          "拓宽选人用人渠道",
+          "根据公司人力资源管理有关规定，制定本办法"
+        ],
+        "hallucinations": [],
+        "reason": "答案覆盖了风险评估全部要点及岗位竞聘的机制和活力目标，但未覆盖标准答案中“拓宽选人用人渠道”和制定依据。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-027",
+      "split": "multi_hop",
+      "question": "公司各市分公司通过框架协议采购服务后报销费用，需要遵守哪些采购范围规定并提交哪些报销材料？",
+      "facts": [
+        "本办法适用于公司本部、各市分公司及直属单位以合同方式取得货物、工程和服务的采购活动。",
+        "适用的采购活动包括集中采购、分散采购、框架协议采购和紧急采购。",
+        "报销应提交费用报销单、合规发票、审批单和必要的证明材料。",
+        "差旅费报销还应附出差审批单和行程单据。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcw-2025-007#c013",
+        "zdcg-2023-001#c002",
+        "zdcw-2023-005#c005",
+        "zdcg-2025-004#c014",
+        "zdcg-2023-001#c008"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 采购范围规定\n各市分公司以合同方式取得服务的采购活动，属于《采购管理办法》的适用范围；该办法适用于集中采购、分散采购、框架协议采购和紧急采购。[c02] 框架协议采购是公司规定的采购方式之一。[c05] 框架协议的协议签订按相应权限审批，具体订单由采购与供应链部负责人在协议范围内直接下达，不再逐单审批。[c04]\n\n### 报销材料\n报销应提交费用报销单、合规发票、审批单和必要的证明材料。[c01] 材料未说明框架协议采购服务费用另需提交哪些采购或支付材料，也未说明其与一般报销材料的衔接要求，建议咨询财务部或采购与供应链部。[c01][c03]\n\n### 规定时效\n报销办法自2025年5月1日起试行，试行期两年；试行期间如国家或上级单位出台新规定，从其规定。[c10]采购管理办法自2023年4月1日起施行，原《物资采购管理暂行规定》同时废止；该办法除采购审批权限相关规定外，其他条款继续有效。[c06][c08]采购审批权限细则自2025年3月1日起施行，并废止采购管理办法第十二条关于采购审批权限的规定。[c08]",
+      "refused": false,
+      "ttft_ms": 2349,
+      "elapsed_ms": 5577,
+      "invalid_citations": [],
+      "claim_support_rate": 0.625,
+      "unsupported_claims": [
+        "框架协议采购是公司规定的采购方式之一。",
+        "材料未说明框架协议采购服务费用另需提交哪些采购或支付材料，也未说明其与一般报销材料的衔接要求，建议咨询财务部或采购与供应链部。",
+        "该办法除采购审批权限相关规定外，其他条款继续有效。"
+      ],
+      "timed_out": false,
+      "verdict": "judge_error",
+      "judge_error": "parse: JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-042",
+      "split": "multi_hop",
+      "question": "编制收入预算时要按什么维度拆分、说明哪些假设依据？不同等级的网络故障又分别由谁指挥处置？",
+      "facts": [
+        "收入预算应按业务和客户群分别编制。",
+        "收入预算的主要假设包括用户规模、资费水平、市场竞争态势和在建项目投产时间。",
+        "收入预算的主要假设应附测算依据。",
+        "一级故障由公司分管副总经理担任总指挥。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcw-2024-006#c007",
+        "zdww-2023-010#c017",
+        "zdww-2023-010#c004",
+        "zdww-2023-010#c010",
+        "zdww-2023-010#c018"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 收入预算编制\n\n收入预算应按业务、客户群拆分；主要假设包括用户规模、资费水平、市场竞争态势和在建项目投产时间，并应附测算依据。[c01]\n\n### 不同等级网络故障的指挥处置\n\n- 一级故障：由公司分管副总经理担任总指挥。[c02]\n- 二级故障：由网络运行维护中心负责人担任总指挥。[c02]\n- 三级、四级故障：由属地维护部门负责人组织处置。[c02]",
+      "refused": false,
+      "ttft_ms": 2255,
+      "elapsed_ms": 3552,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "收入预算应分业务、分客户群编制",
+          "主要假设包括用户规模、资费水平、市场竞争态势和在建项目投产时间",
+          "主要假设应附测算依据",
+          "一级故障由公司分管副总经理担任总指挥",
+          "二级故障由网络运行维护中心负责人担任总指挥",
+          "三级、四级故障由属地维护部门负责人组织处置"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整覆盖标准答案中收入预算拆分维度、假设依据及各级网络故障指挥处置主体，且无材料不支持断言。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-017",
+      "split": "multi_hop",
+      "question": "采购项目完成后，材料归档有哪些时限和保存要求？审批环节又应在多久内完成，补材料怎么处理？",
+      "facts": [
+        "采购与供应链部应在采购项目完成后30日内整理归档采购申请、审批文件、采购文件、评审记录、合同文本和验收材料。",
+        "采购与供应链部归档的采购材料保存期限不少于10年。",
+        "各审批环节应在收到完整材料后3个工作日内完成审批。",
+        "需补充材料时，审批环节应一次性提出补正要求，补正时间不计入审批时限。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcg-2025-004#c018",
+        "zdcg-2023-001#c021",
+        "zdcg-2025-004#c017",
+        "zdcg-2024-003#c020",
+        "zdcg-2023-002#c023"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 采购项目完成后的归档时限和保存要求\n\n采购项目完成后30日内，采购与供应链部应将采购申请、审批文件、采购文件、评审记录、合同文本和验收材料整理归档，保存期限不少于10年。[c02]\n\n### 审批时限及补充材料处理\n\n各审批环节应在收到完整材料后3个工作日内完成审批；如需补充材料，应一次性提出补正要求，补正时间不计入审批时限。[c01]",
+      "refused": false,
+      "ttft_ms": 2440,
+      "elapsed_ms": 3793,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "采购项目完成后30日内归档",
+          "由采购与供应链部整理归档",
+          "归档材料包括采购申请、审批文件、采购文件、评审记录、合同文本和验收材料",
+          "保存期限不少于10年",
+          "各审批环节收到完整材料后3个工作日内完成审批",
+          "需补充材料的应一次性提出补正要求",
+          "补正时间不计入审批时限"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整覆盖标准答案中的归档时限、保存要求、审批时限及补正处理事实点，且无材料不支持的断言。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-028",
+      "split": "multi_hop",
+      "question": "网络割接管理办法适用于哪些作业和设施？劳动争议调解委员会由哪些代表组成，人数有什么要求？",
+      "facts": [
+        "本办法适用于公司传输网、数据网、移动核心网、接入网和动力配套设施的扩容、改造、搬迁、版本升级及路由调整等割接作业。",
+        "劳动争议调解委员会由员工代表、公司代表和工会代表组成。",
+        "劳动争议调解委员会人数为单数。",
+        "劳动争议调解委员会中员工代表和工会代表人数不得少于二分之一。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdww-2024-011#c002",
+        "zdrl-2025-009#c018",
+        "zdww-2023-010#c002",
+        "zdww-2024-011#c001",
+        "zdww-2024-011#c003"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 网络割接管理办法的适用范围\n适用于公司传输网、数据网、移动核心网、接入网及动力配套设施的扩容、改造、搬迁、版本升级和路由调整等割接作业。[c01]\n\n### 劳动争议调解委员会的组成及人数要求\n委员会由员工代表、公司代表和工会代表组成，人数为单数；其中员工代表和工会代表人数不得少于二分之一。[c02]",
+      "refused": false,
+      "ttft_ms": 2464,
+      "elapsed_ms": 3450,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "适用于公司传输网、数据网、移动核心网、接入网、动力配套设施的扩容、改造、搬迁、版本升级和路由调整等割接作业",
+          "劳动争议调解委员会由员工代表、公司代表和工会代表组成",
+          "劳动争议调解委员会人数为单数",
+          "员工代表和工会代表人数不得少于二分之一"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整覆盖标准答案的两项事实，且表述均可由检索材料第二条和第十八条支持。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-039",
+      "split": "multi_hop",
+      "question": "编收入预算时要考虑哪些假设、附什么依据？申请资金支付又要遵循哪些原则，缺少哪些材料会被退回？",
+      "facts": [
+        "收入预算应按业务、客户群分别编制。",
+        "收入预算的主要假设包括用户规模、资费水平、市场竞争态势和在建项目投产时间。",
+        "收入预算的主要假设应附测算依据。",
+        "资金支付遵循预算控制、先审后付、专款专用、痕迹可查的原则。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcw-2023-005#c003",
+        "zdcw-2024-006#c007",
+        "zdcw-2023-005#c005",
+        "zdcw-2024-006#c014",
+        "zdcw-2024-006#c006"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 收入预算的假设与依据\n收入预算应分业务、分客户群编制；主要假设包括用户规模、资费水平、市场竞争态势和在建项目投产时间，并应附测算依据。[c02]\n\n### 资金支付的原则与退回情形\n资金支付应遵循预算控制、先审后付、专款专用、痕迹可查的原则；无预算、无合同或无合规票据的支付申请，财务部应予退回。[c01]\n\n支付申请还应通过公司财务共享系统提交，并附合同文本、验收合格证明、合规发票、结算清单等材料；材料不齐时，财务部应一次性告知补正要求。[c03]",
+      "refused": false,
+      "ttft_ms": 3436,
+      "elapsed_ms": 5369,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "收入预算应分业务、分客户群编制",
+          "主要假设包括用户规模、资费水平、市场竞争态势和在建项目投产时间",
+          "主要假设应附测算依据",
+          "资金支付遵循预算控制、先审后付、专款专用、痕迹可查的原则",
+          "无预算、无合同、无合规票据的支付申请，财务部应予退回"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整覆盖标准答案全部事实点，额外引用的共享系统提交及补正要求有检索材料第五条支持。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-001",
+      "split": "multi_hop",
+      "question": "预算调整一年集中办几次，哪些情况可以随时申请？采购审批中预算和资金来源由谁审核、审批权限执行情况由谁监督？",
+      "facts": [
+        "预算调整分为定期调整和专项调整。",
+        "定期预算调整每年7月集中办理一次。",
+        "因政策变化、重大市场变动或重大突发事件引起的专项预算调整可以随时提出。",
+        "采购与供应链部负责本细则的组织实施和审批事项的日常受理。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcw-2024-006#c018",
+        "zdcg-2025-004#c004",
+        "zdcg-2023-001#c005",
+        "zdcw-2024-006#c011",
+        "zdcg-2025-004#c020"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 预算调整\n定期调整每年集中办理一次，在7月办理；因政策变化、重大市场变动或者重大突发事件引起的专项调整，可以随时提出。[c01]\n\n### 采购审批中的审核与监督\n财务部负责预算和资金来源的合规性审核；审计部负责审批权限执行情况的监督检查。[c02]",
+      "refused": false,
+      "ttft_ms": 3197,
+      "elapsed_ms": 4153,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "预算调整分为定期调整和专项调整",
+          "定期调整每年7月集中办理一次",
+          "专项调整因政策变化、重大市场变动或者重大突发事件引起，可以随时提出",
+          "财务部负责预算和资金来源的合规性审核",
+          "审计部负责审批权限执行情况的监督检查"
+        ],
+        "missing_facts": [
+          "采购与供应链部负责本细则的组织实施和审批事项的日常受理"
+        ],
+        "hallucinations": [],
+        "reason": "答案覆盖了预算调整及财务部、审计部职责，但遗漏采购与供应链部的组织实施和审批事项日常受理职责。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-023",
+      "split": "multi_hop",
+      "question": "遇到紧急情况只能找一家供应商采购时，要满足哪些论证要求？市分公司还需向人力资源部备案什么？",
+      "facts": [],
+      "facts_source": "missing",
+      "retrieved": [
+        "zdcg-2023-001#c011",
+        "zdrl-2025-009#c025",
+        "zdcg-2024-003#c022",
+        "zdcg-2023-001#c024",
+        "zdcg-2025-004#c007"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 紧急情况下只能找一家供应商采购的论证要求\n可以采用单一来源采购；单一来源采购应组织不少于三名专家论证，并形成书面论证意见。[c01]\n\n### 市分公司需向人力资源部备案什么\n各市分公司应明确本单位申诉受理的经办岗位，并将人员名单报人力资源部备案。[c02]",
+      "refused": false,
+      "ttft_ms": 2158,
+      "elapsed_ms": 3144,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "可以采用单一来源采购",
+          "单一来源采购应组织不少于三名专家论证并形成书面论证意见",
+          "各市分公司应明确本单位申诉受理的经办岗位",
+          "将人员名单报人力资源部备案"
+        ],
+        "missing_facts": [
+          "只能从唯一供应商处采购的情形",
+          "发生不可预见的紧急情况，不能从其他供应商处采购的情形",
+          "为保证原有采购项目一致性或者服务配套要求，需要继续从原供应商处采购的情形",
+          "本办法由人力资源部负责解释",
+          "本办法自2025年3月1日起施行"
+        ],
+        "hallucinations": [],
+        "reason": "答案覆盖了单一来源采购的论证要求和向人力资源部备案人员名单的核心内容，但未完整覆盖标准答案中列举的三类单一来源采购情形及解释、施行日期等事实点。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-033",
+      "split": "multi_hop",
+      "question": "编制收入预算时要按哪些维度和假设测算？公司制定采购合同管理细则又是为了什么？",
+      "facts": [
+        "收入预算应按业务、客户群分别编制。",
+        "收入预算的主要假设包括用户规模、资费水平、市场竞争态势和在建项目投产时间。",
+        "收入预算的主要假设应附测算依据。",
+        "本细则旨在规范明州数智服务有限公司采购合同的订立、履行和归档管理，减少合同纠纷、防范法律风险。"
+      ],
+      "facts_source": "llm_extracted",
+      "retrieved": [
+        "zdcw-2024-006#c007",
+        "zdcg-2024-003#c001",
+        "zdcw-2024-006#c006",
+        "zdcg-2025-004#c002",
+        "zdcg-2024-003#c002"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 收入预算的编制维度与测算假设\n收入预算应分业务、分客户群编制；主要测算假设包括用户规模、资费水平、市场竞争态势和在建项目投产时间，且主要假设应附测算依据。[c01]\n\n### 制定采购合同管理细则的目的\n制定该细则是为了规范公司采购合同的订立、履行和归档管理，减少合同纠纷、防范法律风险。[c02]",
+      "refused": false,
+      "ttft_ms": 2180,
+      "elapsed_ms": 3358,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "correct",
+      "judge": {
+        "raw_verdict": "correct",
+        "covered_facts": [
+          "收入预算应分业务、分客户群编制",
+          "主要假设包括用户规模、资费水平、市场竞争态势和在建项目投产时间",
+          "主要假设应附测算依据",
+          "为规范公司采购合同的订立、履行和归档管理",
+          "减少合同纠纷",
+          "防范法律风险"
+        ],
+        "missing_facts": [],
+        "hallucinations": [],
+        "reason": "答案完整覆盖标准答案中收入预算编制维度、测算假设及采购合同管理细则目的等事实点，且无材料不支持的断言。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-038",
+      "split": "multi_hop",
+      "question": "网络安全应急指挥部由哪些人和部门组成？采购审批日常受理、预算资金审核及监督检查分别由谁负责？",
+      "facts": [],
+      "facts_source": "missing",
+      "retrieved": [
+        "zdww-2025-012#c004",
+        "zdcg-2025-004#c004",
+        "zdww-2025-012#c005",
+        "zdcg-2023-001#c004",
+        "zdww-2023-010#c017"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 网络安全应急指挥部组成\n总经理任总指挥，分管网络运行的副总经理任副总指挥；成员包括网络运行维护中心、信息安全部、市场经营部、客户服务部、综合部和法律事务岗负责人。[c01]\n\n### 采购审批相关职责\n- 采购审批事项的日常受理由采购与供应链部负责。[c02]\n- 预算和资金来源的合规性审核由财务部负责。[c02]\n- 审批权限执行情况的监督检查由审计部负责。[c02]",
+      "refused": false,
+      "ttft_ms": 3078,
+      "elapsed_ms": 4357,
+      "invalid_citations": [],
+      "claim_support_rate": 1.0,
+      "unsupported_claims": [],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "网络安全应急指挥部由总经理任总指挥",
+          "分管网络运行的副总经理任副总指挥",
+          "成员包括网络运行维护中心、信息安全部、市场经营部、客户服务部、综合部和法律事务岗负责人",
+          "采购与供应链部负责审批事项的日常受理",
+          "财务部负责预算和资金来源的合规性审核",
+          "审计部负责审批权限执行情况的监督检查"
+        ],
+        "missing_facts": [
+          "采购与供应链部负责本细则的组织实施"
+        ],
+        "hallucinations": [],
+        "reason": "指挥部组成及三项职责负责人均正确，但未覆盖标准答案中采购与供应链部负责本细则组织实施这一事实点。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    },
+    {
+      "qid": "m-021",
+      "split": "multi_hop",
+      "question": "出差住宿费按地区怎么限额？如果途中发生网络安全事件，各部门和相关单位分别负责什么？",
+      "facts": [],
+      "facts_source": "missing",
+      "retrieved": [
+        "zdcw-2025-007#c006",
+        "zdww-2025-012#c005",
+        "zdww-2025-012#c019",
+        "zdcw-2025-007#c004",
+        "zdww-2025-012#c030"
+      ],
+      "recall_hit": true,
+      "recall_all_hit": true,
+      "answer": "### 一、出差住宿费按地区怎么限额？\n\n- 省会城市及计划单列市：每人每天不超过500元。[c01]\n- 其他地级市：每人每天不超过400元。[c01]\n- 县级及以下地区：每人每天不超过300元。[c01]\n- 超出限额部分由个人承担。[c01]\n\n以上标准来自自2025年5月1日起试行的《成本费用报销管理办法》，试行期两年；试行期间如国家或上级单位出台新规定，从其规定。[c01][c06]\n\n### 二、途中发生网络安全事件时，各部门和相关单位分别负责什么？\n\n- 信息安全部是网络安全应急管理归口部门，负责预案编制、监测预警、事件定级、处置协调和演练组织。[c02]\n- 网络运行维护中心负责技术处置和系统恢复。[c02]\n- 各部门负责本部门范围内的先期处置和信息报送。[c02]\n- 各市分公司应根据该办法制定本单位网络安全事件应急预案，并报信息安全部备案。[c04]\n- 较大事件启动二级响应，由信息安全部负责人组织处置；一般事件启动三级响应，由事件发生部门自行处置并报信息安全部备案。[c03]\n- 网络安全事件管理办法自2025年6月1日起施行。[c04]",
+      "refused": false,
+      "ttft_ms": 2370,
+      "elapsed_ms": 5448,
+      "invalid_citations": [],
+      "claim_support_rate": 0.9091,
+      "unsupported_claims": [
+        "- 超出限额部分由个人承担。"
+      ],
+      "timed_out": false,
+      "verdict": "partial",
+      "judge": {
+        "raw_verdict": "partial",
+        "covered_facts": [
+          "住宿费分地区限额：省会城市及计划单列市每人每天不超过500元",
+          "其他地级市每人每天不超过400元",
+          "县级及以下地区每人每天不超过300元",
+          "超出限额部分由个人承担",
+          "信息安全部是网络安全应急管理归口部门，负责预案编制、监测预警、事件定级、处置协调和演练组织",
+          "网络运行维护中心负责技术处置和系统恢复",
+          "各部门负责本部门范围内的先期处置和信息报送"
+        ],
+        "missing_facts": [],
+        "hallucinations": [
+          "《成本费用报销管理办法》",
+          "网络安全事件管理办法"
+        ],
+        "reason": "标准答案事实点已全部覆盖，但答案中出现的办法名称在材料中未明确出现，属于材料无法支持的断言。",
+        "judge_model": "opencode-go/deepseek-v4.1-flash"
+      },
+      "verdict_source": "judge"
+    }
+  ],
+  "gate": {
+    "verdict": "INCOMPLETE —— judge 失败率 2.53% 超过 2%，正确率不可读",
+    "rows": [
+      {
+        "metric": "AC-02 答案正确率（facts 口径）",
+        "threshold": "≥85%",
+        "actual": "50.65%",
+        "status": "FAIL"
+      },
+      {
+        "metric": "AC-11 claim 支撑率",
+        "threshold": "≥90%",
+        "actual": "78.06%",
+        "status": "FAIL"
+      },
+      {
+        "metric": "AC-12 judge 失败率",
+        "threshold": "≤2%",
+        "actual": "2.53%",
+        "status": "FAIL"
+      },
+      {
+        "metric": "AC-01 Chunk-ID Recall@5",
+        "threshold": "≥90%",
+        "actual": "100.00%",
+        "status": "PASS"
+      },
+      {
+        "metric": "AC-05 误拒率",
+        "threshold": "≤5%",
+        "actual": "1.25%",
+        "status": "PASS"
+      },
+      {
+        "metric": "AC-07 TTFT p95",
+        "threshold": "≤1000ms",
+        "actual": "4041.6",
+        "status": "FAIL"
+      },
+      {
+        "metric": "AC-08 完成 p95",
+        "threshold": "≤5000ms",
+        "actual": "5591.2",
+        "status": "FAIL"
+      }
+    ]
+  }
+}
