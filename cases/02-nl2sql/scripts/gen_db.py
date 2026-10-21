@@ -278,8 +278,9 @@ def main() -> int:
             indent=2,
         ),
         encoding="utf-8",
+        newline="\n",
     )
-    CASES.write_text(json.dumps(OFFSETS, ensure_ascii=False, indent=2), encoding="utf-8")
+    CASES.write_text(json.dumps(OFFSETS, ensure_ascii=False, indent=2), encoding="utf-8", newline="\n")
     print(f"[done] {DB_PATH}")
     for k, v in counts.items():
         print(f"  {k:14s} {v}")

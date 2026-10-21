@@ -1,7 +1,7 @@
 # ENVIRONMENT · 环境基线（NL2SQL）
 
 > 本文件是证据，不是说明书。能力项均有实测记录（`evidence/`）。
-> **锁定项：** GStack `1.91.121.0`｜Python 3.12.10｜SQLite（stdlib）｜端口 `4181`｜模型 `opencode-go/gpt-6-luna`（`reasoning_effort=none`）
+> **锁定项：** GStack `1.91.121.0`｜Python 3.12.10｜SQLite（stdlib）｜端口 `4181`｜模型 `Qwen/Qwen2.5-72B-Instruct`（默认公网；10-20 基线为 magpie `opencode-go/gpt-6-luna`）
 
 ## 0. 依赖与运行环境
 

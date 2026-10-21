@@ -1,4 +1,7 @@
 # SPEC · 政企 RAG 问答 demo（v1）
+> **历史说明：** 本文件是 v1 契约原文，其中 `1024` 维 / `bge-m3` / `gpt-6-luna` 均为当时口径。当前实现为 **315 chunk / 2560 维 / `Qwen/Qwen3-Embedding-4B` 与 `Qwen/Qwen3-Reranker-4B`**（见 `ENVIRONMENT.md` 与 `qa-report.md`）。
+
+
 
 > **环次：** 第 2 环 `/spec`
 > **上游：** [环 0 数据与口径](docs/00-数据与口径.md)（已关闭）、[环 1 需求](docs/01-需求.md)（已批准）

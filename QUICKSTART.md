@@ -59,7 +59,7 @@ cases\03-contract-review\.env
 .\labs\scripts\smoke-contract.ps1   # 案例三 4182：CT001 零风险 / CT003 命中 / 覆盖度
 ```
 
-端口不是默认值时加 `-Port`，例如 `.\labs\scripts\smoke-rag.ps1 -Port 5180`。脚本只读、不写业务数据；全过退出码 0，末尾打印 `RESULT`。
+端口不是默认值时加 `-Port`，例如 `.\labs\scripts\smoke-rag.ps1 -Port 5180`。脚本只做断言；但案例二/三的 smoke 会确定性重建 `data/aicoding.db` 与 30 份合同，跑完 `git status` 可能出现生成物改动，属正常（生成物已在 `.gitignore`）。全过退出码 0，末尾打印 `RESULT`。
 
 ## 手动方式（不用脚本）
 

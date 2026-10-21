@@ -99,4 +99,4 @@
 - 案例二 JOIN 类问题是已知短板（JOIN 桶 68%），不是环境问题。
 - 案例一门禁结论为 INCOMPLETE（judge 失败率超 2%），刻意保留。
 - `evidence/`、案例一索引、案例二数据库、案例三合同都不随仓库分发；缺文件按上文命令生成，不是克隆坏了。
-- 三份 `BUILD.md` / `ENVIRONMENT.md` 仍保留作者环境的 magpie 内网口径，默认路径以根 `README.md` + `QUICKSTART.md` 为准。
+- 三份 `BUILD.md` / `ENVIRONMENT.md` 已按默认公网（硅基流动）书写；内网 magpie 仅作可选档 B，见 `.env.example` 注释块。

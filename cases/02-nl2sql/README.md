@@ -46,7 +46,7 @@
 ├── web/index.html             # 单页前端
 ├── eval/                      # gold_cases / golden_set / anchor_set / ambiguity_set / run_eval
 ├── scripts/                   # gen_db / verify_db / build_gold / gen_questions / test_safety / qa_checks
-├── docs/                      # 00 口径 / 01 需求 / 02 八环讲解记录
+├── docs/                      # 00 口径 / 01 需求 / 10 八环讲解记录
 ├── SPEC.md  DECISIONS.md  BUILD.md  ENVIRONMENT.md
 └── evidence/                  # 带时间戳的实测证据（未随仓库分发）
 ```

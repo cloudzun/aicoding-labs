@@ -247,7 +247,7 @@ def main() -> int:
                  "sha256": hashlib.sha256(path.read_bytes()).hexdigest()[:16], "paras": len(Document(str(path)).paragraphs)}
             )
 
-    TRUTH.write_text("\n".join(json.dumps(u, ensure_ascii=False) for u in units) + "\n", encoding="utf-8")
+    TRUTH.write_text("\n".join(json.dumps(u, ensure_ascii=False) for u in units) + "\n", encoding="utf-8", newline="\n")
     MANIFEST.write_text(
         json.dumps(
             {"seed": SEED, "contracts": len(contracts), "units": len(units),
@@ -256,6 +256,7 @@ def main() -> int:
             ensure_ascii=False, indent=2,
         ),
         encoding="utf-8",
+        newline="\n",
     )
     print(f"[done] {len(contracts)} 份合同 → {OUT_DIR}")
     print(f"[done] 判定单元 {len(units)} 条（{len(contracts)}×27）→ {TRUTH}")
