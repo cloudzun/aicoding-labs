@@ -34,3 +34,7 @@ cases/*/evidence/
 cases/*/data/contracts/
 cases/*/data/manifest.json
 cases/*/data/truth/__pycache__/
+
+# Python 虚拟环境
+.venv/
+
